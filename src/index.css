@@ -1,0 +1,38 @@
+body {
+    background-color: #330000;
+    margin: 0;
+    padding: 0;
+}
+main {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: stretch;
+    margin: 0 auto;
+    max-width: 1272px;
+    min-width: 320px;
+    padding: 0.125in;
+    width: 100vw;
+}
+header, section {
+    padding: 0.125in;
+    text-align: center;
+}
+header > img {
+    height: auto;
+    max-width: 472px;
+    width: 100%;
+}
+section#pleistocene > img {
+    height: auto;
+    width: 100%;
+}
+img {
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+a:hover > img {
+    opacity: 0.75;
+    transition: opacity 0.25s;
+}

@@ -1,0 +1,45 @@
+Arguments: 
+  /Users/keesey/.nvm/versions/node/v10.15.0/bin/node /Users/keesey/.yarn/bin/yarn.js init
+
+PATH: 
+  /Users/keesey/.yarn/bin:/Users/keesey/.config/yarn/global/node_modules/.bin:/Users/keesey/.nvm/versions/node/v10.15.0/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.0/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/keesey/.yarn/bin:/Users/keesey/.config/yarn/global/node_modules/.bin:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.0/bin/:/sw/bin:/sw/sbin:/usr/X11R6/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.15.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/keesey/.yarn/lib/cli.js:136724:13)
+      at Interface.emit (events.js:182:13)
+      at Interface._ttyWrite (readline.js:783:16)
+      at ReadStream.onkeypress (readline.js:168:10)
+      at ReadStream.emit (events.js:182:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1022:36)
+      at ReadStream.emit (events.js:182:13)
+      at addChunk (_stream_readable.js:283:12)
+
+npm manifest: 
+  {
+    "name": "keesey-comics.com",
+    "version": "0.0.0",
+    "description": "Website for Keesey Comics",
+    "main": "src/index.ts",
+    "repository": "https://github.com/keesey/keesey-comics.com",
+    "author": "T. Michael Keesey <keesey@gmail.com>",
+    "license": "UNLICENSED",
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
