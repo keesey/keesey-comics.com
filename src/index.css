@@ -1,38 +1,95 @@
+@font-face{
+    font-family: Paleocene;
+    font-style: normal;
+    font-weight: 400;
+    src: url(assets/fonts/paleocene-regular-webfont.woff2) format('woff2'),
+        url(assets/fonts/paleocene-regular-webfont.woff) format('woff');
+}
+@font-face{
+    font-family: Paleocene;
+    font-style: italic;
+    font-weight: 400;
+    src: url(assets/fonts/paleocene-italic-webfont.woff2) format('woff2'),
+        url(assets/fonts/paleocene-italic-webfont.woff) format('woff');
+}
 body {
-    background-color: #330000;
+    background-color: #000000;
     margin: 0;
     padding: 0;
 }
+a {
+    color: #ffffcc;
+    font-style: italic;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.67;
+    transition: opacity 0.25s;
+}
 main {
-    align-items: stretch;
+    align-items: center;
+    align-content: center;
+    background-color: #330000;
+    box-shadow: 0 0 0.125in 0.125in #330000;;
+    color: #ffffcc;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    justify-items: stretch;
+    font-family: Paleocene;
+    font-size: 13pt;
+    justify-content: center;
     margin: 0 auto;
-    max-width: 1272px;
+    max-width: 9.75in;
+    min-height: 100vh;
     min-width: 320px;
-    padding: 0.125in;
-    width: 100vw;
+    padding: 0.25in;
 }
-header, section {
+header, section, footer {
     padding: 0.125in;
     text-align: center;
 }
 header > img {
     height: auto;
     max-width: 472px;
-    width: 100%;
+    width: calc(100% - 0.25in);
 }
-section#pleistocene > img {
+section > a > img {
     height: auto;
-    width: 100%;
+    width: calc(100% - 0.25in);
+}
+section#about {
+    max-width: 16em;
+}
+section.series {
+    display: flex;
+    flex-wrap: wrap;
+}
+section.series > p {
+    margin-right: 2em;
+    max-width: 16em;
+}
+section#paleocene > a > img {
+    max-width: 543px;
+}
+section#pleistocene {
+    justify-content: flex-end;
+}
+section#pleistocene > a > img {
+    max-width: 600px;
 }
 img {
     opacity: 1;
     transition: opacity 0.25s;
 }
-a:hover > img {
-    opacity: 0.75;
-    transition: opacity 0.25s;
+footer, footer > a {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer > a {
+    margin-right: 2em;
+    margin-top: 1em;
+}
+footer > a > span {
+    margin-right: 1em;
 }
