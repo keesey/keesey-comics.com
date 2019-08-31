@@ -29,51 +29,75 @@
         @import url("./index.css");
     </style>
     <script src="../assets/scripts/comic-font.js"></script>
+    <script src="../assets/scripts/comic-lines.js"></script>
 </head>
 
 <body>
     <main>
-        <header id="publisher">
-            <h2 class="speech">Keesey Comics</h2>
-            <img src="../assets/logos/black/keesey-comics.svg" alt="Keesey Comics" class="print screen">
+        <header id="publisher" class="cell">
+            <a href="..">
+                <h2 class="speech">Keesey Comics</h2>
+                <img src="../assets/logos/black/keesey-comics.svg" alt="Keesey Comics" class="print screen">
+            </a>
             <span>presents...</span>
         </header>
-        <header id="series">
+        <header id="series" class="cell">
             <h1 class="speech">Pleistocene</h1>
             <img src="../assets/logos/black/pleistocene.png" alt="Pleistocene" class="print screen">
-            <span>by <a href="//tmkeesey.net">Mike Keesey</a></span>
         </header>
-        <section id="about">
+        <section class="text cell">
             <p>
-                He was a brave hero, a great hunter, a natural leader of men -- or so he thought of himself.
-                Ridiculed by his people, he undertook a quest across the desert to find a new homeland.
-                Like every hero, he encountered a monster ... or was it something else?
+                He was a brave hero, a great hunter, a natural leader of men...
             </p>
         </section>
-        <section class="featured-link">
+        <section class="text cell">
+            <p>
+                ...or so he thought of himself.
+            </p>
+        </section>
+        <section class="text cell">
+            <p>
+                Ridiculed by his people, he undertook a quest across the desert to find a new homeland.
+            </p>
+        </section>
+        <section class="text cell">
+            <p>
+                Like every hero, he encountered a monster...
+            </p>
+        </section>
+        <section class="text cell">
+            <p>
+                ...or was it something else?
+            </p>
+        </section>
+        <section class="featured-link cell">
             <a href="https://www.comixology.com/Pleistocene/comics-series/117874">
                 <span>Available on</span>
                 <span class="speech">comiXology.</span>
                 <img src="../assets/logos/black/comixology.svg" alt="comiXology" class="print screen">
             </a>
         </section>
-        <section class="featured-link">
+        <section class="featured-link cell">
             <a href="https://www.patreon.com/tmkeesey">
                 <span>Support Pleistocene on</span>
                 <span class="speech">Patreon.</span>
                 <img src="../assets/logos/black/patreon.svg" alt="Patreon" class="print screen">
             </a>
         </section>
-        <footer>
+        <footer class="cell">
             Also by Mike Keesey:
             <a href="http://phylopic.org">
                 <span class="speech">PhyloPic</span>
-                <img src="../assets/logos/black/phylopic.svg" alt="PhyloPic" width="92" height="13" class="print screen">
+                <img src="../assets/logos/black/phylopic.svg" alt="PhyloPic" width="92" height="13"
+                    class="print screen">
                 --
                 Free Silhouettes of Life Forms
             </a>
         </footer>
     </main>
+    <div id="cell-lines">
+        <svg xmlns="http://www.w3.org/2000/svg" id="cell-lines-graphics" x="0px" y="0px" viewBox="0 0 0 0" style="stroke:#000000"></svg>
+    </div>
 </body>
 
 </html>

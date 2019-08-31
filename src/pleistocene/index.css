@@ -15,6 +15,9 @@
 .print, .screen, .speech {
     display: none;
 }
+html {
+    background-color: black;
+}
 body {
     background-color: white;
     color: black;
@@ -31,58 +34,61 @@ a:hover {
     opacity: 0.67;
 }
 main {
-    align-items: center;
+    align-items: stretch;
     align-content: center;
     display: flex;
     flex-wrap: wrap;
     font-family: Paleocene;
     font-size: 13pt;
-    justify-content: center;
+    justify-items: stretch;
+    justify-content: stretch;
     letter-spacing: 0.07em;
     margin: 0 auto;
     max-width: 9.75in;
     min-height: 100vh;
     min-width: 320px;
-    padding: 0.25in;
+    padding: 0;
 }
 header, section, footer {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
     padding: 0.125in;
     text-align: center;
 }
-#publisher > img {
+#publisher img {
     height: auto;
-    max-width: 256px;
-    width: calc(50vw - 0.5in);
+    max-width: 200px;
+    width: calc(100vw - 0.5in);
 }
 #series > img {
     height: auto;
     max-width: 512px;
     width: calc(100vw - 0.5in);
 }
-section#about {
-    max-width: 24em;
-}
-#featured-link, #featured-link > a {
+.featured-link, .featured-link > a {
     align-items: center;
     align-content: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-#featured-link > a {
+.featured-link > a {
     margin-right: 2em;
     margin-top: 1em;
 }
-#featured-link > a > span {
+.featured-link > a > span {
     margin-right: 0.67em;
 }
-#featured-link img {
+.featured-link img {
     height: auto;
     margin-right: 0.5em;
     width: 240px;
 }
 footer {
-    margin-top: 2em;
     font-size: 9pt;
 }
 footer, footer > a {
@@ -108,4 +114,12 @@ footer > a {
     .speech {
         display: initial;
     }
+}
+#cell-lines {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
 }
