@@ -46,7 +46,7 @@ main {
     max-width: 9.75in;
     min-height: 100vh;
     min-width: 320px;
-    padding: 0.125in;
+    padding: 0.25in;
     z-index: 10;
 }
 header, section, footer {
