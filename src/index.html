@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
 
 <head>
     <title>Keesey Comics</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="T. Michael Keesey">
+    <meta name="description" content="Comics by Mike Keesey, set in prehistoric epochs.">
+    <meta name="language" content="en">
+    <meta name="no-email-collection" content="//unspam.com/noemailcollection">
+    <meta name="reply-to" content="keesey+comics@gmail.com">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="Comics by Mike Keesey, set in prehistoric epochs.">
+    <meta name="twitter:image" content="http://keesey-comics.com/assets/logos/cream/keesey-comics.svg">
+    <meta name="twitter:image:height" content="469">
+    <meta name="twitter:image:width" content="280">
+    <meta name="twitter:title" content="Keesey Comics">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta property="og:description" content="Comics by Mike Keesey, set in prehistoric epochs.">
+    <meta property="og:image" content="http://keesey-comics.com/assets/logos/cream/keesey-comics.svg">
+    <meta property="og:image:height" content="280">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="469">
+    <meta property="og:site_name" content="Keesey Comics">
+    <meta property="og:title" content="Keesey Comics">
     <style>
         @import url("./index.css");
     </style>
-    <script src="./assets/comic-font.js"></script>
+    <script src="./assets/scripts/comic-font.js"></script>
 </head>
 
 <body>
     <main>
         <header>
-            <img src="./assets/logo.png" alt="Keesey Comics">
+            <h1 class="speech">Keesey Comics</h1>
+            <img src="./assets/logos/black/keesey-comics.svg" alt="Keesey Comics" class="print">
+            <img src="./assets/logos/cream/keesey-comics.svg" alt="Keesey Comics" class="screen">
         </header>
         <section id="about">
             <p>
@@ -20,37 +44,49 @@
             </p>
         </section>
         <section id="paleocene" class="series">
-            <p>
-                Sixty-six million years ago, the world nearly ended.
-                But our tiny, furry ancestors survived, in the...
-            </p>
             <a href="paleocene">
-                <img src="./assets/paleocene-logo.png" alt="Paleocene">
+                <p>
+                    Sixty-six million years ago, the world nearly ended.
+                    But our tiny, furry ancestors survived, in the<span class="print screen">...</span>
+                </p>
+                <span class="speech">Paleocene.</span>
+                <img src="./assets/logos/black/paleocene.svg" alt="Paleocene" class="print">
+                <img src="./assets/logos/cream/paleocene.svg" alt="Paleocene" class="screen">
             </a>
         </section>
         <section id="pleistocene" class="series">
-            <p>
-                He told himself he was the greatest hero of his age -- the noblest human being of the...
-            </p>
             <a href="pleistocene">
-                <img src="./assets/pleistocene-logo.png" alt="Pleistocene">
+                <p>
+                    He told himself he was the greatest hero of his age
+                    --
+                    the noblest human being of the<span class="print screen">...</span>
+                </p>
+                <span class="speech">Pleistocene.</span>
+                <img src="./assets/logos/black/pleistocene.png" alt="Pleistocene" class="print">
+                <img src="./assets/logos/cream/pleistocene.png" alt="Pleistocene" class="screen">
             </a>
         </section>
         <section id="featured-links">
             <a href="https://www.comixology.com/Keesey-Comics/comics-publisher/14274-0">
                 <span>Available on</span>
-                <img src="./assets/comixology-logo.png" alt="comiXology, an Amazon company">
+                <span class="speech">comiXology.</span>
+                <img src="./assets/logos/black/comixology.svg" alt="comiXology" class="print">
+                <img src="./assets/logos/cream/comixology.svg" alt="comiXology" class="screen">
             </a>
             <a href="https://www.patreon.com/tmkeesey">
                 <span>Support Keesey Comics on</span>
-                <img src="./assets/patreon-logo.png" alt="Patreon">
+                <span class="speech">Patreon.</span>
+                <img src="./assets/logos/black/patreon.svg" alt="Patreon" class="print">
+                <img src="./assets/logos/cream/patreon.svg" alt="Patreon" class="screen">
             </a>
         </section>
         <footer>
-            Also by Mike Keesey
-            --&nbsp;
+            Also by Mike Keesey:
             <a href="http://phylopic.org">
-                <img src="./assets/phylopic-logo.png" alt="PhyloPic" width="80" height="13">:
+                <span class="speech">PhyloPic</span>
+                <img src="./assets/logos/black/phylopic.svg" alt="PhyloPic" width="92" height="13" class="print">
+                <img src="./assets/logos/cream/phylopic.svg" alt="PhyloPic" width="92" height="13" class="screen">
+                --
                 Free Silhouettes of Life Forms
             </a>
         </footer>
