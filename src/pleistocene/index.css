@@ -40,14 +40,14 @@ main {
     flex-wrap: wrap;
     font-family: Paleocene;
     font-size: 13pt;
-    justify-items: stretch;
-    justify-content: stretch;
+    justify-content: center;
     letter-spacing: 0.07em;
     margin: 0 auto;
     max-width: 9.75in;
     min-height: 100vh;
     min-width: 320px;
     padding: 0;
+    z-index: 10;
 }
 header, section, footer {
     align-content: center;
@@ -56,8 +56,11 @@ header, section, footer {
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
-    padding: 0.125in;
+    padding: 0.25in;
     text-align: center;
+}
+section.text {
+    max-width: 10em;
 }
 #publisher img {
     height: auto;
@@ -85,7 +88,6 @@ header, section, footer {
 }
 .featured-link img {
     height: auto;
-    margin-right: 0.5em;
     width: 240px;
 }
 footer {
@@ -118,8 +120,8 @@ footer > a {
 #cell-lines {
     bottom: 0;
     left: 0;
-    position: absolute;
+    pointer-events: none;
+    position: fixed;
     right: 0;
     top: 0;
-    z-index: 100;
 }

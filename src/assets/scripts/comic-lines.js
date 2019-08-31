@@ -1,22 +1,56 @@
 "use strict";
 (() => {
+    const THICKNESS = 5;
+    const WIGGLE = THICKNESS / 2;
     const SVG_NS = "http://www.w3.org/2000/svg";
+    let randomIndex = 0;
+    const randomNumbers = [];
+    const random = () => {
+        while (randomIndex >= randomNumbers.length) {
+            randomNumbers.push(Math.random());
+        }
+        return randomNumbers[randomIndex++];
+    }
     const drawLines = () => {
+        randomIndex = 0;
         const svg = document.getElementById("cell-lines-graphics");
         while (svg.lastChild) {
             svg.removeChild(svg.lastChild);
         }
-        const width = document.documentElement.clientWidth;
-        const height = document.documentElement.clientHeight;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
         svg.setAttributeNS(null,  "viewBox", `0 0 ${width} ${height}`);
         const drawLine = (x1, y1, x2, y2) => {
             const path = document.createElementNS(SVG_NS, "path");
-            path.setAttributeNS(null, "d", `M${x1} ${y1}L${x2} ${y2}Z`);
+            const acx1 = (x1 * 2 / 3 + x2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);
+            const acy1 = (y1 * 2 / 3 + y2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
+            const acx2 = (x1 / 3 + x2 * 2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
+            const acy2 = (y1 / 3 + y2 * 2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
+            const bcx1 = (x1 * 2 / 3 + x2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);
+            const bcy1 = (y1 * 2 / 3 + y2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
+            const bcx2 = (x1 / 3 + x2 * 2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
+            const bcy2 = (y1 / 3 + y2 * 2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
+            path.setAttributeNS(null, "d", `M${x1} ${y1}L${
+                (x1 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
+            } ${
+                (y1 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
+            }C${acx1} ${acy1} ${acx2} ${acy2} ${
+                (x2 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
+            } ${
+                (y2 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
+            }L${x2} ${y2}L${
+                (x2 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
+            } ${
+                (y2 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
+            }C${bcx2} ${bcy2} ${bcx1} ${bcy1} ${
+                (x1 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
+            } ${
+                (y1 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
+            }Z`);
             svg.appendChild(path);
         };
         const cells = [...document.getElementsByClassName("cell")]
-            .map(element => element.getBoundingClientRect())
-            .map(({ bottom, left, top, right }) => ({ bottom, left, top, right }));
+            .map(element => element.getBoundingClientRect());
         const n = cells.length;
         const bottom = cells.reduce((prev, cell) => isNaN(prev) ? cell.bottom : Math.max(prev, cell.bottom), NaN);
         const top = cells.reduce((prev, cell) => isNaN(prev) ? cell.top : Math.min(prev, cell.top), NaN);
@@ -24,17 +58,17 @@
         for (let i = 0; i < n; i++) {
             const a = cells[i];
             if (a.bottom !== bottom && a.bottom !== lastHLine) {
-                drawLine(0, a.bottom, width, a.bottom);
+                drawLine(-THICKNESS, a.bottom, width + THICKNESS, a.bottom);
                 lastHLine = a.bottom;
             }
             const b = (i < n - 1) ? cells[i + 1] : null;
             if (b && (a.top === b.top)) {
                 const coords = [a.right, a.top, b.left, b.bottom];
                 if (a.top === top) {
-                    coords[1] = 0;
+                    coords[1] = -THICKNESS;
                 }
                 if (a.bottom === bottom) {
-                    coords[3] = document.documentElement.clientHeight;
+                    coords[3] = document.documentElement.clientHeight + THICKNESS;
                 }
                 drawLine(...coords);
             }
@@ -42,5 +76,6 @@
     }
     window.addEventListener("load", drawLines);
     window.addEventListener("resize", drawLines);
+    window.addEventListener("scroll", drawLines);
 })();
 
