@@ -2,15 +2,15 @@
     font-family: Paleocene;
     font-style: normal;
     font-weight: 400;
-    src: url(assets/fonts/paleocene-regular-webfont.woff2) format('woff2'),
-        url(assets/fonts/paleocene-regular-webfont.woff) format('woff');
+    src: url(../assets/fonts/paleocene-regular-webfont.woff2) format('woff2'),
+        url(../assets/fonts/paleocene-regular-webfont.woff) format('woff');
 }
 @font-face{
     font-family: Paleocene;
     font-style: italic;
     font-weight: 400;
-    src: url(assets/fonts/paleocene-italic-webfont.woff2) format('woff2'),
-        url(assets/fonts/paleocene-italic-webfont.woff) format('woff');
+    src: url(../assets/fonts/paleocene-italic-webfont.woff2) format('woff2'),
+        url(../assets/fonts/paleocene-italic-webfont.woff) format('woff');
 }
 .print, .screen, .speech {
     display: none;
@@ -24,8 +24,8 @@ body {
 a {
     color: black;
     font-style: italic;
-    transition: opacity 0.25s;
     text-decoration: none;
+    transition: opacity 0.25s;
 }
 a:hover {
     opacity: 0.67;
@@ -33,7 +33,6 @@ a:hover {
 main {
     align-items: center;
     align-content: center;
-    border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
     font-family: Paleocene;
@@ -50,45 +49,34 @@ header, section, footer {
     padding: 0.125in;
     text-align: center;
 }
-header > img {
+#publisher > img {
+    height: auto;
+    max-width: 256px;
+    width: calc(50vw - 0.5in);
+}
+#series > img {
     height: auto;
     max-width: 512px;
     width: calc(100vw - 0.5in);
 }
 section#about {
-    max-width: 16em;
+    max-width: 24em;
 }
-section.series > a {
-    display: flex;
-    flex-wrap: wrap;
-}
-section.series > a > img {
-    height: auto;
-    max-width: 440px;
-    width: calc(100vw - 0.5in);
-}
-section.series > a > p {
-    margin-right: 2em;
-    max-width: 16em;
-}
-section#pleistocene > a {
-    justify-content: flex-end;
-}
-#featured-links, #featured-links > a {
+#featured-link, #featured-link > a {
     align-items: center;
     align-content: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-#featured-links > a {
+#featured-link > a {
     margin-right: 2em;
     margin-top: 1em;
 }
-#featured-links > a > span {
+#featured-link > a > span {
     margin-right: 0.67em;
 }
-#featured-links img {
+#featured-link img {
     height: auto;
     margin-right: 0.5em;
     width: 240px;
@@ -107,17 +95,6 @@ footer > a {
     font-style: normal;
 }
 @media screen {
-    body {
-        background-color: #110000;
-    }
-    a {
-        color: #ffffcc;
-    }
-    main {
-        background-color: #330000;
-        box-shadow: 0 0 .25in .125in black;
-        color: #ffffcc;
-    }
     .screen {
         display: initial;
     }
