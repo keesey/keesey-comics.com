@@ -46,7 +46,7 @@ main {
     max-width: 9.75in;
     min-height: 100vh;
     min-width: 320px;
-    padding: 0;
+    padding: 0.125in;
     z-index: 10;
 }
 header, section, footer {
@@ -60,7 +60,17 @@ header, section, footer {
     text-align: center;
 }
 section.text {
-    max-width: 10em;
+    max-width: 12em;
+}
+#panel-3 {
+    background-clip: border-box;
+    background-image: url(./panels/03.png);
+    background-origin: border-box;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+    min-width: 320px;
 }
 #publisher img {
     height: auto;
@@ -94,9 +104,11 @@ footer {
     font-size: 9pt;
 }
 footer, footer > a {
+    align-content: center;
     align-items: baseline;
     display: flex;
     flex-wrap: wrap;
+    justify-items: center;
     justify-content: center;
 }
 footer > a {

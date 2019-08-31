@@ -49,27 +49,40 @@
             }Z`);
             svg.appendChild(path);
         };
-        const cells = [...document.getElementsByClassName("cell")]
-            .map(element => element.getBoundingClientRect());
+        const cells = [...document.getElementsByClassName("cell")];
+        const rects = cells.map(element => element.getBoundingClientRect());
         const n = cells.length;
-        const bottom = cells.reduce((prev, cell) => isNaN(prev) ? cell.bottom : Math.max(prev, cell.bottom), NaN);
-        const top = cells.reduce((prev, cell) => isNaN(prev) ? cell.top : Math.min(prev, cell.top), NaN);
+        const bottom = rects.reduce((prev, cell) => isNaN(prev) ? cell.bottom : Math.max(prev, cell.bottom), NaN);
+        const top = rects.reduce((prev, cell) => isNaN(prev) ? cell.top : Math.min(prev, cell.top), NaN);
         let lastHLine = NaN;
+        const adjustCoords = (coords, rect) => {
+            if (rect.top === top) {
+                coords[1] = -THICKNESS;
+            }
+            if (rect.bottom === bottom) {
+                coords[3] = document.documentElement.clientHeight + THICKNESS;
+            }
+        };
         for (let i = 0; i < n; i++) {
-            const a = cells[i];
+            const a = rects[i];
+            const cell = cells[i];
+            if (cell.classList.contains("cell-border-left")) {
+                const coords = [a.left, a.top, a.left, a.bottom];
+                adjustCoords(coords, a);
+                drawLine(...coords);
+            }
             if (a.bottom !== bottom && a.bottom !== lastHLine) {
                 drawLine(-THICKNESS, a.bottom, width + THICKNESS, a.bottom);
                 lastHLine = a.bottom;
             }
-            const b = (i < n - 1) ? cells[i + 1] : null;
+            const b = (i < n - 1) ? rects[i + 1] : null;
             if (b && (a.top === b.top)) {
                 const coords = [a.right, a.top, b.left, b.bottom];
-                if (a.top === top) {
-                    coords[1] = -THICKNESS;
-                }
-                if (a.bottom === bottom) {
-                    coords[3] = document.documentElement.clientHeight + THICKNESS;
-                }
+                adjustCoords(coords, a);
+                drawLine(...coords);
+            } else if (cell.classList.contains("cell-border-right")) {
+                const coords = [a.right, a.top, a.right, a.bottom];
+                adjustCoords(coords, a);
                 drawLine(...coords);
             }
         }
