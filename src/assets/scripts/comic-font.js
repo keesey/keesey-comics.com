@@ -1,5 +1,11 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
+    if (
+        (!window.matchMedia("screen").matches && !window.matchMedia("print").matches)
+        || /bot|crawl|spider/i.test(navigator.userAgent)
+    ) {
+        return;
+    }
     const ALPHA_REGEX = /^[a-hj-z]$/i;
     const COMIXIFY_CHARS = {};
     const comixify = text => {
