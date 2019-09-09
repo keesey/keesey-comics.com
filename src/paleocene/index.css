@@ -175,14 +175,13 @@ footer {
     width: 100%;
 }
 footer, footer > a {
-    align-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-items: center;
     justify-content: center;
 }
 footer > a {
+    align-items: baseline;
     font-style: normal;
 }
 @media screen {

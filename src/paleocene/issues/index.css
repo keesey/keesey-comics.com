@@ -1,0 +1,12 @@
+#publisher img {
+    max-width: 120px;
+}
+img.cell.cover {
+    max-height: 734px;
+}
+main {
+    max-width: 18in;
+}
+header, section {
+    max-width: 9.75in;
+}
