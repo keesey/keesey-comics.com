@@ -156,14 +156,23 @@ input[type=submit]:hover {
     justify-content: center;
 }
 .featured-link > a {
+    flex-direction: column;
     margin: 0.67em;
-}
-.featured-link > a > span {
-    margin-right: 0.67em;
 }
 .featured-link img {
     height: auto;
     width: 240px;
+}
+#patreon > a {
+    align-items: flex-end;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-items: flex-end;
+}
+#patreon > a > span {
+    margin-right: 34px;
 }
 .phylopic {
     font-family: Georgia, serif;

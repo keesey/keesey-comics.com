@@ -74,28 +74,35 @@ section.series > a > p {
 section#pleistocene > a {
     justify-content: flex-end;
 }
-#featured-links, #featured-links > a {
-    align-items: center;
+.featured-links {
     align-content: center;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    justify-items: center;
 }
-#featured-links > a {
-    margin-right: 2em;
-    margin-top: 1em;
-}
-#featured-links > a > span {
-    margin-right: 0.67em;
-}
-#featured-links img {
+.featured-links img {
     height: auto;
-    margin-right: 0.5em;
+    margin: 0 0.5em;
     width: 240px;
 }
+#patreon > a {
+    align-items: flex-end;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-items: flex-end;
+}
+#patreon > a > span {
+    margin-right: 44px;
+}
 footer {
-    margin-top: 2em;
+    border-top: 2px solid black;
     font-size: 9pt;
+    margin-top: 2em;
+    width: 100%;
 }
 footer, footer > a {
     align-items: baseline;
@@ -105,6 +112,13 @@ footer, footer > a {
 }
 footer > a {
     font-style: normal;
+}
+.phylopic {
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+}
+.phylopic img {
+    margin-bottom: 4pt;
 }
 @media screen {
     body {
@@ -117,6 +131,9 @@ footer > a {
         background-color: #330000;
         box-shadow: 0 0 .25in .125in black;
         color: #ffffcc;
+    }
+    footer {
+        border-top: 2px solid #ffffcc;
     }
     .screen {
         display: initial;

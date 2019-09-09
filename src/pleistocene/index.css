@@ -107,15 +107,18 @@ footer {
     font-size: 9pt;
 }
 footer, footer > a {
-    align-content: center;
-    align-items: baseline;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-items: center;
     justify-content: center;
 }
 footer > a {
+    align-items: baseline;
     font-style: normal;
+}
+.phylopic {
+    font-family: Georgia, serif;
+    text-transform: uppercase;
 }
 @media screen {
     .screen {
