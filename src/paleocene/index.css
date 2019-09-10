@@ -46,7 +46,6 @@ main {
     margin: 0 auto;
     max-width: 9.75in;
     min-height: 100vh;
-    min-width: 320px;
     padding: 0.25in;
 }
 .cell {
@@ -115,7 +114,8 @@ input[type=email] {
     color: black;
     font-family: Roboto, sans-serif;
     font-size: 16pt;
-    min-width: 20em;
+    max-width: 20em;
+    width: calc(100vw - 1in);
 }
 input[type=email]:focus {
     outline: none;
@@ -177,6 +177,7 @@ input[type=submit]:hover {
     margin-bottom: -1.25em;
     margin-right: 34px;
     margin-top: -1.25em;
+    text-align: right;
 }
 footer {
     width: 100%;

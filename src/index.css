@@ -97,6 +97,7 @@ section#pleistocene > a {
 #patreon > a > span {
     margin-bottom: -1.25em;
     margin-right: 44px;
+    text-align: right;
 }
 footer {
     align-items: center;
