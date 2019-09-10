@@ -15,6 +15,9 @@
 .print, .screen, .speech {
     display: none;
 }
+img {
+    object-fit: scale-down;
+}
 body {
     background-color: white;
     color: black;
@@ -63,6 +66,7 @@ section.series > a {
 }
 section.series > a > img {
     height: auto;
+    max-height: auto;
     max-width: 440px;
     width: calc(100vw - 0.5in);
 }

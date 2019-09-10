@@ -15,6 +15,9 @@
 .print, .screen, .speech {
     display: none;
 }
+img {
+    object-fit: scale-down;
+}
 html {
     background-color: black;
 }
