@@ -42,8 +42,8 @@
                 path.setAttributeNS(
                     null,
                     "d",
-                    `M${topLeftIn[0]} ${top
-                    }H${right}V${bottom}H${left}V${top
+                    `M${topLeftIn[0]} ${top - 1
+                    }H${right + 1}V${bottom + 1}H${left - 1}V${top - 1
                     }H${topLeftIn[0]}V${topLeftIn[1]
                     }Q${topLeftOut[0]} ${topLeftIn[1]} ${topLeftOut.join(" ")
                     }Q${leftCenter.join(" ")} ${bottomLeftOut.join(" ")
@@ -53,7 +53,7 @@
                     }Q${rightCenter.join(" ")} ${topRightOut.join(" ")
                     }Q${topRightOut[0]} ${topRightIn[1]} ${topRightIn.join(" ")
                     }Q${topCenter.join(" ")} ${topLeftIn.join(" ")
-                    }V${top}Z`,
+                    }V${top - 1}Z`,
                 );
                 svg.appendChild(path);
             });

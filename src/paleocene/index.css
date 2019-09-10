@@ -179,6 +179,14 @@ input[type=submit]:hover {
     margin-top: -1.25em;
     text-align: right;
 }
+#social > div {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
 footer {
     width: 100%;
 }
