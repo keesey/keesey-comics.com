@@ -1,8 +1,9 @@
 "use strict";
 const { dest, src } = require("gulp");
 const htmlmin = require("gulp-htmlmin");
+const paths = require("./paths");
 const pages = () =>
-    src("./src/**/*.html")
+    src(paths.src.pages)
         .pipe(htmlmin({
             collapseWhitespace: true,
             minifyCSS: true,
@@ -14,5 +15,5 @@ const pages = () =>
             sortClassName: true,
             useShortDoctype: true,
         }))
-        .pipe(dest("dist"));
+        .pipe(dest(paths.dest));
 module.exports = pages;

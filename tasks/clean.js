@@ -1,4 +1,5 @@
 "use strict";
 const del = require("del");
-const clean = () => del("./dist", { dot: true });
+const { dest } = require("./paths");
+const clean = () => del(dest, { dot: true });
 module.exports = clean;

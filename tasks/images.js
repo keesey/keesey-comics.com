@@ -1,7 +1,8 @@
 "use strict";
 const { dest, src } = require("gulp");
 const imagemin = require("gulp-imagemin");
-const images = () => src("./src/**/*.{png,svg}")
+const paths = require("./paths");
+const images = () => src(paths.src.images)
     .pipe(imagemin())
-    .pipe(dest("./dist"));
+    .pipe(dest(paths.dest));
 module.exports = images;

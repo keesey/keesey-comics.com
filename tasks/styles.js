@@ -3,11 +3,12 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const { dest, src } = require("gulp");
 const postcss = require("gulp-postcss");
+const paths = require("./paths");
 const styles = () =>
-    src("./src/**/*.css")
+    src(paths.src.styles)
         .pipe(postcss([
             autoprefixer(),
             cssnano(),
         ]))
-        .pipe(dest("dist"));
+        .pipe(dest(paths.dest));
 module.exports = styles;
