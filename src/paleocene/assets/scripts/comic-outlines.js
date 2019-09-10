@@ -58,8 +58,11 @@
                 svg.appendChild(path);
             });
     }
-    window.addEventListener("load", draw);
-    window.addEventListener("resize", draw);
-    window.addEventListener("scroll", draw);
+    const refresh = () => {
+        window.requestAnimationFrame(draw);
+    }
+    window.addEventListener("load", refresh);
+    window.addEventListener("resize", refresh, { useCapture: true });
+    window.addEventListener("scroll", refresh, { useCapture: true });
 })();
 

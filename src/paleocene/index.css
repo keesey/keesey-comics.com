@@ -61,11 +61,13 @@ header, section, footer {
     align-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
     flex-grow: 1;
     justify-content: center;
     padding: 0.25in;
     text-align: center;
+}
+header, section {
+    flex-direction: column;
 }
 header {
     padding: 0.375in;
@@ -172,16 +174,15 @@ input[type=submit]:hover {
     justify-items: flex-end;
 }
 #patreon > a > span {
+    margin-bottom: -1.25em;
     margin-right: 34px;
-}
-.phylopic {
-    font-family: Georgia, serif;
-    font-weight: 500;
-    text-transform: uppercase;
+    margin-top: -1.25em;
 }
 footer {
-    font-size: 9pt;
     width: 100%;
+}
+footer img {
+    margin-left: 1em;
 }
 footer, footer > a {
     align-items: center;

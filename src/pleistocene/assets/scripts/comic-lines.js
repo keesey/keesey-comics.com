@@ -11,44 +11,47 @@
         }
         return randomNumbers[randomIndex++];
     }
-    const drawLines = () => {
+    const drawLine = (svg, x1, y1, x2, y2) => {
+        const path = document.createElementNS(SVG_NS, "path");
+        const acx1 = (x1 * 2 / 3 + x2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);
+        const acy1 = (y1 * 2 / 3 + y2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
+        const acx2 = (x1 / 3 + x2 * 2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
+        const acy2 = (y1 / 3 + y2 * 2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
+        const bcx1 = (x1 * 2 / 3 + x2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);
+        const bcy1 = (y1 * 2 / 3 + y2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
+        const bcx2 = (x1 / 3 + x2 * 2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
+        const bcy2 = (y1 / 3 + y2 * 2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
+        path.setAttributeNS(null, "d", `M${x1} ${y1}L${
+            (x1 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
+            } ${
+            (y1 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
+            }C${acx1} ${acy1} ${acx2} ${acy2} ${
+            (x2 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
+            } ${
+            (y2 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
+            }L${x2} ${y2}L${
+            (x2 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
+            } ${
+            (y2 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
+            }C${bcx2} ${bcy2} ${bcx1} ${bcy1} ${
+            (x1 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
+            } ${
+            (y1 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
+            }Z`);
+        svg.appendChild(path);
+    };
+    const draw = () => {
         randomIndex = 0;
         const svg = document.getElementById("cell-lines-graphics");
-        while (svg.lastChild) {
-            svg.removeChild(svg.lastChild);
+        {
+            let child;
+            while (child = svg.lastChild) {
+                svg.removeChild(child);
+            }
         }
         const width = window.innerWidth;
         const height = window.innerHeight;
-        svg.setAttributeNS(null,  "viewBox", `0 0 ${width} ${height}`);
-        const drawLine = (x1, y1, x2, y2) => {
-            const path = document.createElementNS(SVG_NS, "path");
-            const acx1 = (x1 * 2 / 3 + x2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);
-            const acy1 = (y1 * 2 / 3 + y2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
-            const acx2 = (x1 / 3 + x2 * 2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
-            const acy2 = (y1 / 3 + y2 * 2 / 3 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2);;
-            const bcx1 = (x1 * 2 / 3 + x2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);
-            const bcy1 = (y1 * 2 / 3 + y2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
-            const bcx2 = (x1 / 3 + x2 * 2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
-            const bcy2 = (y1 / 3 + y2 * 2 / 3 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2);;
-            path.setAttributeNS(null, "d", `M${x1} ${y1}L${
-                (x1 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
-            } ${
-                (y1 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
-            }C${acx1} ${acy1} ${acx2} ${acy2} ${
-                (x2 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
-            } ${
-                (y2 + (random() - 0.5) * WIGGLE - THICKNESS / 2).toFixed(2)
-            }L${x2} ${y2}L${
-                (x2 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
-            } ${
-                (y2 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
-            }C${bcx2} ${bcy2} ${bcx1} ${bcy1} ${
-                (x1 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
-            } ${
-                (y1 + (random() - 0.5) * WIGGLE + THICKNESS / 2).toFixed(2)
-            }Z`);
-            svg.appendChild(path);
-        };
+        svg.setAttributeNS(null, "viewBox", `0 0 ${width} ${height}`);
         const cells = [...document.getElementsByClassName("cell")];
         const rects = cells.map(element => element.getBoundingClientRect());
         const n = cells.length;
@@ -69,26 +72,29 @@
             if (cell.classList.contains("cell-border-left")) {
                 const coords = [a.left, a.top, a.left, a.bottom];
                 adjustCoords(coords, a);
-                drawLine(...coords);
+                drawLine(svg, ...coords);
             }
             if (a.bottom !== bottom && a.bottom !== lastHLine) {
-                drawLine(-THICKNESS, a.bottom, width + THICKNESS, a.bottom);
+                drawLine(svg, -THICKNESS, a.bottom, width + THICKNESS, a.bottom);
                 lastHLine = a.bottom;
             }
             const b = (i < n - 1) ? rects[i + 1] : null;
             if (b && (a.top === b.top)) {
                 const coords = [a.right, a.top, b.left, b.bottom];
                 adjustCoords(coords, a);
-                drawLine(...coords);
+                drawLine(svg, ...coords);
             } else if (cell.classList.contains("cell-border-right")) {
                 const coords = [a.right, a.top, a.right, a.bottom];
                 adjustCoords(coords, a);
-                drawLine(...coords);
+                drawLine(svg, ...coords);
             }
         }
     }
-    window.addEventListener("load", drawLines);
-    window.addEventListener("resize", drawLines);
-    window.addEventListener("scroll", drawLines);
+    const refresh = () => {
+        window.requestAnimationFrame(draw);
+    }
+    window.addEventListener("load", refresh);
+    window.addEventListener("resize", refresh, { useCapture: true });
+    window.addEventListener("scroll", refresh, { useCapture: true });
 })();
 

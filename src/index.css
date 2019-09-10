@@ -43,10 +43,9 @@ main {
     margin: 0 auto;
     max-width: 9.75in;
     min-height: 100vh;
-    min-width: 320px;
     padding: 0.25in;
 }
-header, section, footer {
+header, section {
     padding: 0.125in;
     text-align: center;
 }
@@ -96,13 +95,18 @@ section#pleistocene > a {
     justify-items: flex-end;
 }
 #patreon > a > span {
+    margin-bottom: -1.25em;
     margin-right: 44px;
 }
 footer {
+    align-items: center;
+    align-content: center;
     border-top: 2px solid black;
-    font-size: 9pt;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 2em;
-    width: 100%;
+    width: 100%;   
 }
 footer, footer > a {
     align-items: baseline;
@@ -110,15 +114,8 @@ footer, footer > a {
     flex-wrap: wrap;
     justify-content: center;
 }
-footer > a {
+footer a {
     font-style: normal;
-}
-.phylopic {
-    font-family: Georgia, serif;
-    text-transform: uppercase;
-}
-.phylopic img {
-    margin-bottom: 4pt;
 }
 @media screen {
     body {
