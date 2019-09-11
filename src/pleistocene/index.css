@@ -108,6 +108,15 @@ h3 {
     height: auto;
     width: 240px;
 }
+.cta {
+    width: 100%;
+}
+.cta a {
+    background-color: black;
+    border-radius: 1em;
+    color: white;
+    padding: 2em;
+}
 #patreon > a {
     align-items: flex-end;
     align-content: flex-end;

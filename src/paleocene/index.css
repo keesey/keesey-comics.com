@@ -191,6 +191,16 @@ input[type=submit]:hover {
     justify-items: center;
     justify-content: center;
 }
+.cta {
+    width: 100%;
+}
+.cta a {
+    background-color: #ffff00;
+    border-radius: 1em;
+    color: black;
+    display: flex;
+    padding: 2em;
+}
 footer {
     width: 100%;
 }
