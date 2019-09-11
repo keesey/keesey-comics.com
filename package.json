@@ -16,10 +16,12 @@
     "gulp-imagemin": "^6.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-uglify-es": "^1.0.4",
+    "s3": "^4.4.0",
     "serve": "^11.1.0"
   },
   "scripts": {
     "build": "gulp",
+    "deploy": "gulp && gulp deploy",
     "postinstall": "gulp",
     "serve": "gulp watch & serve dist --no-compression --listen 3000",
     "watch": "gulp watch"
