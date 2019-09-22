@@ -201,6 +201,9 @@ input[type=submit]:hover {
     display: flex;
     padding: 2em;
 }
+.rating {
+    font-size: smaller;
+}
 footer {
     width: 100%;
 }

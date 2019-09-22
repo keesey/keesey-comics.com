@@ -68,7 +68,7 @@ section.text {
     max-width: 12em;
 }
 h3 {
-    font-size: 11pt;
+    font-size: 12pt;
 }
 #panel-3 {
     background-clip: border-box;
@@ -116,6 +116,9 @@ h3 {
     border-radius: 1em;
     color: white;
     padding: 2em;
+}
+.rating {
+    font-size: 10pt;
 }
 #patreon > a {
     align-items: flex-end;
