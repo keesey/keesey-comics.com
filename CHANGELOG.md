@@ -18,4 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.1.0] - 2017-10-08
+
+# Added
+- Gumroad link for *Pleistocene*.
+
+# Changed
+- Simplified CSS for featured links on *Pleistocene*.
+
 ## [1.0.0] - 2017-09-27
