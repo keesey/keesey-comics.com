@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.1.1] - 2017-12-06
+
+# Added
+- comiXology link for *Paleocene*.
+
 ## [1.1.0] - 2017-10-08
 
 # Added

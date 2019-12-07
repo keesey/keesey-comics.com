@@ -1,6 +1,6 @@
 {
   "name": "keesey-comics.com",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Website for Keesey Comics",
   "main": "dist/index.html",
   "repository": "https://github.com/keesey/keesey-comics.com",
