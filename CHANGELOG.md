@@ -18,12 +18,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
-## [1.1.1] - 2017-12-06
+## [1.1.2] - 2020-02-14
+
+# Added
+- Proper social media images.
+
+## [1.1.1] - 2019-12-06
 
 # Added
 - comiXology link for *Paleocene*.
 
-## [1.1.0] - 2017-10-08
+## [1.1.0] - 2019-10-08
 
 # Added
 - Gumroad link for *Pleistocene*.
@@ -31,4 +36,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 # Changed
 - Simplified CSS for featured links on *Pleistocene*.
 
-## [1.0.0] - 2017-09-27
+## [1.0.0] - 2019-09-27
