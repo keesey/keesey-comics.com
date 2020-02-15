@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.1.5] - 2020-02-14
+
+# Fixed
+- All content within ARIA landmarks.
+
 ## [1.1.4] - 2020-02-14
 
 # Added
