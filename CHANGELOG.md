@@ -18,6 +18,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.1.4] - 2020-02-14
+
+# Added
+- Metadata tag (`robots`).
+- Canonical links.
+- Language specification.
+
+# Fixed
+- Duplicate `viewport` metadata tags.
+
 ## [1.1.3] - 2020-02-14
 
 # Fixed
