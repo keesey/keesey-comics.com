@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.1.3] - 2020-02-14
+
+# Fixed
+- Corrected social media metadata (including Twitter image sizes).
+
 ## [1.1.2] - 2020-02-14
 
 # Added
