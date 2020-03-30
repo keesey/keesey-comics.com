@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.2.1] - 2020-03-30
+
+# Changed
+- Expanded maximum width for *Paleocene* pages.
+
 ## [1.2.0] - 2020-02-15
 
 # Added
