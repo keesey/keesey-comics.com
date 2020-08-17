@@ -57,12 +57,10 @@
                 );
                 svg.appendChild(path);
             });
+        document.body.style.visibility = "visible";
     }
-    const refresh = () => {
-        window.requestAnimationFrame(draw);
-    }
-    window.addEventListener("load", refresh);
-    window.addEventListener("resize", refresh, { useCapture: true });
-    window.addEventListener("scroll", refresh, { useCapture: true });
+    window.addEventListener("load", draw, { useCapture: true });
+    window.addEventListener("resize", draw, { useCapture: true });
+    window.addEventListener("scroll", draw, { useCapture: true });
 })();
 

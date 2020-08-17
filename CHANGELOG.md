@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 # Deprecated
 
 # Fixed
+- Spacing between "more of" and "Paleocene".
+- Render lag for comic outlines.
 
 # Removed
 
