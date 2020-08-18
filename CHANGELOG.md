@@ -7,7 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 # Added
-- Korean pages.
+
+# Changed
+
+# Deprecated
+
+# Fixed
+
+# Removed
+
+# Security
+
+## [1.3.0] - 2020-08-17
+
+# Added
+- Korean pages and font.
 
 # Changed
 - Thicker "Keesey Comics" logo.
@@ -16,16 +30,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - English-language consistently coded as `en`, not `en-US`.
 - Page for *Paleocene #2* redesigned.
 
-# Deprecated
-
 # Fixed
 - Spacing between "more of" and "Paleocene".
 - Render lag for comic outlines.
 
 # Removed
 - "Presents..." after "Keesey Comics" except on Issue Pages.
-
-# Security
 
 ## [1.2.1] - 2020-03-30
 
