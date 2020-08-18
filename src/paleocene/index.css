@@ -1,19 +1,41 @@
 @font-face{
+    font-family: Euljiro-Che;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/bmeuljiro.otf) format('opentype'),
+        url(/assets/fonts/bmeuljiro.ttf) format('truetype');
+}
+@font-face{
     font-family: Paleocene;
     font-style: normal;
     font-weight: 400;
-    src: url(../assets/fonts/paleocene-regular-webfont.woff2) format('woff2'),
-        url(../assets/fonts/paleocene-regular-webfont.woff) format('woff');
+    src: url(/assets/fonts/paleocene-regular-webfont.woff2) format('woff2'),
+        url(/assets/fonts/paleocene-regular-webfont.woff) format('woff');
 }
 @font-face{
     font-family: Paleocene;
     font-style: italic;
     font-weight: 400;
-    src: url(../assets/fonts/paleocene-italic-webfont.woff2) format('woff2'),
-        url(../assets/fonts/paleocene-italic-webfont.woff) format('woff');
+    src: url(/assets/fonts/paleocene-italic-webfont.woff2) format('woff2'),
+        url(/assets/fonts/paleocene-italic-webfont.woff) format('woff');
+}
+@keyframes fade-out-in {
+    0% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 1; }
+}
+:lang(en) {
+    font-family: Paleocene;
+}
+:lang(ko) {
+    font-family: Euljiro-Che;
+    font-weight: normal;
 }
 .print, .screen, .speech {
     display: none;
+}
+h1 {
+    font-size: 64pt;
 }
 html {
     background-color: black;
@@ -23,7 +45,6 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    visibility: hidden;
 }
 a {
     color: white;
@@ -43,7 +64,6 @@ main {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
-    font-family: Paleocene;
     font-size: 13pt;
     justify-content: center;
     letter-spacing: 0.07em;
@@ -75,6 +95,11 @@ header, section {
 }
 header {
     padding: 0.375in;
+}
+.indicated {
+    animation-duration: 0.67s;
+    animation-name: fade-out-in;
+    animation-timing-function: ease-in-out;
 }
 .text {
     background-color: #cfdd28;
@@ -205,6 +230,10 @@ input[type=submit]:hover {
 .cta span + img {
     margin-left: 1em;
 }
+.footnote {
+    font-size: smaller;
+    opacity: 0.8;
+}
 .rating {
     font-size: smaller;
 }
@@ -223,6 +252,9 @@ footer, footer > a {
 footer > a {
     align-items: baseline;
     font-style: normal;
+}
+ul {
+    list-style: none;
 }
 @media screen {
     .screen {

@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 # Added
+- Korean pages.
 
 # Changed
 - Thicker "Keesey Comics" logo.
 - Made links to Gumroad products direct (not anchor links).
+- Gumroad link for *Paleocene #2*.
+- English-language consistently coded as `en`, not `en-US`.
+- Page for *Paleocene #2* redesigned.
 
 # Deprecated
 
@@ -19,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Render lag for comic outlines.
 
 # Removed
+- "Presents..." after "Keesey Comics" except on Issue Pages.
 
 # Security
 

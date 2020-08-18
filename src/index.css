@@ -12,6 +12,11 @@
     src: url(assets/fonts/paleocene-italic-webfont.woff2) format('woff2'),
         url(assets/fonts/paleocene-italic-webfont.woff) format('woff');
 }
+@keyframes fade-out-in {
+    0% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 1; }
+} 
 .print, .screen, .speech {
     display: none;
 }
@@ -89,6 +94,11 @@ section#pleistocene > a {
     height: auto;
     margin: 0 0.5em;
     width: 240px;
+}
+.indicated {
+    animation-duration: 0.67s;
+    animation-name: fade-out-in;
+    animation-timing-function: ease-in-out;
 }
 #patreon > a {
     align-items: flex-end;

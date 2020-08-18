@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" prefix="og: http://ogp.me/ns#
+<html lang="en" prefix="og: http://ogp.me/ns#
 book: http://ogp.me/ns/book#">
 
 <head>
@@ -38,15 +38,20 @@ book: http://ogp.me/ns/book#">
     <meta property="book:tag" content="prehistory">
     <meta property="book:tag" content="paleontology">
     <meta property="book:tag" content="primates">
+    <link rel="alternate" href="http://keesey-comics.com/paleocene/issues/01/ko/" hreflang="ko">
     <link rel="author" href="//tmkeesey.net">
     <link rel="canonical" href="http://keesey-comics.com/paleocene/issues/01/">
-    <link rel="icon" href="../../assets/favicon.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/paleocene/assets/favicon.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
     <style>
-        @import url("../../index.css");
-        @import url("../index.css");
-    </style>
-    <script src="../../../assets/scripts/comic-font.js"></script>
-    <script src="./../../assets/scripts/comic-outlines.js"></script>
+        @import url("/paleocene/index.css");
+        @import url("/paleocene/issues/index.css");
+        body {
+            visibility: hidden;
+        }
+     </style>
+    <script src="/assets/scripts/comic-font.js"></script>
+    <script src="/assets/scripts/indicate-id.js"></script>
+    <script src="/paleocene/assets/scripts/comic-outlines.js"></script>
 </head>
 
 <body>
@@ -56,27 +61,43 @@ book: http://ogp.me/ns/book#">
     </aside>
     <main>
         <header id="publisher">
-            <a href="../../..">
+            <a href="/">
                 <h2 class="speech">Keesey Comics</h2>
-                <img src="../../../assets/logos/white/keesey-comics.svg" alt="Keesey Comics" class="print screen">
+                <img src="/assets/logos/white/keesey-comics.svg" alt="Keesey Comics" class="print screen">
             </a>
             <span>presents...</span>
         </header>
         <h1 class="speech">Paleocene issue #1, by <a href="//tmkeesey.net">Mike Keesey</a>.</h1>
         <img src="./assets/pages/front_cover.png" height="734" alt="Paleocene #1 — Mike Keesey"
             class="cell cover print screen">
-        <section id="availability" class="featured-link cell">
+        <section id="availability" class="featured-link">
             <span>Available on</span>
             <a href="//www.comixology.com/Paleocene-1/digital-comic/812491" role="button">
                 <span class="speech">comiXology</span>
-                <img src="../../../assets/logos/white/comixology.svg" alt="comiXology" class="print screen">
+                <img src="/assets/logos/white/comixology.svg" alt="comiXology" class="print screen">
             </a>
             <span>and</span>
             <a href="//gum.co/VJVre" role="button">
                 <span class="speech">Gumroad.</span>
-                <img src="../../../assets/logos/white/gumroad.svg" alt="Gumroad" class="print screen">
+                <img src="../../../assets/logos/white/gumroad.svg" alt="Gumroad" class="print screen" style="margin-top: -1.5em">
             </a>
+        </section>
+        <section class="cell">
             <span class="rating">age recommendation: nine and up</span>
+            <ul>
+                <lh>Translations:</lh>
+                <li>
+                    <a href="./ko/" lang="ko" hreflang="ko">한국어 <span lang="en">-- Korean</span></a>
+                </li>
+                <li>
+                    <a href="//fourcatspress.com/catalog/paleontology/paleocene/" lang="it">italiano <span lang="en">-- italian</span>*</a>
+                </li>
+                <li>
+                    <a href="//www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno" lang="es">Español <span lang="en">-- Spanish</span>**</a>
+                </li>
+            </ul>
+            <aside class="footnote">* Most of the art differs.</aside>
+            <aside class="footnote">** First eight pages only.</aside>
         </section>
         <section class="cell text text-long">
             <p>Mamma loves telling her babies about the "dragons" that used to roam the Earth.</p>

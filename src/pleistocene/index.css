@@ -12,6 +12,11 @@
     src: url(../assets/fonts/paleocene-italic-webfont.woff2) format('woff2'),
         url(../assets/fonts/paleocene-italic-webfont.woff) format('woff');
 }
+@keyframes fade-out-in {
+    0% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 1; }
+} 
 .print, .screen, .speech {
     display: none;
 }
@@ -91,14 +96,6 @@ h3 {
     max-width: 512px;
     width: calc(100vw - 0.5in);
 }
-.featured-link > a {
-    margin: 1em;
-    margin-right: 2em;
-}
-.featured-link img {
-    height: auto;
-    width: 240px;
-}
 .cta {
     width: 100%;
 }
@@ -107,6 +104,19 @@ h3 {
     border-radius: 1em;
     color: white;
     padding: 2em;
+}
+.featured-link > a {
+    margin: 1em;
+    margin-right: 2em;
+}
+.featured-link img {
+    height: auto;
+    width: 240px;
+}
+.indicated {
+    animation-duration: 0.67s;
+    animation-name: fade-out-in;
+    animation-timing-function: ease-in-out;
 }
 .rating {
     font-size: 10pt;

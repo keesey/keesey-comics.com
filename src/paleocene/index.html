@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
     <title>Paleocene</title>
@@ -34,13 +34,18 @@
     <meta property="og:title" content="Paleocene">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://keesey-comics.com/paleocene/">
+    <link rel="alternate" href="http://keesey-comics/com/paleocene/ko/" hreflang="ko">
     <link rel="author" href="//tmkeesey.net">
     <link rel="canonical" href="http://keesey-comics.com/paleocene/">
     <link rel="icon" href="./assets/favicon.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
     <style>
         @import url("./index.css");
+        body {
+            visibility: hidden;
+        }
     </style>
-    <script src="../assets/scripts/comic-font.js"></script>
+    <script src="/assets/scripts/comic-font.js"></script>
+    <script src="/assets/scripts/indicate-id.js"></script>
     <script src="./assets/scripts/comic-outlines.js"></script>
 </head>
 
@@ -55,7 +60,6 @@
                 <h2 class="speech">Keesey Comics</h2>
                 <img src="../assets/logos/white/keesey-comics.svg" alt="Keesey Comics" class="print screen">
             </a>
-            <span>presents...</span>
         </header>
         <header id="series" class="cell">
             <h1 class="speech">Paleocene</h1>
@@ -72,8 +76,24 @@
             <span>and</span>
             <a href="//gumroad.com/keesey" role="button">
                 <span class="speech">Gumroad.</span>
-                <img src="../assets/logos/white/gumroad.svg" alt="Gumroad" class="print screen">
+                <img src="../assets/logos/white/gumroad.svg" alt="Gumroad" class="print screen" style="margin-top: -1.5em">
             </a>
+        </section>
+        <section class="cell">
+            <ul>
+                <lh>Translations:</lh>
+                <li>
+                    <a href="./ko/" lang="ko" hreflang="ko">한국어 <span lang="en">-- Korean</span></a>
+                </li>
+                <li>
+                    <a href="//fourcatspress.com/catalog/paleontology/paleocene/" lang="it">italiano <span lang="en">-- italian</span>*</a>
+                </li>
+                <li>
+                    <a href="//www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno" lang="es">Español <span lang="en">-- Spanish</span>**</a>
+                </li>
+            </ul>
+            <aside class="footnote">* Most of the art differs.</aside>
+            <aside class="footnote">** First eight pages only.</aside>
         </section>
         <section class="text text-long cell">
             <p>
@@ -118,9 +138,8 @@
             <a href="./issues/02/" role="button">
                 <div class="caption">
                     Issue #2
-                    <span class="speech">(coming soon)</span>
                 </div>
-                <img src="./issues/02/assets/pages/01.png" height="320" alt="Paleocene #2 (coming soon)" />
+                <img src="./issues/02/assets/pages/front_cover.png" height="320" alt="Paleocene #2" />
             </a>
         </section>
         <section id="patreon" class="featured-link">

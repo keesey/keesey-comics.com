@@ -2,7 +2,7 @@
 module.exports = {
     dest: "./dist",
     src: {
-        assets: "./src/**/*.{ico,woff,woff2}",
+        assets: "./src/**/*.{ico,otf,ttf,woff,woff2}",
         images: "./src/**/*.{png,svg}",
         pages: "./src/**/*.html",
         scripts: "./src/**/*.js",
