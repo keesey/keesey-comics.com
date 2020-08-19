@@ -18,6 +18,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.3.1] - 2020-08-19
+
+# Changed
+- Korean copy updates.
+- English copy tweaks.
+
+# Fixed
+- Running comic outline generator on all frames.
+
 ## [1.3.0] - 2020-08-17
 
 # Added

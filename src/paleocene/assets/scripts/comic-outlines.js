@@ -64,10 +64,8 @@
     }
     const refresh = () => {
         draw();
-        requestAnimationFrame(draw);
+        requestAnimationFrame(refresh);
     };
-    window.addEventListener("load", draw);
-    window.addEventListener("resize", draw, { useCapture: true });
-    window.addEventListener("scroll", refresh, { useCapture: true });
+    window.addEventListener("load", refresh);
 })();
 

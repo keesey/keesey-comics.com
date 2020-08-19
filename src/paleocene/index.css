@@ -35,7 +35,8 @@
     display: none;
 }
 h1 {
-    font-size: 64pt;
+    font-size: 48pt;
+    white-space: nowrap;
 }
 html {
     background-color: black;
@@ -175,10 +176,12 @@ input[type=submit]:hover {
     background-color: #ffff00;
     border: 2px solid black;
     color: black;
-    font-family: Roboto, sans-serif;
-    font-weight: bold;
     text-transform: uppercase;
     padding: 0.06125in;
+}
+.caption:lang(en) {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
 }
 .featured-link, .featured-link > a {
     align-items: center;

@@ -91,8 +91,10 @@
         }
         document.body.style.visibility = "visible";
     }
-    window.addEventListener("load", draw, { useCapture: true });
-    window.addEventListener("resize", draw, { useCapture: true });
-    window.addEventListener("scroll", draw, { useCapture: true });
+    const refresh = () => {
+        draw();
+        requestAnimationFrame(refresh);
+    };
+    window.addEventListener("load", refresh);
 })();
 
