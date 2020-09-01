@@ -96,6 +96,17 @@ h3 {
     max-width: 512px;
     width: calc(100vw - 0.5in);
 }
+#social {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+}
+#social > * {
+    margin: 0 0.5em;
+}
 .cta {
     width: 100%;
 }

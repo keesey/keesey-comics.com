@@ -82,6 +82,17 @@ section.series > a > p {
 section#pleistocene > a {
     justify-content: flex-end;
 }
+section#social {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+}
+section#social > * {
+    margin: 0 0.5em;
+}
 .featured-links {
     align-content: center;
     align-items: center;

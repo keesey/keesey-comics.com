@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.3.3] - 2020-09-01
+
+# Added
+- Links to Instagram and social media links for Home Page and *Pleistocene* Page.
+
 ## [1.3.2] - 2020-08-19
 
 # Fixed
