@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.3.2] - 2020-08-19
+
+# Fixed
+- Metadata for *Paleocene #2* indicated *Paleocene #1*.
+
 ## [1.3.1] - 2020-08-19
 
 # Changed
