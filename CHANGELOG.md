@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Security
 
+## [1.3.4] - 2020-09-29
+
+# Changed
+- *Paleocene* issues link to Gumroad store, not specific product page.
+
 ## [1.3.3] - 2020-09-01
 
 # Added
