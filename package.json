@@ -33,6 +33,9 @@
   "name": "keesey-comics.com",
   "private": true,
   "repository": "https://github.com/keesey/keesey-comics.com",
+  "resolutions": {
+    "graceful-fs": "4.2.2"
+  },
   "scripts": {
     "build": "gulp",
     "deploy": "gulp && gulp deploy",
