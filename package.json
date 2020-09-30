@@ -19,12 +19,12 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^6.1.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-uglify-es": "^1.0.4",
+    "gulp-uglify-es": "^2.0.0",
     "s3": "^4.4.0",
     "serve": "^11.1.0"
   },
@@ -34,7 +34,7 @@
   "private": true,
   "repository": "https://github.com/keesey/keesey-comics.com",
   "resolutions": {
-    "graceful-fs": "4.2.2"
+    "graceful-fs": "4.2.4"
   },
   "scripts": {
     "build": "gulp",
