@@ -11,6 +11,9 @@ img.page, img.panel {
     height: auto;
     max-width: calc(100vw - 0.5in);
 }
+.gumroad-link {
+    margin-top: -1.5em;
+}
 .text-long {
     max-width: none;
     width: 100%;
