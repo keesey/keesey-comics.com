@@ -21,16 +21,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.0] - 2021-05-13
 
 # Added
-
 - Page for *Paleocene #3*.
 - LD-JSON Schema for all pages.
 
 # Changed
-
 - Upgraded `caniuse-lite`.
 
 # Security
-
 - Dev dependency upgrades.
 
 ## [1.3.5] - 2020-10-07
