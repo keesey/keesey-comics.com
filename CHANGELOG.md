@@ -29,6 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Upgraded `caniuse-lite`.
 
+# Security
+
+- Dev dependency upgrades.
+
 ## [1.3.5] - 2020-10-07
 
 # Added
