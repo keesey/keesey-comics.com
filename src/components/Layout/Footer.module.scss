@@ -1,0 +1,21 @@
+@use "src/styles/mixins.scss";
+.footer {
+    @include mixins.black;
+    align-items: center;
+    column-gap: 1rem;
+    display: flex;
+    font-weight: 100;
+    justify-content: center;
+    height: 0.5in;
+    padding: 0.5rem;
+    text-align: center;
+    &.theme-day {
+        @include mixins.paynes;
+    }
+    &.theme-kc {
+        @include mixins.brown;
+    }
+    &.theme-night {
+        @include mixins.green;
+    }
+}

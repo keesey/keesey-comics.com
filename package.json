@@ -15,18 +15,20 @@
     "android >= 4.4",
     "bb >= 10"
   ],
+  "dependencies": {
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.41.1"
+  },
   "description": "Website for Keesey Comics",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "cssnano": "^4.1.10",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-uglify-es": "^2.0.0",
+    "@types/react": "17.0.21",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
     "s3": "^4.4.0",
-    "serve": "^11.1.0"
+    "schema-dts": "^1.0.0",
+    "typescript": "4.4.3"
   },
   "license": "UNLICENSED",
   "main": "dist/index.html",
@@ -34,15 +36,12 @@
   "private": true,
   "repository": "https://github.com/keesey/keesey-comics.com",
   "resolutions": {
-    "graceful-fs": "4.2.4"
+    "@babel/core": "^7.0.0-0"
   },
   "scripts": {
-    "build": "gulp",
-    "deploy": "gulp && gulp deploy",
-    "postinstall": "gulp",
-    "serve": "gulp watch & serve dist --no-compression --listen 3000",
-    "watch": "gulp watch"
+    "build": "next build && next export",
+    "start": "next dev",
+    "lint": "next lint"
   },
-  "version": "1.4.0",
-  "dependencies": {}
+  "version": "2.0.0-alpha"
 }

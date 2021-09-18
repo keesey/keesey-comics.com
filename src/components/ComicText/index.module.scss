@@ -1,0 +1,13 @@
+.comixified {
+    display: none;
+    @media print, screen {
+        display: initial;
+        font-family: Paleocene;
+        text-transform: unset;
+    }
+}
+.regular {
+    @media print, screen {
+        display: none;
+    }
+}

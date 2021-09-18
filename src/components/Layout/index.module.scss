@@ -1,0 +1,15 @@
+@use "src/styles/mixins.scss";
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main {
+    flex-grow: 1;
+    &.theme-kc {
+        @include mixins.cream;
+    }
+    &.theme-night {
+        @include mixins.black;
+    }
+}

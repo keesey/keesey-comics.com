@@ -1,0 +1,51 @@
+@mixin black {
+    background-color: #000;
+    color: #fff;
+}
+@mixin brown {
+    background-color: #000;
+    box-shadow: inset 0 0 1rem #330000;
+    color: #fff;
+    @media screen {
+        background-color: #660000;
+        color: #ffffcc;
+    }
+    @media print {
+        background-color: #ccc;
+        border-color: #000;
+        border-style: solid;
+        border-width: 2pt;
+    }
+}
+@mixin cream {
+    background-color: #fff;
+    box-shadow: inset 0 0 1rem #cccccc;
+    color: #000;
+    @media screen {
+        background-color: #ffffcc;
+        color: #660000;
+    }
+}
+@mixin green {
+    @media screen {
+        background-color: #8d0;
+        color: #000;
+    }
+}
+@mixin paynes {
+    @media screen {
+        background-color: #768b90;
+        color: #fff;
+    }
+    @media print {
+        background-color: #909090;
+        border-color: #000;
+        border-style: solid;
+        border-width: 2pt;
+        color: #000;
+    }
+}
+@mixin page {
+    margin: 0 auto;
+    max-width: 1280px;
+}

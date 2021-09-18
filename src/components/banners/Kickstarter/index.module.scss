@@ -1,0 +1,11 @@
+.container {
+    overflow-x: hidden;
+}
+.banner {
+    background-image: url("/banners/kickstarter/bg.png");
+    background-repeat: repeat-x;
+    background-size: 1px 100%;
+    display: block;
+    min-width: 540px;
+    text-align: center;
+}
