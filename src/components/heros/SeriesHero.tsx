@@ -39,11 +39,9 @@ const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) =>
                 src={`/logos/${logoColor}/${id}.${LOGO_FORMATS[id]}`}
             />
             <div className={styles.store} key="store">
-                <Link href="/store">
-                    <a className={styles.cta} role="button">
-                        <ComicText>Buy print issues</ComicText>
-                    </a>
-                </Link>
+                <a href="https://gumroad.com/keesey" className={styles.cta} role="button">
+                    <ComicText>Buy print issues</ComicText>
+                </a>
             </div>
             {storeLinks?.length > 0 && (
                 <div className={styles.externalStores} key="external-stores">

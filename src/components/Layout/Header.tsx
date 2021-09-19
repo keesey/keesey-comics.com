@@ -21,9 +21,7 @@ const Header: VFC = () => {
                     </a>
                 </Link>
                 <section className={styles.buttons}>
-                    <Link href="/store">
-                        <a>Store</a>
-                    </Link>
+                    <a href="https://gumroad.com/keesey">Store</a>
                     <Link href="/mail">
                         <a>Mailing List</a>
                     </Link>
