@@ -3,10 +3,13 @@
     font-size: smaller;
 }
 .cta {
-    @include mixins.green;
+    @include mixins.black;
     border-radius: 1rem;
     font-size: larger;
     padding: 0.75rem;
+    .theme-night & {
+        @include mixins.green;
+    }
 }
 .hero {
     display: flex;

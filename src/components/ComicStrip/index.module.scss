@@ -6,10 +6,12 @@
     justify-content: center;
     margin: 1rem 2pt;
     text-align: center;
+    width: calc(100vw + 5pt);
     &.theme-bw {
         background-color: #000;
-        gap: 2px;
-        justify-content: stretch;
-        padding: 2px 0;
+        color: #000;
+        gap: 0;
+        margin: 1rem -2.5pt;
+        padding: 2.5pt 0;
     }
 }

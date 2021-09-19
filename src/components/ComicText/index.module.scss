@@ -1,10 +1,13 @@
-.comixified {
+.comics {
     display: none;
     @media print, screen {
         display: initial;
         font-family: Paleocene;
         text-transform: unset;
     }
+}
+.italic {
+    font-style: italic;
 }
 .regular {
     @media print, screen {
