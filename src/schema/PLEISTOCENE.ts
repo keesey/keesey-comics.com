@@ -1,6 +1,4 @@
 import type { ComicStory } from "schema-dts"
-import KEESEY_COMICS from "./KEESEY_COMICS"
-import MIKE_KEESEY from "./MIKE_KEESEY"
 const PLEISTOCENE: ComicStory = {
     "@id": "http://keesey-comics.com/pleistocene",
     "@type": "ComicStory",

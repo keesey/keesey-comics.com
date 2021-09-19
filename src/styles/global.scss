@@ -2,6 +2,7 @@
     font-family: Paleocene;
     font-style: normal;
     font-weight: 400;
+
     src: url(/fonts/paleocene-regular-webfont.woff2) format('woff2'),
         url(/fonts/paleocene-regular-webfont.woff) format('woff');
 }
@@ -14,6 +15,9 @@
 }
 * {
     box-sizing: border-box;
+    &[role=button] {
+        cursor: pointer;
+    }
 }
 a, abbr {
     color: inherit;
@@ -34,6 +38,10 @@ html {
 }
 hr {
     border: 1px solid;
+}
+img.intrinsic {
+    height: auto;
+    max-width: 100%;
 }
 .print, .screen, .speech {
     display: none;

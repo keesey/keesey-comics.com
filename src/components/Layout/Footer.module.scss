@@ -11,11 +11,13 @@
     text-align: center;
     &.theme-day {
         @include mixins.paynes;
+        border: 2pt solid #000;
     }
     &.theme-kc {
         @include mixins.brown;
     }
     &.theme-night {
-        @include mixins.green;
+        @include mixins.purple;
+        border: 2pt solid #000;
     }
 }

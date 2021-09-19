@@ -1,0 +1,26 @@
+@use "src/styles/mixins";
+.cell {
+    border-radius: 2rem;
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+    &.theme-bw {
+        @include mixins.black;
+        border-radius: unset;
+    }
+    &.theme-day {
+        border-radius: unset;
+    }
+    &.theme-kc {
+        @include mixins.brown;
+        border-radius: unset;
+    }
+    &.theme-night {
+        @include mixins.purple;
+    }
+}
+.image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}

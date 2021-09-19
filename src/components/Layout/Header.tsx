@@ -1,19 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { VFC } from "react"
-import Image from "next/image"
 import Link from "next/link"
-import styles from "./Header.module.scss"
+import { VFC } from "react"
+import { ThemeColor } from "~/themes/ThemeColor"
+import useBackgroundColor from "~/themes/useBackgroundColor"
 import useTheme from "~/themes/useTheme"
-import { Theme } from "~/themes/Theme"
-const LOGO_COLORS: Readonly<Record<Theme, "black" | "brown" | "cream" | "white">> = {
-    bw: "white",
-    day: "white",
-    kc: "cream",
-    night: "black",
-}
+import styles from "./Header.module.scss"
 const Header: VFC = () => {
     const theme = useTheme()
-    const logoColor = LOGO_COLORS[theme];
+    const bgColor = useBackgroundColor()
+    const logoColor: ThemeColor = theme === "night" ? "cream" : bgColor;
     return (
         <header className={`${styles.header} ${styles[`theme-${theme}`]}`}>
             <nav className={styles.nav}>
@@ -43,13 +38,13 @@ const Header: VFC = () => {
                         <img src={`/logos/${logoColor}/instagram.svg`} width={21} height={21} alt="Instagram" />
                     </a>
                     <a href="//twitter.com/paleocenecomic" role="button">
-                        <Image src={`/logos/${logoColor}/twitter.svg`} width={28} height={28} alt="Twitter" />
+                        <img src={`/logos/${logoColor}/twitter.svg`} width={28} height={28} alt="Twitter" />
                     </a>
                     <a href="//facebook.com/paleocene" role="button">
-                        <Image src={`/logos/${logoColor}/facebook.svg`} width={21} height={21} alt="Facebook" />
+                        <img src={`/logos/${logoColor}/facebook.svg`} width={21} height={21} alt="Facebook" />
                     </a>
                     <a href="//patreon.com/tmkeesey" role="button">
-                        <Image src={`/logos/${logoColor}/patreon.svg`} width={59} height={21} alt="Patreon" />
+                        <img src={`/logos/${logoColor}/patreon.svg`} width={79} height={28} alt="Patreon" />
                     </a>
                 </section>
             </nav>

@@ -29,11 +29,10 @@ const ComicText: FC<Props> = ({ children }) => {
     if (!children) {
         return null;
     }
-    const text = comixify(children);
     return (
         <>
-            <span className={styles.regular}>{text}</span>
-            <span className={styles.comixified}>{text}</span>
+            <span className={styles.regular}>{children}</span>
+            <span className={styles.comixified}>{comixify(children)}</span>
         </>
     );
 }

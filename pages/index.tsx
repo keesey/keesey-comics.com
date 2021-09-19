@@ -1,7 +1,7 @@
 import type { NextPage } from "next"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
-import SeriesPromo from "~/components/SeriesPromo"
+import SeriesPromo from "~/components/promos/SeriesPromo"
 import KEESEY_COMICS from "~/schema/KEESEY_COMICS"
 const Home: NextPage = () => {
   return (

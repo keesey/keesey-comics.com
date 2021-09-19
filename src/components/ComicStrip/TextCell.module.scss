@@ -1,0 +1,24 @@
+@use "src/styles/mixins";
+.cell {
+    border-radius: 2rem;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 8rem;
+    max-width: 20rem;
+    padding: .25in;
+    text-align: center;
+    &.theme-bw {
+        @include mixins.black;
+    }
+    &.theme-day {
+        @include mixins.paynes;
+    }
+    &.theme-kc {
+        @include mixins.cream;
+    }
+    &.theme-night {
+        @include mixins.green;
+    }
+}

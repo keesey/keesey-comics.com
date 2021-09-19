@@ -6,6 +6,7 @@ import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import Schema from "./Schema"
 export interface Props {
     author?: Person
+    favIconType?: "paleocene" | "pleistocene";
     language?: string
     noIndex?: true
     socialImageAlt?: string
@@ -31,7 +32,7 @@ const getTextValue = <T extends any>(value: T | string | readonly T[] | undefine
     return ""
 }
 const SITE_NAME = getTextValue(KEESEY_COMICS, "name");
-const Head: FC<Props> = ({ author, children, language, noIndex, socialImageAlt, subject }) => {
+const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, socialImageAlt, subject }) => {
     const authorName = getTextValue(author, "name")
     const description = getTextValue(subject, "description")
     const title = getTextValue(subject, "name")
@@ -68,8 +69,11 @@ const Head: FC<Props> = ({ author, children, language, noIndex, socialImageAlt, 
             <meta key="meta:property:og:url" property="og:url" content={url} />
             <link key="link:author" rel="author" href="//tmkeesey.net" />
             <link key="link:canonical" rel="canonical" href={url} />
-            <link key="link:icon" rel="icon" href={`${url}/favicon.ico`} sizes="32x32 48x48" type="image/vnd.microsoft.icon" />
-            <Schema key="script:schema" thing={subject} />
+            <link key="link:icon" rel="icon" href={`/favicon${favIconType ? `-${favIconType}` : ""}.ico`} sizes="32x32 48x48" type="image/vnd.microsoft.icon" />
+            <link key="link:preload:font:regular" rel="preload" href="/fonts/paleocene-regular-webfont.woff2" as="font" />
+            <link key="link:preload:font:italic" rel="preload" href="/fonts/paleocene-italic-webfont.woff2" as="font" />
+            <Schema key="script:schema:subject" thing={subject} />
+            {author && <Schema key="script:schema:author" thing={author} />}
             {children}
         </NextHead>
     )

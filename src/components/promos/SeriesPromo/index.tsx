@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image"
 import Link from "next/link"
 import { FC } from "react"
-import ComicText from "../ComicText"
+import ComicText from "~/components/ComicText"
 import styles from "./index.module.scss"
 export interface Props {
     children: string;
@@ -11,6 +10,10 @@ export interface Props {
 const LOGO_FORMATS: Readonly<Record<Props["id"], "png" | "svg">> = {
     paleocene: "svg",
     pleistocene: "png",
+}
+const TITLES: Readonly<Record<Props["id"], string>> = {
+    paleocene: "Paleocene",
+    pleistocene: "Pleistocene",
 }
 const SeriesPromo: FC<Props> = ({ children, id }) => (
     <Link href={`/${id}`}>
@@ -28,10 +31,9 @@ const SeriesPromo: FC<Props> = ({ children, id }) => (
                     />
                 </div>
                 <div className={styles.image}>
-                    <Image
-                        alt=""
+                    <img
+                        alt={TITLES[id]}
                         height={180}
-                        layout="responsive"
                         src={`/promos/${id}.png`}
                         width={600}
                     />
