@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { Fragment, VFC } from "react"
 import useForegroundColor from "~/themes/useForegroundColor"
+import useTheme from "~/themes/useTheme"
 import ComicText from "../ComicText"
 import styles from "./SeriesHero.module.scss"
 export type ExternalStoreLink = Readonly<{
@@ -27,9 +28,10 @@ const EXTERNAL_STORE_LOGO_HEIGHT: Readonly<Record<ExternalStoreLink["type"], num
     comiXology: 20
 }
 const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) => {
+    const theme = useTheme()
     const logoColor = useForegroundColor()
     return (
-        <section className={styles.hero}>
+        <section className={`${styles.hero} ${styles[`theme-${theme}`]}`}>
             <img
                 alt={title}
                 className={styles.logo}
@@ -39,7 +41,7 @@ const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) =>
             <div className={styles.store} key="store">
                 <Link href="/store">
                     <a className={styles.cta} role="button">
-                        <ComicText>Buy Issues</ComicText>
+                        <ComicText>Buy print issues</ComicText>
                     </a>
                 </Link>
             </div>

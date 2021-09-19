@@ -1,23 +1,27 @@
 @use "src/styles/mixins.scss";
+@use "./nav.scss";
 .footer {
     @include mixins.black;
-    align-items: center;
-    column-gap: 1rem;
-    display: flex;
-    font-weight: 100;
-    justify-content: center;
-    height: 0.5in;
-    padding: 0.5rem;
-    text-align: center;
     &.theme-day {
         @include mixins.paynes;
         border: 2pt solid #000;
     }
-    &.theme-kc {
+    &.theme-kc  {
         @include mixins.brown;
     }
     &.theme-night {
         @include mixins.purple;
         border: 2pt solid #000;
     }
+}
+.nav {
+    @include mixins.page;
+    @include nav.row;
+    height: 0.5in;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.promos {
+    @include nav.row;
+    align-items: flex-start;
 }

@@ -10,7 +10,7 @@ const Paleocene: NextPage = () => {
   return (
     <>
       <Head favIconType="paleocene" subject={PALEOCENE} />
-      <Layout theme="night">
+      <Layout footerPromos={["pleistocene", "phylopic"]} theme="night">
         <SeriesHero
           ageRecommendation="9+"
           id="paleocene"

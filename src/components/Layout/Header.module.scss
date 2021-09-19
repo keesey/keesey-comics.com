@@ -1,14 +1,7 @@
 @use "src/styles/mixins.scss";
-@mixin row {
-    align-items: center;
-    column-gap: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 1rem;
-}
+@use "./nav.scss";
 .buttons {
-    @include row;
+    @include nav.row;
     flex-grow: 1;
 }
 .header {
@@ -33,9 +26,9 @@
 }
 .nav {
     @include mixins.page;
-    @include row;
+    @include nav.row;
     text-transform: uppercase;
 }
 .social {
-    @include row;
+    @include nav.row;
 }

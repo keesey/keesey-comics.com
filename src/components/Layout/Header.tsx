@@ -1,14 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link"
 import { VFC } from "react"
-import { ThemeColor } from "~/themes/ThemeColor"
-import useBackgroundColor from "~/themes/useBackgroundColor"
 import useTheme from "~/themes/useTheme"
 import styles from "./Header.module.scss"
+import useLogoColor from "./useLogoColor"
 const Header: VFC = () => {
     const theme = useTheme()
-    const bgColor = useBackgroundColor()
-    const logoColor: ThemeColor = theme === "night" ? "cream" : bgColor;
+    const logoColor = useLogoColor()
     return (
         <header className={`${styles.header} ${styles[`theme-${theme}`]}`}>
             <nav className={styles.nav}>
