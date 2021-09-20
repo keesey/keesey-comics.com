@@ -14,13 +14,15 @@
         border-radius: unset;
     }
     &.theme-day {
-        @include mixins.paynes;
+        background-color: #fff7e5;
+        border: 2.5pt solid #ffcb05;
+        color: #000;
     }
     &.theme-kc {
         @include mixins.cream;
     }
     &.theme-night {
-        @include mixins.green;
+        @include mixins.paynes;
     }
     &.complex {
         max-width: 20rem;

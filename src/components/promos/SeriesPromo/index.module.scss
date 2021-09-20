@@ -2,6 +2,12 @@
 .desc {
     margin-bottom: 1em;
 }
+.image {
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+}
 .promo {
     border-radius: 1rem;
     display: flex;

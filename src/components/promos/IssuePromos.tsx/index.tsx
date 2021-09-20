@@ -14,8 +14,8 @@ const IssuePromos: FC<Props> = ({ children, id, first, last }) => {
     const className = useThemedClassName(styles, "promos");
     return (
         <section className={className}>
-            {children && <p><ComicText>{children}</ComicText></p>}
-            <nav>
+            {children && <p key="text"><ComicText>{children}</ComicText></p>}
+            <nav key="nav">
                 {
                     new Array(last)
                         .fill(0)

@@ -12,9 +12,6 @@
         border-radius: unset;
         display: flex;
     }
-    &.theme-day {
-        border-radius: unset;
-    }
     &.theme-kc {
         @include mixins.brown;
         border-radius: unset;

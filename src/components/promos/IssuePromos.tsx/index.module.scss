@@ -16,7 +16,8 @@
         @include mixins.brown;
     }
     &.theme-night {
-        @include mixins.paynes;
+        background-color: #a3cad5;
+        color: #000;
     }
     > p {
         margin: 0;

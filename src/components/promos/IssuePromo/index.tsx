@@ -13,7 +13,7 @@ const TITLES: Readonly<Record<Props["id"], string>> = {
 const IssuePromo: VFC<Props> = ({ id, number }) => {
     const paddedNumber = number < 10 ? `0${number}` : String(number);
     return (
-        <Link href={`/${id}/${paddedNumber}`}>
+        <Link href={`/${id}/issues/${paddedNumber}`}>
             <a className={styles.promo}>
                 <img
                     alt={`${TITLES[id]} #${number}`}

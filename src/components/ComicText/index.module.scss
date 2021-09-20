@@ -5,6 +5,9 @@
         font-family: Paleocene;
         letter-spacing: 0.25pt;
         text-transform: unset;
+        &.theme-day {
+            font-family: Atland-BB;
+        }
         [lang=ko] &, &[lang=ko] {
             display: none;
         }

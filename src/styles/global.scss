@@ -15,6 +15,30 @@
         url(/fonts/paleocene-italic-webfont.woff) format('woff');
 }
 @font-face {
+    font-display: block;
+    font-family: Atland-BB;
+    font-style: normal;
+    font-weight: 400;
+    src: url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.eot");
+    src: url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.svg#AtlandBB") format("svg");
+}
+@font-face {
+    font-display: block;
+    font-family: Atland-BB;
+    font-style: italic;
+    font-weight: 400;
+    src: url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.eot");
+    src: url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.svg#AtlandBB-Italic") format("svg");
+}
+@font-face {
     font-display: swap;
     font-family: Euljiro-Che;
     font-style: normal;

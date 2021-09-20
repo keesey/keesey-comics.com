@@ -15,7 +15,7 @@ const Promo: VFC<{ color: ThemeColor, type: PromoType }> = ({ color, type }) => 
             return (
                 <Link href="/paleocene">
                     <a>
-                        <Logo color={color} type="paleocene" height={28} width={77} />
+                        <Logo color={color} type="paleocene" height={32} width={88} />
                     </a>
                 </Link>
             )
@@ -24,7 +24,7 @@ const Promo: VFC<{ color: ThemeColor, type: PromoType }> = ({ color, type }) => 
             return (
                 <Link href="/pleistocene">
                     <a>
-                        <Logo color={color} type="pleistocene" height={28} width={88} />
+                        <Logo color={color} type="pleistocene" height={32} width={101} />
                     </a>
                 </Link>
             )

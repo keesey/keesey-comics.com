@@ -11,14 +11,12 @@
     padding: 0.5rem 1rem;
     &.theme-day {
         @include mixins.paynes;
-        border: 2pt solid #000;
     }
     &.theme-kc {
         @include mixins.brown;
     }
     &.theme-night {
         @include mixins.purple;
-        border: 2pt solid #000;
     }
 }
 .logo {

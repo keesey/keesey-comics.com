@@ -9,12 +9,15 @@
     text-align: center;
     width: fit-content;
     &.theme-day {
-        @include mixins.paynes;
+        background-color: #fff1e6;
+        border: 2.5pt solid #f79552;
+        color: #000;
     }
     &.theme-kc {
         @include mixins.cream;
     }
     &.theme-night {
-        @include mixins.green;
+        background-color: #ff0;
+        color: #000;
     }
 }

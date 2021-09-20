@@ -3,7 +3,7 @@ const getThemedClassName = (
     theme: Theme,
     styles: Readonly<Record<string, string>>,
     ...classNames: readonly string[]
-) => [styles[`theme-${theme}`], ...classNames.map((className) => styles[className])]
+) => [styles[`theme-${theme}`], ...classNames.filter(Boolean).map((className) => styles[className])]
     .filter(Boolean)
     .join(" ")
 export default getThemedClassName
