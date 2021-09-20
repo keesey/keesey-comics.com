@@ -1,0 +1,20 @@
+@use "src/styles/mixins.scss";
+.cta {
+    @include mixins.black;
+    border-radius: 1rem;
+    display: block;
+    font-size: larger;
+    padding: 0.75rem;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    &.theme-day {
+        @include mixins.paynes;
+    }
+    &.theme-kc {
+        @include mixins.cream;
+    }
+    &.theme-night {
+        @include mixins.green;
+    }
+}

@@ -2,7 +2,8 @@
 import Link from "next/link"
 import { VFC } from "react"
 import { ThemeColor } from "~/themes/ThemeColor"
-import useTheme from "~/themes/useTheme"
+import useThemedClassName from "~/themes/useThemedClassName"
+import Logo from "../Logo"
 import styles from "./Footer.module.scss"
 import useLogoColor from "./useLogoColor"
 type PromoType = "paleocene" | "phylopic" | "pleistocene";
@@ -15,7 +16,7 @@ const Promo: VFC<{ color: ThemeColor, type: PromoType }> = ({ color, type }) => 
             return (
                 <Link href="/paleocene">
                     <a>
-                        <img alt="Paleocene" src={`/logos/${color}/${type}.svg`} height={28} width={77} />
+                        <Logo color={color} type="paleocene" height={28} width={77} />
                     </a>
                 </Link>
             )
@@ -24,7 +25,7 @@ const Promo: VFC<{ color: ThemeColor, type: PromoType }> = ({ color, type }) => 
             return (
                 <Link href="/pleistocene">
                     <a>
-                        <img alt="Pleistocene" src={`/logos/${color}/${type}.png`} height={28} width={88} />
+                        <Logo color={color} type="pleistocene" height={28} width={88} />
                     </a>
                 </Link>
             )
@@ -33,17 +34,17 @@ const Promo: VFC<{ color: ThemeColor, type: PromoType }> = ({ color, type }) => 
         default: {
             return (
                 <a href="//phylopic.org" target="_blank" rel="noreferrer">
-                    <img alt="PhyloPic" src={`/logos/${color}/${type}.svg`} height={21} width={129} />
+                    <Logo color={color} type="phylopic" height={21} width={129} />
                 </a>
             )
         }
     }
 }
 const Footer: VFC<Props> = ({ promos }) => {
-    const theme = useTheme()
+    const className = useThemedClassName(styles, "footer");
     const logoColor = useLogoColor()
     return (
-        <footer className={`${styles.footer} ${styles[`theme-${theme}`]}`}>
+        <footer className={className}>
             <nav className={styles.nav}>
                 <div key="copyright">
                     <abbr title="Copyright">©</abbr> 2021 <Link href="/contact"><a title="Contact the Creator">T. Michael Keesey</a></Link> • All Rights Reserved

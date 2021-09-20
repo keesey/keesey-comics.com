@@ -1,10 +1,10 @@
 import { FC } from "react";
-import useTheme from "~/themes/useTheme";
+import useThemedClassName from "~/themes/useThemedClassName";
 import styles from "./index.module.scss";
 const ComicStrip: FC = ({ children }) => {
-    const theme = useTheme();
+    const className = useThemedClassName(styles, "strip");
     return (
-        <section className={`${styles.strip} ${styles[`theme-${theme}`]}`}>
+        <section className={className}>
             {children}
         </section>
     )

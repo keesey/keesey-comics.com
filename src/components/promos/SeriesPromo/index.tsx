@@ -2,18 +2,11 @@
 import Link from "next/link"
 import { FC } from "react"
 import ComicText from "~/components/ComicText"
+import Logo from "~/components/Logo"
 import styles from "./index.module.scss"
 export interface Props {
     children: string;
     id: "paleocene" | "pleistocene"
-}
-const LOGO_FORMATS: Readonly<Record<Props["id"], "png" | "svg">> = {
-    paleocene: "svg",
-    pleistocene: "png",
-}
-const TITLES: Readonly<Record<Props["id"], string>> = {
-    paleocene: "Paleocene",
-    pleistocene: "Pleistocene",
 }
 const SeriesPromo: FC<Props> = ({ children, id }) => (
     <Link href={`/${id}`}>
@@ -22,19 +15,14 @@ const SeriesPromo: FC<Props> = ({ children, id }) => (
                 <div className={styles.desc}>
                     <ComicText>{children}</ComicText>
                 </div>
-                <div className={styles.image}>
-                    <img
-                        alt={id}
-                        height="auto"
-                        src={`/logos/brown/${id}.${LOGO_FORMATS[id]}`}
-                        width="100%"
-                    />
+                <div className={styles.logo}>
+                    <Logo color="brown" type={id} width="100%" height="auto" />
                 </div>
                 <div className={styles.image}>
                     <img
-                        alt={TITLES[id]}
+                        alt=""
                         height={180}
-                        src={`/promos/${id}.png`}
+                        src={`/images/promos/${id}.png`}
                         width={600}
                     />
                 </div>

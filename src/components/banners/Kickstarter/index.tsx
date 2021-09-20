@@ -16,7 +16,7 @@ const Kickstarter: VFC<Props> = ({ phase, url }) => (
         <a className={styles.banner} href={url} role="button">
             <img
                 alt={`Kickstarter Campaign ${ALT_TEXT[phase]}`}
-                src={`/banners/kickstarter/${phase}.png`}
+                src={`/images/banners/kickstarter/${phase}.png`}
                 height={196}
                 width={1080}
             />

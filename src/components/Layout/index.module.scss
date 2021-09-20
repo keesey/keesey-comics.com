@@ -8,10 +8,10 @@
     flex-grow: 1;
     overflow-x: hidden;
     padding-bottom: 5rem;
-    &.theme-kc {
+    .theme-kc & {
         @include mixins.cream;
     }
-    &.theme-night {
+    .theme-night & {
         @include mixins.black;
     }
 }

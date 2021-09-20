@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { VFC } from "react"
-import useTheme from "~/themes/useTheme"
+import useThemedClassName from "~/themes/useThemedClassName"
 import styles from "./ImagePanel.module.scss"
 export interface Props {
     alt?: string;
@@ -9,9 +9,9 @@ export interface Props {
     width: number;
 }
 const ImagePanel: VFC<Props> = (props) => {
-    const theme = useTheme()
+    const className = useThemedClassName(styles, "cell");
     return (
-        <section className={`${styles.cell} ${styles[`theme-${theme}`]}`}>
+        <section className={className}>
             <img alt={props.alt ?? ""} className={styles.image} {...props} />
         </section>
     )

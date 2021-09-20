@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link"
 import { Fragment, VFC } from "react"
 import useForegroundColor from "~/themes/useForegroundColor"
-import useTheme from "~/themes/useTheme"
+import useThemedClassName from "~/themes/useThemedClassName"
 import ComicText from "../ComicText"
+import CTA from "../CTA"
+import Logo from "../Logo"
 import styles from "./SeriesHero.module.scss"
 export type ExternalStoreLink = Readonly<{
-    type: "comiXology" | "Gumroad"
+    type: "comixology" | "gumroad"
     url: string
 }>
 export interface Props {
@@ -15,33 +16,24 @@ export interface Props {
     storeLinks: readonly ExternalStoreLink[];
     title: string;
 }
-const LOGO_FORMATS: Readonly<Record<Props["id"], "png" | "svg">> = {
-    paleocene: "svg",
-    pleistocene: "png",
-}
 const AGE_RECOMMENDATION_TEXT: Readonly<Record<Props["ageRecommendation"], string>> = {
     "17+": "seventeen and up",
     "9+": "nine and up",
 }
 const EXTERNAL_STORE_LOGO_HEIGHT: Readonly<Record<ExternalStoreLink["type"], number>> = {
-    Gumroad: 48,
-    comiXology: 20
+    gumroad: 48,
+    comixology: 20
 }
 const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) => {
-    const theme = useTheme()
+    const className = useThemedClassName(styles, "hero");
     const logoColor = useForegroundColor()
     return (
-        <section className={`${styles.hero} ${styles[`theme-${theme}`]}`}>
-            <img
-                alt={title}
-                className={styles.logo}
-                key="logo"
-                src={`/logos/${logoColor}/${id}.${LOGO_FORMATS[id]}`}
-            />
+        <section className={className}>
+            <Logo key="logo" color={logoColor} type={id} className={styles.logo} />
             <div className={styles.store} key="store">
-                <a href="https://gumroad.com/keesey" className={styles.cta} role="button">
-                    <ComicText>Buy print issues</ComicText>
-                </a>
+                <CTA href="https://gumroad.com/keesey">
+                    Buy print issues
+                </CTA>
             </div>
             {storeLinks?.length > 0 && (
                 <div className={styles.externalStores} key="external-stores">
@@ -50,7 +42,7 @@ const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) =>
                         <Fragment key={type}>
                             {" "}
                             <a href={url}>
-                                <img alt={type} src={`/logos/${logoColor}/${type.toLowerCase()}.svg`} width="auto" height={EXTERNAL_STORE_LOGO_HEIGHT[type]} />
+                                <Logo color={logoColor} type={type} width="auto" height={EXTERNAL_STORE_LOGO_HEIGHT[type]} />
                             </a>
                         </Fragment>
                     ))}

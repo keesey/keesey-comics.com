@@ -1,23 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link"
 import { VFC } from "react"
-import useTheme from "~/themes/useTheme"
+import useThemedClassName from "~/themes/useThemedClassName"
+import Logo from "../Logo"
 import styles from "./Header.module.scss"
 import useLogoColor from "./useLogoColor"
 const Header: VFC = () => {
-    const theme = useTheme()
+    const className = useThemedClassName(styles, "header");
     const logoColor = useLogoColor()
     return (
-        <header className={`${styles.header} ${styles[`theme-${theme}`]}`}>
+        <header className={className}>
             <nav className={styles.nav}>
                 <Link href="/">
                     <a className={styles.logo}>
-                        <img
-                            alt="Keesey Comics"
-                            height={56}
-                            src={`/logos/${logoColor}/keesey-comics.svg`}
-                            width={93}
-                        />
+                        <Logo color={logoColor} type="keesey-comics" width={93} height={56} />
                     </a>
                 </Link>
                 <section className={styles.buttons}>
@@ -31,16 +27,16 @@ const Header: VFC = () => {
                 </section>
                 <section className={styles.social}>
                     <a href="//instagram.com/keesey.comics" role="button">
-                        <img src={`/logos/${logoColor}/instagram.svg`} width={21} height={21} alt="Instagram" />
+                        <Logo color={logoColor} type="instagram" width={21} height={21} />
                     </a>
                     <a href="//twitter.com/paleocenecomic" role="button">
-                        <img src={`/logos/${logoColor}/twitter.svg`} width={28} height={28} alt="Twitter" />
+                        <Logo color={logoColor} type="twitter" width={28} height={28} />
                     </a>
                     <a href="//facebook.com/paleocene" role="button">
-                        <img src={`/logos/${logoColor}/facebook.svg`} width={21} height={21} alt="Facebook" />
+                        <Logo color={logoColor} type="facebook" width={21} height={21} />
                     </a>
                     <a href="//patreon.com/tmkeesey" role="button">
-                        <img src={`/logos/${logoColor}/patreon.svg`} width={79} height={28} alt="Patreon" />
+                        <Logo color={logoColor} type="patreon" width={79} height={28} />
                     </a>
                 </section>
             </nav>

@@ -1,6 +1,7 @@
 @use "src/styles/mixins.scss";
 @use "./nav.scss";
 .footer {
+    font-weight: 100;
     @include mixins.black;
     &.theme-day {
         @include mixins.paynes;
