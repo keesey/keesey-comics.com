@@ -32,10 +32,8 @@ const Paleocene: NextPage = () => {
           <TextPanel>...and the early dawn of a new one.</TextPanel>
           <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={203} />
         </ComicStrip>
-        <IssuePromos id="paleocene" first={1} last={3} />
-        <CTA href="https://gumroad.com/keesey">
-          Check it out!
-        </CTA>
+        <IssuePromos id="paleocene" first={1} last={3}>Read them all!</IssuePromos>
+        <CTA href="https://gumroad.com/keesey">Check it out!</CTA>
       </Layout>
     </>
   )

@@ -1,19 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import { VFC } from "react"
+import { FC } from "react"
 import ComicText from "~/components/ComicText"
 import useThemedClassName from "~/themes/useThemedClassName"
 import IssuePromo from "../IssuePromo"
 import styles from "./index.module.scss"
 export interface Props {
+    children?: string;
     id: "paleocene" | "pleistocene"
     first: number;
     last: number;
 }
-const IssuePromos: VFC<Props> = ({ id, first, last }) => {
+const IssuePromos: FC<Props> = ({ children, id, first, last }) => {
     const className = useThemedClassName(styles, "promos");
     return (
         <section className={className}>
-            <p><ComicText>Read them all!</ComicText></p>
+            {children && <p><ComicText>{children}</ComicText></p>}
             <nav>
                 {
                     new Array(last)
