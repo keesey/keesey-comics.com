@@ -1,0 +1,5 @@
+@use "./nav.scss";
+.promos {
+    @include nav.row;
+    align-items: flex-start;
+}

@@ -5,7 +5,9 @@ import useThemedClassName from "~/themes/useThemedClassName"
 import Logo from "../Logo"
 import styles from "./Header.module.scss"
 import useLogoColor from "./useLogoColor"
-const Header: VFC = () => {
+import Promos, { Props as PromosProps } from "./Promos"
+export type Props = PromosProps
+const Header: VFC<PromosProps> = ({ promos }) => {
     const className = useThemedClassName(styles, "header");
     const logoColor = useLogoColor()
     return (
@@ -16,6 +18,7 @@ const Header: VFC = () => {
                         <Logo color={logoColor} type="keesey-comics" width={93} height={56} />
                     </a>
                 </Link>
+                <Promos promos={promos} />
                 <section className={styles.buttons}>
                     <a href="https://gumroad.com/keesey">Store</a>
                     <Link href="/mail">

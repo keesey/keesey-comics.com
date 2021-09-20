@@ -1,17 +1,26 @@
-@font-face{
+@font-face {
+    font-display: block;
     font-family: Paleocene;
     font-style: normal;
     font-weight: 400;
-
     src: url(/fonts/paleocene-regular-webfont.woff2) format('woff2'),
         url(/fonts/paleocene-regular-webfont.woff) format('woff');
 }
-@font-face{
+@font-face {
+    font-display: block;
     font-family: Paleocene;
     font-style: italic;
     font-weight: 400;
     src: url(/fonts/paleocene-italic-webfont.woff2) format('woff2'),
         url(/fonts/paleocene-italic-webfont.woff) format('woff');
+}
+@font-face {
+    font-display: swap;
+    font-family: Euljiro-Che;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/bmeuljiro.otf) format('opentype'),
+        url(/fonts/bmeuljiro.ttf) format('truetype');
 }
 * {
     box-sizing: border-box;
@@ -37,7 +46,10 @@ html {
     padding: 0;
 }
 hr {
-    border: 1px solid;
+    border: 2.5pt solid;
+    border-bottom: none; 
+    border-left: none; 
+    border-right: none; 
 }
 img.intrinsic {
     height: auto;

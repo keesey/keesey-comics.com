@@ -3,18 +3,19 @@ import getThemedClassName from "~/themes/getThemedClassName";
 import ThemeContext from "~/themes/ThemeContext";
 import CurrentBanner from "../banners/CurrentBanner";
 import Footer, { Props as FooterProps } from "./Footer";
-import Header from "./Header";
+import Header, { Props as HeaderProps } from "./Header";
 import styles from "./index.module.scss";
 export interface Props {
-    theme: "bw" | "day" | "kc" | "night"
     footerPromos?: FooterProps["promos"]
+    headerPromos?: HeaderProps["promos"]
+    theme: "bw" | "day" | "kc" | "night"
 }
-const Layout: FC<Props> = ({ children, footerPromos, theme }) => {
+const Layout: FC<Props> = ({ children, headerPromos, footerPromos, theme }) => {
     const className = getThemedClassName(theme, styles, "layout");
     return (
         <ThemeContext.Provider value={theme}>
             <div className={className}>
-                <Header />
+                <Header promos={headerPromos} />
                 <main className={styles.main}>
                     <CurrentBanner />
                     {children}

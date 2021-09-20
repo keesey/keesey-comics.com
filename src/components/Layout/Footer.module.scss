@@ -1,8 +1,8 @@
 @use "src/styles/mixins.scss";
 @use "./nav.scss";
 .footer {
-    font-weight: 100;
     @include mixins.black;
+    font-weight: 200;
     &.theme-day {
         @include mixins.paynes;
         border: 2pt solid #000;
@@ -18,11 +18,8 @@
 .nav {
     @include mixins.page;
     @include nav.row;
-    height: 0.5in;
-    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+        justify-content: space-between;
+    }
     padding: 0.5rem;
-}
-.promos {
-    @include nav.row;
-    align-items: flex-start;
 }

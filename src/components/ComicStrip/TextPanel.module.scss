@@ -22,4 +22,14 @@
     &.theme-night {
         @include mixins.green;
     }
+    &.complex {
+        max-width: 20rem;
+        width: fit-content;
+        &.emphatic {
+            font-style: italic;
+        }
+        &:empty {
+            display: none;
+        }
+    }
 }

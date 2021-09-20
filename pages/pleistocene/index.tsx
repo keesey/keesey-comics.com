@@ -11,7 +11,7 @@ const Paleocene: NextPage = () => {
   return (
     <>
       <Head favIconType="pleistocene" subject={PLEISTOCENE} />
-      <Layout footerPromos={["paleocene", "pleistocene", "phylopic"]} theme="bw">
+      <Layout headerPromos={["pleistocene"]} footerPromos={["paleocene", "phylopic"]} theme="bw">
         <SeriesHero
           ageRecommendation="17+"
           id="pleistocene"
@@ -30,7 +30,7 @@ const Paleocene: NextPage = () => {
           <ImagePanel height={185} src="/images/issues/pleistocene/03.png" width={610} />
           <TextPanel>Like every hero, he encountered a monster...</TextPanel>
           <ImagePanel height={280} src="/images/issues/pleistocene/04.png" width={509} />
-          <TextPanel italic>...or was it something else?</TextPanel>
+          <TextPanel emphatic>...or was it something else?</TextPanel>
         </ComicStrip>
         <br />
         <CTA href="https://gumroad.com/keesey">

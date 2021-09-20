@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link"
 import { VFC } from "react"
+import styles from "./index.module.scss"
 export interface Props {
     id: "paleocene" | "pleistocene"
     number: number
@@ -13,7 +14,7 @@ const IssuePromo: VFC<Props> = ({ id, number }) => {
     const paddedNumber = number < 10 ? `0${number}` : String(number);
     return (
         <Link href={`/${id}/${paddedNumber}`}>
-            <a>
+            <a className={styles.promo}>
                 <img
                     alt={`${TITLES[id]} #${number}`}
                     height={320}

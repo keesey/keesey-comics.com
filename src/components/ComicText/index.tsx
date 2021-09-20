@@ -2,7 +2,8 @@ import { FC } from "react"
 import styles from "./index.module.scss"
 export interface Props {
     children?: string | null;
-    italic?: boolean;
+    emphatic?: boolean;
+    lang?: string;
 }
 const ALPHA_REGEX = /^[a-hj-z]$/i;
 const comixify = (text: string) => {
@@ -26,14 +27,19 @@ const comixify = (text: string) => {
     }
     return result;
 }
-const ComicText: FC<Props> = ({ children, italic }) => {
+const ComicText: FC<Props> = ({ children, emphatic, lang }) => {
     if (!children) {
         return null;
     }
+    if (lang === "ko") {
+        return (
+            <span lang={lang} className={[styles.regular, emphatic ? styles.emphatic : null].filter(Boolean).join(" ")}>{children}</span>
+        )
+    }
     return (
         <>
-            <span className={[styles.regular, italic ? styles.italic : null].filter(Boolean).join(" ")}>{children}</span>
-            <span className={[styles.comics, italic ? styles.italic : null].filter(Boolean).join(" ")}>{comixify(children)}</span>
+            <span lang={lang} className={[styles.regular, emphatic ? styles.emphatic : null].filter(Boolean).join(" ")}>{children}</span>
+            <span lang={lang} className={[styles.comics, emphatic ? styles.emphatic : null].filter(Boolean).join(" ")}>{comixify(children)}</span>
         </>
     );
 }

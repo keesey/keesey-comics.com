@@ -1,0 +1,30 @@
+.attribution {
+    font-style: normal;
+}
+.quote {
+    border: 1pt solid #000;
+    background-color: #fff;
+    color: #000;
+    font-family: Roboto, sans-serif;
+    margin: 1rem 0;
+    padding: 1rem;
+    > p {
+        font-size: larger;
+        text-align: center;
+        &::after {
+            content: "”";
+            font-size: larger;
+        }
+        &::before {
+            content: "“";
+            font-size: larger;
+        }
+    }
+    > footer {
+        font-weight: 200;
+        text-align: right;
+        &::before {
+            content: "— ";
+        }
+    }
+}
