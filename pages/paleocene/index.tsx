@@ -6,6 +6,7 @@ import CTA from "~/components/CTA"
 import SeriesHero from "~/components/heroes/SeriesHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
+import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import PALEOCENE from "~/schema/PALEOCENE"
 const Paleocene: NextPage = () => {
   return (
@@ -31,9 +32,9 @@ const Paleocene: NextPage = () => {
           <TextPanel>...and the early dawn of a new one.</TextPanel>
           <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={203} />
         </ComicStrip>
-        <br />
+        <IssuePromos id="paleocene" first={1} last={3} />
         <CTA href="https://gumroad.com/keesey">
-          Read it!
+          Check it out!
         </CTA>
       </Layout>
     </>
