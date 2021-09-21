@@ -22,14 +22,14 @@ const Paleocene: NextPage = () => {
           ageRecommendation="9+"
           id="paleocene"
           storeLinks={[
-            { type: "gumroad", url: "https://gumroad.com/keesey" },
-            { type: "comixology", url: "https://www.comixology.com/Paleocene-Vol-1/comics-series/137451" },
+            { type: "gumroad", url: "//gumroad.com/keesey" },
+            { type: "comixology", url: "//www.comixology.com/Paleocene-Vol-1/comics-series/137451" },
           ]}
           title="Paleocene"
         />
         <Quote
           attribution={<>Daniel Bensen (<cite>First Knife</cite>, <cite>Junction</cite>)</>}
-          href="//www.thekingdomsofevil.com/?p=8983"
+          href="http://www.thekingdomsofevil.com/?p=8983"
         >
           ★★★★
         </Quote>
@@ -46,19 +46,19 @@ const Paleocene: NextPage = () => {
         <IssuePromos id="paleocene" numbers={[1, 2, 3]}>Read all issues!</IssuePromos>
         <Nav>
           <ComicText>Translations:</ComicText>
-          <Link href="https://gumroad.com/keesey" passHref>
+          <Link href="//gumroad.com/keesey" passHref>
             <CTA hrefLang="ko">
               <ComicText lang="ko">한국어</ComicText>
               <ComicText> (Korean)</ComicText>
             </CTA>
           </Link>
-          <CTA href="//fourcatspress.com/catalog/paleontology/paleocene" hrefLang="it" target="_blank" rel="noreferrer">
+          <CTA href="http://fourcatspress.com/catalog/paleontology/paleocene" hrefLang="it" target="_blank" rel="noreferrer">
             <ComicText lang="it">Italiano</ComicText>
             <ComicText> (Italian)</ComicText>
             <br />
             <ComicText emphatic>(Most artwork differs.)</ComicText>
           </CTA>
-          <CTA href="//www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno" hrefLang="es" target="_blank" rel="noreferrer">
+          <CTA href="http://www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno" hrefLang="es" target="_blank" rel="noreferrer">
             <ComicText lang="es">Español</ComicText>
             <ComicText> (Spanish)</ComicText>
             <br />

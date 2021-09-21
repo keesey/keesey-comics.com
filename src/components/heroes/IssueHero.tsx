@@ -16,7 +16,7 @@ const IssueHero: FC<Props> = ({ ageRecommendation, children, id, number, seriesT
     const paddedNumber = number < 10 ? `0${number}` : String(number);
     return (
         <header className={className}>
-            <a className={styles.image} href="https://gumroad.com/keesey">
+            <a className={styles.image} href="//gumroad.com/keesey">
                 <img
                     alt={`${seriesTitle} #${number}`}
                     height={640}

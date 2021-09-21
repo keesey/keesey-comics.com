@@ -17,8 +17,8 @@ const Paleocene: NextPage = () => {
           ageRecommendation="17+"
           id="pleistocene"
           storeLinks={[
-            { type: "gumroad", url: "https://gumroad.com/keesey" },
-            { type: "comixology", url: "http://www.comixology.com/Pleistocene/comics-series/117874" },
+            { type: "gumroad", url: "//gumroad.com/keesey" },
+            { type: "comixology", url: "//www.comixology.com/Pleistocene/comics-series/117874" },
           ]}
           title="Pleistocene"
         />

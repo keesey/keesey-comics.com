@@ -68,7 +68,7 @@ const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, soc
             <meta key="meta:property:og:title" property="og:title" content={title} />
             <meta key="meta:property:og:type" property="og:type" content="website" />
             <meta key="meta:property:og:url" property="og:url" content={url} />
-            <link key="link:author" rel="author" href="//tmkeesey.net" />
+            <link key="link:author" rel="author" href="http://tmkeesey.net" />
             <link key="link:canonical" rel="canonical" href={url} />
             <link key="link:icon" rel="icon" href={`/favicon${favIconType ? `-${favIconType}` : ""}.ico`} sizes="32x32 48x48" type="image/vnd.microsoft.icon" />
             <link key="link:preload:font:regular" rel="preload" href="/fonts/paleocene-regular-webfont.woff2" as="font" />

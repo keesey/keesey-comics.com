@@ -35,8 +35,8 @@ const Issue03: NextPage = () => {
           id="paleocene"
           number={3}
           storeLinks={[
-            { type: "gumroad", url: "https://gumroad.com/keesey" },
-            { type: "comixology", url: "https://www.comixology.com/Paleocene-1/digital-comic/812491" },
+            { type: "gumroad", url: "//gumroad.com/keesey" },
+            { type: "comixology", url: "//www.comixology.com/Paleocene-1/digital-comic/812491" },
           ]}
           seriesTitle="Paleocene"
         >
@@ -46,7 +46,7 @@ const Issue03: NextPage = () => {
         </IssueHero>
         <Quote
           attribution={<>Daniel Bensen (<cite>First Knife</cite>, <cite>Junction</cite>)</>}
-          href="//www.thekingdomsofevil.com/?p=8983"
+          href="http://www.thekingdomsofevil.com/?p=8983"
         >
           The birds&rsquo; world is operatic and grand.
         </Quote>

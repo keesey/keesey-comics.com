@@ -36,8 +36,8 @@ const Issue01: NextPage = () => {
           id="paleocene"
           number={1}
           storeLinks={[
-            { type: "gumroad", url: "https://gumroad.com/keesey" },
-            { type: "comixology", url: "https://www.comixology.com/Paleocene-1/digital-comic/812491" },
+            { type: "gumroad", url: "//gumroad.com/keesey" },
+            { type: "comixology", url: "//www.comixology.com/Paleocene-1/digital-comic/812491" },
           ]}
           seriesTitle="Paleocene"
         >
@@ -58,17 +58,17 @@ const Issue01: NextPage = () => {
         <IssuePromos id="paleocene" numbers={[2, 3]}>Read the other issues!</IssuePromos>
         <Nav>
           <ComicText>Translations:</ComicText>
-          <CTA href="https://gumroad.com/keesey">
+          <CTA href="//gumroad.com/keesey">
             <ComicText lang="ko">한국어</ComicText>
             <ComicText> (Korean)</ComicText>
           </CTA>
-          <CTA href="//fourcatspress.com/catalog/paleontology/paleocene" hrefLang="it" target="_blank" rel="noreferrer">
+          <CTA href="http://fourcatspress.com/catalog/paleontology/paleocene" hrefLang="it" target="_blank" rel="noreferrer">
             <ComicText lang="it">Italiano</ComicText>
             <ComicText> (Italian)</ComicText>
             <br />
             <ComicText emphatic>(Most artwork differs.)</ComicText>
           </CTA>
-          <CTA href="//www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno" hrefLang="es" target="_blank" rel="noreferrer">
+          <CTA href="http://www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno" hrefLang="es" target="_blank" rel="noreferrer">
             <ComicText lang="es">Español</ComicText>
             <ComicText> (Spanish)</ComicText>
             <br />

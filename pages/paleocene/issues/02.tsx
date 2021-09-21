@@ -34,8 +34,8 @@ const Issue02: NextPage = () => {
           id="paleocene"
           number={2}
           storeLinks={[
-            { type: "gumroad", url: "https://gumroad.com/keesey" },
-            { type: "comixology", url: "https://www.comixology.com/Paleocene-2/digital-comic/890936" },
+            { type: "gumroad", url: "//gumroad.com/keesey" },
+            { type: "comixology", url: "//www.comixology.com/Paleocene-2/digital-comic/890936" },
           ]}
           seriesTitle="Paleocene"
         >
