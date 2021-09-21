@@ -1,0 +1,50 @@
+.container {
+    background-color: #05ce78;
+    border: 1pt solid #fff;
+    border-left: none;
+    border-right: none;
+    display: block;
+    padding: 1rem;
+    transition: background-color 0.25s;
+    &:active, &:hover {
+        background-color: #000;
+        opacity: 1;
+    }
+}
+.banner {
+    align-items: center;
+    display: flex;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    justify-content: space-between;
+    line-height: 1;
+    margin: 0 auto;
+    max-width: 1024px;
+    @media screen and (max-width: 330px) {
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 570px) {
+        justify-content: center;
+    }
+    > cite {
+        align-items: flex-start;
+        display: flex;
+        gap: 0.5rem;
+        font-family: Atland-BB, sans-serif;
+        font-size: 1.5rem;
+        font-weight: normal;
+        font-style: normal;
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
+}
+.phase {
+    @media screen and (max-width: 570px) {
+        display: none;
+    }
+}

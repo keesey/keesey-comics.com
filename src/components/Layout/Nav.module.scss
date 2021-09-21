@@ -1,0 +1,7 @@
+@use "src/styles/mixins.scss";
+@use "./nav.scss";
+.nav {
+    @include mixins.page;
+    @include nav.row;
+    padding: 0 1rem;
+}

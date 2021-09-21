@@ -1,0 +1,17 @@
+.strip {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1rem 2pt;
+    text-align: center;
+    &.theme-bw {
+        background-color: #000;
+        color: #000;
+        gap: 0;
+        margin: 1rem -2.5pt;
+        padding: 2.5pt 0;
+        width: calc(100vw + 5pt);
+    }
+}

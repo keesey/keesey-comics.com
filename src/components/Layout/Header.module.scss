@@ -1,0 +1,32 @@
+@use "src/styles/mixins.scss";
+@use "./nav.scss";
+.buttons {
+    @include nav.row;
+    flex-grow: 1;
+}
+.header {
+    @include mixins.black;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    &.theme-day {
+        @include mixins.paynes;
+    }
+    &.theme-kc {
+        @include mixins.brown;
+    }
+    &.theme-night {
+        @include mixins.purple;
+    }
+}
+.logo {
+    height: 100%;
+}
+.nav {
+    @include mixins.page;
+    @include nav.row;
+    text-transform: uppercase;
+}
+.social {
+    @include nav.row;
+}

@@ -1,0 +1,37 @@
+@use "src/styles/mixins";
+.cell {
+    border-radius: 2rem;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 10rem;
+    padding: .25in;
+    text-align: center;
+    &.theme-bw {
+        background-color: #fff;
+        border: 2.5pt solid #000;
+        border-radius: unset;
+    }
+    &.theme-day {
+        background-color: #fff7e5;
+        border: 2.5pt solid #ffcb05;
+        color: #000;
+    }
+    &.theme-kc {
+        @include mixins.cream;
+    }
+    &.theme-night {
+        @include mixins.paynes;
+    }
+    &.complex {
+        max-width: 20rem;
+        width: fit-content;
+        &.emphatic {
+            font-style: italic;
+        }
+        &:empty {
+            display: none;
+        }
+    }
+}

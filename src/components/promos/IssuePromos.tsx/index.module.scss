@@ -1,0 +1,36 @@
+@use "src/styles/mixins.scss";
+.promos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    row-gap: 1rem;
+    &.theme-bw {
+        @include mixins.black;
+    }
+    &.theme-day {
+        background-color: #d7616b;
+        color: #fff;
+    }
+    &.theme-kc {
+        @include mixins.brown;
+    }
+    &.theme-night {
+        background-color: #a3cad5;
+        color: #000;
+    }
+    > p {
+        margin: 0;
+        text-align: center;
+    }
+    > nav {
+        @include mixins.page;
+        align-items: center;
+        column-gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 1rem;
+    }
+}

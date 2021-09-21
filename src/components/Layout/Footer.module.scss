@@ -1,0 +1,23 @@
+@use "src/styles/mixins.scss";
+@use "./nav.scss";
+.footer {
+    @include mixins.black;
+    font-weight: 200;
+    &.theme-day {
+        @include mixins.paynes;
+    }
+    &.theme-kc  {
+        @include mixins.brown;
+    }
+    &.theme-night {
+        @include mixins.purple;
+    }
+}
+.nav {
+    @include mixins.page;
+    @include nav.row;
+    padding: 0.5rem;
+    @media screen and (min-width: 768px) {
+        justify-content: space-between;
+    }
+}

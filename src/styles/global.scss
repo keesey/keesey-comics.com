@@ -1,0 +1,106 @@
+@font-face {
+    font-display: block;
+    font-family: Paleocene;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/paleocene-regular-webfont.woff2) format('woff2'),
+        url(/fonts/paleocene-regular-webfont.woff) format('woff');
+}
+@font-face {
+    font-display: block;
+    font-family: Paleocene;
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/paleocene-italic-webfont.woff2) format('woff2'),
+        url(/fonts/paleocene-italic-webfont.woff) format('woff');
+}
+@font-face {
+    font-display: block;
+    font-family: Atland-BB;
+    font-style: normal;
+    font-weight: 400;
+    src: url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.eot");
+    src: url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.svg#AtlandBB") format("svg");
+}
+@font-face {
+    font-display: block;
+    font-family: Atland-BB;
+    font-style: italic;
+    font-weight: 400;
+    src: url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.eot");
+    src: url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.svg#AtlandBB-Italic") format("svg");
+}
+@font-face {
+    font-display: swap;
+    font-family: Euljiro-Che;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/bmeuljiro.otf) format('opentype'),
+        url(/fonts/bmeuljiro.ttf) format('truetype');
+}
+* {
+    box-sizing: border-box;
+    &[role=button] {
+        cursor: pointer;
+    }
+}
+a, abbr {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.25s;
+    &:hover {
+        opacity: 0.67;
+    }
+}
+address {
+    font-style: normal;
+}
+body,
+html {
+    background-color: #000;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 11pt;
+    margin: 0;
+    padding: 0;
+}
+main {
+    background-color: #fff;
+    color: #000;
+}
+hr {
+    border: 2.5pt solid;
+    border-bottom: none; 
+    border-left: none; 
+    border-right: none; 
+}
+img.intrinsic {
+    height: auto;
+    max-width: 100%;
+}
+.print, .screen, .speech {
+    display: none;
+}
+@media print {
+    .print {
+        display: initial;
+    }
+}
+@media screen {
+    .screen {
+        display: initial;
+    }
+}
+@media speech {
+    .speech {
+        display: initial;
+    }
+}

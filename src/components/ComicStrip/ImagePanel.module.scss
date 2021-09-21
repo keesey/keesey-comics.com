@@ -1,0 +1,28 @@
+@use "src/styles/mixins";
+.cell {
+    border-radius: 2rem;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 280px;
+    position: relative;
+    text-align: center;
+    &.theme-bw {
+        align-items: flex-end;
+        border: 2.5pt solid #000;
+        border-radius: unset;
+        display: flex;
+    }
+    &.theme-kc {
+        @include mixins.brown;
+        border-radius: unset;
+    }
+    &.theme-night {
+        @include mixins.purple;
+    }
+}
+.image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 280px;
+}
