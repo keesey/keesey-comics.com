@@ -11,6 +11,7 @@ import Nav from "~/components/Layout/Nav"
 import Head from "~/components/metadata/Head"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quote from "~/components/Quote"
+import SocialNav from "~/components/SocialNav"
 import PALEOCENE from "~/schema/PALEOCENE"
 const Paleocene: NextPage = () => {
   return (
@@ -64,6 +65,8 @@ const Paleocene: NextPage = () => {
             <ComicText emphatic>(First eight pages only.)</ComicText>
           </CTA>
         </Nav>
+        <br />
+        <SocialNav />
       </Layout>
     </>
   )

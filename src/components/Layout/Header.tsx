@@ -20,13 +20,13 @@ const Header: VFC<PromosProps> = ({ promos }) => {
                 </Link>
                 <Promos promos={promos} />
                 <section className={styles.buttons}>
-                    <Link href="/store">
+                    <Link href="/store" passHref>
                         <a>Store</a>
                     </Link>
-                    <Link href="/mailinglist">
+                    <Link href="/mailinglist" passHref>
                         <a>Mailing List</a>
                     </Link>
-                    <Link href="/contact">
+                    <Link href="/contact" passHref>
                         <a>Contact</a>
                     </Link>
                 </section>
@@ -40,8 +40,13 @@ const Header: VFC<PromosProps> = ({ promos }) => {
                     <a href="//facebook.com/paleocene" role="button">
                         <Logo color={logoColor} type="facebook" width={21} height={21} />
                     </a>
+                    <Link href="/kickstarter" passHref>
+                        <a role="button">
+                            <Logo color={logoColor} type="kickstarter-k" width={19} height={21} />
+                        </a>
+                    </Link>
                     <a href="//patreon.com/tmkeesey" role="button">
-                        <Logo color={logoColor} type="patreon" width={79} height={28} />
+                        <Logo color={logoColor} type="patreon" width={79} height={21} />
                     </a>
                 </section>
             </nav>

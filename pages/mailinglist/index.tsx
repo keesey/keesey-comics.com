@@ -4,6 +4,7 @@ import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
 import Form from "~/components/MailingList/Form"
 import Head from "~/components/metadata/Head"
+import SocialNav from "~/components/SocialNav"
 const SUBJECT: MediaSubscription = {
     "@type": "MediaSubscription",
     "@id": "http://keesey-comics.com/mailinglist",
@@ -20,6 +21,8 @@ const Contact: NextPage = () => {
                     <h1>Keesey Comics Mailing List</h1>
                 </Hero>
                 <Form />
+                <hr />
+                <SocialNav />
             </Layout>
         </>
     )

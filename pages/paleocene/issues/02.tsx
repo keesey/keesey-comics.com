@@ -7,9 +7,9 @@ import TextPanel from "~/components/ComicStrip/TextPanel"
 import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
-import Nav from "~/components/Layout/Nav"
 import Head from "~/components/metadata/Head"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
+import SocialNav from "~/components/SocialNav"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
   ...PALEOCENE,
@@ -54,11 +54,7 @@ const Issue02: NextPage = () => {
           <ImagePanel height={280} src="/images/issues/paleocene/02/04.png" width={240} />
         </ComicStrip>
         <IssuePromos id="paleocene" numbers={[1, 3]}>Read the other issues!</IssuePromos>
-        <Nav>
-          <Link href="/store" passHref>
-            <CTA>Check it out!</CTA>
-          </Link>
-        </Nav>
+        <SocialNav />
       </Layout>
     </>
   )

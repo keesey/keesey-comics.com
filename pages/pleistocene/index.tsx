@@ -6,6 +6,7 @@ import CTA from "~/components/CTA"
 import SeriesHero from "~/components/heroes/SeriesHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
+import SocialNav from "~/components/SocialNav"
 import PLEISTOCENE from "~/schema/PLEISTOCENE"
 const Paleocene: NextPage = () => {
   return (
@@ -32,10 +33,7 @@ const Paleocene: NextPage = () => {
           <ImagePanel height={280} src="/images/issues/pleistocene/04.png" width={509} />
           <TextPanel emphatic>...or was it something else?</TextPanel>
         </ComicStrip>
-        <br />
-        <CTA href="https://gumroad.com/keesey">
-          Read it!
-        </CTA>
+        <SocialNav />
       </Layout>
     </>
   )

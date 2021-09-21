@@ -7,10 +7,10 @@ import TextPanel from "~/components/ComicStrip/TextPanel"
 import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
-import Nav from "~/components/Layout/Nav"
 import Head from "~/components/metadata/Head"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quote from "~/components/Quote"
+import SocialNav from "~/components/SocialNav"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
   ...PALEOCENE,
@@ -62,11 +62,7 @@ const Issue03: NextPage = () => {
           <TextPanel emphatic>...the Great Ones strode.</TextPanel>
         </ComicStrip>
         <IssuePromos id="paleocene" numbers={[1, 2]}>Read the other issues!</IssuePromos>
-        <Nav>
-          <Link href="/kickstarter" passHref>
-            <CTA>Check it out!</CTA>
-          </Link>
-        </Nav>
+        <SocialNav />
       </Layout>
     </>
   )

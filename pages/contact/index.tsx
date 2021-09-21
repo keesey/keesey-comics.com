@@ -5,6 +5,7 @@ import CTA from "~/components/CTA"
 import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
+import SocialNav from "~/components/SocialNav"
 const SUBJECT: ContactPage = {
     "@type": "ContactPage",
     "@id": "http://keesey-comics.com/contact",
@@ -22,10 +23,11 @@ const Contact: NextPage = () => {
                     <h1>Keesey Comics</h1>
                     <address>Email: <a href="mailto:keesey+comics@gmail.com">keesey+comics@gmail.com</a></address>
                 </Hero>
-                <hr />
                 <Link href="/mailinglist" passHref>
                     <CTA><span>Join the mailing list</span></CTA>
                 </Link>
+                <hr />
+                <SocialNav />
             </Layout>
         </>
     )
