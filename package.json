@@ -16,9 +16,9 @@
     "bb >= 10"
   ],
   "dependencies": {
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "sass": "^1.41.1"
   },
   "description": "Website for Keesey Comics",
@@ -31,7 +31,7 @@
     "typescript": "4.4.3"
   },
   "license": "UNLICENSED",
-  "main": "dist/index.html",
+  "main": "out/index.html",
   "name": "keesey-comics.com",
   "private": true,
   "repository": "https://github.com/keesey/keesey-comics.com",
