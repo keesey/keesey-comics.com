@@ -3,11 +3,18 @@
 }
 .quote {
     border: 1pt solid #000;
+    border-left: none;
+    border-right: none;
     background-color: #fff;
     color: #000;
     font-family: Roboto, sans-serif;
     margin: 1rem 0;
     padding: 1rem;
+    &.theme-day {
+        background-color: #f0f7ff;
+        border-left: none;
+        border-right: none;
+    }
     > p {
         font-size: larger;
         text-align: center;

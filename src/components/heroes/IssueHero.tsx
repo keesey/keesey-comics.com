@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { VFC } from "react"
+import { FC } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
-import CTA from "../CTA"
 import AgeRecommendation, { Props as AgeRecommendationProps } from "./AgeRecommendation"
 import ExternalStores, { Props as ExternalStoresProps } from "./ExternalStores"
 import styles from "./IssueHero.module.scss"
@@ -12,7 +11,7 @@ export interface Props {
     seriesTitle: string
     storeLinks: ExternalStoresProps["links"]
 }
-const IssueHero: VFC<Props> = ({ ageRecommendation, id, number, seriesTitle, storeLinks }) => {
+const IssueHero: FC<Props> = ({ ageRecommendation, children, id, number, seriesTitle, storeLinks }) => {
     const className = useThemedClassName(styles, "hero");
     const paddedNumber = number < 10 ? `0${number}` : String(number);
     return (
@@ -26,9 +25,7 @@ const IssueHero: VFC<Props> = ({ ageRecommendation, id, number, seriesTitle, sto
                 />
             </a>
             <div className={styles.info}>
-                <CTA href="https://gumroad.com/keesey">
-                    Buy print issues
-                </CTA>
+                {children}
                 <ExternalStores links={storeLinks} />
                 <AgeRecommendation ageRecommendation={ageRecommendation} />
             </div>

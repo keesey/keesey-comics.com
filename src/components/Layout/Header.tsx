@@ -20,8 +20,10 @@ const Header: VFC<PromosProps> = ({ promos }) => {
                 </Link>
                 <Promos promos={promos} />
                 <section className={styles.buttons}>
-                    <a href="https://gumroad.com/keesey">Store</a>
-                    <Link href="/mail">
+                    <Link href="/store">
+                        <a>Store</a>
+                    </Link>
+                    <Link href="/mailinglist">
                         <a>Mailing List</a>
                     </Link>
                     <Link href="/contact">

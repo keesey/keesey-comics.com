@@ -7,21 +7,16 @@ import styles from "./index.module.scss"
 export interface Props {
     children?: string;
     id: "paleocene" | "pleistocene"
-    first: number;
-    last: number;
+    numbers: readonly number[];
 }
-const IssuePromos: FC<Props> = ({ children, id, first, last }) => {
+const IssuePromos: FC<Props> = ({ children, id, numbers }) => {
     const className = useThemedClassName(styles, "promos");
     return (
         <section className={className}>
             {children && <p key="text"><ComicText>{children}</ComicText></p>}
             <nav key="nav">
                 {
-                    new Array(last)
-                        .fill(0)
-                        .map((_, index) => index + 1)
-                        .slice(first - 1)
-                        .map((number) => <IssuePromo id={id} key={number} number={number} />)
+                    numbers.map((number) => <IssuePromo id={id} key={number} number={number} />)
                 }
             </nav>
         </section>

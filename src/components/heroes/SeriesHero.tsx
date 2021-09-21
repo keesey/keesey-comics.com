@@ -20,7 +20,7 @@ const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) =>
             <Logo color={logoColor} type={id} className={styles.logo} />
             <div className={styles.store}>
                 <CTA href="https://gumroad.com/keesey">
-                    Buy print issues
+                    Buy it!
                 </CTA>
             </div>
             <ExternalStores links={storeLinks} />

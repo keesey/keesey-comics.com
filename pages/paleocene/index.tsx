@@ -28,7 +28,7 @@ const Paleocene: NextPage = () => {
         />
         <Quote
           attribution={<>Daniel Bensen (<cite>First Knife</cite>, <cite>Junction</cite>)</>}
-          href="http://www.thekingdomsofevil.com/?p=8983"
+          href="//www.thekingdomsofevil.com/?p=8983"
         >
             ★★★★
         </Quote>
@@ -42,7 +42,7 @@ const Paleocene: NextPage = () => {
           <TextPanel>...and the early dawn of a new one.</TextPanel>
           <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={203} />
         </ComicStrip>
-        <IssuePromos id="paleocene" first={1} last={3}>Read all issues!</IssuePromos>
+        <IssuePromos id="paleocene" numbers={[1, 2, 3]}>Read all issues!</IssuePromos>
         <Nav>
           <ComicText>Translations:</ComicText>
           <Link href="/paleocene/ko" passHref>

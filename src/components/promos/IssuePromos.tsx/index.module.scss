@@ -10,7 +10,8 @@
         @include mixins.black;
     }
     &.theme-day {
-        @include mixins.paynes;
+        background-color: #d7616b;
+        color: #fff;
     }
     &.theme-kc {
         @include mixins.brown;

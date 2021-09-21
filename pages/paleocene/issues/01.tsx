@@ -10,6 +10,7 @@ import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Nav from "~/components/Layout/Nav"
 import Head from "~/components/metadata/Head"
+import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
@@ -38,7 +39,11 @@ const Issue01: NextPage = () => {
             { type: "comixology", url: "https://www.comixology.com/Paleocene-1/digital-comic/812491" },
           ]}
           seriesTitle="Paleocene"
-        />
+        >
+          <CTA href="/store">
+              Buy it!
+          </CTA>
+        </IssueHero>
         <ComicStrip>
           <TextPanel>Mamma loves telling her babies about the &quot;dragons&quot; that used to roam the Earth.</TextPanel>
           <ImagePanel height={280} src="/images/issues/paleocene/01.png" width={322} />
@@ -49,6 +54,7 @@ const Issue01: NextPage = () => {
           <TextPanel>...and &quot;dragons&quot; may still lurk in the hills.</TextPanel>
           <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={203} />
         </ComicStrip>
+        <IssuePromos id="paleocene" numbers={[2, 3]}>Read the other issues!</IssuePromos>
         <Nav>
           <ComicText>Translations:</ComicText>
           <Link href="/paleocene/issues/01/ko" passHref>
