@@ -1,6 +1,7 @@
 import { VFC } from "react"
 import useForegroundColor from "~/themes/useForegroundColor"
 import useThemedClassName from "~/themes/useThemedClassName"
+import Link from "next/link"
 import CTA from "../CTA"
 import Logo from "../Logo"
 import AgeRecommendation, { Props as AgeRecommendationProps } from "./AgeRecommendation"
@@ -19,9 +20,9 @@ const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) =>
         <header className={className}>
             <Logo color={logoColor} type={id} className={styles.logo} />
             <div className={styles.store}>
-                <CTA href="https://gumroad.com/keesey">
-                    Buy it!
-                </CTA>
+                <Link href="/store" passHref>
+                    <CTA>Get it now!</CTA>
+                </Link>
             </div>
             <ExternalStores links={storeLinks} />
             <AgeRecommendation ageRecommendation={ageRecommendation} />

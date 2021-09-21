@@ -1,4 +1,5 @@
 import type { NextPage } from "next"
+import Link from "next/link"
 import type { ComicStory } from "schema-dts"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
@@ -39,9 +40,9 @@ const Issue03: NextPage = () => {
           ]}
           seriesTitle="Paleocene"
         >
-          <CTA href="/kickstarter">
-            Get it on Kickstarter!
-          </CTA>
+          <Link href="/kickstarter" passHref>
+            <CTA>Get it on Kickstarter!</CTA>
+          </Link>
         </IssueHero>
         <Quote
           attribution={<>Daniel Bensen (<cite>First Knife</cite>, <cite>Junction</cite>)</>}
@@ -51,20 +52,20 @@ const Issue03: NextPage = () => {
         </Quote>
         <ComicStrip>
           <TextPanel emphatic>We all recall the World-End...</TextPanel>
-          <ImagePanel height={280} src="/images/issues/paleocene/03/01.png" width={322} />
+          <ImagePanel height={280} src="/images/issues/paleocene/03/01.png" width={310} />
           <TextPanel emphatic>...the Fire-Quake, the Rising Sea, the Storm of Stones.</TextPanel>
-          <ImagePanel height={280} src="/images/issues/paleocene/03/02.png" width={209} />
+          <ImagePanel height={280} src="/images/issues/paleocene/03/02.png" width={284} />
           <TextPanel emphatic>it left a Shroud above our Heads that slew the Sun, and lay my northern Province bare.</TextPanel>
-          <ImagePanel height={280} src="/images/issues/paleocene/03/03.png" width={498} />
+          <ImagePanel height={280} src="/images/issues/paleocene/03/03.png" width={380} />
           <TextPanel emphatic>in lonely Stillness, Signs of Life cannot be found, save where, in Silt turned hard as Stone...</TextPanel>
           <ImagePanel height={280} src="/images/issues/paleocene/03/04.png" width={286} />
           <TextPanel emphatic>...the Great Ones strode.</TextPanel>
         </ComicStrip>
         <IssuePromos id="paleocene" numbers={[1, 2]}>Read the other issues!</IssuePromos>
         <Nav>
-          <CTA href="/kickstarter">
-            Check it out!
-          </CTA>
+          <Link href="/kickstarter" passHref>
+            <CTA>Check it out!</CTA>
+          </Link>
         </Nav>
       </Layout>
     </>
