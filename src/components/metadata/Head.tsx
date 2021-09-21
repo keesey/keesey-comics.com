@@ -10,6 +10,7 @@ export interface Props {
     language?: string
     noIndex?: true
     socialImageAlt?: string
+    socialImagePath?: string
     subject: Thing
 }
 // :KLUDGE: Types are complex and confuse compiler.
@@ -32,7 +33,7 @@ const getTextValue = <T extends any>(value: T | string | readonly T[] | undefine
     return ""
 }
 const SITE_NAME = getTextValue(KEESEY_COMICS, "name");
-const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, socialImageAlt, subject }) => {
+const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, socialImageAlt, socialImagePath, subject }) => {
     const authorName = getTextValue(author, "name")
     const description = getTextValue(subject, "description")
     const title = getTextValue(subject, "name")
@@ -51,15 +52,15 @@ const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, soc
             <meta key="meta:name:twitter:card" name="twitter:card" content="summary_large_image" />
             <meta key="meta:name:twitter:creator" name="twitter:creator" content="@tmkeesey" />
             <meta key="meta:name:twitter:description" name="twitter:description" content={description} />
-            <meta key="meta:name:twitter:image" name="twitter:image" content={`${url}/social/876x438.png`} />
-            <meta key="meta:name:twitter:image:alt" name="twitter:image:alt" content={socialImageAlt || title} />
+            <meta key="meta:name:twitter:image" name="twitter:image" content={`/images/social${socialImagePath ?? ""}/876x438.png`} />
+            <meta key="meta:name:twitter:image:alt" name="twitter:image:alt" content={socialImageAlt ?? title} />
             <meta key="meta:name:twitter:image:height" name="twitter:image:height" content="438" />
             <meta key="meta:name:twitter:image:width" name="twitter:image:width" content="876" />
             <meta key="meta:name:twitter:image:title" name="twitter:title" content={title} />
             <meta key="meta:name:viewport" name="viewport" content="width=device-width,initial-scale=1" />
             <meta key="meta:property:og:description" property="og:description" content={description} />
-            <meta key="meta:property:og:image" property="og:image" content={`${url}/social/1200x628.png`} />
-            <meta key="meta:property:og:image:alt" property="og:image:alt" content={socialImageAlt || title} />
+            <meta key="meta:property:og:image" property="og:image" content={`/images/social${socialImagePath ?? ""}/1200x628.png`} />
+            <meta key="meta:property:og:image:alt" property="og:image:alt" content={socialImageAlt ?? title} />
             <meta key="meta:property:og:image:height" property="og:image:height" content="628" />
             <meta key="meta:property:og:image:type" property="og:image:type" content="image/png" />
             <meta key="meta:property:og:image:width" property="og:image:width" content="1200" />
@@ -81,5 +82,6 @@ const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, soc
 Head.defaultProps = {
     author: MIKE_KEESEY,
     language: "en",
+    socialImagePath: ""
 }
 export default Head

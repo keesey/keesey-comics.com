@@ -11,7 +11,7 @@ import PLEISTOCENE from "~/schema/PLEISTOCENE"
 const Paleocene: NextPage = () => {
   return (
     <>
-      <Head favIconType="pleistocene" subject={PLEISTOCENE} />
+      <Head favIconType="pleistocene" socialImagePath="/pleistocene" subject={PLEISTOCENE} />
       <Layout headerPromos={["pleistocene"]} footerPromos={["paleocene", "phylopic"]} theme="bw">
         <SeriesHero
           ageRecommendation="17+"

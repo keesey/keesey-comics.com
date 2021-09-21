@@ -27,7 +27,7 @@ const SUBJECT: ComicStory = {
 const Issue02: NextPage = () => {
   return (
     <>
-      <Head favIconType="paleocene" subject={SUBJECT} />
+      <Head favIconType="paleocene" socialImagePath="/paleocene/02" subject={SUBJECT} />
       <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="night">
         <IssueHero
           ageRecommendation="9+"
