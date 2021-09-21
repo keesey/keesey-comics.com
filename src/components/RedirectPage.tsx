@@ -9,12 +9,12 @@ const RedirectPage: VFC<Props> = ({ href, title }) => {
         <>
             <Head>
                 <title>{title}</title>
-                <meta httpEquiv="refresh" content={`0; url=${href}`} /> 
+                <meta httpEquiv="refresh" content={`0; url=${href}`} />
             </Head>
             <body>
-                <main style={{ color: "#888", fontFamily: "Roboto, sans", margin: 20 }}>
-                    Redirecting to <a href={href}>{title}</a>&hellip;
-                </main>
+                <div style={{ color: "#888", fontFamily: "Roboto, sans", margin: 20 }}>
+                    Redirecting to <a href={href}>{title}</a>.&hellip;
+                </div>
             </body>
         </>
     )

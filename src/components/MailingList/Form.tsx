@@ -13,7 +13,7 @@ const Form: FC = () => (
         >
             <div className="content" id="mc_embed_signup_scroll">
                 <label htmlFor="mce-EMAIL">
-                    Subscribe to the <cite>Keesey Comics</cite> mailing list.
+                    Sign up for the newsletter:
                 </label>
                 <input className="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required type="email" />
                 <div aria-hidden="true" style={{ position: "absolute", left: -5000 }}>

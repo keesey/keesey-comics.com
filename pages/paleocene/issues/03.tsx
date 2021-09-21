@@ -24,7 +24,7 @@ const SUBJECT: ComicStory = {
   sameAs: "https://www.comixology.com/Paleocene-1/digital-comic/812491",
   url: "http://keesey-comics.com/paleocene/issues/03",
 }
-const Issue01: NextPage = () => {
+const Issue03: NextPage = () => {
   return (
     <>
       <Head favIconType="paleocene" subject={SUBJECT} />
@@ -51,13 +51,13 @@ const Issue01: NextPage = () => {
         </Quote>
         <ComicStrip>
           <TextPanel emphatic>We all recall the World-End...</TextPanel>
-          <ImagePanel height={280} src="/images/issues/paleocene/01.png" width={322} />
+          <ImagePanel height={280} src="/images/issues/paleocene/03/01.png" width={322} />
           <TextPanel emphatic>...the Fire-Quake, the Rising Sea, the Storm of Stones.</TextPanel>
-          <ImagePanel height={280} src="/images/issues/paleocene/02.png" width={209} />
+          <ImagePanel height={280} src="/images/issues/paleocene/03/02.png" width={209} />
           <TextPanel emphatic>it left a Shroud above our Heads that slew the Sun, and lay my northern Province bare.</TextPanel>
-          <ImagePanel height={280} src="/images/issues/paleocene/03.png" width={498} />
+          <ImagePanel height={280} src="/images/issues/paleocene/03/03.png" width={498} />
           <TextPanel emphatic>in lonely Stillness, Signs of Life cannot be found, save where, in Silt turned hard as Stone...</TextPanel>
-          <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={203} />
+          <ImagePanel height={280} src="/images/issues/paleocene/03/04.png" width={286} />
           <TextPanel emphatic>...the Great Ones strode.</TextPanel>
         </ComicStrip>
         <IssuePromos id="paleocene" numbers={[1, 2]}>Read the other issues!</IssuePromos>
@@ -70,4 +70,4 @@ const Issue01: NextPage = () => {
     </>
   )
 }
-export default Issue01
+export default Issue03

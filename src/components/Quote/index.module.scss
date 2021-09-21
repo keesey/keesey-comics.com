@@ -15,23 +15,27 @@
         border-left: none;
         border-right: none;
     }
-    > p {
-        font-size: larger;
-        text-align: center;
-        &::after {
-            content: "”";
+    > blockquote {
+        margin: 0 auto;
+        max-width: 1024px;
+        > p {
             font-size: larger;
+            text-align: center;
+            &::after {
+                content: "”";
+                font-size: larger;
+            }
+            &::before {
+                content: "“";
+                font-size: larger;
+            }
         }
-        &::before {
-            content: "“";
-            font-size: larger;
-        }
-    }
-    > footer {
-        font-weight: 200;
-        text-align: right;
-        &::before {
-            content: "— ";
+        > footer {
+            font-weight: 200;
+            text-align: right;
+            &::before {
+                content: "— ";
+            }
         }
     }
 }

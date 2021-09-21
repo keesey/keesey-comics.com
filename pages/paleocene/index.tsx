@@ -30,7 +30,7 @@ const Paleocene: NextPage = () => {
           attribution={<>Daniel Bensen (<cite>First Knife</cite>, <cite>Junction</cite>)</>}
           href="//www.thekingdomsofevil.com/?p=8983"
         >
-            ★★★★
+          ★★★★
         </Quote>
         <ComicStrip>
           <TextPanel>Sixty-six million years ago, an asteroid slammed into the Earth, killing three quarters of all living things.</TextPanel>
@@ -45,13 +45,13 @@ const Paleocene: NextPage = () => {
         <IssuePromos id="paleocene" numbers={[1, 2, 3]}>Read all issues!</IssuePromos>
         <Nav>
           <ComicText>Translations:</ComicText>
-          <Link href="/paleocene/ko" passHref>
+          <Link href="https://gumroad.com/keesey" passHref>
             <CTA hrefLang="ko">
               <ComicText lang="ko">한국어</ComicText>
               <ComicText> (Korean)</ComicText>
             </CTA>
           </Link>
-          <CTA href="//fourcatspress.com/catalog/paleontology/paleocene/" hrefLang="it" target="_blank" rel="noreferrer">
+          <CTA href="//fourcatspress.com/catalog/paleontology/paleocene" hrefLang="it" target="_blank" rel="noreferrer">
             <ComicText lang="it">Italiano</ComicText>
             <ComicText> (Italian)</ComicText>
             <br />

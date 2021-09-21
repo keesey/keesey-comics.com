@@ -1,10 +1,8 @@
 import type { NextPage } from "next"
-import Link from "next/link"
 import type { ComicStory } from "schema-dts"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
-import ComicText from "~/components/ComicText"
 import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
@@ -56,13 +54,9 @@ const Issue02: NextPage = () => {
         </ComicStrip>
         <IssuePromos id="paleocene" numbers={[1, 3]}>Read the other issues!</IssuePromos>
         <Nav>
-          <ComicText>Translations:</ComicText>
-          <Link href="/paleocene/issues/01/ko" passHref>
-            <CTA hrefLang="ko">
-              <ComicText lang="ko">한국어</ComicText>
-              <ComicText> (Korean)</ComicText>
-            </CTA>
-          </Link>
+          <CTA href="/kickstarter">
+            Check it out!
+          </CTA>
         </Nav>
       </Layout>
     </>

@@ -65,12 +65,16 @@ address {
 }
 body,
 html {
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
     font-family: Roboto, sans-serif;
     font-size: 11pt;
     margin: 0;
     padding: 0;
+}
+main {
+    background-color: #fff;
+    color: #000;
 }
 hr {
     border: 2.5pt solid;
