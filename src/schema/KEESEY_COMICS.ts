@@ -10,6 +10,10 @@ const KEESEY_COMICS: Organization = {
         "https://www.comixology.com/Keesey-Comics/comics-publisher/14274-0",
         "http://instagram.com/keesey.comics"
     ],
+    subjectOf: [
+        { "@id": "http://keesey-comics.com/contact" },
+        { "@id": "http://keesey-comics.com/mailinglist" },
+    ],
     url: "http://keesey-comics.com",
 }
 export default KEESEY_COMICS

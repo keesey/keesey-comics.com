@@ -16,7 +16,7 @@ const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) =>
     const className = useThemedClassName(styles, "hero");
     const logoColor = useForegroundColor()
     return (
-        <section className={className}>
+        <header className={className}>
             <Logo color={logoColor} type={id} className={styles.logo} />
             <div className={styles.store}>
                 <CTA href="https://gumroad.com/keesey">
@@ -25,7 +25,7 @@ const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) =>
             </div>
             <ExternalStores links={storeLinks} />
             <AgeRecommendation ageRecommendation={ageRecommendation} />
-        </section>
+        </header>
     )
 }
 export default SeriesHero

@@ -60,6 +60,9 @@ a, abbr {
         opacity: 0.67;
     }
 }
+address {
+    font-style: normal;
+}
 body,
 html {
     background-color: #fff;
@@ -82,13 +85,13 @@ img.intrinsic {
 .print, .screen, .speech {
     display: none;
 }
-@media screen {
-    .screen {
+@media print {
+    .print {
         display: initial;
     }
 }
-@media print {
-    .print {
+@media screen {
+    .screen {
         display: initial;
     }
 }

@@ -8,14 +8,16 @@ export type Props = {
 const Quote: FC<Props> = ({ attribution, children, href }) => {
     const className = useThemedClassName(styles, "quote")
     return (
-        <blockquote cite={href} className={className}>
-            <p>{children}</p>
-            <footer>
-                <cite className={styles.attribution}>
-                    <a href={href} target="_blank" rel="noreferrer">{attribution}</a>
-                </cite>
-            </footer>
-        </blockquote>
+        <aside>
+            <blockquote cite={href} className={className}>
+                <p>{children}</p>
+                <footer>
+                    <cite className={styles.attribution}>
+                        <a href={href} target="_blank" rel="noreferrer">{attribution}</a>
+                    </cite>
+                </footer>
+            </blockquote>
+        </aside>
     )
 }
 export default Quote

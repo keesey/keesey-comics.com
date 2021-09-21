@@ -1,10 +1,10 @@
 @use "src/styles/mixins.scss";
 .cta {
     @include mixins.black;
-    border-radius: 1rem;
+    border-radius: 2rem;
     display: block;
     font-size: larger;
-    padding: 0.75rem;
+    padding: 1.25rem;
     margin: 0 auto;
     text-align: center;
     width: fit-content;
@@ -14,7 +14,7 @@
         color: #000;
     }
     &.theme-kc {
-        @include mixins.cream;
+        @include mixins.brown;
     }
     &.theme-night {
         background-color: #ff0;

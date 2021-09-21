@@ -15,7 +15,7 @@ const IssueHero: FC<Props> = ({ ageRecommendation, children, id, number, seriesT
     const className = useThemedClassName(styles, "hero");
     const paddedNumber = number < 10 ? `0${number}` : String(number);
     return (
-        <section className={className}>
+        <header className={className}>
             <a className={styles.image} href="https://gumroad.com/keesey">
                 <img
                     alt={`${seriesTitle} #${number}`}
@@ -29,7 +29,7 @@ const IssueHero: FC<Props> = ({ ageRecommendation, children, id, number, seriesT
                 <ExternalStores links={storeLinks} />
                 <AgeRecommendation ageRecommendation={ageRecommendation} />
             </div>
-        </section>
+        </header>
     )
 }
 export default IssueHero
