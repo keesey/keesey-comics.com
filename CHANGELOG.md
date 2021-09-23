@@ -24,10 +24,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Legacy redirect for issue #3 cover.
 
-### Changed
-
-- Server-side redirects.
-
 ### Fixed
 
 - Invalid store link.
