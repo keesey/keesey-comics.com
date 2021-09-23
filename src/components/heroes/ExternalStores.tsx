@@ -9,7 +9,7 @@ export type ExternalStoreLink = Readonly<{
     url: string
 }>
 export interface Props {
-    links: readonly ExternalStoreLink[];
+    links?: readonly ExternalStoreLink[];
 }
 const LOGO_HEIGHT: Readonly<Record<ExternalStoreLink["type"], number>> = {
     gumroad: 48,
@@ -17,7 +17,7 @@ const LOGO_HEIGHT: Readonly<Record<ExternalStoreLink["type"], number>> = {
 }
 const ExternalStores: VFC<Props> = ({ links }) => {
     const logoColor = useForegroundColor()
-    return links?.length > 0
+    return (links && links.length > 0)
         ? (
             <div className={styles.externalStores} key="external-stores">
                 <ComicText>Also available digitally on:</ComicText>

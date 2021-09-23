@@ -9,7 +9,7 @@ export interface Props {
     id: "paleocene" | "pleistocene"
     number: number
     seriesTitle: string
-    storeLinks: ExternalStoresProps["links"]
+    storeLinks?: ExternalStoresProps["links"]
 }
 const IssueHero: FC<Props> = ({ ageRecommendation, children, id, number, seriesTitle, storeLinks }) => {
     const className = useThemedClassName(styles, "hero");

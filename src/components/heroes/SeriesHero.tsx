@@ -10,7 +10,7 @@ import styles from "./SeriesHero.module.scss"
 export interface Props {
     ageRecommendation: AgeRecommendationProps["ageRecommendation"]
     id: "paleocene" | "pleistocene"
-    storeLinks: ExternalStoresProps["links"]
+    storeLinks?: ExternalStoresProps["links"]
     title: string;
 }
 const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) => {
