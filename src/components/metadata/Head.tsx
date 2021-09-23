@@ -45,6 +45,7 @@ const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, soc
             <meta key="meta:http-equiv:x-ua-compatible" httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
             <meta key="meta:name:author" name="author" content={authorName} />
             <meta key="meta:name:description" name="description" content={description} />
+            <meta key="meta:name:google-site-verification" name="google-site-verification" content="DXCMgDfcoYmZzI9n1DDIH_q5XGl06Yx4aoDdUOvRX0E" />
             <meta key="meta:name:language" name="language" content={language} />
             <meta key="meta:name:no-email-collection" name="no-email-collection" content="//unspam.com/noemailcollection" />
             <meta key="meta:name:reply-to" name="reply-to" content="keesey+comics@gmail.com" />
