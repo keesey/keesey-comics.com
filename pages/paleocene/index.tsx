@@ -46,7 +46,7 @@ const Paleocene: NextPage = () => {
         <IssuePromos id="paleocene" numbers={[1, 2, 3]}>Read all issues!</IssuePromos>
         <Nav>
           <ComicText>Translations:</ComicText>
-          <Link href="//gumroad.com/keesey" passHref>
+          <Link href="/store" passHref>
             <CTA hrefLang="ko">
               <ComicText lang="ko">한국어</ComicText>
               <ComicText> (Korean)</ComicText>
