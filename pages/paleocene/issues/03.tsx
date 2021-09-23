@@ -15,7 +15,7 @@ import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
   ...PALEOCENE,
   "@id": "http://keesey-comics.com/paleocene/issues/03",
-  abstract: "On one continent, a lonely male bird starves in the wasteland. On another, a band of males search for a new home. See what happens when continents collide!",
+  abstract: "On one continent, a lonely bird starves in the wasteland. On another, a band of primates searches for a new home. See what happens when continents collide!",
   copyrightYear: 2021,
   description: "Issue #3 of a comic series about our early primate ancestors.",
   image: "http://keesey-comics.com/images/issues/03/front_cover.png",
@@ -34,10 +34,6 @@ const Issue03: NextPage = () => {
           ageRecommendation="9+"
           id="paleocene"
           number={3}
-          storeLinks={[
-            { type: "gumroad", url: "//gumroad.com/keesey" },
-            { type: "comixology", url: "//www.comixology.com/Paleocene-1/digital-comic/812491" },
-          ]}
           seriesTitle="Paleocene"
         >
           <Link href="/kickstarter" passHref>

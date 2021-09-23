@@ -58,7 +58,7 @@ const Issue01: NextPage = () => {
         <IssuePromos id="paleocene" numbers={[2, 3]}>Read the other issues!</IssuePromos>
         <Nav>
           <ComicText>Translations:</ComicText>
-          <CTA href="//gumroad.com/keesey">
+          <CTA href="/store">
             <ComicText lang="ko">한국어</ComicText>
             <ComicText> (Korean)</ComicText>
           </CTA>
@@ -66,13 +66,13 @@ const Issue01: NextPage = () => {
             <ComicText lang="it">Italiano</ComicText>
             <ComicText> (Italian)</ComicText>
             <br />
-            <ComicText emphatic>(Most artwork differs.)</ComicText>
+            <ComicText emphatic>(Most artwork differs)</ComicText>
           </CTA>
           <CTA href="http://www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno" hrefLang="es" target="_blank" rel="noreferrer">
             <ComicText lang="es">Español</ComicText>
             <ComicText> (Spanish)</ComicText>
             <br />
-            <ComicText emphatic>(First eight pages only.)</ComicText>
+            <ComicText emphatic>(Eight pages only)</ComicText>
           </CTA>
         </Nav>
         <br />
