@@ -53,14 +53,14 @@ const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, soc
             <meta key="meta:name:twitter:card" name="twitter:card" content="summary_large_image" />
             <meta key="meta:name:twitter:creator" name="twitter:creator" content="@tmkeesey" />
             <meta key="meta:name:twitter:description" name="twitter:description" content={description} />
-            <meta key="meta:name:twitter:image" name="twitter:image" content={`/images/social${socialImagePath ?? ""}/876x438.png`} />
+            <meta key="meta:name:twitter:image" name="twitter:image" content={`https://www.keesey-comics.com/images/social${socialImagePath ?? ""}/876x438.png`} />
             <meta key="meta:name:twitter:image:alt" name="twitter:image:alt" content={socialImageAlt ?? title} />
             <meta key="meta:name:twitter:image:height" name="twitter:image:height" content="438" />
             <meta key="meta:name:twitter:image:width" name="twitter:image:width" content="876" />
             <meta key="meta:name:twitter:image:title" name="twitter:title" content={title} />
             <meta key="meta:name:viewport" name="viewport" content="width=device-width,initial-scale=1" />
             <meta key="meta:property:og:description" property="og:description" content={description} />
-            <meta key="meta:property:og:image" property="og:image" content={`/images/social${socialImagePath ?? ""}/1200x628.png`} />
+            <meta key="meta:property:og:image" property="og:image" content={`https://www.keesey-comics.com/images/social${socialImagePath ?? ""}/1200x628.png`} />
             <meta key="meta:property:og:image:alt" property="og:image:alt" content={socialImageAlt ?? title} />
             <meta key="meta:property:og:image:height" property="og:image:height" content="628" />
             <meta key="meta:property:og:image:type" property="og:image:type" content="image/png" />
