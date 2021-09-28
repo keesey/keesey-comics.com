@@ -30,7 +30,7 @@ const comixify = (text: string) => {
 }
 const ComicText: FC<Props> = ({ children, emphatic, lang }) => {
     const regularClassName = useThemedClassName(styles, "regular", emphatic ? "emphatic" : "");
-    const comicsClassName = useThemedClassName(styles, "comics", emphatic ? "emphatic" : "");
+    const comixifiedClassName = useThemedClassName(styles, "comixified", emphatic ? "emphatic" : "");
     if (!children) {
         return null;
     }
@@ -42,7 +42,7 @@ const ComicText: FC<Props> = ({ children, emphatic, lang }) => {
     return (
         <>
             <span lang={lang} className={regularClassName}>{children}</span>
-            <span lang={lang} className={comicsClassName}>{comixify(children)}</span>
+            <span lang={lang} className={comixifiedClassName}>{comixify(children)}</span>
         </>
     );
 }

@@ -2,47 +2,61 @@
     font-display: block;
     font-family: Paleocene;
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url(/fonts/paleocene-regular-webfont.woff2) format('woff2'),
         url(/fonts/paleocene-regular-webfont.woff) format('woff');
+    text-rendering: optimizeLegibility;
 }
 @font-face {
     font-display: block;
     font-family: Paleocene;
     font-style: italic;
-    font-weight: 400;
+    font-weight: normal;
     src: url(/fonts/paleocene-italic-webfont.woff2) format('woff2'),
         url(/fonts/paleocene-italic-webfont.woff) format('woff');
+    text-rendering: optimizeLegibility;
 }
 @font-face {
     font-display: block;
-    font-family: Atland-BB;
+    font-family: AtlandBB;
     font-style: normal;
-    font-weight: 400;
-    src: url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.eot");
-    src: url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.eot?#iefix") format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.woff2") format("woff2"),
-        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.woff") format("woff"),
-        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/a3848f1192e944e5c781e4edec5b41ef.svg#AtlandBB") format("svg");
+    font-weight: normal;
+    src: url(/fonts/AtlandBB.eot);
+    src: url(/fonts/AtlandBB.eot?#iefix) format('embedded-opentype'),
+         url(/fonts/AtlandBB.woff) format('woff'),
+         url(/fonts/AtlandBB.ttf) format('truetype'),
+         url(/fonts/AtlandBB.svg#AtlandBB) format('svg');
+    text-rendering: optimizeLegibility;
 }
 @font-face {
     font-display: block;
-    font-family: Atland-BB;
+    font-family: AtlandBB;
     font-style: italic;
-    font-weight: 400;
-    src: url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.eot");
-    src: url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.eot?#iefix") format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.woff2") format("woff2"),
-        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.woff") format("woff"),
-        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/6d632db5dd29f6ce3190820955eea8a4.svg#AtlandBB-Italic") format("svg");
+    font-weight: normal;
+    src: url(/fonts/AtlandBB-Italic.eot);
+    src: url(/fonts/AtlandBB-Italic.eot?#iefix) format('embedded-opentype'),
+         url(/fonts/AtlandBB-Italic.woff) format('woff'),
+         url(/fonts/AtlandBB-Italic.ttf) format('truetype'),
+         url(/fonts/AtlandBB-Italic.svg#AtlandBB) format('svg');
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-display: block;
+    font-family: AtlandBB;
+    font-style: italic;
+    font-weight: bold;
+    src: url(/fonts/AtlandBB-BoldItalic.eot);
+    src: url(/fonts/AtlandBB-BoldItalic.eot?#iefix) format('embedded-opentype'),
+         url(/fonts/AtlandBB-BoldItalic.woff) format('woff'),
+         url(/fonts/AtlandBB-BoldItalic.ttf) format('truetype'),
+         url(/fonts/AtlandBB-BoldItalic.svg#AtlandBB) format('svg');
+    text-rendering: optimizeLegibility;
 }
 @font-face {
     font-display: swap;
     font-family: Euljiro-Che;
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url(/fonts/bmeuljiro.otf) format('opentype'),
         url(/fonts/bmeuljiro.ttf) format('truetype');
 }

@@ -1,14 +1,11 @@
-.comics {
+.comixified {
     display: none;
     @media print, screen {
         display: initial;
         font-family: Paleocene;
         letter-spacing: 0.25pt;
         text-transform: unset;
-        &.theme-day {
-            font-family: Atland-BB;
-        }
-        [lang=ko] &, &[lang=ko] {
+        &.theme-day, [lang=ko] &, &[lang=ko] {
             display: none;
         }
     }
@@ -19,8 +16,9 @@
 .regular {
     @media print, screen {
         display: none;
-        [lang=ko] &, &[lang=ko] {
+        &.theme-day, [lang=ko] &, &[lang=ko] {
             display: initial;
+            font-family: AtlandBB;
         }
     }
     [lang=ko] &, &[lang=ko] {
