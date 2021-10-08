@@ -18,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.0.5] - 2021-10-07
+
+### Removed
+
+- All settings related to S3.
+
 ## [2.0.4] - 2021-09-28
 
 ### Changed
