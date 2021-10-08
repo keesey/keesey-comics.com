@@ -2,7 +2,6 @@
 /build
 /node_modules
 /out
-/s3-options.json
 .DS_Store
 .env.local
 .env.development.local
