@@ -35,7 +35,9 @@
   "private": true,
   "repository": "https://github.com/keesey/keesey-comics.com",
   "resolutions": {
-    "@babel/core": "^7.0.0-0"
+    "@babel/core": "^7.0.0-0",
+    "glob-parent": "^5.1.2",
+    "path-parse": "^1.0.7"
   },
   "scripts": {
     "build": "next build",
