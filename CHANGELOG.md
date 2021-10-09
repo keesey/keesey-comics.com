@@ -18,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.0.7] - 2021-10-08
+
+### Added
+
+- Countdown banner for Kickstarter campaign.
+
 ## [2.0.6] - 2021-10-07
 
 ### Security
