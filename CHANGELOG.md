@@ -18,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.0.8] - 2021-10-22
+
+### Fixed
+
+- Countdown said "minutes" instead of "hours".
+
 ## [2.0.7] - 2021-10-08
 
 ### Added

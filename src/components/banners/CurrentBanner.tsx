@@ -13,7 +13,7 @@ const getCountdown = () => {
     }
     if (duration < 60 * 60 * 1000) {
         const minutes = Math.floor(duration / (60 * 1000))
-        return `${minutes} minute${minutes === 1 ? "" : "s"} left!`
+        return `${minutes} hour${minutes === 1 ? "" : "s"} left!`
     }
     if (duration < 24 * 60 * 60 * 1000) {
         const hours = Math.floor(duration / (60 * 60 * 1000))
