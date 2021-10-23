@@ -1,3 +1,5 @@
+import { VFC } from "react";
+/*
 import { useEffect, useState, VFC } from "react"
 import Kickstarter from "./Kickstarter"
 const END = process.env.NEXT_PUBLIC_KICKSTARTER_END_DATE ? new Date(process.env.NEXT_PUBLIC_KICKSTARTER_END_DATE).valueOf() : NaN
@@ -47,5 +49,6 @@ const Countdown: VFC = () => {
         ? <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-3-comic-book">{countdown}</Kickstarter>
         : <Message />
 }
-const CurrentBanner: VFC = () => isNaN(END) ? <Message /> : <Countdown />
+*/
+const CurrentBanner: VFC = () => null;
 export default CurrentBanner

@@ -18,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.0.9] - 2021-10-23
+
+### Changed
+
+- Removed countdown banner code due to bug with appearance after final time.
+
 ## [2.0.8] - 2021-10-22
 
 ### Fixed
