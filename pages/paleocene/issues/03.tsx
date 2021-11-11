@@ -36,8 +36,8 @@ const Issue03: NextPage = () => {
           number={3}
           seriesTitle="Paleocene"
         >
-          <Link href="/kickstarter" passHref>
-            <CTA>Get it on Kickstarter!</CTA>
+          <Link href="/store" passHref>
+            <CTA>Get it now!</CTA>
           </Link>
         </IssueHero>
         <Quote

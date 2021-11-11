@@ -44,5 +44,5 @@
     "start": "next dev",
     "lint": "next lint"
   },
-  "version": "2.0.9"
+  "version": "2.0.10"
 }

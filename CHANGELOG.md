@@ -18,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.0.10] - 2021-11-11
+
+### Changed
+
+- Buy link for *Paleocene #3* (from Kickstarter to Gumroad).
+
 ## [2.0.9] - 2021-10-23
 
 ### Changed
