@@ -1,6 +1,7 @@
 import axios from "axios";
-import { Order } from "./Order";
+import { Shipment } from "./Shipment";
 import { ServiceOption } from "./SeviceOption";
+import OUNCES_PER_POUND from "./OUNCES_PER_POUND";
 const isDomestic = (country: string) =>
     country === 'United States'
     || country === 'Guam'
@@ -20,19 +21,21 @@ const MIN_LARGE_DIMENSION = 12;
 const REVISION_NODE = '<Revision>2</Revision>';
 const PACKAGE_OPENING_TAG = '<Package ID="1">';
 const SHIPPING_API_ENDPOINT = 'http://production.shippingapis.com/ShippingAPI.dll';
-const createOrderDocument = (order: Order) => {
+const createOrderDocument = (order: Shipment) => {
     const pkg = order.package;
     const dimensions = [...pkg.dimensions].sort();
     const size = dimensions.some(x => x > MIN_LARGE_DIMENSION) ? 'LARGE' : 'REGULAR';
     const [width, length, height] = pkg.dimensions;
     const girth = 2 * (width + height);
     const dimensionNodes = `<Size>${size}</Size><Width>${width}</Width><Length>${length}</Length><Height>${height}</Height><Girth>${girth}</Girth>`;
-    const weightNodes = `<Pounds>${pkg.pounds}</Pounds><Ounces>${pkg.ounces}</Ounces>`;
+    const pounds = Math.floor(pkg.ounces / OUNCES_PER_POUND)
+    const ounces = Math.ceil(pkg.ounces - pounds * OUNCES_PER_POUND)
+    const weightNodes = `<Pounds>${pounds}</Pounds><Ounces>${ounces}</Ounces>`;
     return isDomestic(order.address.country)
         ? `<RateV4Request USERID="${process.env.USPS_USER_ID}">${REVISION_NODE}${PACKAGE_OPENING_TAG}<Service>MEDIA</Service><ZipOrigination>${process.env.ORIGIN_POSTAL_CODE}</ZipOrigination><ZipDestination>${order.address.postalCode}</ZipDestination>${weightNodes}<Container>VARIABLE</Container>${dimensionNodes}<Value>${pkg.value}</Value></Package></RateV4Request>`
         : `<IntlRateV2Request USERID="${process.env.USPS_USER_ID}">${REVISION_NODE}${PACKAGE_OPENING_TAG}${weightNodes}<MailType>PACKAGE</MailType><ValueOfContents>${pkg.value}</ValueOfContents><Country>${order.address.country}</Country><Container>RECTANGULAR</Container>${dimensionNodes}<OriginZip>${process.env.ORIGIN_POSTAL_CODE}</OriginZip></Package></IntlRateV2Request>`;
 };
-const createPostageRequestURL = (order: Order): URL => {
+const createShippingRequestURL = (order: Shipment): URL => {
     const api = isDomestic(order.address.country) ? 'RateV4' : 'IntlRateV2';
     const xml = createOrderDocument(order);
     const query = `api=${api}&xml=${encodeURIComponent(xml)}`;
@@ -95,9 +98,9 @@ const getServiceOptionFromXML = (xml: string): ServiceOption => {
         }
     }
 };
-const calculatePostage = async (order: Order): Promise<ServiceOption> => {
-    const requestURL = createPostageRequestURL(order);
+const calculateShipping = async (order: Shipment): Promise<ServiceOption> => {
+    const requestURL = createShippingRequestURL(order);
     const response = await axios.get(requestURL.toString());
     return getServiceOptionFromXML(String(response.data));
 };
-export default calculatePostage;
+export default calculateShipping;
