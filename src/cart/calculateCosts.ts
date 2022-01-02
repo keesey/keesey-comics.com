@@ -6,6 +6,8 @@ import selectContainer from "./selectContainer";
 import calculateShipping from "./calculateShipping";
 import { Package } from "./Package";
 import { Product } from "./Product";
+const PAYPAL_TRANSACTION_RATE = 0.0289;
+const PAYPAL_TRANSACTION_FEE = 0.49;
 const calculateCosts = async (
   order: Order,
   address: Address,
@@ -34,11 +36,14 @@ const calculateCosts = async (
     value: container.value + productValue,
   };
   const shipping = await calculateShipping({ address, package: pkg });
+  const handling = orderProducts.length * Number(process.env.HANDLING_RATE);
+  const processingSubtotal = container.value + shipping.postage + handling + productValue;
   return {
     containers: container.value,
     shipping: shipping.postage,
-    handling: orderProducts.length * Number(process.env.HANDLING_RATE),
+    handling,
     products: productValue,
+    processing: Number((PAYPAL_TRANSACTION_FEE + processingSubtotal * PAYPAL_TRANSACTION_RATE).toFixed(2)),
   };
 };
 export default calculateCosts;

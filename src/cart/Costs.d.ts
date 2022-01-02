@@ -3,5 +3,6 @@ export type Costs = Readonly<{
     handling: number;
     products: number;
     shipping: number;
+    processing: number;
     // taxes: number;
 }>;
