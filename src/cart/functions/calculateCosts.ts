@@ -21,29 +21,34 @@ const calculateCosts = async (
   const orderProducts = Object.keys(order).map(
     (productId) => products[productId]
   );
+  const productOunces = orderProducts.reduce<number>(
+    (prev, product) => prev + product.type.ounces,
+    0
+  );
   const productValue = orderProducts.reduce<number>(
     (prev, product) => prev + product.type.value,
     0
   );
   const pkg: Package = {
     dimensions: container.dimensions,
-    ounces:
-      container.ounces +
-      orderProducts.reduce<number>(
-        (prev, product) => prev + product.type.ounces,
-        0
-      ),
+    ounces: container.ounces + productOunces,
     value: container.value + productValue,
   };
   const shipping = await calculateShipping({ address, package: pkg });
   const handling = orderProducts.length * Number(process.env.HANDLING_RATE);
-  const processingSubtotal = container.value + shipping.postage + handling + productValue;
+  const processingSubtotal =
+    container.value + shipping.postage + handling + productValue;
   return {
     containers: container.value,
     shipping: shipping.postage,
     handling,
     products: productValue,
-    processing: Number((PAYPAL_TRANSACTION_FEE + processingSubtotal * PAYPAL_TRANSACTION_RATE).toFixed(2)),
+    processing: Number(
+      (
+        PAYPAL_TRANSACTION_FEE +
+        processingSubtotal * PAYPAL_TRANSACTION_RATE
+      ).toFixed(2)
+    ),
   };
 };
 export default calculateCosts;
