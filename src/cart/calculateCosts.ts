@@ -6,7 +6,6 @@ import selectContainer from "./selectContainer";
 import calculateShipping from "./calculateShipping";
 import { Package } from "./Package";
 import { Product } from "./Product";
-const HANDLING_PER_PRODUCT = 0.05;
 const calculateCosts = async (
   order: Order,
   address: Address,
@@ -38,7 +37,7 @@ const calculateCosts = async (
   return {
     containers: container.value,
     shipping: shipping.postage,
-    handling: orderProducts.length * HANDLING_PER_PRODUCT,
+    handling: orderProducts.length * Number(process.env.HANDLING_RATE),
     products: productValue,
   };
 };

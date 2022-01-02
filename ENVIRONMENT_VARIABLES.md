@@ -2,6 +2,7 @@
 
 ## Required
 
+- `HANDLING_RATE` - Amount to charge for product handling.
 - `ORIGIN_POSTAL_CODE` - United States ZIP code for shipping.
 - `PAYPAL_CLIENT_ID` - ID for PayPal account.
 - `USPS_USER_ID` - ID for United Stated Postal Service account.
