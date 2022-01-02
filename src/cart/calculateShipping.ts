@@ -32,7 +32,7 @@ const createOrderDocument = (order: Shipment) => {
     const ounces = Math.ceil(pkg.ounces - pounds * OUNCES_PER_POUND)
     const weightNodes = `<Pounds>${pounds}</Pounds><Ounces>${ounces}</Ounces>`;
     return isDomestic(order.address.country)
-        ? `<RateV4Request USERID="${process.env.USPS_USER_ID}">${REVISION_NODE}${PACKAGE_OPENING_TAG}<Service>MEDIA</Service><ZipOrigination>${process.env.ORIGIN_POSTAL_CODE}</ZipOrigination><ZipDestination>${order.address.postalCode}</ZipDestination>${weightNodes}<Container>VARIABLE</Container>${dimensionNodes}<Value>${pkg.value}</Value></Package></RateV4Request>`
+        ? `<RateV4Request USERID="${process.env.USPS_USER_ID}">${REVISION_NODE}${PACKAGE_OPENING_TAG}<Service>MEDIA</Service><ZipOrigination>${process.env.ORIGIN_ZIP_CODE}</ZipOrigination><ZipDestination>${order.address.postalCode}</ZipDestination>${weightNodes}<Container>VARIABLE</Container>${dimensionNodes}<Value>${pkg.value}</Value></Package></RateV4Request>`
         : `<IntlRateV2Request USERID="${process.env.USPS_USER_ID}">${REVISION_NODE}${PACKAGE_OPENING_TAG}${weightNodes}<MailType>PACKAGE</MailType><ValueOfContents>${pkg.value}</ValueOfContents><Country>${order.address.country}</Country><Container>RECTANGULAR</Container>${dimensionNodes}<OriginZip>${process.env.ORIGIN_POSTAL_CODE}</OriginZip></Package></IntlRateV2Request>`;
 };
 const createShippingRequestURL = (order: Shipment): URL => {
