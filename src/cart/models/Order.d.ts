@@ -1,1 +1,2 @@
-export type Order = Readonly<Record<string, number>>;
+import { OrderItem } from "./OrderItem";
+export type Order = readonly OrderItem[];

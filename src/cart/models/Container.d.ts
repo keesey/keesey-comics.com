@@ -1,4 +1,5 @@
+import { ContainerQuantity } from "./ContainerQuantity";
 import { Package } from "./Package";
 export type Container = Package & Readonly<{
-    maxCountForProductType: Readonly<Record<string, number>>;
+    quantities: readonly ContainerQuantity[];
 }>;
