@@ -11,30 +11,35 @@ const CostsContainer: FC = ({ children }) => {
     const [address] = useContext(AddressContext) ?? [];
     const [order] = useContext(OrderContext) ?? [];
     const [abortController] = useState(() => new AbortController());
-    useEffect(
-        () => {
-            abortController.abort();
-            setError(undefined);
-            setCosts(undefined);
-            if (!address || !order) {
-                setPending(false);
-            } else {
-                setPending(true);
-                (async () => {
-                    try {
-                        const result = await axios.post<Costs>('/api/costs', { address, order }, { signal: abortController.signal });
-                        setCosts(result.data);
-                    } catch (e) {
-                        setError(e instanceof Error ? e : new Error(String(e)));
-                    } finally {
-                        setPending(false)
-                    }
-                })();
-                return () => abortController.abort();
-            }
-        },
-        [abortController, address, order],
+    useEffect(() => {
+        abortController.abort();
+        setError(undefined);
+        setCosts(undefined);
+        if (!address || !order) {
+            setPending(false);
+        } else {
+            setPending(true);
+            (async () => {
+                try {
+                    const result = await axios.post<Costs>(
+                        "/api/costs",
+                        { address, order },
+                        { signal: abortController.signal }
+                    );
+                    setCosts(result.data);
+                } catch (e) {
+                    setError(e instanceof Error ? e : new Error(String(e)));
+                } finally {
+                    setPending(false);
+                }
+            })();
+            return () => abortController.abort();
+        }
+    }, [abortController, address, order]);
+    return (
+        <Context.Provider value={{ costs, error, pending }}>
+            {children}
+        </Context.Provider>
     );
-    return <Context.Provider value={{ costs, error, pending }}>{children}</Context.Provider>;
 };
 export default CostsContainer;
