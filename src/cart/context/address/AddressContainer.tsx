@@ -1,8 +1,8 @@
 import { FC, useEffect, useReducer } from "react";
-import STORAGE_KEY from "~/cart/constants/STORAGE_KEY";
 import Context from "./Context";
 import reducer from "./reducer";
 import { State } from "./State";
+import STORAGE_KEY from "./STORAGE_KEY";
 const DEFAULT_STATE: State = { country: "United States" };
 const AddressContainer: FC = ({ children }) => {
     const contextValue = useReducer(reducer, DEFAULT_STATE);
@@ -22,7 +22,11 @@ const AddressContainer: FC = ({ children }) => {
         }
     }, [dispatch]);
     useEffect(() => {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } catch (e) {
+            alert(e)
+        }
     }, [state]);
     return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };

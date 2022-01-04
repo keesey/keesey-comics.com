@@ -2,6 +2,7 @@ import type { NextPage } from "next"
 import type { Store } from "schema-dts"
 import { PRODUCT_TYPES_MAP } from "~/cart/constants/PRODUCT_TYPES"
 import OrderContainer from "~/cart/context/order/OrderContainer"
+import ExternalStores from "~/components/heroes/ExternalStores"
 import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
@@ -24,6 +25,15 @@ const Page: NextPage = () => {
                 <Hero>
                     <h1>Keesey Comics Online Store</h1>
                 </Hero>
+                <ExternalStores
+                    links={[
+                        { type: "gumroad", url: "//gumroad/com/keesey" },
+                        { type: "comixology", url: "//www.comixology.com/Keesey-Comics/comics-publisher/14274-0" },
+                    ]}
+                >
+                    <span style={{ fontSize: "large" }}>Digital versions available on:</span>
+                </ExternalStores>
+                <br />
                 <ProductTypes>
                     <ProductType
                         title="Comic Books"

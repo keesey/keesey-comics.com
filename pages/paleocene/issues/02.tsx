@@ -13,6 +13,7 @@ import Head from "~/components/metadata/Head"
 import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
+import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
   ...PALEOCENE,
@@ -27,11 +28,12 @@ const SUBJECT: ComicStory = {
   sameAs: "https://www.comixology.com/Paleocene-2/digital-comic/890936",
   url: "http://keesey-comics.com/paleocene/issues/02",
 }
+const PRODUCT_ID = "COB-STD-PAL-02A"
 const Page: NextPage = () => {
   return (
     <OrderContainer>
       <Head favIconType="paleocene" socialImagePath="/paleocene/02" subject={SUBJECT}>
-        <ProductSchema product={PRODUCTS_MAP["COB-STD-PAL-02A"]} />
+        <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
       </Head>
       <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="night">
         <IssueHero
@@ -44,9 +46,7 @@ const Page: NextPage = () => {
           ]}
           seriesTitle="Paleocene"
         >
-          <Link href="/store" passHref>
-            <CTA>Get it now!</CTA>
-          </Link>
+          <IncrementQuantityCTA href="/cart" productId={PRODUCT_ID} />
         </IssueHero>
         <ComicStrip>
           <TextPanel>Sister has been taken from the nest by ... something.</TextPanel>

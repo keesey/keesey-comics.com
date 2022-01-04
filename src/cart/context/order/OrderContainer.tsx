@@ -1,9 +1,9 @@
 import { FC, useEffect, useReducer } from "react";
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS";
-import STORAGE_KEY from "~/cart/constants/STORAGE_KEY";
 import { OrderItem } from "~/cart/models/OrderItem";
 import Context from "./Context";
 import reducer from "./reducer";
+import STORAGE_KEY from "./STORAGE_KEY";
 const OrderContainer: FC = ({ children }) => {
     const contextValue = useReducer(reducer, []);
     const [state, dispatch] = contextValue;
@@ -17,10 +17,10 @@ const OrderContainer: FC = ({ children }) => {
                     payload.every((item: OrderItem) => {
                         const product = PRODUCTS_MAP[item.productId];
                         if (!product) {
-                            return false;
+                            return false
                         }
                         if (typeof item.quantity !== "number" || !isFinite(item.quantity)) {
-                            return false;
+                            return false
                         }
                         if (
                             item.shippingOptionId &&
@@ -28,9 +28,9 @@ const OrderContainer: FC = ({ children }) => {
                                 (option) => option.id === item.shippingOptionId
                             )
                         ) {
-                            return false;
+                            return false
                         }
-                        return true;
+                        return true
                     })
                 ) {
                     dispatch({ type: "INITIALIZE", payload });
@@ -42,7 +42,11 @@ const OrderContainer: FC = ({ children }) => {
         }
     }, [dispatch]);
     useEffect(() => {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } catch (e) {
+            alert(e)
+        }
     }, [state]);
     return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };

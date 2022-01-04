@@ -1,3 +1,4 @@
+import { Theme } from "~/themes/Theme";
 import { ProductType } from "./ProductType";
 export type Product = Readonly<{
     html: string;
@@ -5,5 +6,6 @@ export type Product = Readonly<{
     imagePath?: string;
     name: string;
     path?: string;
+    theme?: Theme;
     type: ProductType;
 }>;

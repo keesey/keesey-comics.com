@@ -20,7 +20,9 @@
   align-self: stretch;
   display: flex;
   flex-wrap: no-wrap;
-  gap: 1em;
+  font-size: 1.2rem;
+  font-weight: 200;
+  gap: 0.5em;
   margin-top: 0.25rem;
   > * {
     flex-grow: 1;

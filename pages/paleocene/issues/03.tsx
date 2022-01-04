@@ -1,12 +1,10 @@
 import type { NextPage } from "next"
-import Link from "next/link"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
-import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
@@ -14,6 +12,7 @@ import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quote from "~/components/Quote"
 import SocialNav from "~/components/SocialNav"
+import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
   ...PALEOCENE,
@@ -28,11 +27,12 @@ const SUBJECT: ComicStory = {
   sameAs: "https://www.comixology.com/Paleocene-1/digital-comic/812491",
   url: "http://keesey-comics.com/paleocene/issues/03",
 }
+const PRODUCT_ID = "COB-STD-PAL-03A"
 const Page: NextPage = () => {
   return (
     <OrderContainer>
       <Head favIconType="paleocene" socialImagePath="/paleocene/03" subject={SUBJECT}>
-        <ProductSchema product={PRODUCTS_MAP["COB-STD-PAL-03A"]} />
+        <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
       </Head>
       <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="day">
         <IssueHero
@@ -41,9 +41,7 @@ const Page: NextPage = () => {
           number={3}
           seriesTitle="Paleocene"
         >
-          <Link href="/store" passHref>
-            <CTA>Get it now!</CTA>
-          </Link>
+          <IncrementQuantityCTA href="/cart" productId={PRODUCT_ID} />
         </IssueHero>
         <Quote
           attribution={<>Daniel Bensen (<cite>First Knife</cite>, <cite>Junction</cite>)</>}

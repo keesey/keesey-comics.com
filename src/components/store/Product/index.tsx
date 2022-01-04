@@ -1,18 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useContext, VFC } from "react";
+import { VFC } from "react";
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS";
-import Context from "~/cart/context/order/Context";
+import useQuantityIncrementer from "~/cart/hooks/useQuantitytIncrementer";
 import styles from "./index.module.scss";
 export interface Props {
-    id: string;
-    noTitle?: boolean;
+    id: string
+    noTitle?: boolean
 }
 const Product: VFC<Props> = ({ id, noTitle }) => {
-    const [, dispatch] = useContext(Context) ?? [];
-    const handleAddToCartClick = useCallback(() => {
-        dispatch?.({ type: "INCREMENT_QUANTITY", payload: { productId: id } });
-    }, [dispatch, id]);
+    const handleAddToCartClick = useQuantityIncrementer(id)
     const product = PRODUCTS_MAP[id];
     if (!product) {
         return null;
@@ -39,6 +36,6 @@ const Product: VFC<Props> = ({ id, noTitle }) => {
                 </a>
             </nav>
         </section>
-    );
-};
+    )
+}
 export default Product;

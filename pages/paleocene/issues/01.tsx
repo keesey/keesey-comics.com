@@ -1,5 +1,4 @@
 import type { NextPage } from "next"
-import Link from "next/link"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
@@ -15,6 +14,7 @@ import Head from "~/components/metadata/Head"
 import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
+import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
   ...PALEOCENE,
@@ -29,11 +29,12 @@ const SUBJECT: ComicStory = {
   sameAs: "https://www.comixology.com/Paleocene-1/digital-comic/812491",
   url: "http://keesey-comics.com/paleocene/issues/01",
 }
+const PRODUCT_ID = "COB-STD-PAL-01B"
 const Page: NextPage = () => {
   return (
     <OrderContainer>
       <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT}>
-        <ProductSchema product={PRODUCTS_MAP["COB-STD-PAL-01B"]} />
+        <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
       </Head>
       <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="night">
         <IssueHero
@@ -46,9 +47,7 @@ const Page: NextPage = () => {
           ]}
           seriesTitle="Paleocene"
         >
-          <Link href="/store" passHref>
-            <CTA>Get it now!</CTA>
-          </Link>
+          <IncrementQuantityCTA href="/cart" productId={PRODUCT_ID} />
         </IssueHero>
         <ComicStrip>
           <TextPanel>Mamma loves telling her babies about the &quot;dragons&quot; that used to roam the Earth.</TextPanel>
