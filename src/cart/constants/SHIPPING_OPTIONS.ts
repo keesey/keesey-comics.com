@@ -8,7 +8,7 @@ const SHIPPING_OPTIONS: readonly ShippingOption[] = [
     },
     {
         id: "NOB",
-        name: "No Bag nor Board",
+        name: "No Packaging",
         ounces: 0,
         value: 0,
     },

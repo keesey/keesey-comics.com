@@ -1,7 +1,9 @@
 import type { NextPage } from "next"
+import Link from "next/link"
 import type { Store } from "schema-dts"
 import { PRODUCT_TYPES_MAP } from "~/cart/constants/PRODUCT_TYPES"
 import OrderContainer from "~/cart/context/order/OrderContainer"
+import CTA from "~/components/CTA"
 import ExternalStores from "~/components/heroes/ExternalStores"
 import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
@@ -68,6 +70,10 @@ const Page: NextPage = () => {
                         <Product id="STK-02I-PAL-002" noTitle />
                     </ProductType>
                 </ProductTypes>
+                <br />
+                <Link href="/cart" passHref>
+                    <CTA>Check Out</CTA>
+                </Link>
             </Layout>
         </OrderContainer>
     )

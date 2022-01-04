@@ -24,7 +24,7 @@ const Product: VFC<Props> = ({ id, noTitle }) => {
             />
             <Link href={href}>
                 <a>
-                    <Image src={imgSrc} width={172} height={263} alt={product.name} />
+                    <Image layout="fixed" src={imgSrc} width={172} height={263} alt={product.name} />
                 </a>
             </Link>
             <nav className={styles.controls}>
