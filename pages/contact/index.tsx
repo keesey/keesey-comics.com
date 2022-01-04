@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 import Link from "next/link"
 import type { ContactPage } from "schema-dts"
+import OrderContainer from "~/cart/context/order/OrderContainer"
 import CTA from "~/components/CTA"
 import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
@@ -16,7 +17,7 @@ const SUBJECT: ContactPage = {
 }
 const Contact: NextPage = () => {
     return (
-        <>
+        <OrderContainer>
             <Head subject={SUBJECT} />
             <Layout footerPromos={["paleocene", "pleistocene", "phylopic"]} theme="kc">
                 <Hero>
@@ -29,7 +30,7 @@ const Contact: NextPage = () => {
                 <hr />
                 <SocialNav />
             </Layout>
-        </>
+        </OrderContainer>
     )
 }
 export default Contact

@@ -3,9 +3,10 @@ import Link from "next/link"
 import { VFC } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
 import Logo from "../Logo"
+import CartButton from "./CartButton"
 import styles from "./Header.module.scss"
-import useLogoColor from "./useLogoColor"
 import Promos, { Props as PromosProps } from "./Promos"
+import useLogoColor from "./useLogoColor"
 export type Props = PromosProps
 const Header: VFC<PromosProps> = ({ promos }) => {
     const className = useThemedClassName(styles, "header");
@@ -31,9 +32,7 @@ const Header: VFC<PromosProps> = ({ promos }) => {
                     </Link>
                 </section>
                 <section className={styles.social}>
-                    <a href="//instagram.com/keesey.comics" role="button">
-                        <Logo color={logoColor} type="instagram" width={21} height={21} />
-                    </a>
+                    <CartButton />
                     <a href="//twitter.com/paleocenecomic" role="button">
                         <Logo color={logoColor} type="twitter" width={28} height={28} />
                     </a>

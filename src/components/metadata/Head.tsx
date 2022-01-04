@@ -11,10 +11,10 @@ export interface Props {
     noIndex?: true
     socialImageAlt?: string
     socialImagePath?: string
-    subject: Thing
+    subject?: Thing | null
 }
 // :KLUDGE: Types are complex and confuse compiler.
-const getTextValue = <T extends any>(value: T | string | readonly T[] | undefined, property: keyof T): string => {
+const getTextValue = <T extends any>(value: T | string | readonly T[] | null | undefined, property: keyof T): string => {
     if (typeof value === "string") {
         return value
     }
@@ -74,7 +74,7 @@ const Head: FC<Props> = ({ author, children, favIconType, language, noIndex, soc
             <link key="link:icon" rel="icon" href={`/favicon${favIconType ? `-${favIconType}` : ""}.ico`} sizes="32x32 48x48" type="image/vnd.microsoft.icon" />
             <link key="link:preload:font:regular" rel="preload" href="/fonts/paleocene-regular-webfont.woff2" as="font" />
             <link key="link:preload:font:italic" rel="preload" href="/fonts/paleocene-italic-webfont.woff2" as="font" />
-            <Schema key="script:schema:subject" thing={subject} />
+            {subject && <Schema key="script:schema:subject" thing={subject} />}
             {author && <Schema key="script:schema:author" thing={author} />}
             {children}
         </NextHead>

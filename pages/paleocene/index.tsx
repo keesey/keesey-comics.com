@@ -1,5 +1,6 @@
 import type { NextPage } from "next"
 import Link from "next/link"
+import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
@@ -9,14 +10,26 @@ import SeriesHero from "~/components/heroes/SeriesHero"
 import Layout from "~/components/Layout"
 import Nav from "~/components/Layout/Nav"
 import Head from "~/components/metadata/Head"
+import ItemListSchema from "~/components/metadata/ItemListSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quote from "~/components/Quote"
 import SocialNav from "~/components/SocialNav"
 import PALEOCENE from "~/schema/PALEOCENE"
-const Paleocene: NextPage = () => {
+const Page: NextPage = () => {
   return (
-    <>
-      <Head favIconType="paleocene" socialImagePath="/paleocene" subject={PALEOCENE} />
+    <OrderContainer>
+      <Head favIconType="paleocene" socialImagePath="/paleocene" subject={PALEOCENE}>
+        <ItemListSchema urls={[
+          "https://www.keesey-comics.com/paleocene/issues/01",
+          "https://www.keesey-comics.com/paleocene/issues/02",
+          "https://www.keesey-comics.com/paleocene/issues/03",
+          "https://www.keesey-comics.com/products/POS-17I-PAL-001",
+          "https://www.keesey-comics.com/products/POS-17I-PAL-002",
+          "https://www.keesey-comics.com/products/BKM-06I-PAL-001",
+          "https://www.keesey-comics.com/products/STK-02I-PAL-001",
+          "https://www.keesey-comics.com/products/STK-02I-PAL-002",
+        ]} />
+      </Head>
       <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="night">
         <SeriesHero
           ageRecommendation="9+"
@@ -68,7 +81,7 @@ const Paleocene: NextPage = () => {
         <br />
         <SocialNav />
       </Layout>
-    </>
+    </OrderContainer>
   )
 }
-export default Paleocene
+export default Page

@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  > h2,
+  > p {
+    margin-block-start: 0;
+    margin-block-end: 0.5rem;
+  }
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -11,7 +11,7 @@ const Footer: VFC<Props> = ({ promos }) => {
         <footer className={className}>
             <nav className={styles.nav}>
                 <div key="copyright">
-                    <abbr title="Copyright">©</abbr> 2021 <Link href="/contact"><a title="Contact the Creator">T. Michael Keesey</a></Link> • All Rights Reserved
+                    <abbr title="Copyright">©</abbr> 2022 <Link href="/contact"><a title="Contact the Creator">T. Michael Keesey</a></Link> • All Rights Reserved
                 </div>
                 <Promos promos={promos} />
             </nav>

@@ -1,16 +1,16 @@
 import type { NextPage } from "next"
+import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
-import CTA from "~/components/CTA"
 import SeriesHero from "~/components/heroes/SeriesHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import SocialNav from "~/components/SocialNav"
 import PLEISTOCENE from "~/schema/PLEISTOCENE"
-const Paleocene: NextPage = () => {
+const Page: NextPage = () => {
   return (
-    <>
+    <OrderContainer>
       <Head favIconType="pleistocene" socialImagePath="/pleistocene" subject={PLEISTOCENE} />
       <Layout headerPromos={["pleistocene"]} footerPromos={["paleocene", "phylopic"]} theme="bw">
         <SeriesHero
@@ -35,7 +35,7 @@ const Paleocene: NextPage = () => {
         </ComicStrip>
         <SocialNav />
       </Layout>
-    </>
+    </OrderContainer>
   )
 }
-export default Paleocene
+export default Page

@@ -1,7 +1,7 @@
 import axios from "axios";
-import { Shipment } from "./Shipment";
-import { ServiceOption } from "./SeviceOption";
-import OUNCES_PER_POUND from "./OUNCES_PER_POUND";
+import OUNCES_PER_POUND from "../constants/OUNCES_PER_POUND";
+import { ServiceOption } from "../models/ServiceOption";
+import { Shipment } from "../models/Shipment";
 const isDomestic = (country: string) =>
     country === 'United States'
     || country === 'Guam'

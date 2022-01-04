@@ -25,4 +25,4 @@ const Layout: FC<Props> = ({ children, headerPromos, footerPromos, theme }) => {
         </ThemeContext.Provider>
     )
 };
-export default Layout;
+export default Layout

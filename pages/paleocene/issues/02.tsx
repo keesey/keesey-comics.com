@@ -1,6 +1,8 @@
 import type { NextPage } from "next"
 import Link from "next/link"
 import type { ComicStory } from "schema-dts"
+import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
+import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
@@ -8,6 +10,7 @@ import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
+import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
 import PALEOCENE from "~/schema/PALEOCENE"
@@ -24,10 +27,12 @@ const SUBJECT: ComicStory = {
   sameAs: "https://www.comixology.com/Paleocene-2/digital-comic/890936",
   url: "http://keesey-comics.com/paleocene/issues/02",
 }
-const Issue02: NextPage = () => {
+const Page: NextPage = () => {
   return (
-    <>
-      <Head favIconType="paleocene" socialImagePath="/paleocene/02" subject={SUBJECT} />
+    <OrderContainer>
+      <Head favIconType="paleocene" socialImagePath="/paleocene/02" subject={SUBJECT}>
+        <ProductSchema product={PRODUCTS_MAP["COB-STD-PAL-02A"]} />
+      </Head>
       <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="night">
         <IssueHero
           ageRecommendation="9+"
@@ -56,7 +61,7 @@ const Issue02: NextPage = () => {
         <IssuePromos id="paleocene" numbers={[1, 3]}>Read the other issues!</IssuePromos>
         <SocialNav />
       </Layout>
-    </>
+    </OrderContainer>
   )
 }
-export default Issue02
+export default Page

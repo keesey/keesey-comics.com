@@ -14,6 +14,6 @@ const KEESEY_COMICS: Organization = {
         { "@id": "http://keesey-comics.com/contact" },
         { "@id": "http://keesey-comics.com/mailinglist" },
     ],
-    url: "http://keesey-comics.com",
+    url: "https://www.keesey-comics.com/",
 }
 export default KEESEY_COMICS

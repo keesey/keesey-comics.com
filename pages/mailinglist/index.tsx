@@ -1,5 +1,6 @@
 import type { NextPage } from "next"
 import type { MediaSubscription } from "schema-dts"
+import OrderContainer from "~/cart/context/order/OrderContainer"
 import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
 import Form from "~/components/MailingList/Form"
@@ -14,7 +15,7 @@ const SUBJECT: MediaSubscription = {
 }
 const Contact: NextPage = () => {
     return (
-        <>
+        <OrderContainer>
             <Head subject={SUBJECT} />
             <Layout footerPromos={["paleocene", "pleistocene", "phylopic"]} theme="kc">
                 <Hero>
@@ -24,7 +25,7 @@ const Contact: NextPage = () => {
                 <hr />
                 <SocialNav />
             </Layout>
-        </>
+        </OrderContainer>
     )
 }
 export default Contact

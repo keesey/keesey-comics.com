@@ -3,7 +3,7 @@ import { SHIPPING_OPTIONS_MAP } from "./SHIPPING_OPTIONS";
 const PRODUCT_TYPES: readonly ProductType[] = [
     {
         id: "COB-STD",
-        name: "Comic Book (6⅞×10½in)",
+        name: "Comic Book (6⅞ × 10½ in)",
         ounces: 4.1,
         shippingOptions: [
             SHIPPING_OPTIONS_MAP["BAB"],
@@ -13,19 +13,19 @@ const PRODUCT_TYPES: readonly ProductType[] = [
     },
     {
         id: "STK-02I",
-        name: "Sticker (2×2in)",
+        name: "Sticker (2 × 2 in)",
         ounces: 0.02,
         value: 0.5,
     },
     {
         id: "BKM-06I",
-        name: "Bookmark (6×2in)",
+        name: "Bookmark (6 × 2 in)",
         ounces: 0.09,
-        value: 1,
+        value: 2,
     },
     {
         id: "POS-17I",
-        name: "Poster (11×17in)",
+        name: "Poster (11 × 17 in)",
         ounces: 0.65,
         shippingOptions: [
             SHIPPING_OPTIONS_MAP["UNF"],

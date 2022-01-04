@@ -1,6 +1,8 @@
 import type { NextPage } from "next"
 import Link from "next/link"
 import type { ComicStory } from "schema-dts"
+import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
+import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
@@ -10,26 +12,29 @@ import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Nav from "~/components/Layout/Nav"
 import Head from "~/components/metadata/Head"
+import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
-    ...PALEOCENE,
-    "@id": "http://keesey-comics.com/paleocene/issues/01",
-    abstract: "Mamma loves telling her babies about the &quot;dragons&quot; that used to roam the Earth. But with Pappa gone for days, she is starting to tire of being stuck in the nest. Does she dare leave the infants alone? It is a dangerous world ... and &quot;dragons&quot; may still lurk in the hills.",
-    copyrightYear: 2020,
-    description: "Issue #1 of a comic series about our early primate ancestors.",
-    image: "http://keesey-comics.com/images/issues/01/front_cover.png",
-    isPartOf: "http://keesey-comics.com/paleocene",
-    name: "Paleocene #1",
-    position: 1,
-    sameAs: "https://www.comixology.com/Paleocene-1/digital-comic/812491",
-    url: "http://keesey-comics.com/paleocene/issues/01",
+  ...PALEOCENE,
+  "@id": "http://keesey-comics.com/paleocene/issues/01",
+  abstract: "Mamma loves telling her babies about the &quot;dragons&quot; that used to roam the Earth. But with Pappa gone for days, she is starting to tire of being stuck in the nest. Does she dare leave the infants alone? It is a dangerous world ... and &quot;dragons&quot; may still lurk in the hills.",
+  copyrightYear: 2020,
+  description: "Issue #1 of a comic series about our early primate ancestors.",
+  image: "http://keesey-comics.com/images/issues/01/front_cover.png",
+  isPartOf: "http://keesey-comics.com/paleocene",
+  name: "Paleocene #1",
+  position: 1,
+  sameAs: "https://www.comixology.com/Paleocene-1/digital-comic/812491",
+  url: "http://keesey-comics.com/paleocene/issues/01",
 }
-const Issue01: NextPage = () => {
+const Page: NextPage = () => {
   return (
-    <>
-      <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT} />
+    <OrderContainer>
+      <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT}>
+        <ProductSchema product={PRODUCTS_MAP["COB-STD-PAL-01B"]} />
+      </Head>
       <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="night">
         <IssueHero
           ageRecommendation="9+"
@@ -78,7 +83,7 @@ const Issue01: NextPage = () => {
         <br />
         <SocialNav />
       </Layout>
-    </>
+    </OrderContainer>
   )
 }
-export default Issue01
+export default Page

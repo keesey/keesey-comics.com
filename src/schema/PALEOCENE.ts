@@ -14,6 +14,6 @@ const PALEOCENE: ComicStory = {
     name: "Paleocene",
     publisher: "http://keesey-comics.com",
     sameAs: "https://www.comixology.com/Paleocene-Vol-1/comics-series/137451",
-    url: "http://keesey-comics.com/paleocene"
+    url: "https://www.keesey-comics.com/paleocene",
 }
 export default PALEOCENE
