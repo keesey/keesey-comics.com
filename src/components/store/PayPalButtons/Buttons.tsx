@@ -13,6 +13,7 @@ const Buttons: VFC = () => {
     const onApprove = useOnApprove();
     return (
         <section className={styles.main}>
+            <h2>Finalize Purchase</h2>
             <PayPalButtons
                 disabled={isPending}
                 forceReRender={[order, costs]}

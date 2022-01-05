@@ -22,7 +22,7 @@ const ShoppingCart: VFC = () => {
             {order.items?.map((item) => (
                 <CartItem key={item.productId} item={item} />
             ))}
-            {Boolean(order.items?.length) && (
+            {order.items?.length > 1 && (
                 <a
                     key={-1}
                     className={styles.removeAll}
