@@ -1,11 +1,12 @@
 import type { NextPage } from "next"
+import Link from "next/link"
 import CartContainer from "~/cart/CartContainer"
 import CTA from "~/components/CTA"
 import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
+import ShippingForm from "~/components/store/ShippingForm"
 import ShoppingCart from "~/components/store/ShoppingCart"
-import Link from "next/link"
 const Page: NextPage = () => {
     return (
         <CartContainer>
@@ -17,9 +18,10 @@ const Page: NextPage = () => {
                 <ShoppingCart />
                 <br />
                 <Link href="/store" passHref>
-                    <CTA>Add More Stuff</CTA>
+                    <CTA>Keep Shopping</CTA>
                 </Link>
-                :TODO:
+                <br />
+                <ShippingForm />
             </Layout>
         </CartContainer>
     )

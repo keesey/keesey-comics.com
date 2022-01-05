@@ -48,12 +48,7 @@ const CartItem: VFC<Props> = ({ item }) => {
     const href = product.path ?? `/products/${item.productId}`;
     const imgSrc = product.imagePath ?? `/images/products/${item.productId}.png`;
     const amount = useMemo(
-        () =>
-            item.quantity *
-            (product.type.value +
-                (item.shippingOptionId
-                    ? SHIPPING_OPTIONS_MAP[item.shippingOptionId].value
-                    : 0)),
+        () => item.quantity * product.type.value,
         [item, product]
     );
     return (
@@ -62,7 +57,7 @@ const CartItem: VFC<Props> = ({ item }) => {
                 <header>
                     <Link href={href}>
                         <a>
-                            <h2 dangerouslySetInnerHTML={{ __html: product.html }} />
+                            <h3 dangerouslySetInnerHTML={{ __html: product.html }} />
                         </a>
                     </Link>
                 </header>

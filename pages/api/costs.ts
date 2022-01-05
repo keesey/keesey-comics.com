@@ -6,8 +6,12 @@ const costs: NextApiHandler = async (req, res) => {
   if (req.method !== "POST") {
     return res.status(405).end();
   }
-  const data: { order: Order; address: Address } = req.body;
-  const costs = await calculateCosts(data.order, data.address);
-  res.json(costs);
+  try {
+    const data: { order: Order; address: Address } = req.body;
+    const costs = await calculateCosts(data.order, data.address);
+    res.json(costs);
+  } catch (e) {
+    res.status(500).send(String(e))
+  }
 };
 export default costs;
