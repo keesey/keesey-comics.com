@@ -1,4 +1,5 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -18,11 +19,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.0.11] - 2022-01-05
+
+### Added
+
+- New pull quotes (Dino Dad Reviews, Fanbase Press).
+
 ## [2.0.10] - 2021-11-11
 
 ### Changed
 
-- Buy link for *Paleocene #3* (from Kickstarter to Gumroad).
+- Buy link for _Paleocene #3_ (from Kickstarter to Gumroad).
 
 ## [2.0.9] - 2021-10-23
 
@@ -88,7 +95,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- Invalid external store links for *Paleocene #3*.
+- Invalid external store links for _Paleocene #3_.
 
 ## [2.0.0] - 2021-09-21
 
@@ -99,109 +106,132 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.0] - 2021-05-13
 
 ### Added
-- Page for *Paleocene #3*.
+
+- Page for _Paleocene #3_.
 - LD-JSON Schema for all pages.
 
 ### Changed
+
 - Upgraded `caniuse-lite`.
 
 ### Security
+
 - Dev dependency upgrades.
 
 ## [1.3.5] - 2020-10-07
 
 ### Added
-- Link for *Paleocene #2* on comiXology.
+
+- Link for _Paleocene #2_ on comiXology.
 
 ## [1.3.4] - 2020-09-29
 
 ### Changed
-- *Paleocene* issues link to Gumroad store, not specific product page.
+
+- _Paleocene_ issues link to Gumroad store, not specific product page.
 
 ## [1.3.3] - 2020-09-01
 
 ### Added
-- Links to Instagram and social media links for Home Page and *Pleistocene* Page.
+
+- Links to Instagram and social media links for Home Page and _Pleistocene_ Page.
 
 ## [1.3.2] - 2020-08-19
 
 ### Fixed
-- Metadata for *Paleocene #2* indicated *Paleocene #1*.
+
+- Metadata for _Paleocene #2_ indicated _Paleocene #1_.
 
 ## [1.3.1] - 2020-08-19
 
 ### Changed
+
 - Korean copy updates.
 - English copy tweaks.
 
 ### Fixed
+
 - Running comic outline generator on all frames.
 
 ## [1.3.0] - 2020-08-17
 
 ### Added
+
 - Korean pages and font.
 
 ### Changed
+
 - Thicker "Keesey Comics" logo.
 - Made links to Gumroad products direct (not anchor links).
-- Gumroad link for *Paleocene #2*.
+- Gumroad link for _Paleocene #2_.
 - English-language consistently coded as `en`, not `en-US`.
-- Page for *Paleocene #2* redesigned.
+- Page for _Paleocene #2_ redesigned.
 
 ### Fixed
+
 - Spacing between "more of" and "Paleocene".
 - Render lag for comic outlines.
 
 ### Removed
+
 - "Presents..." after "Keesey Comics" except on Issue Pages.
 
 ## [1.2.1] - 2020-03-30
 
 ### Changed
-- Expanded maximum width for *Paleocene* pages.
+
+- Expanded maximum width for _Paleocene_ pages.
 
 ## [1.2.0] - 2020-02-15
 
 ### Added
-- Page for *Paleocene #2*.
+
+- Page for _Paleocene #2_.
 
 ## [1.1.5] - 2020-02-14
 
 ### Fixed
+
 - All content within ARIA landmarks.
 
 ## [1.1.4] - 2020-02-14
 
 ### Added
+
 - Metadata tag (`robots`).
 - Canonical links.
 - Language specification.
 
 ### Fixed
+
 - Duplicate `viewport` metadata tags.
 
 ## [1.1.3] - 2020-02-14
 
 ### Fixed
+
 - Corrected social media metadata (including Twitter image sizes).
 
 ## [1.1.2] - 2020-02-14
 
 ### Added
+
 - Proper social media images.
 
 ## [1.1.1] - 2019-12-06
 
 ### Added
-- comiXology link for *Paleocene*.
+
+- comiXology link for _Paleocene_.
 
 ## [1.1.0] - 2019-10-08
 
 ### Added
-- Gumroad link for *Pleistocene*.
+
+- Gumroad link for _Pleistocene_.
 
 ### Changed
-- Simplified CSS for featured links on *Pleistocene*.
+
+- Simplified CSS for featured links on _Pleistocene_.
 
 ## [1.0.0] - 2019-09-27
