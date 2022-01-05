@@ -21,6 +21,8 @@ const CostsTable: VFC = () => {
             <dl className={styles.list}>
                 <dt>Subtotal</dt>
                 <dd>{costs ? <Price amount={costs.products} /> : "--"}</dd>
+                <dt>Sales Tax</dt>
+                <dd>{costs ? <Price amount={costs.salesTax} /> : "--"}</dd>
                 <dt>
                     Shipping <abbr title="and">&amp;</abbr> Handling
                 </dt>
@@ -38,8 +40,6 @@ const CostsTable: VFC = () => {
                         "--"
                     )}
                 </dd>
-                <dt>Sales Tax</dt>
-                <dd>{costs ? <Price amount={costs.salesTax} /> : "--"}</dd>
                 <dt>Processing</dt>
                 <dd>{costs ? <Price amount={costs.processing} /> : "--"}</dd>
                 <dt className={styles.total}>Total</dt>
