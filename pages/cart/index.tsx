@@ -5,6 +5,7 @@ import CTA from "~/components/CTA"
 import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
+import PayPalButton from "~/components/store/PayPalButton"
 import ShippingForm from "~/components/store/ShippingForm"
 import ShoppingCart from "~/components/store/ShoppingCart"
 const Page: NextPage = () => {
@@ -22,6 +23,8 @@ const Page: NextPage = () => {
                 </Link>
                 <br />
                 <ShippingForm />
+                <br />
+                <PayPalButton />
             </Layout>
         </CartContainer>
     )

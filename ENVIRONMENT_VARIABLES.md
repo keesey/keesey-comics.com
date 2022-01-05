@@ -3,8 +3,9 @@
 ## Required
 
 - `HANDLING_RATE` - Amount to charge for product handling.
+- `NEXT_PUBLIC_PAYPAL_CLIENT_ID` - ID for PayPal account.
+- `NODE_ENV` - Either `production` or `development`
 - `ORIGIN_ZIP_CODE` - United States ZIP code for shipping.
-- `PAYPAL_CLIENT_ID` - ID for PayPal account.
 - `USPS_USER_ID` - ID for United Stated Postal Service account.
 
 ## Optional
