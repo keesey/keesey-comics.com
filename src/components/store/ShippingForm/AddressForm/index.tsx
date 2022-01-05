@@ -39,7 +39,7 @@ const AddressForm: VFC = () => {
                     onChange={handlePostalCodeInputChange}
                     placeholder="ZIP Code"
                     type="text"
-                    value={address.postalCode}
+                    value={address.postalCode ?? ""}
                 />
             )}
         </section>

@@ -3,19 +3,26 @@ import Context from "~/cart/context/order/Context";
 import CartItem from "./CartItem";
 import styles from "./index.module.scss";
 const ShoppingCart: VFC = () => {
-    const [items, dispatch] = useContext(Context) ?? [];
+    const [order, dispatch] = useContext(Context) ?? [];
     const handleRemoveAllButtonClick = useCallback(() => {
         if (confirm("Are you sure you want to remove all items from your cart?")) {
-            dispatch?.({ type: "INITIALIZE", payload: [] });
+            dispatch?.({ type: "RESET" });
         }
     }, [dispatch]);
+    if (!order) {
+        return null
+    }
     return (
         <section className={styles.main}>
-            {!items?.length && <p key={0} className={styles.empty}>Your cart is empty.</p>}
-            {items?.map((item) => (
+            {!order.items?.length && (
+                <p key={0} className={styles.empty}>
+                    Your cart is empty.
+                </p>
+            )}
+            {order.items?.map((item) => (
                 <CartItem key={item.productId} item={item} />
             ))}
-            {Boolean(items?.length) && (
+            {Boolean(order.items?.length) && (
                 <a
                     key={-1}
                     className={styles.removeAll}

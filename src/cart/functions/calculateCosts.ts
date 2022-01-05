@@ -4,29 +4,45 @@ import { Address } from "../models/Address";
 import { Costs } from "../models/Costs";
 import { Order } from "../models/Order";
 import { Package } from "../models/Package";
+import { ProductType } from "../models/ProductType";
 import calculateShipping from "./calculateShipping";
 import selectContainer from "./selectContainer";
 const PAYPAL_TRANSACTION_RATE = 0.0289;
 const PAYPAL_TRANSACTION_FEE = 0.49;
+const getShippingOption = (
+  ids: readonly string[],
+  productType: ProductType
+) => {
+  if (!productType.shippingOptions) {
+    return undefined;
+  }
+  const id =
+    ids.find((id) =>
+      productType.shippingOptions!.some((option) => option.id === id)
+    ) ?? productType.shippingOptions[0].id;
+  return SHIPPING_OPTIONS_MAP[id];
+};
 const calculateCosts = async (
   order: Order,
   address: Address
-): Promise<Costs> => {
+): Promise<Costs | undefined> => {
+  // :TODO: Allow grouping into multiple containers.
   const container = selectContainer(order);
   if (!container) {
-    throw new Error("Order is too large for this form.");
+    return undefined;
   }
-  const [ounces, handling, products, shippingAdditional] = order.reduce<
+  const [ounces, handling, products, shippingAdditional] = order.items.reduce<
     [number, number, number, number]
   >(
     (
       [prevOunces, prevHandling, prevProducts, prevShippingAdditional],
-      { productId, quantity, shippingOptionId }
+      { productId, quantity }
     ) => {
       const product = PRODUCTS_MAP[productId];
-      const shippingOption = shippingOptionId
-        ? SHIPPING_OPTIONS_MAP[shippingOptionId]
-        : undefined;
+      const shippingOption = getShippingOption(
+        order.shippingOptionIds,
+        product.type
+      );
       return [
         prevOunces +
           product.type.ounces +
@@ -45,7 +61,7 @@ const calculateCosts = async (
     value: container.value + products,
   };
   const shipping = await calculateShipping({ address, package: pkg });
-  const salesTax = products * Number(process.env.NEXT_PUBLIC_SALES_TAX)
+  const salesTax = products * Number(process.env.NEXT_PUBLIC_SALES_TAX);
   const processingSubtotal =
     pkg.value + shipping.rate + shippingAdditional + handling + salesTax;
   const processing = Number(

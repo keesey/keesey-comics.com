@@ -17,7 +17,7 @@ const CostsContainer: FC = ({ children }) => {
     useEffect(() => {
         setError(undefined);
         setCosts(undefined);
-        if (!isValidAddress(address) || !order?.length) {
+        if (!isValidAddress(address) || !order?.items.length) {
             setPending(false);
         } else {
             const abortController = new AbortController()

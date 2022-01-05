@@ -1,0 +1,15 @@
+.main,
+.container,
+.options,
+.label {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.container {
+  gap: 2rem;
+}
+.label {
+  gap: 0.25rem;
+}

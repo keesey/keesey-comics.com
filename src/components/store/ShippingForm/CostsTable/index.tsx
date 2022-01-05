@@ -1,30 +1,67 @@
-import { useContext, VFC } from "react"
-import Context from "~/cart/context/costs/Context"
-import Price from "~/components/Price"
-import styles from "./index.module.scss"
+import { useContext, VFC } from "react";
+import Context from "~/cart/context/costs/Context";
+import Price from "~/components/Price";
+import styles from "./index.module.scss";
 const CostsTable: VFC = () => {
-    const { error, costs, pending } = useContext(Context) ?? {}
-    if (pending) {
-        return <p className={styles.pending}>Loading&hellip;</p>
+    const context = useContext(Context);
+    if (!context) {
+        return null;
     }
-    if (error) {
-        return <p className={styles.error}>{error.name}: {error.message}</p>
-    }
-    if (costs) {
-        const shippingAndHandling = costs.shipping + costs.shippingAdditional + costs.handling + costs.containers
-        return (
-            <dl className={styles.main}>
+    const { error, costs, pending } = context;
+    return (
+        <div className={styles.main}>
+            <div className={styles.status}>
+                {pending && <p className={styles.pending}>Loading&hellip;</p>}
+                {error && (
+                    <p className={styles.error}>
+                        {error.name}: {error.message}
+                    </p>
+                )}
+            </div>
+            <dl className={styles.list}>
                 <dt>Subtotal</dt>
-                <dd><Price amount={costs.products} /></dd>
-                <dt>Shipping <abbr title="and">&amp;</abbr> Handling</dt>
-                <dd><Price amount={shippingAndHandling} /></dd>
+                <dd>{costs ? <Price amount={costs.products} /> : "--"}</dd>
+                <dt>
+                    Shipping <abbr title="and">&amp;</abbr> Handling
+                </dt>
+                <dd>
+                    {costs ? (
+                        <Price
+                            amount={
+                                costs.containers +
+                                costs.handling +
+                                costs.shipping +
+                                costs.shippingAdditional
+                            }
+                        />
+                    ) : (
+                        "--"
+                    )}
+                </dd>
+                <dt>Sales Tax</dt>
+                <dd>{costs ? <Price amount={costs.salesTax} /> : "--"}</dd>
                 <dt>Processing</dt>
-                <dd><Price amount={costs.processing} /></dd>
+                <dd>{costs ? <Price amount={costs.processing} /> : "--"}</dd>
                 <dt className={styles.total}>Total</dt>
-                <dd className={styles.total}><Price amount={costs.products + shippingAndHandling + costs.processing} /></dd>
+                <dd className={costs ? styles.total : undefined}>
+                    {costs ? (
+                        <Price
+                            amount={
+                                costs.containers +
+                                costs.handling +
+                                costs.processing +
+                                costs.products +
+                                costs.salesTax +
+                                costs.shipping +
+                                costs.shippingAdditional
+                            }
+                        />
+                    ) : (
+                        "--"
+                    )}
+                </dd>
             </dl>
-        )
-    }
-    return null
-}
-export default CostsTable
+        </div>
+    );
+};
+export default CostsTable;

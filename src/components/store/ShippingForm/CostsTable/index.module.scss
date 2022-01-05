@@ -1,4 +1,10 @@
 .main {
+  display: flex;
+}
+.status {
+  flex-grow: 1;
+}
+.list {
   column-gap: 1rem;
   display: grid;
   font-size: larger;

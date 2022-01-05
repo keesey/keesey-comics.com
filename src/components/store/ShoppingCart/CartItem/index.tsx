@@ -5,13 +5,14 @@ import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS";
 import { SHIPPING_OPTIONS_MAP } from "~/cart/constants/SHIPPING_OPTIONS";
 import Context from "~/cart/context/order/Context";
 import { OrderItem } from "~/cart/models/OrderItem";
+import { ShippingOption } from "~/cart/models/ShippingOption";
 import Price from "~/components/Price";
 import styles from "./index.module.scss";
 export interface Props {
     item: OrderItem;
 }
 const CartItem: VFC<Props> = ({ item }) => {
-    const [, dispatch] = useContext(Context) ?? [];
+    const [order, dispatch] = useContext(Context) ?? [];
     const handleQuantityInputChange = useCallback(
         (event: ChangeEvent<HTMLInputElement>) => {
             dispatch?.({
@@ -32,18 +33,6 @@ const CartItem: VFC<Props> = ({ item }) => {
             });
         }
     }, [dispatch, item.productId]);
-    const handleShippingOptionSelectChange = useCallback(
-        (event: ChangeEvent<HTMLSelectElement>) => {
-            dispatch?.({
-                type: "SET_SHIPPING_OPTION",
-                payload: {
-                    productId: item.productId,
-                    shippingOptionId: event.currentTarget.value,
-                },
-            });
-        },
-        [dispatch, item.productId]
-    );
     const product = PRODUCTS_MAP[item.productId];
     const href = product.path ?? `/products/${item.productId}`;
     const imgSrc = product.imagePath ?? `/images/products/${item.productId}.png`;
@@ -51,6 +40,17 @@ const CartItem: VFC<Props> = ({ item }) => {
         () => item.quantity * product.type.value,
         [item, product]
     );
+    const shippingOption = useMemo<ShippingOption | undefined>(
+        () => {
+            if (!product.type.shippingOptions) {
+                return undefined;
+            }
+            const id = order?.shippingOptionIds.find(id => product.type.shippingOptions!.some(option => option.id === id))
+                ?? product.type.shippingOptions[0].id
+            return SHIPPING_OPTIONS_MAP[id]
+        },
+        [product.type, order?.shippingOptionIds],
+    )
     return (
         <section className={styles.main}>
             <div className={styles.content}>
@@ -73,7 +73,10 @@ const CartItem: VFC<Props> = ({ item }) => {
                             />
                         </a>
                     </Link>
-                    <p dangerouslySetInnerHTML={{ __html: product.type.html }} />
+                    <div>
+                        <p dangerouslySetInnerHTML={{ __html: product.type.html }} />
+                        {shippingOption && <p><b>Shipping Option</b>: {shippingOption.name}</p>}
+                    </div>
                 </div>
             </div>
             <nav>
@@ -84,17 +87,6 @@ const CartItem: VFC<Props> = ({ item }) => {
                     value={item.quantity}
                     onChange={handleQuantityInputChange}
                 />
-                {product.type.shippingOptions && (
-                    <select
-                        key="shipping"
-                        value={item.shippingOptionId}
-                        onChange={handleShippingOptionSelectChange}
-                    >
-                        {product.type.shippingOptions.map((option) => (
-                            <option key={option.id} value={option.id} label={option.name} />
-                        ))}
-                    </select>
-                )}
             </nav>
             <footer>
                 <span className={styles.amount}>
