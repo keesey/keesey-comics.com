@@ -4,6 +4,9 @@ export interface Props {
     amount: number
 }
 const Price: VFC<Props> = ({ abbreviate, amount }) => {
+    if (isNaN(amount) || amount === null) {
+        return null
+    }
     const text = amount.toFixed(2);
     const displayedText = abbreviate ? text.replace(/\.00$/, "") : text
     if (text !== displayedText) {

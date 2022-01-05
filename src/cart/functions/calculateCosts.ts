@@ -45,8 +45,9 @@ const calculateCosts = async (
     value: container.value + products,
   };
   const shipping = await calculateShipping({ address, package: pkg });
+  const salesTax = products * Number(process.env.NEXT_PUBLIC_SALES_TAX)
   const processingSubtotal =
-    pkg.value + shipping.rate + shippingAdditional + handling;
+    pkg.value + shipping.rate + shippingAdditional + handling + salesTax;
   const processing = Number(
     (
       PAYPAL_TRANSACTION_FEE +
@@ -60,6 +61,7 @@ const calculateCosts = async (
     handling,
     products,
     processing,
+    salesTax,
   };
 };
 export default calculateCosts;
