@@ -114,6 +114,7 @@ const Page: NextPage = () => {
         <IssuePromos id="paleocene" numbers={[1, 2, 3]}>
           Read all issues!
         </IssuePromos>
+        {/* :TODO: Add merch? */}
         <Nav>
           <ComicText>Translations:</ComicText>
           <Link href="/store" passHref>

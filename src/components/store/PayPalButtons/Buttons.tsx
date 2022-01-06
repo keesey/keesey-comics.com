@@ -23,6 +23,7 @@ const Buttons: VFC = () => {
     return (
         <section className={styles.main}>
             <h2>3. Finalize Purchase</h2>
+            {/* :TODO: check onShippingChange to make sure destination matches */}
             <PayPalButtons
                 className={disabled ? styles.disabled : undefined}
                 createOrder={createOrder}

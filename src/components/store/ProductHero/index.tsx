@@ -21,6 +21,7 @@ const ProductHero: VFC<Props> = ({ productId }) => {
                         __html: product.type.html
                     }} />
                 </h2>
+                {/* :TODO: Add description? */}
                 <h2><Price amount={product.type.value} abbreviate /></h2>
                 <IncrementQuantityCTA productIds={productIds}>Add to Cart</IncrementQuantityCTA>
                 <br />
