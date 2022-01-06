@@ -28,7 +28,7 @@ const Page: NextPage = () => {
                 </Hero>
                 <ExternalStores
                     links={[
-                        { type: "gumroad", url: "//gumroad/com/keesey" },
+                        { type: "gumroad", url: "//gumroad.com/keesey" },
                         {
                             type: "comixology",
                             url: "//www.comixology.com/Keesey-Comics/comics-publisher/14274-0",
