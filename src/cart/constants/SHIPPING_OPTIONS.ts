@@ -4,7 +4,7 @@ const SHIPPING_OPTIONS: readonly ShippingOption[] = [
     id: "BAB",
     name: "Bagged and Boarded",
     ounces: 0.7,
-    value: 0.5,
+    value: 0.15,
   },
   {
     id: "NOB",
@@ -13,14 +13,14 @@ const SHIPPING_OPTIONS: readonly ShippingOption[] = [
     value: 0,
   },
   {
-    id: "FOL",
-    name: "Folded",
+    id: "UNF",
+    name: "Unfolded",
     ounces: 0,
     value: 0,
   },
   {
-    id: "UNF",
-    name: "Unfolded",
+    id: "FOL",
+    name: "Folded",
     ounces: 0,
     value: 0,
   },
@@ -45,7 +45,7 @@ export const SHIPPING_OPTION_LISTS: readonly ShippingOptionList[] = [
   },
   {
     name: "Posters",
-    options: [SHIPPING_OPTIONS_MAP["FOL"], SHIPPING_OPTIONS_MAP["UNF"]],
+    options: [SHIPPING_OPTIONS_MAP["UNF"], SHIPPING_OPTIONS_MAP["FOL"]],
   },
 ];
 export default SHIPPING_OPTIONS;
