@@ -70,18 +70,6 @@ const Page: NextPage = () => {
                         <Product id="POS-17I-PAL-002" noTitle />
                     </ProductType>
                     <ProductType
-                        title="Bookmarks"
-                        description={
-                            <>
-                                2<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 6
-                                <abbr title="inches">&quot;</abbr>
-                            </>
-                        }
-                        price={PRODUCT_TYPES_MAP["BKM-06I"].value}
-                    >
-                        <Product id="BKM-06I-PAL-001" noTitle />
-                    </ProductType>
-                    <ProductType
                         title="Stickers"
                         description={
                             <>
@@ -93,6 +81,18 @@ const Page: NextPage = () => {
                     >
                         <Product id="STK-02I-PAL-001" noTitle />
                         <Product id="STK-02I-PAL-002" noTitle />
+                    </ProductType>
+                    <ProductType
+                        title="Bookmarks"
+                        description={
+                            <>
+                                2<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 6
+                                <abbr title="inches">&quot;</abbr>
+                            </>
+                        }
+                        price={PRODUCT_TYPES_MAP["BKM-06I"].value}
+                    >
+                        <Product id="BKM-06I-PAL-001" noTitle />
                     </ProductType>
                 </ProductTypes>
                 <br />
