@@ -32,6 +32,7 @@ const SUBJECT: ComicStory = {
   url: "http://keesey-comics.com/paleocene/issues/01",
 };
 const PRODUCT_ID = "COB-STD-PAL-01B";
+const PRODUCT_IDS = [PRODUCT_ID];
 const Page: NextPage = () => {
   return (
     <OrderContainer>
@@ -60,7 +61,7 @@ const Page: NextPage = () => {
           ]}
           seriesTitle="Paleocene"
         >
-          <IncrementQuantityCTA href="/cart" productId={PRODUCT_ID} />
+          <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
         </IssueHero>
         <Quotes
           quotes={[

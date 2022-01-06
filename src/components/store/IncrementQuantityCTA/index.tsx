@@ -4,11 +4,11 @@ import useQuantityIncrementer from "~/cart/hooks/useQuantitytIncrementer";
 import CTA from "~/components/CTA";
 export interface Props {
     href?: string;
-    productId: string;
+    productIds: readonly string[];
 }
-const IncrementQuantityCTA: FC<Props> = ({ children, href, productId }) => {
-    const handleClick = useQuantityIncrementer(productId);
-    children = children ?? (href ? "Get it now!" : "Add to Cart")
+const IncrementQuantityCTA: FC<Props> = ({ children, href, productIds }) => {
+    const handleClick = useQuantityIncrementer(productIds);
+    children = children ?? (href ? (productIds.length > 1 ? "Get them all!" : "Get it now!") : "Add to Cart")
     if (href) {
         return (
             <Link href={href} passHref>

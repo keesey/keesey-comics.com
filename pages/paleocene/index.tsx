@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { PRODUCT_TYPES_MAP } from "~/cart/constants/PRODUCT_TYPES";
 import OrderContainer from "~/cart/context/order/OrderContainer";
 import ComicStrip from "~/components/ComicStrip";
 import ImagePanel from "~/components/ComicStrip/ImagePanel";
@@ -15,10 +14,8 @@ import ItemListSchema from "~/components/metadata/ItemListSchema";
 import IssuePromos from "~/components/promos/IssuePromos.tsx";
 import Quotes from "~/components/Quotes";
 import SocialNav from "~/components/SocialNav";
-import Product from "~/components/store/Product";
-import ProductType from "~/components/store/ProductType";
-import ProductTypes from "~/components/store/ProductTypes";
 import PALEOCENE from "~/schema/PALEOCENE";
+const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A"];
 const Page: NextPage = () => {
   return (
     <OrderContainer>
@@ -48,6 +45,7 @@ const Page: NextPage = () => {
         <SeriesHero
           ageRecommendation="9+"
           id="paleocene"
+          productIds={PRODUCT_IDS}
           storeLinks={[
             { type: "gumroad", url: "//gumroad.com/keesey" },
             {

@@ -1,10 +1,14 @@
 import { useCallback, useContext } from "react";
 import Context from "~/cart/context/order/Context";
-const useQuantityIncrementer = (productId: string) => {
+const useQuantityIncrementer = (productIds: readonly string[]) => {
   const [, dispatch] = useContext(Context) ?? [];
   return useCallback(
-    () => dispatch?.({ type: "INCREMENT_QUANTITY", payload: { productId } }),
-    [dispatch, productId]
+    () => {
+      for (const productId of productIds) {
+        dispatch?.({ type: "INCREMENT_QUANTITY", payload: { productId } });
+      }
+    },
+    [dispatch, productIds]
   );
 };
 export default useQuantityIncrementer;

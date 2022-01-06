@@ -1,30 +1,33 @@
 import { VFC } from "react"
 import useForegroundColor from "~/themes/useForegroundColor"
 import useThemedClassName from "~/themes/useThemedClassName"
-import Link from "next/link"
-import CTA from "../CTA"
+import ComicText from "../ComicText"
 import Logo from "../Logo"
+import IncrementQuantityCTA from "../store/IncrementQuantityCTA"
 import AgeRecommendation, { Props as AgeRecommendationProps } from "./AgeRecommendation"
 import ExternalStores, { Props as ExternalStoresProps } from "./ExternalStores"
 import styles from "./SeriesHero.module.scss"
 export interface Props {
     ageRecommendation: AgeRecommendationProps["ageRecommendation"]
     id: "paleocene" | "pleistocene"
+    productIds?: readonly string[];
     storeLinks?: ExternalStoresProps["links"]
     title: string;
 }
-const SeriesHero: VFC<Props> = ({ ageRecommendation, id, storeLinks, title }) => {
+const SeriesHero: VFC<Props> = ({ ageRecommendation, id, productIds, storeLinks, title }) => {
     const className = useThemedClassName(styles, "hero");
     const logoColor = useForegroundColor()
     return (
         <header className={className}>
-            <Logo color={logoColor} type={id} className={styles.logo} />
-            <div className={styles.store}>
-                <Link href="/store" passHref>
-                    <CTA>Get it now!</CTA>
-                </Link>
-            </div>
-            <ExternalStores links={storeLinks} />
+            <Logo color={logoColor} type={id} className={styles.logo} alt={title} />
+            {Boolean(productIds?.length) && (
+                <div className={styles.store}>
+                    <IncrementQuantityCTA href="/cart" productIds={productIds!} />
+                </div>
+            )}
+            <ExternalStores links={storeLinks}>
+                {Boolean(productIds?.length) ? <ComicText>Also available digitally on:</ComicText> : <ComicText>Available digitally on:</ComicText>}
+            </ExternalStores>
             <AgeRecommendation ageRecommendation={ageRecommendation} />
         </header>
     )

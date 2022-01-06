@@ -12,7 +12,8 @@ export interface Props {
 }
 const Product: VFC<Props> = ({ id, noTitle }) => {
     const [animationRef, animate] = useAnimation<HTMLElement>("pulse")
-    const handleAddToCartClick = useQuantityIncrementer(id)
+    const ids = useMemo(() => [id], [id]);
+    const handleAddToCartClick = useQuantityIncrementer(ids)
     const [order] = useContext(Context) ?? []
     const quantity = useMemo(
         () => {
