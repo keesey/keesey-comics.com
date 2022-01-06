@@ -2,6 +2,7 @@ import {
     ChangeEvent,
     FocusEvent,
     KeyboardEvent,
+    MouseEvent,
     useCallback,
     useContext,
     useEffect,
@@ -15,7 +16,7 @@ import styles from "./index.module.scss";
 export interface Props {
     item: OrderItem;
 }
-const handleQuantityInputKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
         event.currentTarget.blur();
     }
@@ -25,8 +26,8 @@ const QuantityInput: VFC<Props> = ({ item }) => {
     const product = PRODUCTS_MAP[item.productId];
     const [quantity, setQuantity] = useState(() => item.quantity);
     useEffect(() => setQuantity(item.quantity), [item.quantity]);
-    const handleQuantityInputBlur = useCallback(
-        (event: FocusEvent<HTMLInputElement>) => {
+    const handleBlurOrMouseUp = useCallback(
+        (event: FocusEvent<HTMLInputElement> | MouseEvent<HTMLInputElement>) => {
             const newQuantity = Math.min(
                 product.type.maximum,
                 event.currentTarget.valueAsNumber
@@ -42,7 +43,7 @@ const QuantityInput: VFC<Props> = ({ item }) => {
         },
         [dispatch, item.productId, product.type.maximum]
     );
-    const handleQuantityInputChange = useCallback(
+    const handleChange = useCallback(
         (event: ChangeEvent<HTMLInputElement>) => {
             setQuantity(event.currentTarget.valueAsNumber);
         },
@@ -54,9 +55,10 @@ const QuantityInput: VFC<Props> = ({ item }) => {
             key="quantity"
             max={product.type.maximum}
             min={1}
-            onBlur={handleQuantityInputBlur}
-            onChange={handleQuantityInputChange}
-            onKeyDown={handleQuantityInputKeyDown}
+            onBlur={handleBlurOrMouseUp}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+            onMouseUp={handleBlurOrMouseUp}
             type="number"
             value={isNaN(quantity) ? "" : quantity}
         />
