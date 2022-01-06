@@ -6,6 +6,7 @@ import CTA from "~/components/CTA"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import useProduct from "~/components/metadata/useProduct"
+import RedirectPage from "~/components/RedirectPage"
 import CheckOutCTA from "~/components/store/CheckOutCTA"
 import ProductHero from "~/components/store/ProductHero"
 export interface Props {
@@ -14,6 +15,11 @@ export interface Props {
 const Page: NextPage<Props> = ({ productId }) => {
     const product = PRODUCTS_MAP[productId]
     const productSchema = useProduct(product)
+    if (product.path) {
+        return (
+            <RedirectPage href={product.path} title={product.name} />
+        )
+    }
     return (
         <OrderContainer>
             <Head subject={productSchema} />
@@ -45,14 +51,6 @@ export const getStaticProps: GetStaticProps<Props> = (context) => {
     const product = PRODUCTS_MAP[productId]
     if (!product) {
         return { notFound: true }
-    }
-    if (product.path) {
-        return {
-            redirect: {
-                destination: product.path,
-                permanent: true,
-            },
-        }
     }
     return { props: { productId } }
 }
