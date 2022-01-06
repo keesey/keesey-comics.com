@@ -100,6 +100,7 @@ const setQuantity = (
   quantity: number
 ): State => {
   const { items } = prevState;
+  quantity = Math.max(1, Math.min(PRODUCTS_MAP[productId].type.maximum, Math.round(quantity)));
   if (!items.some((item) => item.productId === productId)) {
     const newItems = [...items, { productId, quantity }].sort(compareItems);
     return {
@@ -119,7 +120,7 @@ const setQuantity = (
   };
 };
 const isValidQuantity = (q: number) =>
-  isFinite(q) && q > 0;
+  isFinite(q) && q >= 1;
 const reducer: Reducer<State, Action> = (prevState, action) => {
   console.log(action)
   switch (action.type) {
@@ -137,7 +138,8 @@ const reducer: Reducer<State, Action> = (prevState, action) => {
     case "INITIALIZE": {
       const items = (action.payload?.items ?? []).filter(
         (item) => PRODUCTS_MAP[item.productId] && isValidQuantity(item.quantity)
-      );
+      )
+      .map(item => ({ ...item, quantity: Math.min(PRODUCTS_MAP[item.productId].type.maximum, item.quantity)}));
       return {
         items,
         shippingOptionIds: normalizeShippingOptionIds(

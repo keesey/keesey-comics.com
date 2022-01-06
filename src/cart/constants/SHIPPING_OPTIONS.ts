@@ -3,7 +3,7 @@ const SHIPPING_OPTIONS: readonly ShippingOption[] = [
   {
     id: "BAB",
     name: "Bagged and Boarded",
-    ounces: 0, // :TODO: Weigh
+    ounces: 0.7,
     value: 0.5,
   },
   {

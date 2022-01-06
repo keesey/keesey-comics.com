@@ -4,8 +4,9 @@ const PRODUCT_TYPES: readonly ProductType[] = [
     {
         html: `Standard Size Comic Book (6⅞<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 10½<abbr title="inches">&quot;</abbr>), 22 Story Pages <abbr title="Plus">+</abbr> Extra Material`,
         id: "COB-STD",
+        maximum: 50,
         name: "Comic Book (6⅞ × 10½ in)",
-        ounces: 4.1,
+        ounces: 3.4,
         shippingOptions: [
             SHIPPING_OPTIONS_MAP["BAB"],
             SHIPPING_OPTIONS_MAP["NOB"],
@@ -15,6 +16,7 @@ const PRODUCT_TYPES: readonly ProductType[] = [
     {
         html: `Sticker (2<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 2<abbr title="inches">&quot;</abbr>)`,
         id: "STK-02I",
+        maximum: 25,
         name: "Sticker (2 × 2 in)",
         ounces: 0.02,
         value: 0.5,
@@ -22,6 +24,7 @@ const PRODUCT_TYPES: readonly ProductType[] = [
     {
         html: `Bookmark (2<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 6<abbr title="inches">&quot;</abbr>)`,
         id: "BKM-06I",
+        maximum: 25,
         name: "Bookmark (2 × 6 in)",
         ounces: 0.09,
         value: 2,
@@ -29,6 +32,7 @@ const PRODUCT_TYPES: readonly ProductType[] = [
     {
         html: `Poster (11<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 17<abbr title="inches">&quot;</abbr>)`,
         id: "POS-17I",
+        maximum: 25,
         name: "Poster (11 × 17 in)",
         ounces: 0.65,
         shippingOptions: [
