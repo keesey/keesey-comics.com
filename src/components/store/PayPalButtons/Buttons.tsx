@@ -1,16 +1,24 @@
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
-import { useContext, VFC } from "react";
+import { useCallback, useContext, useState, VFC } from "react";
 import CostsContext from "~/cart/context/costs/Context";
 import OrderContext from "~/cart/context/order/Context";
+import styles from "./Buttons.module.scss";
 import useCreateOrder from "./useCreateOrder";
 import useOnApprove from "./useOnApprove";
-import styles from "./Buttons.module.scss";
 const Buttons: VFC = () => {
-    const [{ isPending }] = usePayPalScriptReducer() ?? [{}];
+    const [{ isPending, isRejected }] = usePayPalScriptReducer() ?? [{}];
     const [order] = useContext(OrderContext) ?? [];
     const { costs } = useContext(CostsContext) ?? {};
     const createOrder = useCreateOrder();
-    const onApprove = useOnApprove();
+    const handleApprove = useOnApprove();
+    const [error, setError] = useState<string | undefined>()
+    const handleError = useCallback(
+        (error: unknown) => {
+            console.error(error);
+            setError(String(error) || undefined)
+        },
+        [],
+    );
     const disabled = Boolean(!costs || isPending);
     return (
         <section className={styles.main}>
@@ -20,10 +28,11 @@ const Buttons: VFC = () => {
                 createOrder={createOrder}
                 disabled={disabled}
                 forceReRender={[order, costs]}
-                onApprove={onApprove}
-                onCancel={alert}
-                onError={alert}
+                key="buttons"
+                onApprove={handleApprove}
+                onError={handleError}
             />
+            {isRejected && <div key="error" className={styles.error}>{error || "Error!"}</div>}
         </section>
     );
 };

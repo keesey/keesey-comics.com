@@ -31,37 +31,48 @@ const calculateCosts = async (
   if (!container) {
     return undefined;
   }
-  const [ounces, handling, products, shippingAdditional] = order.items.reduce<
-    [number, number, number, number]
-  >(
-    (
-      [prevOunces, prevHandling, prevProducts, prevShippingAdditional],
-      { productId, quantity }
-    ) => {
-      const product = PRODUCTS_MAP[productId];
-      const shippingOption = getShippingOption(
-        order.shippingOptionIds,
-        product.type
-      );
-      return [
-        prevOunces +
-          product.type.ounces +
-          (shippingOption ? quantity * shippingOption.ounces : 0),
-        prevHandling + quantity * Number(process.env.HANDLING_RATE),
-        prevProducts + quantity * product.type.value,
-        prevShippingAdditional +
-          (shippingOption ? quantity * shippingOption.value : 0),
-      ];
-    },
-    [container.ounces, 0, 0, 0]
-  );
+  const [ounces, handling, products, shippingAdditional, salesTax] =
+    order.items.reduce<[number, number, number, number, number]>(
+      (
+        [
+          prevOunces,
+          prevHandling,
+          prevProducts,
+          prevShippingAdditional,
+          prevSalesTax,
+        ],
+        { productId, quantity }
+      ) => {
+        const product = PRODUCTS_MAP[productId];
+        const shippingOption = getShippingOption(
+          order.shippingOptionIds,
+          product.type
+        );
+        return [
+          prevOunces +
+            product.type.ounces +
+            (shippingOption ? quantity * shippingOption.ounces : 0),
+          prevHandling + quantity * Number(process.env.HANDLING_RATE),
+          prevProducts + quantity * product.type.value,
+          prevShippingAdditional +
+            (shippingOption ? quantity * shippingOption.value : 0),
+          prevSalesTax +
+            quantity *
+              Number(
+                (
+                  product.type.value * Number(process.env.NEXT_PUBLIC_SALES_TAX)
+                ).toFixed(2)
+              ),
+        ];
+      },
+      [container.ounces, 0, 0, 0, 0]
+    );
   const pkg: Package = {
     dimensions: container.dimensions,
     ounces,
     value: container.value + products,
   };
   const shipping = await calculateShipping({ address, package: pkg });
-  const salesTax = products * Number(process.env.NEXT_PUBLIC_SALES_TAX);
   const processingSubtotal =
     pkg.value + shipping.rate + shippingAdditional + handling + salesTax;
   const processing = Number(

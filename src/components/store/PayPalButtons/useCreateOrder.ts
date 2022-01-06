@@ -8,7 +8,7 @@ const useCreateOrder = () => {
   const { costs } = useContext(CostsContext) ?? {};
   return useCallback(
     async (_: unknown, actions: CreateOrderActions): Promise<string> => {
-      if (!costs || !order?.length) {
+      if (!costs || !order?.items.length) {
         throw new Error();
       }
       const amount = costs
@@ -23,10 +23,6 @@ const useCreateOrder = () => {
       const orderId = await actions.order.create({
         application_context: {
           brand_name: "Keesey Comics",
-          cancel_url: "https://www.keesey-comics.com/cart/cancel",
-          return_url: "https://www.keesey-comics.com/cart/return",
-          shipping_preference: "GET_FROM_FILE",
-          user_action: "PAY_NOW",
         },
         purchase_units: [
           {
@@ -57,7 +53,7 @@ const useCreateOrder = () => {
               currency_code: "USD",
               value: amount.toFixed(2),
             },
-            items: order?.map((item) => {
+            items: order?.items.map((item) => {
               const product = PRODUCTS_MAP[item.productId];
               return {
                 category: "PHYSICAL_GOODS",
@@ -68,7 +64,6 @@ const useCreateOrder = () => {
                 tax: {
                   currency_code: "USD",
                   value: (
-                    item.quantity *
                     product.type.value *
                     Number(process.env.NEXT_PUBLIC_SALES_TAX)
                   ).toFixed(2),

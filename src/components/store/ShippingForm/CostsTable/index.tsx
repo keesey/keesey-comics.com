@@ -1,3 +1,4 @@
+import "animate.css";
 import { useContext, VFC } from "react";
 import Context from "~/cart/context/costs/Context";
 import Price from "~/components/Price";
@@ -11,7 +12,13 @@ const CostsTable: VFC = () => {
     return (
         <div className={styles.main}>
             <div className={styles.status}>
-                {pending && <p className={styles.pending}>Loading&hellip;</p>}
+                {pending && (
+                    <p
+                        className={`${styles.pending} animate__animated animate__headShake animate__infinite`}
+                    >
+                        Loading&hellip;
+                    </p>
+                )}
                 {error && (
                     <p className={styles.error}>
                         {error.name}: {error.message}

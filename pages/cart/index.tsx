@@ -1,30 +1,14 @@
 import type { NextPage } from "next"
-import Link from "next/link"
 import CartContainer from "~/cart/CartContainer"
-import CTA from "~/components/CTA"
-import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
-import PayPalButtons from "~/components/store/PayPalButtons"
-import ShippingForm from "~/components/store/ShippingForm"
-import ShoppingCart from "~/components/store/ShoppingCart"
+import Cart from "~/components/store/Cart"
 const Page: NextPage = () => {
     return (
         <CartContainer>
             <Head subject="Keesey Comics: Your Cart" />
             <Layout theme="kc">
-                <Hero>
-                    <h1>Your Cart</h1>
-                </Hero>
-                <ShoppingCart />
-                <br />
-                <Link href="/store" passHref>
-                    <CTA>Keep Shopping</CTA>
-                </Link>
-                <br />
-                <ShippingForm />
-                <br />
-                <PayPalButtons />
+                <Cart />
             </Layout>
         </CartContainer>
     )
