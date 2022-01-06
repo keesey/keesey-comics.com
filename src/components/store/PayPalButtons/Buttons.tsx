@@ -11,16 +11,18 @@ const Buttons: VFC = () => {
     const { costs } = useContext(CostsContext) ?? {};
     const createOrder = useCreateOrder();
     const onApprove = useOnApprove();
+    const disabled = Boolean(!costs || isPending);
     return (
         <section className={styles.main}>
-            <h2>Finalize Purchase</h2>
+            <h2>3. Finalize Purchase</h2>
             <PayPalButtons
-                disabled={isPending}
-                forceReRender={[order, costs]}
+                className={disabled ? styles.disabled : undefined}
                 createOrder={createOrder}
+                disabled={disabled}
+                forceReRender={[order, costs]}
                 onApprove={onApprove}
-                onError={alert}
                 onCancel={alert}
+                onError={alert}
             />
         </section>
     );

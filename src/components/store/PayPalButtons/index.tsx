@@ -1,9 +1,7 @@
-import { PayPalScriptProvider } from "@paypal/react-paypal-js"
-import { useContext, VFC } from "react"
-import CostsContext from "~/cart/context/costs/Context"
-import Buttons from "./Buttons"
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { VFC } from "react";
+import Buttons from "./Buttons";
 const PayPalButtons: VFC = () => {
-    const { costs } = useContext(CostsContext) ?? {}
     return (
         <PayPalScriptProvider
             options={{
@@ -11,7 +9,7 @@ const PayPalButtons: VFC = () => {
                 currency: "USD",
             }}
         >
-            {costs && <Buttons />}
+            <Buttons />
         </PayPalScriptProvider>
     );
 };

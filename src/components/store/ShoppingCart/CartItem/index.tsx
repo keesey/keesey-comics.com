@@ -7,6 +7,7 @@ import Context from "~/cart/context/order/Context";
 import { OrderItem } from "~/cart/models/OrderItem";
 import { ShippingOption } from "~/cart/models/ShippingOption";
 import Price from "~/components/Price";
+import Section from "../Section";
 import styles from "./index.module.scss";
 export interface Props {
     item: OrderItem;
@@ -52,16 +53,26 @@ const CartItem: VFC<Props> = ({ item }) => {
         [product.type, order?.shippingOptionIds],
     )
     return (
-        <section className={styles.main}>
-            <div className={styles.content}>
-                <header>
+        <Section>
+            <div className={styles.main}>
+                <header className={styles.header}>
                     <Link href={href}>
-                        <a>
+                        <a className={styles.productLink}>
                             <h3 dangerouslySetInnerHTML={{ __html: product.html }} />
                         </a>
                     </Link>
+                    <input
+                        key="quantity"
+                        type="number"
+                        min={1}
+                        value={item.quantity}
+                        onChange={handleQuantityInputChange}
+                    />
+                    <span className={styles.amount}>
+                        <Price amount={amount} />
+                    </span>
                 </header>
-                <div className={styles.details}>
+                <div className={styles.content}>
                     <Link href={href}>
                         <a>
                             <Image
@@ -73,35 +84,21 @@ const CartItem: VFC<Props> = ({ item }) => {
                             />
                         </a>
                     </Link>
-                    <div>
+                    <div className={styles.details}>
                         <p dangerouslySetInnerHTML={{ __html: product.type.html }} />
                         {shippingOption && <p><b>Shipping Option</b>: {shippingOption.name}</p>}
                     </div>
+                    <a
+                        key="remove"
+                        className={styles.remove}
+                        onClick={handleRemoveButtonClick}
+                        role="button"
+                    >
+                        Remove
+                    </a>
                 </div>
             </div>
-            <nav>
-                <input
-                    key="quantity"
-                    type="number"
-                    min={1}
-                    value={item.quantity}
-                    onChange={handleQuantityInputChange}
-                />
-            </nav>
-            <footer>
-                <span className={styles.amount}>
-                    <Price amount={amount} />
-                </span>
-                <a
-                    key="remove"
-                    className={styles.remove}
-                    onClick={handleRemoveButtonClick}
-                    role="button"
-                >
-                    Remove
-                </a>
-            </footer>
-        </section>
+        </Section>
     );
 };
 export default CartItem;

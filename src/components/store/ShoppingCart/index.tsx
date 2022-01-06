@@ -2,6 +2,7 @@ import { useCallback, useContext, VFC } from "react";
 import Context from "~/cart/context/order/Context";
 import CartItem from "./CartItem";
 import styles from "./index.module.scss";
+import Section from "./Section";
 const ShoppingCart: VFC = () => {
     const [order, dispatch] = useContext(Context) ?? [];
     const handleRemoveAllButtonClick = useCallback(() => {
@@ -14,17 +15,22 @@ const ShoppingCart: VFC = () => {
     }
     return (
         <section className={styles.main}>
+            <Section key="header">
+                <h2>1. Review Your Order</h2>
+            </Section>
             {!order.items?.length && (
-                <p key={0} className={styles.empty}>
-                    Your cart is empty.
-                </p>
+                <Section key="empty">
+                    <div className={styles.empty}>
+                        Your cart is empty.
+                    </div>
+                </Section>
             )}
             {order.items?.map((item) => (
-                <CartItem key={item.productId} item={item} />
+                <CartItem key={`product:${item.productId}`} item={item} />
             ))}
             {order.items?.length > 1 && (
                 <a
-                    key={-1}
+                    key="removeAll"
                     className={styles.removeAll}
                     onClick={handleRemoveAllButtonClick}
                     role="button"

@@ -1,0 +1,15 @@
+.main {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  margin-bottom: -1px;
+  padding: 1rem;
+  &:first-of-type {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  &:last-of-type {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}

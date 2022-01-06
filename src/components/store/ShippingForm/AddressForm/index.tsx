@@ -23,25 +23,28 @@ const AddressForm: VFC = () => {
     }
     return (
         <section className={styles.main}>
-            <select
-                onChange={handleCountrySelectChange}
-                required
-                value={address.country}
-            >
-                {USPS_COUNTRIES.map((value) => (
-                    <option key={value} label={value} value={value} />
-                ))}
-            </select>
-            {domestic && (
-                <input
-                    maxLength={32}
-                    name="postalCode"
-                    onChange={handlePostalCodeInputChange}
-                    placeholder="ZIP Code"
-                    type="text"
-                    value={address.postalCode ?? ""}
-                />
-            )}
+            <h3>Destination</h3>
+            <div className={styles.content}>
+                <select
+                    onChange={handleCountrySelectChange}
+                    required
+                    value={address.country}
+                >
+                    {USPS_COUNTRIES.map((value) => (
+                        <option key={value} label={value} value={value} />
+                    ))}
+                </select>
+                {domestic && (
+                    <input
+                        maxLength={32}
+                        name="postalCode"
+                        onChange={handlePostalCodeInputChange}
+                        placeholder="ZIP Code"
+                        type="text"
+                        value={address.postalCode ?? ""}
+                    />
+                )}
+            </div>
         </section>
     );
 };

@@ -20,32 +20,29 @@ const ShippingOptionForm: VFC = () => {
     }
     return (
         <section className={styles.main}>
-            <h3>Options</h3>
-            <div className={styles.container}>
-                {SHIPPING_OPTION_LISTS.filter((list) =>
-                    list.options.some((option) =>
-                        order.shippingOptionIds.includes(option.id)
-                    )
-                ).map((list) => (
-                    <section key={list.name} className={styles.optionList}>
-                        <h4>{list.name}</h4>
-                        <div className={styles.options}>
-                            {list.options.map((option) => (
-                                <label key={option.id} className={styles.label}>
-                                    <span>{option.name}</span>
-                                    <input
-                                        type="radio"
-                                        value={option.id}
-                                        name={list.name}
-                                        checked={order.shippingOptionIds.includes(option.id)}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-                            ))}
-                        </div>
-                    </section>
-                ))}
-            </div>
+            {SHIPPING_OPTION_LISTS.filter((list) =>
+                list.options.some((option) =>
+                    order.shippingOptionIds.includes(option.id)
+                )
+            ).map((list) => (
+                <section key={list.name} className={styles.optionList}>
+                    <h3>Options: {list.name}</h3>
+                    <div className={styles.options}>
+                        {list.options.map((option) => (
+                            <label key={option.id} className={styles.label}>
+                                <span>{option.name}</span>
+                                <input
+                                    type="radio"
+                                    value={option.id}
+                                    name={list.name}
+                                    checked={order.shippingOptionIds.includes(option.id)}
+                                    onChange={handleInputChange}
+                                />
+                            </label>
+                        ))}
+                    </div>
+                </section>
+            ))}
         </section>
     );
 };
