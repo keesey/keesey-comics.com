@@ -6,6 +6,7 @@ import CTA from "~/components/CTA"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import useProduct from "~/components/metadata/useProduct"
+import CheckOutCTA from "~/components/store/CheckOutCTA"
 import ProductHero from "~/components/store/ProductHero"
 export interface Props {
     productId: string;
@@ -22,9 +23,7 @@ const Page: NextPage<Props> = ({ productId }) => {
                     <CTA>See More Products</CTA>
                 </Link>
                 <br />
-                <Link href="/car" passHref>
-                    <CTA>Check Out</CTA>
-                </Link>
+                <CheckOutCTA />
             </Layout>
         </OrderContainer>
     )

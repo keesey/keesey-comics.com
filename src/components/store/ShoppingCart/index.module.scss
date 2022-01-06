@@ -1,8 +1,9 @@
+@use "src/styles/mixins";
 .main {
+  @include mixins.contained;
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  margin: 0 2rem;
   min-width: 320px;
 }
 .empty {

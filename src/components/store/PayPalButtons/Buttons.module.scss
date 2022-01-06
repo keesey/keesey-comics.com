@@ -1,16 +1,12 @@
+@use "src/styles/mixins";
 .main {
+  @include mixins.business;
   align-items: center;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 1rem;
-  color: black;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   justify-content: center;
-  margin: 0 2rem;
   min-width: 22rem;
-  padding: 1rem;
   > h2 {
     align-self: flex-start;
   }
