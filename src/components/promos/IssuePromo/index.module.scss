@@ -1,8 +1,11 @@
 .promo {
-    img {
-        background-color: #fff;
-        border: 2pt solid #000;
-        object-fit: cover;
-        padding: 1pt;
-    }
+  align-items: center;
+  background-color: #fff;
+  border: 2pt solid #000;
+  display: flex;
+  justify-content: center;
+  padding: 1pt;
+  img {
+    object-fit: cover;
+  }
 }

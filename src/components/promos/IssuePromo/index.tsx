@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image"
 import Link from "next/link"
 import { VFC } from "react"
 import styles from "./index.module.scss"
@@ -15,7 +16,7 @@ const IssuePromo: VFC<Props> = ({ id, number }) => {
     return (
         <Link href={`/${id}/issues/${paddedNumber}`}>
             <a className={styles.promo}>
-                <img
+                <Image
                     alt={`${TITLES[id]} #${number}`}
                     height={320}
                     src={`/images/issues/${id}/${paddedNumber}/front_cover.png`}

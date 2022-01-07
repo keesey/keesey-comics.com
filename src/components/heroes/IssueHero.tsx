@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image"
 import { FC } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
 import AgeRecommendation, { Props as AgeRecommendationProps } from "./AgeRecommendation"
@@ -16,14 +16,13 @@ const IssueHero: FC<Props> = ({ ageRecommendation, children, id, number, seriesT
     const paddedNumber = number < 10 ? `0${number}` : String(number);
     return (
         <header className={className}>
-            <a className={styles.image} href="//gumroad.com/keesey">
-                <img
-                    alt={`${seriesTitle} #${number}`}
-                    height={640}
-                    src={`/images/issues/${id}/${paddedNumber}/front_cover.png`}
-                    width={416}
-                />
-            </a>
+            <Image
+                alt={`${seriesTitle} #${number}`}
+                height={640}
+                layout="fixed"
+                src={`/images/issues/${id}/${paddedNumber}/front_cover.png`}
+                width={416}
+            />
             <div className={styles.info}>
                 {children}
                 <ExternalStores links={storeLinks} />

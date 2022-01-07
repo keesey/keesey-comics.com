@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image"
 import Link from "next/link"
 import { FC } from "react"
 import ComicText from "~/components/ComicText"
@@ -19,7 +20,7 @@ const SeriesPromo: FC<Props> = ({ children, id }) => (
                     <Logo color="brown" type={id} width="100%" height="auto" />
                 </div>
                 <div className={styles.image}>
-                    <img
+                    <Image
                         alt=""
                         height={180}
                         src={`/images/promos/${id}.png`}
