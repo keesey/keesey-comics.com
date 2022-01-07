@@ -75,12 +75,13 @@ const calculateCosts = async (
   const shipping = await calculateShipping({ address, package: pkg });
   const processingSubtotal =
     pkg.value + shipping.rate + shippingAdditional + handling + salesTax;
-  const processing = Number(
+  const totalWithProcessing = Number(
     (
-      PAYPAL_TRANSACTION_FEE +
-      processingSubtotal * PAYPAL_TRANSACTION_RATE
+      (processingSubtotal + PAYPAL_TRANSACTION_FEE) /
+      (1 - PAYPAL_TRANSACTION_RATE)
     ).toFixed(2)
   );
+  const processing = totalWithProcessing - processingSubtotal;
   return {
     containers: container.value,
     shipping: shipping.rate,
