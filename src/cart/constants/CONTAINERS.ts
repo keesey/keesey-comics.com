@@ -133,6 +133,37 @@ const CONTAINERS: readonly Container[] = [
     },
     {
         // Small Box
+        dimensions: [11.5, 8, 1.5],
+        ounces: 3.7,
+        quantities: [
+            {
+                maximum: 9,
+                productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
+            },
+            {
+                maximum: 11,
+                productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
+            },
+            {
+                maximum: 20,
+                productType: PRODUCT_TYPES_MAP["POS-17I"],
+                shippingOption: SHIPPING_OPTIONS_MAP["FOL"],
+            },
+            {
+                maximum: 40,
+                productType: PRODUCT_TYPES_MAP["BKM-06I"],
+            },
+            {
+                maximum: 40,
+                productType: PRODUCT_TYPES_MAP["STK-02I"],
+            },
+        ],
+        value: 1.45,
+    },
+    {
+        // Medium Box
         dimensions: [12, 9.25, 3.25],
         ounces: 8,
         quantities: [
