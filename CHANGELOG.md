@@ -9,8 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Online Store, with Shopping Cart and Product Pages.
-
 ### Changed
 
 ### Deprecated
@@ -20,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Security
+
+## [2.1.0] - 2022-01-08
+
+### Added
+
+- Online Store, with Shopping Cart and Product Pages.
 
 ## [2.0.11] - 2022-01-05
 
