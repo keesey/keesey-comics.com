@@ -22,10 +22,14 @@ const Contact: NextPage = () => {
             <Layout footerPromos={["paleocene", "pleistocene", "phylopic"]} theme="kc">
                 <Hero>
                     <h1>Keesey Comics</h1>
-                    <address>Email: <a href="mailto:keesey+comics@gmail.com">keesey+comics@gmail.com</a></address>
+                    <address>
+                        Email: <a href="mailto:keesey+comics@gmail.com">keesey+comics@gmail.com</a>
+                    </address>
                 </Hero>
                 <Link href="/mailinglist" passHref>
-                    <CTA><span>Join the mailing list</span></CTA>
+                    <CTA>
+                        <span>Join the mailing list</span>
+                    </CTA>
                 </Link>
                 <hr />
                 <SocialNav />

@@ -1,21 +1,19 @@
-import "animate.css";
-import { useContext, VFC } from "react";
-import Context from "~/cart/context/costs/Context";
-import Price from "~/components/Price";
-import styles from "./index.module.scss";
+import "animate.css"
+import { useContext, VFC } from "react"
+import Context from "~/cart/context/costs/Context"
+import Price from "~/components/Price"
+import styles from "./index.module.scss"
 const CostsTable: VFC = () => {
-    const context = useContext(Context);
+    const context = useContext(Context)
     if (!context) {
-        return null;
+        return null
     }
-    const { error, costs, pending } = context;
+    const { error, costs, pending } = context
     return (
         <div className={styles.main}>
             <div className={styles.status}>
                 {pending && (
-                    <p
-                        className={`${styles.pending} animate__animated animate__headShake animate__infinite`}
-                    >
+                    <p className={`${styles.pending} animate__animated animate__headShake animate__infinite`}>
                         Loading&hellip;
                     </p>
                 )}
@@ -35,14 +33,7 @@ const CostsTable: VFC = () => {
                 </dt>
                 <dd>
                     {costs ? (
-                        <Price
-                            amount={
-                                costs.containers +
-                                costs.handling +
-                                costs.shipping +
-                                costs.shippingAdditional
-                            }
-                        />
+                        <Price amount={costs.containers + costs.handling + costs.shipping + costs.shippingAdditional} />
                     ) : (
                         "--"
                     )}
@@ -69,6 +60,6 @@ const CostsTable: VFC = () => {
                 </dd>
             </dl>
         </div>
-    );
-};
-export default CostsTable;
+    )
+}
+export default CostsTable

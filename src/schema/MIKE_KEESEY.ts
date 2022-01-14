@@ -4,6 +4,6 @@ const MIKE_KEESEY: Person = {
     "@type": "Person",
     alternateName: "T. Michael Keesey",
     name: "Mike Keesey",
-    url: "http://tmkeesey.net"
+    url: "http://tmkeesey.net",
 }
 export default MIKE_KEESEY

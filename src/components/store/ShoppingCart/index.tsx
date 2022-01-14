@@ -1,15 +1,15 @@
-import { useCallback, useContext, VFC } from "react";
-import Context from "~/cart/context/order/Context";
-import CartItem from "./CartItem";
-import styles from "./index.module.scss";
-import Section from "./Section";
+import { useCallback, useContext, VFC } from "react"
+import Context from "~/cart/context/order/Context"
+import CartItem from "./CartItem"
+import styles from "./index.module.scss"
+import Section from "./Section"
 const ShoppingCart: VFC = () => {
-    const [order, dispatch] = useContext(Context) ?? [];
+    const [order, dispatch] = useContext(Context) ?? []
     const handleRemoveAllButtonClick = useCallback(() => {
         if (confirm("Are you sure you want to remove all items from your cart?")) {
-            dispatch?.({ type: "RESET" });
+            dispatch?.({ type: "RESET" })
         }
-    }, [dispatch]);
+    }, [dispatch])
     if (!order) {
         return null
     }
@@ -20,25 +20,18 @@ const ShoppingCart: VFC = () => {
             </Section>
             {!order.items?.length && (
                 <Section key="empty">
-                    <div className={styles.empty}>
-                        Your cart is empty.
-                    </div>
+                    <div className={styles.empty}>Your cart is empty.</div>
                 </Section>
             )}
-            {order.items?.map((item) => (
+            {order.items?.map(item => (
                 <CartItem key={`product:${item.productId}`} item={item} />
             ))}
             {order.items?.length > 1 && (
-                <a
-                    key="removeAll"
-                    className={styles.removeAll}
-                    onClick={handleRemoveAllButtonClick}
-                    role="button"
-                >
+                <a key="removeAll" className={styles.removeAll} onClick={handleRemoveAllButtonClick} role="button">
                     Remove All Items
                 </a>
             )}
         </section>
-    );
-};
-export default ShoppingCart;
+    )
+}
+export default ShoppingCart

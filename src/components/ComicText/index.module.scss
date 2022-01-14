@@ -5,7 +5,9 @@
         font-family: Paleocene;
         letter-spacing: 0.25pt;
         text-transform: unset;
-        &.theme-day, [lang=ko] &, &[lang=ko] {
+        &.theme-day,
+        [lang="ko"] &,
+        &[lang="ko"] {
             display: none;
         }
     }
@@ -16,12 +18,15 @@
 .regular {
     @media print, screen {
         display: none;
-        &.theme-day, [lang=ko] &, &[lang=ko] {
+        &.theme-day,
+        [lang="ko"] &,
+        &[lang="ko"] {
             display: initial;
             font-family: AtlandBB;
         }
     }
-    [lang=ko] &, &[lang=ko] {
+    [lang="ko"] &,
+    &[lang="ko"] {
         font-family: Euljiro-Che;
     }
 }

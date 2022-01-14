@@ -5,7 +5,7 @@ import Hero from "~/components/heroes/Hero"
 import Price from "~/components/Price"
 import IncrementQuantityCTA from "../IncrementQuantityCTA"
 export interface Props {
-    productId: string;
+    productId: string
 }
 const ProductHero: VFC<Props> = ({ productId }) => {
     const product = PRODUCTS_MAP[productId]
@@ -13,16 +13,22 @@ const ProductHero: VFC<Props> = ({ productId }) => {
     return (
         <>
             <Hero>
-                <h1 dangerouslySetInnerHTML={{
-                    __html: product.html
-                }} />
+                <h1
+                    dangerouslySetInnerHTML={{
+                        __html: product.html,
+                    }}
+                />
                 <h2>
-                    <span dangerouslySetInnerHTML={{
-                        __html: product.type.html
-                    }} />
+                    <span
+                        dangerouslySetInnerHTML={{
+                            __html: product.type.html,
+                        }}
+                    />
                 </h2>
                 {/* :TODO: Add description? */}
-                <h2><Price amount={product.type.value} abbreviate /></h2>
+                <h2>
+                    <Price amount={product.type.value} abbreviate />
+                </h2>
                 <IncrementQuantityCTA productIds={productIds}>Add to Cart</IncrementQuantityCTA>
                 <br />
                 <Image

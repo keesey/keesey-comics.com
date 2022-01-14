@@ -5,21 +5,25 @@ import useThemedClassName from "~/themes/useThemedClassName"
 import IssuePromo from "../IssuePromo"
 import styles from "./index.module.scss"
 export interface Props {
-    children?: string;
+    children?: string
     id: "paleocene" | "pleistocene"
-    numbers: readonly number[];
+    numbers: readonly number[]
 }
 const IssuePromos: FC<Props> = ({ children, id, numbers }) => {
-    const className = useThemedClassName(styles, "promos");
+    const className = useThemedClassName(styles, "promos")
     return (
         <section className={className}>
-            {children && <p key="text"><ComicText>{children}</ComicText></p>}
+            {children && (
+                <p key="text">
+                    <ComicText>{children}</ComicText>
+                </p>
+            )}
             <nav key="nav">
-                {
-                    numbers.map((number) => <IssuePromo id={id} key={number} number={number} />)
-                }
+                {numbers.map(number => (
+                    <IssuePromo id={id} key={number} number={number} />
+                ))}
             </nav>
         </section>
     )
 }
-export default IssuePromos;
+export default IssuePromos

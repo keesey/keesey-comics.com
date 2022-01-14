@@ -1,19 +1,19 @@
 @use "src/styles/mixins";
 .main {
-  @include mixins.business;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  justify-content: center;
-  min-width: 22rem;
-  > h2 {
-    align-self: flex-start;
-  }
+    @include mixins.business;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    min-width: 22rem;
+    > h2 {
+        align-self: flex-start;
+    }
 }
 .disabled {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 .error {
-  color: red;
+    color: red;
 }

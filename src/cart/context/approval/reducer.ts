@@ -1,14 +1,14 @@
-import { Reducer } from "react";
-import { Action } from "./Action";
-import { State } from "./State";
+import { Reducer } from "react"
+import { Action } from "./Action"
+import { State } from "./State"
 const reducer: Reducer<State, Action> = (prevState, action) => {
-  switch (action.type) {
-    case "INITIALIZE": {
-      return action.payload;
+    switch (action.type) {
+        case "INITIALIZE": {
+            return action.payload
+        }
+        default: {
+            return prevState
+        }
     }
-    default: {
-      return prevState;
-    }
-  }
-};
-export default reducer;
+}
+export default reducer

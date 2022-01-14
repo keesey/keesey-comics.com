@@ -10,15 +10,13 @@ import RedirectPage from "~/components/RedirectPage"
 import CheckOutCTA from "~/components/store/CheckOutCTA"
 import ProductHero from "~/components/store/ProductHero"
 export interface Props {
-    productId: string;
+    productId: string
 }
 const Page: NextPage<Props> = ({ productId }) => {
     const product = PRODUCTS_MAP[productId]
     const productSchema = useProduct(product)
     if (product.path) {
-        return (
-            <RedirectPage href={product.path} title={product.name} />
-        )
+        return <RedirectPage href={product.path} title={product.name} />
     }
     return (
         <OrderContainer>
@@ -41,9 +39,9 @@ export const getStaticPaths: GetStaticPaths = () => {
         paths: PRODUCTS.map(({ id }) => ({
             params: { id },
         })),
-    };
+    }
 }
-export const getStaticProps: GetStaticProps<Props> = (context) => {
+export const getStaticProps: GetStaticProps<Props> = context => {
     const productId = context.params?.id
     if (typeof productId !== "string") {
         return { notFound: true }

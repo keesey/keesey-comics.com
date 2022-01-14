@@ -1,4 +1,4 @@
 export type OrderItem = Readonly<{
-    productId: string;
-    quantity: number;
-}>;
+    productId: string
+    quantity: number
+}>

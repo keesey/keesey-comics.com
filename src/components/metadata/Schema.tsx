@@ -7,10 +7,8 @@ const Schema: VFC<Props> = ({ thing }) => {
     if (!thing) {
         return null
     }
-    const contextualized = { "@context": "https://schema.org", ...(thing as object) } as WithContext<Thing>;
+    const contextualized = { "@context": "https://schema.org", ...(thing as object) } as WithContext<Thing>
     const json = JSON.stringify(contextualized)
-    return (
-        <script type="application/ld+json">{json}</script>
-    )
+    return <script type="application/ld+json">{json}</script>
 }
 export default Schema

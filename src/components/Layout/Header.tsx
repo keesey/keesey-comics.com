@@ -9,7 +9,7 @@ import Promos, { Props as PromosProps } from "./Promos"
 import useLogoColor from "./useLogoColor"
 export type Props = PromosProps
 const Header: VFC<PromosProps> = ({ promos }) => {
-    const className = useThemedClassName(styles, "header");
+    const className = useThemedClassName(styles, "header")
     const logoColor = useLogoColor()
     return (
         <header className={className}>

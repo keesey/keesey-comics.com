@@ -12,7 +12,7 @@ const TITLES: Readonly<Record<Props["id"], string>> = {
     pleistocene: "Pleistocene",
 }
 const IssuePromo: VFC<Props> = ({ id, number }) => {
-    const paddedNumber = number < 10 ? `0${number}` : String(number);
+    const paddedNumber = number < 10 ? `0${number}` : String(number)
     return (
         <Link href={`/${id}/issues/${paddedNumber}`}>
             <a className={styles.promo}>
@@ -26,4 +26,4 @@ const IssuePromo: VFC<Props> = ({ id, number }) => {
         </Link>
     )
 }
-export default IssuePromo;
+export default IssuePromo

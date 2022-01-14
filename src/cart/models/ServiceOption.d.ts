@@ -1,4 +1,4 @@
 export type ServiceOption = Readonly<{
-    rate: number;
-    serviceName: string;
-}>;
+    rate: number
+    serviceName: string
+}>

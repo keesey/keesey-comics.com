@@ -1,43 +1,43 @@
 .main {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 100%;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
 }
 .header {
-  align-items: baseline;
-  display: flex;
-  flex-wrap: nowrap;
-  font-size: larger;
-  h3 {
-    font-size: inherit;
-    margin-block-end: 0;
-    margin-block-start: 0;
-  }
+    align-items: baseline;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: larger;
+    h3 {
+        font-size: inherit;
+        margin-block-end: 0;
+        margin-block-start: 0;
+    }
 }
 .content {
-  align-items: flex-start;
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: nowrap;
-  justify-content: stretch;
-  gap: 1rem;
+    align-items: flex-start;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    gap: 1rem;
 }
 .productLink {
-  flex-grow: 1;
-  text-decoration: underline;
+    flex-grow: 1;
+    text-decoration: underline;
 }
 .details {
-  flex-grow: 1;
-  @media screen and (max-width: 512px) {
-    display: none;
-  }
-  p {
-    margin-block-start: 0;
-  }
+    flex-grow: 1;
+    @media screen and (max-width: 512px) {
+        display: none;
+    }
+    p {
+        margin-block-start: 0;
+    }
 }
 .amount {
-  text-align: right;
-  width: 5rem;
+    text-align: right;
+    width: 5rem;
 }

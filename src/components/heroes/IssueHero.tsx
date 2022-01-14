@@ -12,8 +12,8 @@ export interface Props {
     storeLinks?: ExternalStoresProps["links"]
 }
 const IssueHero: FC<Props> = ({ ageRecommendation, children, id, number, seriesTitle, storeLinks }) => {
-    const className = useThemedClassName(styles, "hero");
-    const paddedNumber = number < 10 ? `0${number}` : String(number);
+    const className = useThemedClassName(styles, "hero")
+    const paddedNumber = number < 10 ? `0${number}` : String(number)
     return (
         <header className={className}>
             <Image

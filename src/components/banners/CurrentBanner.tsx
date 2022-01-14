@@ -1,4 +1,4 @@
-import { VFC } from "react";
+import { VFC } from "react"
 /*
 import { useEffect, useState, VFC } from "react"
 import Kickstarter from "./Kickstarter"
@@ -50,5 +50,5 @@ const Countdown: VFC = () => {
         : <Message />
 }
 */
-const CurrentBanner: VFC = () => null;
+const CurrentBanner: VFC = () => null
 export default CurrentBanner

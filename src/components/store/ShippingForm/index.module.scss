@@ -1,24 +1,24 @@
 @use "src/styles/mixins";
 .main {
-  @include mixins.business;
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  min-width: 22rem;
-  input,
-  select {
-    @include mixins.input;
-  }
-  fieldset {
-    border: none;
+    @include mixins.business;
+    align-items: stretch;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0;
+    flex-direction: column;
     gap: 0.5rem;
-    padding: 0;
-    > * {
-      flex-grow: 1;
+    min-width: 22rem;
+    input,
+    select {
+        @include mixins.input;
     }
-  }
+    fieldset {
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 0.5rem;
+        padding: 0;
+        > * {
+            flex-grow: 1;
+        }
+    }
 }

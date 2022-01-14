@@ -1,8 +1,8 @@
-import { VFC } from "react";
-import AddressForm from "./AddressForm";
-import CostsTable from "./CostsTable";
-import styles from "./index.module.scss";
-import ShippingOptionForm from "./ShippingOptionForm";
+import { VFC } from "react"
+import AddressForm from "./AddressForm"
+import CostsTable from "./CostsTable"
+import styles from "./index.module.scss"
+import ShippingOptionForm from "./ShippingOptionForm"
 const ShippingForm: VFC = () => {
     return (
         <section className={styles.main}>
@@ -11,6 +11,6 @@ const ShippingForm: VFC = () => {
             <ShippingOptionForm />
             <CostsTable />
         </section>
-    );
-};
-export default ShippingForm;
+    )
+}
+export default ShippingForm

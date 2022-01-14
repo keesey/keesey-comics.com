@@ -6,7 +6,7 @@ import ComicText from "~/components/ComicText"
 import Logo from "~/components/Logo"
 import styles from "./index.module.scss"
 export interface Props {
-    children: string;
+    children: string
     id: "paleocene" | "pleistocene"
 }
 const SeriesPromo: FC<Props> = ({ children, id }) => (
@@ -20,15 +20,10 @@ const SeriesPromo: FC<Props> = ({ children, id }) => (
                     <Logo color="brown" type={id} width="100%" height="auto" />
                 </div>
                 <div className={styles.image}>
-                    <Image
-                        alt=""
-                        height={180}
-                        src={`/images/promos/${id}.png`}
-                        width={600}
-                    />
+                    <Image alt="" height={180} src={`/images/promos/${id}.png`} width={600} />
                 </div>
             </section>
         </a>
     </Link>
 )
-export default SeriesPromo;
+export default SeriesPromo

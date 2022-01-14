@@ -10,12 +10,12 @@ import styles from "./SeriesHero.module.scss"
 export interface Props {
     ageRecommendation: AgeRecommendationProps["ageRecommendation"]
     id: "paleocene" | "pleistocene"
-    productIds?: readonly string[];
+    productIds?: readonly string[]
     storeLinks?: ExternalStoresProps["links"]
-    title: string;
+    title: string
 }
 const SeriesHero: VFC<Props> = ({ ageRecommendation, id, productIds, storeLinks, title }) => {
-    const className = useThemedClassName(styles, "hero");
+    const className = useThemedClassName(styles, "hero")
     const logoColor = useForegroundColor()
     return (
         <header className={className}>
@@ -26,7 +26,11 @@ const SeriesHero: VFC<Props> = ({ ageRecommendation, id, productIds, storeLinks,
                 </div>
             )}
             <ExternalStores links={storeLinks}>
-                {Boolean(productIds?.length) ? <ComicText>Also available digitally on:</ComicText> : <ComicText>Available digitally on:</ComicText>}
+                {Boolean(productIds?.length) ? (
+                    <ComicText>Also available digitally on:</ComicText>
+                ) : (
+                    <ComicText>Available digitally on:</ComicText>
+                )}
             </ExternalStores>
             <AgeRecommendation ageRecommendation={ageRecommendation} />
         </header>

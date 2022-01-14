@@ -4,5 +4,5 @@
 
 ## More Documentation
 
-- [Changelog](./CHANGELOG.md)
-- [Environment Variables](./ENVIRONMENT_VARIABLES.md)
+-   [Changelog](./CHANGELOG.md)
+-   [Environment Variables](./ENVIRONMENT_VARIABLES.md)

@@ -6,7 +6,8 @@
     display: block;
     padding: 1rem;
     transition: background-color 0.25s;
-    &:active, &:hover {
+    &:active,
+    &:hover {
         background-color: #000;
         opacity: 1;
     }

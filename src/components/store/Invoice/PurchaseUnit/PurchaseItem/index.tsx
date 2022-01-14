@@ -1,19 +1,14 @@
-import { PurchaseItem as Props } from "@paypal/paypal-js/types/apis/orders";
-import { VFC } from "react";
-import Price from "~/components/Price";
-import styles from "./index.module.scss";
-const PurchaseItem: VFC<Props> = ({
-    name,
-    quantity,
-    unit_amount,
-    description,
-    sku,
-    tax,
-}) => {
+import { PurchaseItem as Props } from "@paypal/paypal-js/types/apis/orders"
+import { VFC } from "react"
+import Price from "~/components/Price"
+import styles from "./index.module.scss"
+const PurchaseItem: VFC<Props> = ({ name, quantity, unit_amount, description, sku, tax }) => {
     return (
         <section className={styles.main}>
             <header key="header">
-                <h4>{quantity} &times; {name}</h4>
+                <h4>
+                    {quantity} &times; {name}
+                </h4>
                 {description && <p key="description">{description}</p>}
             </header>
             <dl key="details">
@@ -24,15 +19,19 @@ const PurchaseItem: VFC<Props> = ({
                     </>
                 )}
                 <dt>Unit Amount</dt>
-                <dd><Price amount={Number(unit_amount.value)} /></dd>
+                <dd>
+                    <Price amount={Number(unit_amount.value)} />
+                </dd>
                 {tax && (
                     <>
                         <dt>Tax</dt>
-                        <dd><Price amount={Number(tax.value)} /></dd>
+                        <dd>
+                            <Price amount={Number(tax.value)} />
+                        </dd>
                     </>
                 )}
             </dl>
         </section>
     )
-};
-export default PurchaseItem;
+}
+export default PurchaseItem

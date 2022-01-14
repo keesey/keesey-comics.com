@@ -2,7 +2,8 @@ import type { ComicStory } from "schema-dts"
 const PLEISTOCENE: ComicStory = {
     "@id": "http://keesey-comics.com/pleistocene",
     "@type": "ComicStory",
-    abstract: "He was a brave hero, a great hunter, a natural leader of men -- or so he thought of himself. Ridiculed by his people, he undertook a quest across the desert to find a new homeland. Like every hero, he encountered a monster ... or was it something else?",
+    abstract:
+        "He was a brave hero, a great hunter, a natural leader of men -- or so he thought of himself. Ridiculed by his people, he undertook a quest across the desert to find a new homeland. Like every hero, he encountered a monster ... or was it something else?",
     accessMode: "textOnVisual",
     creator: "http://tmkeesey.net",
     contentRating: "17+",

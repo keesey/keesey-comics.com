@@ -1,6 +1,6 @@
-import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-import { VFC } from "react";
-import Buttons from "./Buttons";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js"
+import { VFC } from "react"
+import Buttons from "./Buttons"
 const PayPalButtons: VFC = () => {
     return (
         <PayPalScriptProvider
@@ -11,6 +11,6 @@ const PayPalButtons: VFC = () => {
         >
             <Buttons />
         </PayPalScriptProvider>
-    );
-};
-export default PayPalButtons;
+    )
+}
+export default PayPalButtons

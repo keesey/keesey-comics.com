@@ -2,12 +2,12 @@ import { ReactNode, VFC } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
 import styles from "./index.module.scss"
 export type Quote = Readonly<{
-    attribution: ReactNode;
-    content: ReactNode;
-    href: string;
+    attribution: ReactNode
+    content: ReactNode
+    href: string
 }>
 export type Props = {
-    quotes: readonly Quote[];
+    quotes: readonly Quote[]
 }
 const Quotes: VFC<Props> = ({ quotes }) => {
     const className = useThemedClassName(styles, "quote")
@@ -18,7 +18,9 @@ const Quotes: VFC<Props> = ({ quotes }) => {
                     <p>{content}</p>
                     <footer>
                         <cite className={styles.attribution}>
-                            <a href={href} target="_blank" rel="noreferrer">{attribution}</a>
+                            <a href={href} target="_blank" rel="noreferrer">
+                                {attribution}
+                            </a>
                         </cite>
                     </footer>
                 </blockquote>

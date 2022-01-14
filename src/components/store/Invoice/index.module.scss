@@ -1,11 +1,11 @@
 @use "src/styles/mixins";
 .iFrameContainer {
-  @include mixins.contained;
-  max-width: 8.5in;
-  > iframe {
-    background-color: white;
-    border: 1px solid black;
-    height: 11in;
-    width: 100%;
-  }
+    @include mixins.contained;
+    max-width: 8.5in;
+    > iframe {
+        background-color: white;
+        border: 1px solid black;
+        height: 11in;
+        width: 100%;
+    }
 }

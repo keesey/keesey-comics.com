@@ -1,15 +1,15 @@
-import type { NextPage } from "next";
-import type { Store } from "schema-dts";
-import { PRODUCT_TYPES_MAP } from "~/cart/constants/PRODUCT_TYPES";
-import OrderContainer from "~/cart/context/order/OrderContainer";
-import ExternalStores from "~/components/heroes/ExternalStores";
-import Hero from "~/components/heroes/Hero";
-import Layout from "~/components/Layout";
-import Head from "~/components/metadata/Head";
-import CheckOutCTA from "~/components/store/CheckOutCTA";
-import Product from "~/components/store/Product";
-import ProductType from "~/components/store/ProductType";
-import ProductTypes from "~/components/store/ProductTypes";
+import type { NextPage } from "next"
+import type { Store } from "schema-dts"
+import { PRODUCT_TYPES_MAP } from "~/cart/constants/PRODUCT_TYPES"
+import OrderContainer from "~/cart/context/order/OrderContainer"
+import ExternalStores from "~/components/heroes/ExternalStores"
+import Hero from "~/components/heroes/Hero"
+import Layout from "~/components/Layout"
+import Head from "~/components/metadata/Head"
+import CheckOutCTA from "~/components/store/CheckOutCTA"
+import Product from "~/components/store/Product"
+import ProductType from "~/components/store/ProductType"
+import ProductTypes from "~/components/store/ProductTypes"
 const SUBJECT: Store = {
     "@type": "Store",
     "@id": "http://keesey-comics.com/store",
@@ -17,7 +17,7 @@ const SUBJECT: Store = {
     description: "Comic books, posters, bookmarks, and stickers.",
     isAccessibleForFree: true,
     url: "http://keesey-comics.com/contact",
-};
+}
 const Page: NextPage = () => {
     return (
         <OrderContainer>
@@ -35,9 +35,7 @@ const Page: NextPage = () => {
                         },
                     ]}
                 >
-                    <span style={{ fontSize: "large" }}>
-                        Digital versions available on:
-                    </span>
+                    <span style={{ fontSize: "large" }}>Digital versions available on:</span>
                 </ExternalStores>
                 <br />
                 <ProductTypes>
@@ -46,8 +44,8 @@ const Page: NextPage = () => {
                         description={
                             <>
                                 Standard Size (6⅞<abbr title="inches">&quot;</abbr> × 10½
-                                <abbr title="inches">&quot;</abbr>), 22 Story Pages{" "}
-                                <abbr title="Plus">+</abbr> Extra Material
+                                <abbr title="inches">&quot;</abbr>), 22 Story Pages <abbr title="Plus">+</abbr> Extra
+                                Material
                             </>
                         }
                         price={PRODUCT_TYPES_MAP["COB-STD"].value}
@@ -60,8 +58,8 @@ const Page: NextPage = () => {
                         title="Posters"
                         description={
                             <>
-                                11<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr>{" "}
-                                17<abbr title="inches">&quot;</abbr>
+                                11<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 17
+                                <abbr title="inches">&quot;</abbr>
                             </>
                         }
                         price={PRODUCT_TYPES_MAP["POS-17I"].value}
@@ -99,6 +97,6 @@ const Page: NextPage = () => {
                 <CheckOutCTA />
             </Layout>
         </OrderContainer>
-    );
-};
-export default Page;
+    )
+}
+export default Page

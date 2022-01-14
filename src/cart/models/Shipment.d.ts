@@ -1,6 +1,6 @@
-import { Address } from "./Address";
-import { Package } from "./Package";
+import { Address } from "./Address"
+import { Package } from "./Package"
 export type Shipment = Readonly<{
-    address: Address;
-    package: Package;
-}>;
+    address: Address
+    package: Package
+}>

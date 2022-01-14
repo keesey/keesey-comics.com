@@ -1,21 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
-import { useCallback, useContext, useRef, VFC } from "react";
-import Context from "~/cart/context/approval/Context";
-import CTA from "~/components/CTA";
-import Hero from "~/components/heroes/Hero";
-import IFrameReference from "~/components/IFrameReference";
-import Document from "./Document";
-import styles from "./index.module.scss";
+import Head from "next/head"
+import { useCallback, useContext, useRef, VFC } from "react"
+import Context from "~/cart/context/approval/Context"
+import CTA from "~/components/CTA"
+import Hero from "~/components/heroes/Hero"
+import IFrameReference from "~/components/IFrameReference"
+import Document from "./Document"
+import styles from "./index.module.scss"
 const Invoice: VFC = () => {
-    const [approval] = useContext(Context) ?? [];
-    const printRef = useRef<HTMLIFrameElement | null>(null);
-    const handlePrintCTAClick = useCallback(
-        () => printRef.current?.contentWindow?.print(),
-        [],
-    );
+    const [approval] = useContext(Context) ?? []
+    const printRef = useRef<HTMLIFrameElement | null>(null)
+    const handlePrintCTAClick = useCallback(() => printRef.current?.contentWindow?.print(), [])
     if (!approval) {
-        return null;
+        return null
     }
     return (
         <>
@@ -39,4 +36,4 @@ const Invoice: VFC = () => {
         </>
     )
 }
-export default Invoice;
+export default Invoice

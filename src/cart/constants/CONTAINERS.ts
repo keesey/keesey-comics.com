@@ -1,6 +1,6 @@
-import { Container } from "../models/Container";
-import { PRODUCT_TYPES_MAP } from "./PRODUCT_TYPES";
-import { SHIPPING_OPTIONS_MAP } from "./SHIPPING_OPTIONS";
+import { Container } from "../models/Container"
+import { PRODUCT_TYPES_MAP } from "./PRODUCT_TYPES"
+import { SHIPPING_OPTIONS_MAP } from "./SHIPPING_OPTIONS"
 const CONTAINERS: readonly Container[] = [
     {
         // Tiny Flat
@@ -229,5 +229,5 @@ const CONTAINERS: readonly Container[] = [
         ],
         value: 2.05,
     },
-];
-export default CONTAINERS;
+]
+export default CONTAINERS

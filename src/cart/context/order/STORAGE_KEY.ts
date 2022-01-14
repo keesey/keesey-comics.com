@@ -1,2 +1,2 @@
-const STORAGE_KEY = "keesey-comics.order";
-export default STORAGE_KEY;
+const STORAGE_KEY = "keesey-comics.order"
+export default STORAGE_KEY

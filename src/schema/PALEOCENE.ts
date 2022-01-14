@@ -2,7 +2,8 @@ import type { ComicStory } from "schema-dts"
 const PALEOCENE: ComicStory = {
     "@id": "http://keesey-comics.com/paleocene",
     "@type": "ComicStory",
-    abstract: "Sixty-six million years ago, an asteroid slammed into the Earth, killing three quarters of all living things. But our tiny ancestors survived. With clutched hands and shining eyes, they witnessed the end of the world ... and the early dawn of a new one.",
+    abstract:
+        "Sixty-six million years ago, an asteroid slammed into the Earth, killing three quarters of all living things. But our tiny ancestors survived. With clutched hands and shining eyes, they witnessed the end of the world ... and the early dawn of a new one.",
     accessMode: "textOnVisual",
     creator: "http://tmkeesey.net",
     contentRating: "9+",

@@ -1,42 +1,42 @@
 .main {
-  background-color: white;
-  color: black;
-  font-size: 11pt;
-  min-height: 11in;
-  padding: 0.5in;
-  width: 8.5in;
-  dl {
-    column-gap: 1em;
-    display: grid;
-    grid-template-columns: max-content max-content;
-  }
-  dd {
-    text-align: right;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin-block-start: 0;
-  }
-  hr {
-    border-width: 1pt;
-  }
+    background-color: white;
+    color: black;
+    font-size: 11pt;
+    min-height: 11in;
+    padding: 0.5in;
+    width: 8.5in;
+    dl {
+        column-gap: 1em;
+        display: grid;
+        grid-template-columns: max-content max-content;
+    }
+    dd {
+        text-align: right;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-block-start: 0;
+    }
+    hr {
+        border-width: 1pt;
+    }
 }
 .footer {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
 }
 .contact {
-  flex-grow: 1;
-  text-align: right;
-  a {
-    @media screen {
-      text-decoration: underline;
+    flex-grow: 1;
+    text-align: right;
+    a {
+        @media screen {
+            text-decoration: underline;
+        }
     }
-  }
 }
 .title {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }

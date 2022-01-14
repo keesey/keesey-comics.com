@@ -1,29 +1,29 @@
 .main {
-  display: flex;
+    display: flex;
 }
 .status {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 .list {
-  column-gap: 1rem;
-  display: grid;
-  font-size: larger;
-  grid-template-columns: 1fr max-content;
-  text-align: right;
-  > dt {
-    font-weight: bold;
-  }
-  > dd {
+    column-gap: 1rem;
+    display: grid;
+    font-size: larger;
+    grid-template-columns: 1fr max-content;
     text-align: right;
-  }
+    > dt {
+        font-weight: bold;
+    }
+    > dd {
+        text-align: right;
+    }
 }
 .total {
-  font-weight: bold;
-  text-transform: uppercase;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .pending {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 .error {
-  color: red;
+    color: red;
 }

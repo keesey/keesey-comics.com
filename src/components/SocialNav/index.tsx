@@ -27,4 +27,4 @@ const SocialNav: VFC = () => {
         </Nav>
     )
 }
-export default SocialNav;
+export default SocialNav

@@ -1,36 +1,32 @@
-import { ChangeEvent, useCallback, useContext, useMemo, VFC } from "react";
-import USPS_COUNTRIES from "~/cart/constants/USPS_COUNTRIES";
-import Context from "~/cart/context/address/Context";
-import isDomestic from "~/cart/functions/isDomestic";
-import styles from "./index.module.scss";
+import { ChangeEvent, useCallback, useContext, useMemo, VFC } from "react"
+import USPS_COUNTRIES from "~/cart/constants/USPS_COUNTRIES"
+import Context from "~/cart/context/address/Context"
+import isDomestic from "~/cart/functions/isDomestic"
+import styles from "./index.module.scss"
 const AddressForm: VFC = () => {
-    const [address, dispatch] = useContext(Context) ?? [];
+    const [address, dispatch] = useContext(Context) ?? []
     const domestic = useMemo(() => Boolean(address?.country && isDomestic(address.country)), [address?.country])
     const handleCountrySelectChange = useCallback(
         (event: ChangeEvent<HTMLSelectElement>) => {
             dispatch?.({ type: "SET_COUNTRY", payload: event.currentTarget.value })
         },
-        [dispatch]
-    );
+        [dispatch],
+    )
     const handlePostalCodeInputChange = useCallback(
         (event: ChangeEvent<HTMLInputElement>) => {
             dispatch?.({ type: "SET_POSTAL_CODE", payload: event.currentTarget.value })
         },
-        [dispatch]
-    );
+        [dispatch],
+    )
     if (!address) {
-        return null;
+        return null
     }
     return (
         <section className={styles.main}>
             <h3>Destination</h3>
             <div className={styles.content}>
-                <select
-                    onChange={handleCountrySelectChange}
-                    required
-                    value={address.country}
-                >
-                    {USPS_COUNTRIES.map((value) => (
+                <select onChange={handleCountrySelectChange} required value={address.country}>
+                    {USPS_COUNTRIES.map(value => (
                         <option key={value} label={value} value={value} />
                     ))}
                 </select>
@@ -46,6 +42,6 @@ const AddressForm: VFC = () => {
                 )}
             </div>
         </section>
-    );
-};
+    )
+}
 export default AddressForm

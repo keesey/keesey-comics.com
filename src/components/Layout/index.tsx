@@ -1,17 +1,17 @@
-import { FC } from "react";
-import getThemedClassName from "~/themes/getThemedClassName";
-import ThemeContext from "~/themes/ThemeContext";
-import CurrentBanner from "../banners/CurrentBanner";
-import Footer, { Props as FooterProps } from "./Footer";
-import Header, { Props as HeaderProps } from "./Header";
-import styles from "./index.module.scss";
+import { FC } from "react"
+import getThemedClassName from "~/themes/getThemedClassName"
+import ThemeContext from "~/themes/ThemeContext"
+import CurrentBanner from "../banners/CurrentBanner"
+import Footer, { Props as FooterProps } from "./Footer"
+import Header, { Props as HeaderProps } from "./Header"
+import styles from "./index.module.scss"
 export interface Props {
     footerPromos?: FooterProps["promos"]
     headerPromos?: HeaderProps["promos"]
     theme: "bw" | "day" | "kc" | "night"
 }
 const Layout: FC<Props> = ({ children, headerPromos, footerPromos, theme }) => {
-    const className = getThemedClassName(theme, styles, "layout");
+    const className = getThemedClassName(theme, styles, "layout")
     return (
         <ThemeContext.Provider value={theme}>
             <div className={className}>
@@ -24,5 +24,5 @@ const Layout: FC<Props> = ({ children, headerPromos, footerPromos, theme }) => {
             </div>
         </ThemeContext.Provider>
     )
-};
+}
 export default Layout

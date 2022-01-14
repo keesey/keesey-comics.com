@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps } from "next"
 export const getServerSideProps: GetServerSideProps = async () => ({
     redirect: {
         destination: "/images/issues/paleocene/03/front_cover.png",

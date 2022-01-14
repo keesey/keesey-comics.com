@@ -493,5 +493,5 @@ const USPS_COUNTRIES: readonly string[] = [
     "Zambia",
     "Zanzibar (Tanzania)",
     "Zimbabwe",
-];
-export default USPS_COUNTRIES;
+]
+export default USPS_COUNTRIES

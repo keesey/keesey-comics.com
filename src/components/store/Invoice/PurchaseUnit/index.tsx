@@ -1,8 +1,8 @@
-import { PurchaseUnit as Props, AmountWithBreakdown } from "@paypal/paypal-js/types/apis/orders";
-import { Fragment, VFC } from "react";
-import Price from "~/components/Price";
-import styles from "./index.module.scss";
-import PurchaseItem from "./PurchaseItem";
+import { PurchaseUnit as Props, AmountWithBreakdown } from "@paypal/paypal-js/types/apis/orders"
+import { Fragment, VFC } from "react"
+import Price from "~/components/Price"
+import styles from "./index.module.scss"
+import PurchaseItem from "./PurchaseItem"
 const BREAKDOWN_KEYS: ReadonlyArray<keyof NonNullable<AmountWithBreakdown["breakdown"]>> = [
     "item_total",
     "tax_total",
@@ -11,7 +11,7 @@ const BREAKDOWN_KEYS: ReadonlyArray<keyof NonNullable<AmountWithBreakdown["break
     "insurance",
     "handling",
     "discount",
-];
+]
 const PurchaseUnit: VFC<Props> = ({ amount, description, items, shipping }) => {
     return (
         <section className={styles.main}>
@@ -23,12 +23,16 @@ const PurchaseUnit: VFC<Props> = ({ amount, description, items, shipping }) => {
                     {BREAKDOWN_KEYS.filter(key => Number(amount.breakdown?.[key]?.value)).map(key => (
                         <Fragment key={key}>
                             <dt>{key.replace("_", " ")}</dt>
-                            <dd><Price amount={Number(amount.breakdown![key]!.value)} /></dd>
+                            <dd>
+                                <Price amount={Number(amount.breakdown![key]!.value)} />
+                            </dd>
                         </Fragment>
                     ))}
                     <Fragment key="total">
                         <dt className={styles.total}>Total</dt>
-                        <dd className={styles.total}><Price amount={Number(amount.value)} /></dd>
+                        <dd className={styles.total}>
+                            <Price amount={Number(amount.value)} />
+                        </dd>
                     </Fragment>
                 </dl>
             </section>
@@ -39,11 +43,7 @@ const PurchaseUnit: VFC<Props> = ({ amount, description, items, shipping }) => {
                     <div>{shipping.address.address_line_1}</div>
                     <div>{shipping.address.address_line_2}</div>
                     <div>
-                        {[
-                            shipping.address.admin_area_2,
-                            shipping.address.admin_area_1,
-                            shipping.address.country_code,
-                        ]
+                        {[shipping.address.admin_area_2, shipping.address.admin_area_1, shipping.address.country_code]
                             .filter(Boolean)
                             .join(", ")}{" "}
                         {shipping.address.postal_code}
@@ -53,12 +53,12 @@ const PurchaseUnit: VFC<Props> = ({ amount, description, items, shipping }) => {
             {Boolean(items?.length) && (
                 <section key="items" className={styles.section}>
                     <h3>Items Included</h3>
-                    {items!.map((item) => (
+                    {items!.map(item => (
                         <PurchaseItem key={item.name} {...item} />
                     ))}
                 </section>
             )}
         </section>
-    );
-};
-export default PurchaseUnit;
+    )
+}
+export default PurchaseUnit

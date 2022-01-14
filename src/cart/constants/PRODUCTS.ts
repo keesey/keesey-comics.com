@@ -1,5 +1,5 @@
-import { Product } from "../models/Product";
-import { PRODUCT_TYPES_MAP } from "./PRODUCT_TYPES";
+import { Product } from "../models/Product"
+import { PRODUCT_TYPES_MAP } from "./PRODUCT_TYPES"
 const PRODUCTS: readonly Product[] = [
     {
         html: "<cite>Paleocene</cite> #1",
@@ -31,14 +31,14 @@ const PRODUCTS: readonly Product[] = [
     {
         html: "<cite>Paleocene</cite> Poster &quot;Skull&quot;",
         id: "POS-17I-PAL-001",
-        name: "Paleocene Poster \"Skull\"",
+        name: 'Paleocene Poster "Skull"',
         theme: "night",
         type: PRODUCT_TYPES_MAP["POS-17I"],
     },
     {
         html: "<cite>Paleocene</cite> Poster &quot;Bird&quot;",
         id: "POS-17I-PAL-002",
-        name: "Paleocene Poster \"Bird\"",
+        name: 'Paleocene Poster "Bird"',
         theme: "day",
         type: PRODUCT_TYPES_MAP["POS-17I"],
     },
@@ -52,23 +52,23 @@ const PRODUCTS: readonly Product[] = [
     {
         html: "<cite>Paleocene</cite> Sticker &quot;Eyes&quot;",
         id: "STK-02I-PAL-001",
-        name: "Paleocene Sticker \"Eyes\"",
+        name: 'Paleocene Sticker "Eyes"',
         theme: "day",
         type: PRODUCT_TYPES_MAP["STK-02I"],
     },
     {
         html: "<cite>Paleocene</cite> Sticker &quot;Bird&quot;",
         id: "STK-02I-PAL-002",
-        name: "Paleocene Sticker \"Bird\"",
+        name: 'Paleocene Sticker "Bird"',
         theme: "day",
         type: PRODUCT_TYPES_MAP["STK-02I"],
     },
-];
+]
 export const PRODUCTS_MAP = PRODUCTS.reduce<Readonly<Record<string, Product>>>(
     (prev, product) => ({
         ...prev,
         [product.id]: product,
     }),
     {},
-);
-export default PRODUCTS;
+)
+export default PRODUCTS

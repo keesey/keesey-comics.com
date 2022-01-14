@@ -5,11 +5,11 @@ import { ThemeColor } from "~/themes/ThemeColor"
 import Logo from "../Logo"
 import styles from "./Promos.module.scss"
 import useLogoColor from "./useLogoColor"
-export type PromoType = "paleocene" | "phylopic" | "pleistocene";
+export type PromoType = "paleocene" | "phylopic" | "pleistocene"
 export interface Props {
-    promos?: readonly PromoType[];
+    promos?: readonly PromoType[]
 }
-const Promo: VFC<{ color: ThemeColor, type: PromoType }> = ({ color, type }) => {
+const Promo: VFC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => {
     switch (type) {
         case "paleocene": {
             return (
@@ -42,17 +42,15 @@ const Promo: VFC<{ color: ThemeColor, type: PromoType }> = ({ color, type }) => 
 const Promos: VFC<Props> = ({ promos }) => {
     const logoColor = useLogoColor()
     if (!promos?.length) {
-        return null;
+        return null
     }
     return (
         <section className={styles.promos} key="promos">
-            {
-                promos.map((promo) => (
-                    <div key={promo}>
-                        <Promo color={logoColor} type={promo} />
-                    </div>
-                ))
-            }
+            {promos.map(promo => (
+                <div key={promo}>
+                    <Promo color={logoColor} type={promo} />
+                </div>
+            ))}
         </section>
     )
 }
