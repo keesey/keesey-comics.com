@@ -6,7 +6,7 @@ import Cart from "~/components/store/Cart"
 const Page: NextPage = () => {
     return (
         <CartContainer>
-            <Head subject="Keesey Comics: Your Cart" />
+            <Head subject="Keesey Comics: Your Cart" noIndex />
             <Layout theme="kc">
                 <Cart />
             </Layout>

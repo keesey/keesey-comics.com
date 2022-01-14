@@ -1,0 +1,6 @@
+Sitemap: https://www.keesey-comics.com/sitemap.xml
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*

@@ -19,6 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.1.2] - 2022-01-13
+
+### Added
+
+-   `sitemap.xml` and `robots.txt`
+-   Indication for search tools not to index the Shopping Cart.
+
 ## [2.1.1] - 2022-01-13
 
 ### Added
