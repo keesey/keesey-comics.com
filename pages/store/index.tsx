@@ -16,7 +16,7 @@ const SUBJECT: Store = {
     name: "Keesey Comics Online Store",
     description: "Comic books, posters, bookmarks, and stickers.",
     isAccessibleForFree: true,
-    url: "http://keesey-comics.com/contact",
+    url: "http://keesey-comics.com/store",
 }
 const Page: NextPage = () => {
     return (

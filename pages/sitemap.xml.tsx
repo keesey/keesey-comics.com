@@ -22,9 +22,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     const lastmod = new Date().toISOString()
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${PATHS
-            .map(
-                path => `
+      ${PATHS.map(
+          path => `
             <url>
               <loc>${baseUrl}/${path}</loc>
               <lastmod>${lastmod}</lastmod>
@@ -32,8 +31,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
               <priority>1.0</priority>
             </url>
           `,
-            )
-            .join("")}
+      ).join("")}
     </urlset>
   `
     res.setHeader("Content-Type", "text/xml")
