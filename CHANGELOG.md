@@ -26,6 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   URL in Store metadata.
 -   Schema encoding.
 
+### Security
+
+-   Updated dependency (`nanoid`).
+
 ## [2.1.3] - 2022-01-13
 
 ### Security
