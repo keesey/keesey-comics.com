@@ -15,7 +15,6 @@ const PLEISTOCENE: ComicStory = {
     isFamilyFriendly: false,
     name: "Pleistocene",
     publisher: "http://keesey-comics.com",
-    sameAs: "https://www.comixology.com/Pleistocene/comics-series/117874",
     url: "https://www.keesey-comics.com/pleistocene",
 }
 export default PLEISTOCENE

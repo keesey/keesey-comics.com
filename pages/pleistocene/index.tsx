@@ -16,10 +16,7 @@ const Page: NextPage = () => {
                 <SeriesHero
                     ageRecommendation="17+"
                     id="pleistocene"
-                    storeLinks={[
-                        { type: "gumroad", url: "//gumroad.com/keesey" },
-                        { type: "comixology", url: "//www.comixology.com/Pleistocene/comics-series/117874" },
-                    ]}
+                    storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
                     title="Pleistocene"
                 />
                 <ComicStrip>

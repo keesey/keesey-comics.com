@@ -25,7 +25,6 @@ const SUBJECT: ComicStory = {
     isPartOf: "http://keesey-comics.com/paleocene",
     name: "Paleocene #2",
     position: 2,
-    sameAs: "https://www.comixology.com/Paleocene-2/digital-comic/890936",
     url: "http://keesey-comics.com/paleocene/issues/02",
 }
 const PRODUCT_ID = "COB-STD-PAL-02A"
@@ -41,13 +40,7 @@ const Page: NextPage = () => {
                     ageRecommendation="9+"
                     id="paleocene"
                     number={2}
-                    storeLinks={[
-                        { type: "gumroad", url: "//gumroad.com/keesey" },
-                        {
-                            type: "comixology",
-                            url: "//www.comixology.com/Paleocene-2/digital-comic/890936",
-                        },
-                    ]}
+                    storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
                     seriesTitle="Paleocene"
                 >
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />

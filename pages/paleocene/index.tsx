@@ -38,13 +38,7 @@ const Page: NextPage = () => {
                     ageRecommendation="9+"
                     id="paleocene"
                     productIds={PRODUCT_IDS}
-                    storeLinks={[
-                        { type: "gumroad", url: "//gumroad.com/keesey" },
-                        {
-                            type: "comixology",
-                            url: "//www.comixology.com/Paleocene-Vol-1/comics-series/137451",
-                        },
-                    ]}
+                    storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
                     title="Paleocene"
                 />
                 <Quotes

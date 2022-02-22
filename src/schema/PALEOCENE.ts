@@ -14,7 +14,6 @@ const PALEOCENE: ComicStory = {
     inLanguage: "en",
     name: "Paleocene",
     publisher: "http://keesey-comics.com",
-    sameAs: "https://www.comixology.com/Paleocene-Vol-1/comics-series/137451",
     url: "https://www.keesey-comics.com/paleocene",
 }
 export default PALEOCENE

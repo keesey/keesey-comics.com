@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.1.5] - 2022-02-21
+
+### Removed
+
+-   All references to comiXology.
+
 ## [2.1.4] - 2022-02-05
 
 ### Fixed

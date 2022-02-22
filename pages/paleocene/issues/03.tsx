@@ -25,7 +25,6 @@ const SUBJECT: ComicStory = {
     isPartOf: "http://keesey-comics.com/paleocene",
     name: "Paleocene #3",
     position: 1,
-    sameAs: "https://www.comixology.com/Paleocene-1/digital-comic/812491",
     url: "http://keesey-comics.com/paleocene/issues/03",
 }
 const PRODUCT_ID = "COB-STD-PAL-03A"

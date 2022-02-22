@@ -52,9 +52,9 @@
     },
     "scripts": {
         "build": "next build",
-        "format": "prettier -w . && eslint --ext .js --ext .ts --ext .tsx --fix .",
-        "lint": "eslint --ext .js --ext .ts --ext .tsx .",
+        "format": "prettier -w . && eslint --ext .js,.ts,.tsx --fix .",
+        "lint": "eslint --ext .js,.ts,.tsx .",
         "start": "next dev"
     },
-    "version": "2.1.4"
+    "version": "2.1.5"
 }

@@ -26,15 +26,7 @@ const Page: NextPage = () => {
                 <Hero>
                     <h1>Keesey Comics Online Store</h1>
                 </Hero>
-                <ExternalStores
-                    links={[
-                        { type: "gumroad", url: "//gumroad.com/keesey" },
-                        {
-                            type: "comixology",
-                            url: "//www.comixology.com/Keesey-Comics/comics-publisher/14274-0",
-                        },
-                    ]}
-                >
+                <ExternalStores links={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}>
                     <span style={{ fontSize: "large" }}>Digital versions available on:</span>
                 </ExternalStores>
                 <br />
