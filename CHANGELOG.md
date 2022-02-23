@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+-   Upgraded `follow-redirects` to 1.14.8.
+
 ## [2.1.6] - 2022-02-22
 
 ### Security
