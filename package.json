@@ -54,7 +54,7 @@
     },
     "scripts": {
         "build": "next build",
-        "deploy": "vercel deploy",
+        "deploy": "vercel --prod",
         "format": "prettier -w . && eslint --ext .js,.ts,.tsx --fix .",
         "lint": "eslint --ext .js,.ts,.tsx .",
         "start": "next dev"
