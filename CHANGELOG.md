@@ -9,8 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Shipping options to purchase item descriptions.
-
 ### Changed
 
 ### Deprecated
@@ -18,6 +16,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Removed
+
+### Security
+
+## [2.1.7] - 2022-04-11
+
+### Added
+
+-   Shipping options to purchase item descriptions.
 
 ### Security
 
