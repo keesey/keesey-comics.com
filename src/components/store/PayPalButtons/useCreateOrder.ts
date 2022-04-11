@@ -1,3 +1,4 @@
+import { PurchaseItem } from "@paypal/paypal-js/types/apis/orders"
 import { CreateOrderActions } from "@paypal/paypal-js/types/components/buttons"
 import { useCallback, useContext } from "react"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
@@ -53,11 +54,19 @@ const useCreateOrder = () => {
                             currency_code: "USD",
                             value: amount.toFixed(2),
                         },
-                        items: order?.items.map(item => {
+                        items: order?.items.map<PurchaseItem>(item => {
                             const product = PRODUCTS_MAP[item.productId]
+                            const shippingOptions = (product.type.shippingOptions ?? []).filter(option =>
+                                order.shippingOptionIds.includes(option.id),
+                            )
+                            const description =
+                                product.type.name +
+                                (shippingOptions.length === 0
+                                    ? ""
+                                    : ` (${shippingOptions.map(option => option.name).join(", ")})`)
                             return {
                                 category: "PHYSICAL_GOODS",
-                                description: product.type.name,
+                                description,
                                 name: product.name,
                                 quantity: item.quantity.toString(10),
                                 sku: item.productId,
