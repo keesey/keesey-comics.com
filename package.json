@@ -57,7 +57,9 @@
         "deploy": "vercel --prod",
         "format": "prettier -w . && eslint --ext .js,.ts,.tsx --fix .",
         "lint": "eslint --ext .js,.ts,.tsx .",
-        "start": "next dev"
+        "preversion": "yarn format",
+        "start": "next dev",
+        "version": "git add -A src"
     },
     "version": "2.1.7"
 }
