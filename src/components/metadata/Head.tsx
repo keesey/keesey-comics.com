@@ -99,7 +99,7 @@ const Head: FC<Props> = ({
             <meta key="meta:property:og:title" property="og:title" content={title} />
             <meta key="meta:property:og:type" property="og:type" content="website" />
             {url && <meta key="meta:property:og:url" property="og:url" content={url} />}
-            <link key="link:author" rel="author" href="http://tmkeesey.net" />
+            <link key="link:author" rel="author" href="http://tmkeesey.net" />            
             {url && <link key="link:canonical" rel="canonical" href={url} />}
             <link
                 key="link:icon"

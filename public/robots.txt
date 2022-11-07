@@ -1,4 +1,4 @@
-Sitemap: https://www.keesey-comics.com/sitemap.xml
+Sitemap: https://www.keesey-comics.com/sitemaps/index.xml
 
 User-agent: *
 Allow: /*

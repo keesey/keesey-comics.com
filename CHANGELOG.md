@@ -19,6 +19,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.1.8] - 2022-11-07
+
+### Added
+
+-   Mastodon links.
+-   `dev` script.
+
+### Changed
+
+-   `start` script to use `next start`.
+-   Moved `sitemaps` to own folder.
+
 ## [2.1.7] - 2022-04-11
 
 ### Added

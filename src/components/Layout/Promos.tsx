@@ -32,7 +32,7 @@ const Promo: VFC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => 
         case "phylopic":
         default: {
             return (
-                <a href="http://phylopic.org" target="_blank" rel="noreferrer">
+                <a href="//beta.phylopic.org" target="_blank" rel="noreferrer">
                     <Logo color={color} type="phylopic" height={21} width={129} />
                 </a>
             )

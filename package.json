@@ -55,11 +55,12 @@
     "scripts": {
         "build": "next build",
         "deploy": "vercel --prod",
+        "dev": "next dev",
         "format": "prettier -w . && eslint --ext .js,.ts,.tsx --fix .",
         "lint": "eslint --ext .js,.ts,.tsx .",
         "preversion": "yarn format",
-        "start": "next dev",
+        "start": "next start",
         "version": "git add -A src"
     },
-    "version": "2.1.7"
+    "version": "2.1.8"
 }

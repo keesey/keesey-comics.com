@@ -33,10 +33,13 @@ const Header: VFC<PromosProps> = ({ promos }) => {
                 </section>
                 <section className={styles.social}>
                     <CartButton />
-                    <a href="//twitter.com/paleocenecomic" role="button">
+                    <a href="//sauropods.win/@keeseycomics" rel="me" role="button">
+                        <Logo color={logoColor} type="mastodon" width={25} height={25} />
+                    </a>
+                    <a href="//twitter.com/paleocenecomic" rel="me" role="button">
                         <Logo color={logoColor} type="twitter" width={28} height={28} />
                     </a>
-                    <a href="//facebook.com/paleocene" role="button">
+                    <a href="//facebook.com/paleocene" rel="me" role="button">
                         <Logo color={logoColor} type="facebook" width={21} height={21} />
                     </a>
                     <Link href="/kickstarter" passHref>
@@ -44,7 +47,7 @@ const Header: VFC<PromosProps> = ({ promos }) => {
                             <Logo color={logoColor} type="kickstarter-k" width={19} height={21} />
                         </a>
                     </Link>
-                    <a href="//patreon.com/tmkeesey" role="button">
+                    <a href="//patreon.com/tmkeesey" rel="author" role="button">
                         <Logo color={logoColor} type="patreon" width={79} height={21} />
                     </a>
                 </section>
