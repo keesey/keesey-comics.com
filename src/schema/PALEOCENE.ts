@@ -10,7 +10,7 @@ const PALEOCENE: ComicStory = {
     copyrightYear: [2017, 2020, 2021],
     description: "A comic book series about our early primate ancestors.",
     genre: "paleofiction",
-    image: "http://keesey-comics.com/paleocene/social/1200x628.png",
+    image: "http://keesey-comics.com/paleocene/social/1200x1200.png",
     inLanguage: "en",
     name: "Paleocene",
     publisher: "http://keesey-comics.com",

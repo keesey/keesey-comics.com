@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.1.9] - 2022-11-18
+
+### Changed
+
+-   Social share images now all 1200x1200.
+
 ## [2.1.8] - 2022-11-07
 
 ### Added

@@ -78,28 +78,28 @@ const Head: FC<Props> = ({
             <meta
                 key="meta:name:twitter:image"
                 name="twitter:image"
-                content={`https://www.keesey-comics.com/images/social${socialImagePath ?? ""}/876x438.png`}
+                content={`https://www.keesey-comics.com/images/social${socialImagePath ?? ""}/1200x1200.png`}
             />
             <meta key="meta:name:twitter:image:alt" name="twitter:image:alt" content={socialImageAlt ?? title} />
-            <meta key="meta:name:twitter:image:height" name="twitter:image:height" content="438" />
-            <meta key="meta:name:twitter:image:width" name="twitter:image:width" content="876" />
+            <meta key="meta:name:twitter:image:height" name="twitter:image:height" content="1200" />
+            <meta key="meta:name:twitter:image:width" name="twitter:image:width" content="1200" />
             <meta key="meta:name:twitter:image:title" name="twitter:title" content={title} />
             <meta key="meta:name:viewport" name="viewport" content="width=device-width,initial-scale=1" />
             {description && <meta key="meta:property:og:description" property="og:description" content={description} />}
             <meta
                 key="meta:property:og:image"
                 property="og:image"
-                content={`https://www.keesey-comics.com/images/social${socialImagePath ?? ""}/1200x628.png`}
+                content={`https://www.keesey-comics.com/images/social${socialImagePath ?? ""}/1200x1200.png`}
             />
             <meta key="meta:property:og:image:alt" property="og:image:alt" content={socialImageAlt ?? title} />
-            <meta key="meta:property:og:image:height" property="og:image:height" content="628" />
+            <meta key="meta:property:og:image:height" property="og:image:height" content="1200" />
             <meta key="meta:property:og:image:type" property="og:image:type" content="image/png" />
             <meta key="meta:property:og:image:width" property="og:image:width" content="1200" />
             <meta key="meta:property:og:site_name" property="og:site_name" content={SITE_NAME} />
             <meta key="meta:property:og:title" property="og:title" content={title} />
             <meta key="meta:property:og:type" property="og:type" content="website" />
             {url && <meta key="meta:property:og:url" property="og:url" content={url} />}
-            <link key="link:author" rel="author" href="http://tmkeesey.net" />            
+            <link key="link:author" rel="author" href="http://tmkeesey.net" />
             {url && <link key="link:canonical" rel="canonical" href={url} />}
             <link
                 key="link:icon"

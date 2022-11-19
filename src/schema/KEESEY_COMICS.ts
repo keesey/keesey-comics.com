@@ -4,7 +4,7 @@ const KEESEY_COMICS: Organization = {
     "@type": "Project",
     description: "Comics by Mike Keesey, set in prehistoric epochs.",
     email: "keesey+comics@gmail.com",
-    logo: "http://keesey-comics.com/social/1200x628.png",
+    logo: "http://keesey-comics.com/social/1200x1200.png",
     name: "Keesey Comics",
     sameAs: ["http://instagram.com/keesey.comics"],
     subjectOf: [{ "@id": "http://keesey-comics.com/contact" }, { "@id": "http://keesey-comics.com/mailinglist" }],

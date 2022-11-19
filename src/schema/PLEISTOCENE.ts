@@ -10,7 +10,7 @@ const PLEISTOCENE: ComicStory = {
     copyrightYear: 2017,
     description: "A mini-comic about an encounter in the Late Pleistocene.",
     genre: "paleofiction",
-    image: "http://keesey-comics.com/pleistocene/social/1200x628.png",
+    image: "http://keesey-comics.com/pleistocene/social/1200x1200.png",
     inLanguage: "en",
     isFamilyFriendly: false,
     name: "Pleistocene",
