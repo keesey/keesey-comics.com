@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.1.11] - 2022-11-18
+
+### Security
+
+-   Upgraded `minimatch`.
+
 ## [2.1.10] - 2022-11-18
 
 ### Security
