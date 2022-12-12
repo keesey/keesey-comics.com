@@ -70,20 +70,6 @@ const Head: FC<Props> = ({
             />
             <meta key="meta:name:reply-to" name="reply-to" content="keesey+comics@gmail.com" />
             <meta key="meta:name:robots" name="robots" content={`${noIndex ? "no" : ""}index`} />
-            <meta key="meta:name:twitter:card" name="twitter:card" content="summary_large_image" />
-            <meta key="meta:name:twitter:creator" name="twitter:creator" content="@tmkeesey" />
-            {description && (
-                <meta key="meta:name:twitter:description" name="twitter:description" content={description} />
-            )}
-            <meta
-                key="meta:name:twitter:image"
-                name="twitter:image"
-                content={`https://www.keesey-comics.com/images/social${socialImagePath ?? ""}/1200x1200.png`}
-            />
-            <meta key="meta:name:twitter:image:alt" name="twitter:image:alt" content={socialImageAlt ?? title} />
-            <meta key="meta:name:twitter:image:height" name="twitter:image:height" content="1200" />
-            <meta key="meta:name:twitter:image:width" name="twitter:image:width" content="1200" />
-            <meta key="meta:name:twitter:image:title" name="twitter:title" content={title} />
             <meta key="meta:name:viewport" name="viewport" content="width=device-width,initial-scale=1" />
             {description && <meta key="meta:property:og:description" property="og:description" content={description} />}
             <meta

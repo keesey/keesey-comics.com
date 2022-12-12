@@ -36,9 +36,6 @@ const Header: VFC<PromosProps> = ({ promos }) => {
                     <a href="//sauropods.win/@keeseycomics" rel="me" role="button">
                         <Logo color={logoColor} type="mastodon" width={25} height={25} />
                     </a>
-                    <a href="//twitter.com/paleocenecomic" rel="me" role="button">
-                        <Logo color={logoColor} type="twitter" width={28} height={28} />
-                    </a>
                     <a href="//facebook.com/paleocene" rel="me" role="button">
                         <Logo color={logoColor} type="facebook" width={21} height={21} />
                     </a>
