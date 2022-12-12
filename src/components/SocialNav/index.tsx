@@ -18,9 +18,6 @@ const SocialNav: FC = () => {
             <a href="//instagram.com/keesey.comics" rel="me" role="button">
                 <Logo color={logoColor} type="instagram" width={42} height={42} />
             </a>
-            <a href="//facebook.com/paleocene" rel="me" role="button">
-                <Logo color={logoColor} type="facebook" width={42} height={42} />
-            </a>
             <a href="//patreon.com/tmkeesey" rel="author" role="button">
                 <Logo color={logoColor} type="patreon" width={158} height={56} />
             </a>

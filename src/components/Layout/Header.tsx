@@ -39,9 +39,6 @@ const Header: FC<PromosProps> = ({ promos }) => {
                     <a href="//instagram.com/keesey.comics" rel="me" role="button">
                         <Logo color={logoColor} type="instagram" width={21} height={21} />
                     </a>
-                    <a href="//facebook.com/paleocene" rel="me" role="button">
-                        <Logo color={logoColor} type="facebook" width={21} height={21} />
-                    </a>
                     <Link href="/kickstarter" legacyBehavior passHref>
                         <a role="button">
                             <Logo color={logoColor} type="kickstarter-k" width={19} height={21} />

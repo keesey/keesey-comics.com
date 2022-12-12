@@ -5,7 +5,6 @@ export interface Props
     extends Exclude<DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "alt" | "src"> {
     color: ThemeColor
     type:
-        | "facebook"
         | "gumroad"
         | "instagram"
         | "keesey-comics"
@@ -19,7 +18,6 @@ export interface Props
 }
 const getExtension = (type: Props["type"]) => (type === "pleistocene" ? "png" : "svg")
 const ALT_TEXT: Readonly<Record<Props["type"], string>> = {
-    facebook: "Facebook",
     gumroad: "Gumroad",
     instagram: "Instagram",
     "keesey-comics": "Keesey Comics",
