@@ -21,7 +21,7 @@ const Header: FC<PromosProps> = ({ promos }) => {
                 </Link>
                 <Promos promos={promos} />
                 <section className={styles.buttons}>
-                    <Link href="/store" legacyBehavior passHref >
+                    <Link href="/store" legacyBehavior passHref>
                         <a>Store</a>
                     </Link>
                     <Link href="/mailinglist" legacyBehavior passHref>

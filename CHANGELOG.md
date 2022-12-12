@@ -25,6 +25,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.1.13] - 2022-12-12
+
+### Added
+
+-   Instagram link to top nav.
+
+### Changed
+
+-   Upgraded all dependencies.
+
+### Deprecated
+
+### Removed
+
+-   Facebook links.
+
 ## [2.1.12] - 2022-12-12
 
 ### Removed
