@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useContext, useEffect, useMemo, useState, VFC } from "react"
+import { FC, useContext, useEffect, useMemo, useState } from "react"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import Context from "~/cart/context/order/Context"
 import useQuantityIncrementer from "~/cart/hooks/useQuantitytIncrementer"
@@ -10,7 +10,7 @@ export interface Props {
     id: string
     noTitle?: boolean
 }
-const Product: VFC<Props> = ({ id, noTitle }) => {
+const Product: FC<Props> = ({ id, noTitle }) => {
     const [animationRef, animate] = useAnimation<HTMLElement>("pulse")
     const ids = useMemo(() => [id], [id])
     const handleAddToCartClick = useQuantityIncrementer(ids)
@@ -35,13 +35,13 @@ const Product: VFC<Props> = ({ id, noTitle }) => {
     return (
         <section className={styles.main} ref={animationRef}>
             <h3 className={noTitle ? styles.hidden : undefined} dangerouslySetInnerHTML={{ __html: product.html }} />
-            <Link href={href}>
+            <Link href={href} legacyBehavior>
                 <a>
                     <Image layout="fixed" src={imgSrc} width={172} height={263} alt={product.name} />
                 </a>
             </Link>
             <nav className={styles.controls}>
-                <Link href={href} passHref>
+                <Link href={href} legacyBehavior passHref>
                     <a role="button">More Info</a>
                 </Link>
                 <a role="button" onClick={handleAddToCartClick}>

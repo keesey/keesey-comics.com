@@ -1,6 +1,6 @@
-import { FC, MutableRefObject, useEffect, useState } from "react"
+import { FC, MutableRefObject, PropsWithChildren, ReactNode, useEffect, useMemo, useState } from "react"
 import { createPortal } from "react-dom"
-export interface Props {
+export interface Props extends PropsWithChildren {
     iframeRef?: MutableRefObject<HTMLIFrameElement | null>
 }
 const IFrameReference: FC<Props> = ({ children, iframeRef: iframRef }) => {
@@ -11,6 +11,10 @@ const IFrameReference: FC<Props> = ({ children, iframeRef: iframRef }) => {
         }
     }, [internalRef, iframRef])
     const container = internalRef?.contentDocument?.body
-    return <iframe ref={setInternalRef}>{container && createPortal(children, container)}</iframe>
+    const portal = useMemo(
+        () => (container ? (createPortal(children, container) as ReactNode) : undefined),
+        [children, container],
+    )
+    return <iframe ref={setInternalRef}>{portal}</iframe>
 }
 export default IFrameReference

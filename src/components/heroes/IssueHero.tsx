@@ -1,10 +1,10 @@
 import Image from "next/image"
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
 import AgeRecommendation, { Props as AgeRecommendationProps } from "./AgeRecommendation"
 import ExternalStores, { Props as ExternalStoresProps } from "./ExternalStores"
 import styles from "./IssueHero.module.scss"
-export interface Props {
+export interface Props extends PropsWithChildren {
     ageRecommendation: AgeRecommendationProps["ageRecommendation"]
     id: "paleocene" | "pleistocene"
     number: number

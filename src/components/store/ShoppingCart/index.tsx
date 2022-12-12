@@ -1,9 +1,9 @@
-import { useCallback, useContext, VFC } from "react"
+import { FC, useCallback, useContext } from "react"
 import Context from "~/cart/context/order/Context"
 import CartItem from "./CartItem"
 import styles from "./index.module.scss"
 import Section from "./Section"
-const ShoppingCart: VFC = () => {
+const ShoppingCart: FC = () => {
     const [order, dispatch] = useContext(Context) ?? []
     const handleRemoveAllButtonClick = useCallback(() => {
         if (confirm("Are you sure you want to remove all items from your cart?")) {

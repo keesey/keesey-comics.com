@@ -1,13 +1,13 @@
 import Link from "next/link"
-import { VFC } from "react"
+import { FC } from "react"
 import useForegroundColor from "~/themes/useForegroundColor"
 import Nav from "../Layout/Nav"
 import Logo from "../Logo"
-const SocialNav: VFC = () => {
+const SocialNav: FC = () => {
     const logoColor = useForegroundColor()
     return (
         <Nav>
-            <Link href="/kickstarter" passHref>
+            <Link href="/kickstarter" legacyBehavior passHref>
                 <a role="button">
                     <Logo color={logoColor} type="kickstarter" width={198} height={21} />
                 </a>

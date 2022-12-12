@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { useMemo, VFC } from "react"
+import { FC, useMemo } from "react"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import Hero from "~/components/heroes/Hero"
 import Price from "~/components/Price"
@@ -7,7 +7,7 @@ import IncrementQuantityCTA from "../IncrementQuantityCTA"
 export interface Props {
     productId: string
 }
-const ProductHero: VFC<Props> = ({ productId }) => {
+const ProductHero: FC<Props> = ({ productId }) => {
     const product = PRODUCTS_MAP[productId]
     const productIds = useMemo(() => [productId], [productId])
     return (

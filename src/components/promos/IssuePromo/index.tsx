@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image"
 import Link from "next/link"
-import { VFC } from "react"
+import { FC } from "react"
 import styles from "./index.module.scss"
 export interface Props {
     id: "paleocene" | "pleistocene"
@@ -11,10 +11,10 @@ const TITLES: Readonly<Record<Props["id"], string>> = {
     paleocene: "Paleocene",
     pleistocene: "Pleistocene",
 }
-const IssuePromo: VFC<Props> = ({ id, number }) => {
+const IssuePromo: FC<Props> = ({ id, number }) => {
     const paddedNumber = number < 10 ? `0${number}` : String(number)
     return (
-        <Link href={`/${id}/issues/${paddedNumber}`}>
+        <Link href={`/${id}/issues/${paddedNumber}`} legacyBehavior>
             <a className={styles.promo}>
                 <Image
                     alt={`${TITLES[id]} #${number}`}

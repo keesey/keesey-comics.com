@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { VFC } from "react"
+import { FC } from "react"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import { OrderItem } from "~/cart/models/OrderItem"
 import Section from "../Section"
@@ -12,14 +12,14 @@ import Thumbnail from "./Thumbnail"
 export interface Props {
     item: OrderItem
 }
-const CartItem: VFC<Props> = ({ item }) => {
+const CartItem: FC<Props> = ({ item }) => {
     const product = PRODUCTS_MAP[item.productId]
     const href = product.path ?? `/products/${item.productId}`
     return (
         <Section>
             <div className={styles.main}>
                 <header className={styles.header}>
-                    <Link href={href}>
+                    <Link href={href} legacyBehavior>
                         <a className={styles.productLink}>
                             <h3 dangerouslySetInnerHTML={{ __html: product.html }} />
                         </a>

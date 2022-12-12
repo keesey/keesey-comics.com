@@ -1,4 +1,4 @@
-import { VFC } from "react"
+import { FC } from "react"
 import ComicText from "../ComicText"
 import styles from "./AgeRecommendation.module.scss"
 export interface Props {
@@ -8,7 +8,7 @@ const AGE_RECOMMENDATION_TEXT: Readonly<Record<Props["ageRecommendation"], strin
     "17+": "seventeen and up",
     "9+": "nine and up",
 }
-const AgeRecommendation: VFC<Props> = ({ ageRecommendation }) => {
+const AgeRecommendation: FC<Props> = ({ ageRecommendation }) => {
     return (
         <div className={styles.ageRecommendation}>
             <ComicText>{`Age Recommendation: ${AGE_RECOMMENDATION_TEXT[ageRecommendation]}.`}</ComicText>

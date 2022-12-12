@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { FC, Fragment } from "react"
+import { FC, Fragment, PropsWithChildren } from "react"
 import useForegroundColor from "~/themes/useForegroundColor"
 import ComicText from "../ComicText"
 import Logo from "../Logo"
@@ -8,7 +8,7 @@ export type ExternalStoreLink = Readonly<{
     type: "gumroad"
     url: string
 }>
-export interface Props {
+export interface Props extends PropsWithChildren {
     links?: readonly ExternalStoreLink[]
 }
 const LOGO_HEIGHT: Readonly<Record<ExternalStoreLink["type"], number>> = {

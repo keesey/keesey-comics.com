@@ -1,6 +1,6 @@
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import Head from "next/head"
-export interface Props {
+export interface Props extends PropsWithChildren {
     href: string
     title: string
 }

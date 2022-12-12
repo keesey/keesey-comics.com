@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import Logo from "~/components/Logo"
 import styles from "./index.module.scss"
-export interface Props {
+export interface Props extends PropsWithChildren {
     url: string
 }
 const Kickstarter: FC<Props> = ({ children, url }) => (

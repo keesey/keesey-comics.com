@@ -1,4 +1,4 @@
-import { useMemo, VFC } from "react"
+import { FC, useMemo } from "react"
 import { Product } from "schema-dts"
 import { Product as ProductModel } from "~/cart/models/Product"
 import Schema from "./Schema"
@@ -6,7 +6,7 @@ export interface Props {
     product?: ProductModel
 }
 const GRAMS_PER_OUNCE = 28.3495
-const ProductSchema: VFC<Props> = ({ product }) => {
+const ProductSchema: FC<Props> = ({ product }) => {
     const thing = useMemo<Product | null>(
         () =>
             product

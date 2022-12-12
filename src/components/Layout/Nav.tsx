@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import styles from "./Nav.module.scss"
-const Nav: FC = ({ children }) => <nav className={styles.nav}>{children}</nav>
+const Nav: FC<PropsWithChildren> = ({ children }) => <nav className={styles.nav}>{children}</nav>
 export default Nav

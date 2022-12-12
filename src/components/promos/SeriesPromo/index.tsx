@@ -10,7 +10,7 @@ export interface Props {
     id: "paleocene" | "pleistocene"
 }
 const SeriesPromo: FC<Props> = ({ children, id }) => (
-    <Link href={`/${id}`}>
+    <Link href={`/${id}`} legacyBehavior>
         <a className={styles.promo}>
             <section id={id}>
                 <div className={styles.desc}>

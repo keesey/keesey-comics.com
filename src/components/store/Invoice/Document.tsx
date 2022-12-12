@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState, VFC } from "react"
+import { FC, useEffect, useState } from "react"
 import { State } from "~/cart/context/approval/State"
 import styles from "./Document.module.scss"
 import PurchaseUnit from "./PurchaseUnit"
 export interface Props {
     approval?: State
 }
-const Document: VFC<Props> = ({ approval }) => {
+const Document: FC<Props> = ({ approval }) => {
     const [css, setCSS] = useState("")
     useEffect(() => {
         if (approval) {

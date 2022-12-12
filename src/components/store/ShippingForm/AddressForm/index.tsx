@@ -1,9 +1,9 @@
-import { ChangeEvent, useCallback, useContext, useMemo, VFC } from "react"
+import { ChangeEvent, FC, useCallback, useContext, useMemo } from "react"
 import USPS_COUNTRIES from "~/cart/constants/USPS_COUNTRIES"
 import Context from "~/cart/context/address/Context"
 import isDomestic from "~/cart/functions/isDomestic"
 import styles from "./index.module.scss"
-const AddressForm: VFC = () => {
+const AddressForm: FC = () => {
     const [address, dispatch] = useContext(Context) ?? []
     const domestic = useMemo(() => Boolean(address?.country && isDomestic(address.country)), [address?.country])
     const handleCountrySelectChange = useCallback(

@@ -1,9 +1,9 @@
-import { VFC } from "react"
+import { FC } from "react"
 export interface Props {
     abbreviate?: boolean
     amount: number
 }
-const Price: VFC<Props> = ({ abbreviate, amount }) => {
+const Price: FC<Props> = ({ abbreviate, amount }) => {
     if (isNaN(amount) || amount === null) {
         return null
     }

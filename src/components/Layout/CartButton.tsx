@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import "animate.css"
 import Link from "next/link"
-import { useContext, useEffect, useMemo, useState, VFC } from "react"
+import { FC, useContext, useEffect, useMemo, useState } from "react"
 import Context from "~/cart/context/order/Context"
 import useAnimation from "~/hooks/useAnimation"
 import styles from "./CartButton.module.scss"
 import useLogoColor from "./useLogoColor"
-const CartButton: VFC = () => {
+const CartButton: FC = () => {
     const [order] = useContext(Context) ?? []
     const count = useMemo(() => {
         if (!order?.items.length) {
@@ -24,7 +24,7 @@ const CartButton: VFC = () => {
         }
     }, [animate, count, lastCount])
     return (
-        <Link href="/cart">
+        <Link href="/cart" legacyBehavior>
             <a className={styles.main} role="button" title="Your Cart" ref={animationRef}>
                 <img src={`/images/icons/${logoColor}/cart.svg`} width={24.425} height={21} alt="Shopping Cart" />
                 {count > 0 && <span className={styles.count}>{count}</span>}

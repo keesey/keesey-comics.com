@@ -26,7 +26,7 @@ const Contact: NextPage = () => {
                         Email: <a href="mailto:keesey+comics@gmail.com">keesey+comics@gmail.com</a>
                     </address>
                 </Hero>
-                <Link href="/mailinglist" passHref>
+                <Link href="/mailinglist" legacyBehavior passHref>
                     <CTA>
                         <span>Join the mailing list</span>
                     </CTA>

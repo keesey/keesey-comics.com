@@ -1,5 +1,5 @@
 import axios from "axios"
-import { FC, useContext, useEffect, useState } from "react"
+import { FC, PropsWithChildren, useContext, useEffect, useState } from "react"
 import isDomestic from "~/cart/functions/isDomestic"
 import { Address } from "~/cart/models/Address"
 import { Costs } from "~/cart/models/Costs"
@@ -9,7 +9,7 @@ import Context from "./Context"
 const isValidZIPCode = (s?: string) => Boolean(s && s.length >= 5)
 const isValidAddress = (address?: Partial<Address>) =>
     Boolean(address?.country && (isValidZIPCode(address.postalCode) || !isDomestic(address.country)))
-const CostsContainer: FC = ({ children }) => {
+const CostsContainer: FC<PropsWithChildren> = ({ children }) => {
     const [pending, setPending] = useState(false)
     const [error, setError] = useState<Error | undefined>()
     const [costs, setCosts] = useState<Costs | undefined>()

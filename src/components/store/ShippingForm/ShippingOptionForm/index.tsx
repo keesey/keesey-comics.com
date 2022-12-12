@@ -1,8 +1,8 @@
-import { ChangeEvent, useCallback, useContext, VFC } from "react"
+import { ChangeEvent, FC, useCallback, useContext } from "react"
 import { SHIPPING_OPTION_LISTS } from "~/cart/constants/SHIPPING_OPTIONS"
 import Context from "~/cart/context/order/Context"
 import styles from "./index.module.scss"
-const ShippingOptionForm: VFC = () => {
+const ShippingOptionForm: FC = () => {
     const [order, dispatch] = useContext(Context) ?? []
     const handleInputChange = useCallback(
         (event: ChangeEvent<HTMLInputElement>) => {

@@ -1,5 +1,5 @@
-import { PurchaseUnit as Props, AmountWithBreakdown } from "@paypal/paypal-js/types/apis/orders"
-import { Fragment, VFC } from "react"
+import { AmountWithBreakdown, PurchaseUnit as Props } from "@paypal/paypal-js/types/apis/orders"
+import { FC, Fragment } from "react"
 import Price from "~/components/Price"
 import styles from "./index.module.scss"
 import PurchaseItem from "./PurchaseItem"
@@ -12,7 +12,7 @@ const BREAKDOWN_KEYS: ReadonlyArray<keyof NonNullable<AmountWithBreakdown["break
     "handling",
     "discount",
 ]
-const PurchaseUnit: VFC<Props> = ({ amount, description, items, shipping }) => {
+const PurchaseUnit: FC<Props> = ({ amount, description, items, shipping }) => {
     return (
         <section className={styles.main}>
             <header key="header">
@@ -39,14 +39,18 @@ const PurchaseUnit: VFC<Props> = ({ amount, description, items, shipping }) => {
             {shipping && (
                 <section key="shipping" className={styles.section}>
                     <h3>Shipping Destination</h3>
-                    {shipping.name.full_name && <div className={styles.name}>{shipping.name.full_name}</div>}
-                    <div>{shipping.address.address_line_1}</div>
-                    <div>{shipping.address.address_line_2}</div>
+                    {shipping.name?.full_name && <div className={styles.name}>{shipping.name.full_name}</div>}
+                    {shipping.address?.address_line_1 && <div>{shipping.address?.address_line_1}</div>}
+                    {shipping.address?.address_line_2 && <div>{shipping.address?.address_line_2}</div>}
                     <div>
-                        {[shipping.address.admin_area_2, shipping.address.admin_area_1, shipping.address.country_code]
+                        {[
+                            shipping.address?.admin_area_2,
+                            shipping.address?.admin_area_1,
+                            shipping.address?.country_code,
+                        ]
                             .filter(Boolean)
                             .join(", ")}{" "}
-                        {shipping.address.postal_code}
+                        {shipping.address?.postal_code}
                     </div>
                 </section>
             )}

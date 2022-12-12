@@ -1,9 +1,9 @@
-import { VFC } from "react"
+import { FC } from "react"
 import type { Thing, WithContext } from "schema-dts"
 export interface Props {
     thing?: Thing
 }
-const Schema: VFC<Props> = ({ thing }) => {
+const Schema: FC<Props> = ({ thing }) => {
     if (!thing) {
         return null
     }

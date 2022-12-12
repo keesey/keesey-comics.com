@@ -23,7 +23,7 @@ const Page: NextPage<Props> = ({ productId }) => {
             <Head subject={productSchema} />
             <Layout theme={product.theme ?? "kc"}>
                 <ProductHero productId={productId} />
-                <Link href="/store" passHref>
+                <Link href="/store" legacyBehavior passHref>
                     <CTA>See More Products</CTA>
                 </Link>
                 <br />

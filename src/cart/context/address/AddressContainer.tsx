@@ -1,10 +1,10 @@
-import { FC, useEffect, useReducer } from "react"
+import { FC, PropsWithChildren, useEffect, useReducer } from "react"
 import Context from "./Context"
 import reducer from "./reducer"
 import { State } from "./State"
 import STORAGE_KEY from "./STORAGE_KEY"
 const DEFAULT_STATE: State = { country: "United States" }
-const AddressContainer: FC = ({ children }) => {
+const AddressContainer: FC<PropsWithChildren> = ({ children }) => {
     const contextValue = useReducer(reducer, DEFAULT_STATE)
     const [state, dispatch] = contextValue
     useEffect(() => {

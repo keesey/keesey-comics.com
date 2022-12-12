@@ -1,8 +1,8 @@
-import { useContext, VFC } from "react"
+import { FC, useContext } from "react"
 import Context from "~/cart/context/approval/Context"
 import Checkout from "../Checkout"
 import Invoice from "../Invoice"
-const Cart: VFC = () => {
+const Cart: FC = () => {
     const [approval] = useContext(Context) ?? []
     return approval ? <Invoice /> : <Checkout />
 }

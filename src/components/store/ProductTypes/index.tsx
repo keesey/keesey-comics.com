@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import styles from "./index.module.scss"
-const ProductTypes: FC = ({ children }) => <section className={styles.main}>{children}</section>
+const ProductTypes: FC<PropsWithChildren> = ({ children }) => <section className={styles.main}>{children}</section>
 export default ProductTypes

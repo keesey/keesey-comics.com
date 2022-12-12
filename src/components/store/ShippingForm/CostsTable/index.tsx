@@ -1,9 +1,9 @@
 import "animate.css"
-import { useContext, VFC } from "react"
+import { FC, useContext } from "react"
 import Context from "~/cart/context/costs/Context"
 import Price from "~/components/Price"
 import styles from "./index.module.scss"
-const CostsTable: VFC = () => {
+const CostsTable: FC = () => {
     const context = useContext(Context)
     if (!context) {
         return null

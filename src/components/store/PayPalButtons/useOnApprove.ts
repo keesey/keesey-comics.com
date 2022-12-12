@@ -8,17 +8,19 @@ const useOnApprove = () => {
     return useCallback(
         async (data: OnApproveData, actions: OnApproveActions) => {
             try {
-                const response = await actions.order.capture()
-                switch (response.status) {
-                    case "PAYER_ACTION_REQUIRED": {
-                        break
-                    }
-                    case "VOIDED": {
-                        throw new Error("The transaction was voided.")
-                    }
-                    default: {
-                        dispatchOrder?.({ type: "RESET" })
-                        dispatchApproval?.({ type: "INITIALIZE", payload: { data, response } })
+                if (actions.order) {
+                    const response = await actions.order.capture()
+                    switch (response.status) {
+                        case "PAYER_ACTION_REQUIRED": {
+                            break
+                        }
+                        case "VOIDED": {
+                            throw new Error("The transaction was voided.")
+                        }
+                        default: {
+                            dispatchOrder?.({ type: "RESET" })
+                            dispatchApproval?.({ type: "INITIALIZE", payload: { data, response } })
+                        }
                     }
                 }
             } catch (e) {

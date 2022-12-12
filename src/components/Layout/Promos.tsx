@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link"
-import { VFC } from "react"
+import { FC } from "react"
 import { ThemeColor } from "~/themes/ThemeColor"
 import Logo from "../Logo"
 import styles from "./Promos.module.scss"
@@ -9,11 +9,11 @@ export type PromoType = "paleocene" | "phylopic" | "pleistocene"
 export interface Props {
     promos?: readonly PromoType[]
 }
-const Promo: VFC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => {
+const Promo: FC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => {
     switch (type) {
         case "paleocene": {
             return (
-                <Link href="/paleocene">
+                <Link href="/paleocene" legacyBehavior>
                     <a>
                         <Logo color={color} type="paleocene" height={32} width={88} />
                     </a>
@@ -22,7 +22,7 @@ const Promo: VFC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => 
         }
         case "pleistocene": {
             return (
-                <Link href="/pleistocene">
+                <Link href="/pleistocene" legacyBehavior>
                     <a>
                         <Logo color={color} type="pleistocene" height={32} width={101} />
                     </a>
@@ -39,7 +39,7 @@ const Promo: VFC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => 
         }
     }
 }
-const Promos: VFC<Props> = ({ promos }) => {
+const Promos: FC<Props> = ({ promos }) => {
     const logoColor = useLogoColor()
     if (!promos?.length) {
         return null

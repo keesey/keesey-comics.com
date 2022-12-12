@@ -1,11 +1,11 @@
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js"
-import { useCallback, useContext, useState, VFC } from "react"
+import { FC, useCallback, useContext, useState } from "react"
 import CostsContext from "~/cart/context/costs/Context"
 import OrderContext from "~/cart/context/order/Context"
 import styles from "./Buttons.module.scss"
 import useCreateOrder from "./useCreateOrder"
 import useOnApprove from "./useOnApprove"
-const Buttons: VFC = () => {
+const Buttons: FC = () => {
     const [{ isPending, isRejected }] = usePayPalScriptReducer() ?? [{}]
     const [order] = useContext(OrderContext) ?? []
     const { costs } = useContext(CostsContext) ?? {}

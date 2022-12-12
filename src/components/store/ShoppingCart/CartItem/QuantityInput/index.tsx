@@ -7,7 +7,7 @@ import {
     useContext,
     useEffect,
     useState,
-    VFC,
+    FC,
 } from "react"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import Context from "~/cart/context/order/Context"
@@ -21,7 +21,7 @@ const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
         event.currentTarget.blur()
     }
 }
-const QuantityInput: VFC<Props> = ({ item }) => {
+const QuantityInput: FC<Props> = ({ item }) => {
     const [, dispatch] = useContext(Context) ?? []
     const product = PRODUCTS_MAP[item.productId]
     const [quantity, setQuantity] = useState(() => item.quantity)

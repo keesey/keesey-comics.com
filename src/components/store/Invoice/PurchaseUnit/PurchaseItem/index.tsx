@@ -1,8 +1,8 @@
 import { PurchaseItem as Props } from "@paypal/paypal-js/types/apis/orders"
-import { VFC } from "react"
+import { FC } from "react"
 import Price from "~/components/Price"
 import styles from "./index.module.scss"
-const PurchaseItem: VFC<Props> = ({ name, quantity, unit_amount, description, sku, tax }) => {
+const PurchaseItem: FC<Props> = ({ name, quantity, unit_amount, description, sku, tax }) => {
     return (
         <section className={styles.main}>
             <header key="header">

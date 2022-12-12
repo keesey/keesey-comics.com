@@ -1,10 +1,10 @@
 import NextHead from "next/head"
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import type { Person, Thing } from "schema-dts"
 import KEESEY_COMICS from "~/schema/KEESEY_COMICS"
 import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import Schema from "./Schema"
-export interface Props {
+export interface Props extends PropsWithChildren {
     author?: Person
     favIconType?: "paleocene" | "pleistocene"
     language?: string

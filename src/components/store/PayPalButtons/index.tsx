@@ -1,7 +1,7 @@
 import { PayPalScriptProvider } from "@paypal/react-paypal-js"
-import { VFC } from "react"
+import { FC } from "react"
 import Buttons from "./Buttons"
-const PayPalButtons: VFC = () => {
+const PayPalButtons: FC = () => {
     return (
         <PayPalScriptProvider
             options={{

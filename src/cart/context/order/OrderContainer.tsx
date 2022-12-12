@@ -1,4 +1,4 @@
-import { FC, useEffect, useReducer } from "react"
+import { FC, PropsWithChildren, useEffect, useReducer } from "react"
 import Context from "./Context"
 import reducer from "./reducer"
 import { State } from "./State"
@@ -7,7 +7,7 @@ const DEFAULT_STATE: State = {
     items: [],
     shippingOptionIds: [],
 }
-const OrderContainer: FC = ({ children }) => {
+const OrderContainer: FC<PropsWithChildren> = ({ children }) => {
     const contextValue = useReducer(reducer, DEFAULT_STATE)
     const [state, dispatch] = contextValue
     useEffect(() => {

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link"
-import { VFC } from "react"
+import { FC } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
 import Logo from "../Logo"
 import CartButton from "./CartButton"
@@ -8,26 +8,26 @@ import styles from "./Header.module.scss"
 import Promos, { Props as PromosProps } from "./Promos"
 import useLogoColor from "./useLogoColor"
 export type Props = PromosProps
-const Header: VFC<PromosProps> = ({ promos }) => {
+const Header: FC<PromosProps> = ({ promos }) => {
     const className = useThemedClassName(styles, "header")
     const logoColor = useLogoColor()
     return (
         <header className={className}>
             <nav className={styles.nav}>
-                <Link href="/">
+                <Link href="/" legacyBehavior>
                     <a className={styles.logo}>
                         <Logo color={logoColor} type="keesey-comics" width={93} height={56} />
                     </a>
                 </Link>
                 <Promos promos={promos} />
                 <section className={styles.buttons}>
-                    <Link href="/store" passHref>
+                    <Link href="/store" legacyBehavior passHref >
                         <a>Store</a>
                     </Link>
-                    <Link href="/mailinglist" passHref>
+                    <Link href="/mailinglist" legacyBehavior passHref>
                         <a>Mailing List</a>
                     </Link>
-                    <Link href="/contact" passHref>
+                    <Link href="/contact" legacyBehavior passHref>
                         <a>Contact</a>
                     </Link>
                 </section>
@@ -39,7 +39,7 @@ const Header: VFC<PromosProps> = ({ promos }) => {
                     <a href="//facebook.com/paleocene" rel="me" role="button">
                         <Logo color={logoColor} type="facebook" width={21} height={21} />
                     </a>
-                    <Link href="/kickstarter" passHref>
+                    <Link href="/kickstarter" legacyBehavior passHref>
                         <a role="button">
                             <Logo color={logoColor} type="kickstarter-k" width={19} height={21} />
                         </a>

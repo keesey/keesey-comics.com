@@ -1,8 +1,8 @@
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
 import ComicText from "../ComicText"
 import styles from "./TextPanel.module.scss"
-export interface Props {
+export interface Props extends PropsWithChildren {
     emphatic?: boolean
 }
 const AVERAGE_CHARACTER_WIDTH_IN_EMS = 0.75

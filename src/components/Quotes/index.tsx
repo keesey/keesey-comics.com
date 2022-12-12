@@ -1,4 +1,4 @@
-import { ReactNode, VFC } from "react"
+import { FC, ReactNode } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
 import styles from "./index.module.scss"
 export type Quote = Readonly<{
@@ -9,7 +9,7 @@ export type Quote = Readonly<{
 export type Props = {
     quotes: readonly Quote[]
 }
-const Quotes: VFC<Props> = ({ quotes }) => {
+const Quotes: FC<Props> = ({ quotes }) => {
     const className = useThemedClassName(styles, "quote")
     return (
         <aside className={className}>

@@ -1,9 +1,9 @@
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import AddressContainer from "./context/address/AddressContainer"
 import ApprovalContainer from "./context/approval/ApprovalContainer"
 import CostsContainer from "./context/costs/CostsContainer"
 import OrderContainer from "./context/order/OrderContainer"
-const CartContainer: FC = ({ children }) => {
+const CartContainer: FC<PropsWithChildren> = ({ children }) => {
     return (
         <ApprovalContainer>
             <OrderContainer>

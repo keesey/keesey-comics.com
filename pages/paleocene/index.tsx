@@ -82,7 +82,7 @@ const Page: NextPage = () => {
                 {/* :TODO: Add merch? */}
                 <Nav>
                     <ComicText>Translations:</ComicText>
-                    <Link href="/store" passHref>
+                    <Link href="/store" legacyBehavior passHref>
                         <CTA hrefLang="ko">
                             <ComicText lang="ko">한국어</ComicText>
                             <ComicText> (Korean)</ComicText>

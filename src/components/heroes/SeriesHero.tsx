@@ -1,4 +1,4 @@
-import { VFC } from "react"
+import { FC } from "react"
 import useForegroundColor from "~/themes/useForegroundColor"
 import useThemedClassName from "~/themes/useThemedClassName"
 import ComicText from "../ComicText"
@@ -14,7 +14,7 @@ export interface Props {
     storeLinks?: ExternalStoresProps["links"]
     title: string
 }
-const SeriesHero: VFC<Props> = ({ ageRecommendation, id, productIds, storeLinks, title }) => {
+const SeriesHero: FC<Props> = ({ ageRecommendation, id, productIds, storeLinks, title }) => {
     const className = useThemedClassName(styles, "hero")
     const logoColor = useForegroundColor()
     return (

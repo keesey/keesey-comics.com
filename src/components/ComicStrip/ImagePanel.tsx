@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { VFC } from "react"
+import { FC } from "react"
 import useThemedClassName from "~/themes/useThemedClassName"
 import styles from "./ImagePanel.module.scss"
 export interface Props {
@@ -8,7 +8,7 @@ export interface Props {
     src: string
     width: number
 }
-const ImagePanel: VFC<Props> = props => {
+const ImagePanel: FC<Props> = props => {
     const className = useThemedClassName(styles, "cell")
     return (
         <section className={className}>
