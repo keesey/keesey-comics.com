@@ -11,7 +11,7 @@ const Thumbnail: FC<Props> = ({ product }) => {
     return (
         <Link href={href} legacyBehavior>
             <a>
-                <Image layout="fixed" src={imgSrc} width={86} height={132} alt={product.name} />
+                <Image src={imgSrc} width={86} height={132} alt={product.name} />
             </a>
         </Link>
     )

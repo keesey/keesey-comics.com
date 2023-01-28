@@ -1,6 +1,6 @@
 # Keesey Comics Website
 
-[Visit the site.](http://keesey-comics.com)
+[Visit the site.](https://www.keesey-comics.com)
 
 ## More Documentation
 

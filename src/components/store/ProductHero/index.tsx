@@ -31,13 +31,7 @@ const ProductHero: FC<Props> = ({ productId }) => {
                 </h2>
                 <IncrementQuantityCTA productIds={productIds}>Add to Cart</IncrementQuantityCTA>
                 <br />
-                <Image
-                    alt={product.name}
-                    src={`/images/products/${productId}.png`}
-                    layout="intrinsic"
-                    width={688}
-                    height={1050}
-                />
+                <Image alt={product.name} src={`/images/products/${productId}.png`} width={688} height={1050} />
             </Hero>
         </>
     )

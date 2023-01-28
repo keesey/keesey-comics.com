@@ -12,11 +12,11 @@ import ProductType from "~/components/store/ProductType"
 import ProductTypes from "~/components/store/ProductTypes"
 const SUBJECT: Store = {
     "@type": "Store",
-    "@id": "http://keesey-comics.com/store",
+    "@id": "https://www.keesey-comics.com/store",
     name: "Keesey Comics Online Store",
     description: "Comic books, posters, bookmarks, and stickers.",
     isAccessibleForFree: true,
-    url: "http://keesey-comics.com/store",
+    url: "https://www.keesey-comics.com/store",
 }
 const Page: NextPage = () => {
     return (

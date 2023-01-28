@@ -9,11 +9,11 @@ import Head from "~/components/metadata/Head"
 import SocialNav from "~/components/SocialNav"
 const SUBJECT: ContactPage = {
     "@type": "ContactPage",
-    "@id": "http://keesey-comics.com/contact",
+    "@id": "https://www.keesey-comics.com/contact",
     name: "Contact Keesey Comics",
     description: "How to contact Keesey Comics via email.",
     isAccessibleForFree: true,
-    url: "http://keesey-comics.com/contact",
+    url: "https://www.keesey-comics.com/contact",
 }
 const Contact: NextPage = () => {
     return (

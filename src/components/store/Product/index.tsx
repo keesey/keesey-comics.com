@@ -37,7 +37,7 @@ const Product: FC<Props> = ({ id, noTitle }) => {
             <h3 className={noTitle ? styles.hidden : undefined} dangerouslySetInnerHTML={{ __html: product.html }} />
             <Link href={href} legacyBehavior>
                 <a>
-                    <Image layout="fixed" src={imgSrc} width={172} height={263} alt={product.name} />
+                    <Image src={imgSrc} width={172} height={263} alt={product.name} />
                 </a>
             </Link>
             <nav className={styles.controls}>

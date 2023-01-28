@@ -19,16 +19,16 @@ import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
-    "@id": "http://keesey-comics.com/paleocene/issues/01",
+    "@id": "https://www.keesey-comics.com/paleocene/issues/01",
     abstract:
         "Mamma loves telling her babies about the &quot;dragons&quot; that used to roam the Earth. But with Pappa gone for days, she is starting to tire of being stuck in the nest. Does she dare leave the infants alone? It is a dangerous world ... and &quot;dragons&quot; may still lurk in the hills.",
     copyrightYear: 2020,
     description: "Issue #1 of a comic series about our early primate ancestors.",
-    image: "http://keesey-comics.com/images/issues/01/front_cover.png",
-    isPartOf: "http://keesey-comics.com/paleocene",
+    image: "https://www.keesey-comics.com/images/issues/01/front_cover.png",
+    isPartOf: "https://www.keesey-comics.com/paleocene",
     name: "Paleocene #1",
     position: 1,
-    url: "http://keesey-comics.com/paleocene/issues/01",
+    url: "https://www.keesey-comics.com/paleocene/issues/01",
 }
 const PRODUCT_ID = "COB-STD-PAL-01B"
 const PRODUCT_IDS = [PRODUCT_ID]
@@ -84,7 +84,7 @@ const Page: NextPage = () => {
                     <TextPanel>...and &quot;dragons&quot; may still lurk in the hills.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/01/04.png" width={203} />
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[2, 3]}>
+                <IssuePromos id="paleocene" numbers={[2, 3, 4]}>
                     Read the other issues!
                 </IssuePromos>
                 <Nav>

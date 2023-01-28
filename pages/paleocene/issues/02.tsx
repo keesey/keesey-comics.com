@@ -16,16 +16,16 @@ import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
-    "@id": "http://keesey-comics.com/paleocene/issues/02",
+    "@id": "https://www.keesey-comics.com/paleocene/issues/02",
     abstract:
         "Sister has been taken from the nest by ... something. Was it really a Hunter, as Brother says? Will the troop believe his story? What really happened to her?",
     copyrightYear: 2020,
     description: "Issue #2 of a comic series about our early primate ancestors.",
-    image: "http://keesey-comics.com/images/issues/02/front_cover.png",
-    isPartOf: "http://keesey-comics.com/paleocene",
+    image: "https://www.keesey-comics.com/images/issues/02/front_cover.png",
+    isPartOf: "https://www.keesey-comics.com/paleocene",
     name: "Paleocene #2",
     position: 2,
-    url: "http://keesey-comics.com/paleocene/issues/02",
+    url: "https://www.keesey-comics.com/paleocene/issues/02",
 }
 const PRODUCT_ID = "COB-STD-PAL-02A"
 const PRODUCT_IDS = [PRODUCT_ID]
@@ -68,7 +68,7 @@ const Page: NextPage = () => {
                     <TextPanel>What really happened to her?</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/02/04.png" width={240} />
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[1, 3]}>
+                <IssuePromos id="paleocene" numbers={[1, 3, 4]}>
                     Read the other issues!
                 </IssuePromos>
                 <SocialNav />

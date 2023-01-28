@@ -8,10 +8,10 @@ import Head from "~/components/metadata/Head"
 import SocialNav from "~/components/SocialNav"
 const SUBJECT: MediaSubscription = {
     "@type": "MediaSubscription",
-    "@id": "http://keesey-comics.com/mailinglist",
+    "@id": "https://www.keesey-comics.com/mailinglist",
     name: "Keesey Comics Mailing List",
     description: "Newsletter for Keesey Comics.",
-    url: "http://keesey-comics.com/mailinglist",
+    url: "https://www.keesey-comics.com/mailinglist",
 }
 const Contact: NextPage = () => {
     return (

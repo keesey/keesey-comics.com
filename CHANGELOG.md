@@ -19,6 +19,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.2.0] - 2023-01-28
+
+### Added
+
+-   Preliminary page for _Paleocene #4_.
+
+### Changed
+
+-   Minor/patch upgrades for dependencies.
+
+### Fixed
+
+-   Corrected canonical URLs to use `https` protocol and domain `www.keesey-comics.com`.
+-   Removed outdated `layout` properties for images.
+
+### Removed
+
+-   `browserslist` from `package.json`.
+
 ## [2.1.13] - 2022-12-12
 
 ### Added
