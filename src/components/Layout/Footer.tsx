@@ -5,13 +5,14 @@ import useThemedClassName from "~/themes/useThemedClassName"
 import styles from "./Footer.module.scss"
 import Promos, { Props as PromosProps } from "./Promos"
 export type Props = PromosProps
+const YEAR = new Date().getFullYear();
 const Footer: FC<Props> = ({ promos }) => {
     const className = useThemedClassName(styles, "footer")
     return (
         <footer className={className}>
             <nav className={styles.nav}>
                 <div key="copyright">
-                    <abbr title="Copyright">©</abbr> 2022{" "}
+                    <abbr title="Copyright">©</abbr> {YEAR}{" "}
                     <Link href="/contact" legacyBehavior>
                         <a title="Contact the Creator">T. Michael Keesey</a>
                     </Link>{" "}
