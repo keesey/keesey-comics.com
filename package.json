@@ -32,7 +32,6 @@
         "vercel": "^28.14.0"
     },
     "license": "UNLICENSED",
-    "main": "out/index.html",
     "name": "keesey-comics.com",
     "private": true,
     "repository": "https://github.com/keesey/keesey-comics.com",
@@ -51,5 +50,5 @@
         "start": "next start",
         "version": "git add -A src"
     },
-    "version": "2.2.1"
+    "version": "2.2.2"
 }

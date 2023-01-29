@@ -1,7 +1,5 @@
 /.next
-/build
 /node_modules
-/out
 .DS_Store
 .env.local
 .env.development.local
