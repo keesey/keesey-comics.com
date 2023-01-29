@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.2.2] - 2023-01-28
 
+### Changed
+
+-   Downgraded Next.js to 12.3.4 to fix deployment.
+
+## [2.2.2] - 2023-01-28
+
 ### Fixed
 
 -   Build configuration.

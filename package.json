@@ -8,7 +8,7 @@
         "@paypal/react-paypal-js": "^7.8.2",
         "animate.css": "^4.1.1",
         "axios": "^1.2.6",
-        "next": "^13.1.6",
+        "next": "^12.3.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "sass": "^1.57.1",
@@ -23,7 +23,7 @@
         "@typescript-eslint/eslint-plugin": "^5.49.0",
         "@typescript-eslint/parser": "^5.49.0",
         "eslint": "^8.32.0",
-        "eslint-config-next": "^13.1.6",
+        "eslint-config-next": "^12.3.4",
         "eslint-config-prettier": "^8.6.0",
         "flux-standard-action": "^2.1.2",
         "prettier": "^2.8.3",
@@ -50,5 +50,5 @@
         "start": "next start",
         "version": "git add -A src"
     },
-    "version": "2.2.2"
+    "version": "2.2.3"
 }
