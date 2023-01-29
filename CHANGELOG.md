@@ -19,7 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [2.2.2] - 2023-01-28
+## [2.2.4] - 2023-01-28
+
+### Removed
+
+-   Exclamation point from CTA on _Paleocene #4_ page.
+
+## [2.2.3] - 2023-01-28
 
 ### Changed
 

@@ -46,7 +46,6 @@ const Page: NextPage = () => {
                                 height={18}
                                 src="/images/logos/black/patreon.svg"
                             />
-                            <ComicText>!</ComicText>
                         </span>
                     </CTA>
                 </IssueHero>
