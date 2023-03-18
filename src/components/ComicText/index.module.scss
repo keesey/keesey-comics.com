@@ -1,23 +1,32 @@
 .comixified {
     display: none;
-    @media print, screen {
+
+    @media print,
+    screen {
         display: initial;
         font-family: Paleocene;
         letter-spacing: 0.25pt;
         text-transform: unset;
+
         &.theme-day,
+        &.theme-webcomic,
         [lang="ko"] &,
         &[lang="ko"] {
             display: none;
         }
     }
 }
+
 .emphatic {
     font-style: italic;
 }
+
 .regular {
-    @media print, screen {
+
+    @media print,
+    screen {
         display: none;
+
         &.theme-day,
         [lang="ko"] &,
         &[lang="ko"] {
@@ -25,6 +34,19 @@
             font-family: AtlandBB;
         }
     }
+
+    @media print,
+    screen {
+        display: none;
+
+        &.theme-webcomic,
+        [lang="ko"] &,
+        &[lang="ko"] {
+            display: initial;
+            font-family: DigitalStrip;
+        }
+    }
+
     [lang="ko"] &,
     &[lang="ko"] {
         font-family: Euljiro-Che;

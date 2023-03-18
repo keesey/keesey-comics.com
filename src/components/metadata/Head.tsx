@@ -6,7 +6,7 @@ import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import Schema from "./Schema"
 export interface Props extends PropsWithChildren {
     author?: Person
-    favIconType?: "paleocene" | "pleistocene"
+    favIconType?: "paleocene" | "parry-and-carney" | "pleistocene"
     language?: string
     noIndex?: true
     socialImageAlt?: string

@@ -9,7 +9,7 @@ import ExternalStores, { Props as ExternalStoresProps } from "./ExternalStores"
 import styles from "./SeriesHero.module.scss"
 export interface Props {
     ageRecommendation: AgeRecommendationProps["ageRecommendation"]
-    id: "paleocene" | "pleistocene"
+    id: "paleocene" | "parry-and-carney" | "pleistocene"
     productIds?: readonly string[]
     storeLinks?: ExternalStoresProps["links"]
     title: string

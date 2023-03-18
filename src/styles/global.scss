@@ -7,6 +7,7 @@
         url(/fonts/paleocene-regular-webfont.woff) format("woff");
     text-rendering: optimizeLegibility;
 }
+
 @font-face {
     font-display: block;
     font-family: Paleocene;
@@ -16,6 +17,7 @@
         url(/fonts/paleocene-italic-webfont.woff) format("woff");
     text-rendering: optimizeLegibility;
 }
+
 @font-face {
     font-display: block;
     font-family: AtlandBB;
@@ -26,6 +28,7 @@
         url(/fonts/AtlandBB.ttf) format("truetype"), url(/fonts/AtlandBB.svg#AtlandBB) format("svg");
     text-rendering: optimizeLegibility;
 }
+
 @font-face {
     font-display: block;
     font-family: AtlandBB;
@@ -37,6 +40,7 @@
         url(/fonts/AtlandBB-Italic.svg#AtlandBB) format("svg");
     text-rendering: optimizeLegibility;
 }
+
 @font-face {
     font-display: block;
     font-family: AtlandBB;
@@ -48,6 +52,42 @@
         url(/fonts/AtlandBB-BoldItalic.svg#AtlandBB) format("svg");
     text-rendering: optimizeLegibility;
 }
+
+@font-face {
+    font-display: block;
+    font-family: DigitalStrip;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/digistrip.ttf) format("truetype");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: block;
+    font-family: DigitalStrip;
+    font-style: italic;
+    font-weight: normal;
+    src: url(/fonts/digistrip_i.ttf) format("truetype");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: block;
+    font-family: DigitalStrip;
+    font-weight: bold;
+    src: url(/fonts/digistrip_b.ttf) format("truetype");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: block;
+    font-family: DigitalStrip;
+    font-style: italic;
+    font-weight: bold;
+    src: url(/fonts/digistrip_b.ttf) format("truetype");
+    text-rendering: optimizeLegibility;
+}
+
 @font-face {
     font-display: swap;
     font-family: Euljiro-Che;
@@ -55,24 +95,30 @@
     font-weight: normal;
     src: url(/fonts/bmeuljiro.otf) format("opentype"), url(/fonts/bmeuljiro.ttf) format("truetype");
 }
+
 * {
     box-sizing: border-box;
+
     &[role="button"] {
         cursor: pointer;
     }
 }
+
 a,
 abbr {
     color: inherit;
     text-decoration: none;
     transition: opacity 0.25s;
+
     &:hover {
         opacity: 0.67;
     }
 }
+
 address {
     font-style: normal;
 }
+
 body,
 html {
     background-color: #000;
@@ -82,44 +128,54 @@ html {
     margin: 0;
     padding: 0;
 }
+
 main {
     background-color: #fff;
     color: #000;
 }
+
 hr {
     border: 2.5pt solid;
     border-bottom: none;
     border-left: none;
     border-right: none;
 }
+
 img.intrinsic {
     height: auto;
     max-width: 100%;
 }
+
 .negative {
     color: red;
+
     &::before {
         content: "(";
     }
+
     &::after {
         content: ")";
     }
 }
+
 .print,
 .screen,
 .speech {
     display: none;
 }
+
 @media print {
     .print {
         display: initial;
     }
 }
+
 @media screen {
     .screen {
         display: initial;
     }
 }
+
 @media speech {
     .speech {
         display: initial;

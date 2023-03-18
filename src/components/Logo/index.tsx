@@ -12,6 +12,7 @@ export interface Props
         | "kickstarter-k"
         | "mastodon"
         | "paleocene"
+        | "parry-and-carney"
         | "patreon"
         | "phylopic"
         | "pleistocene"
@@ -25,6 +26,7 @@ const ALT_TEXT: Readonly<Record<Props["type"], string>> = {
     "kickstarter-k": "Kickstarter",
     mastodon: "Mastodon",
     paleocene: "Paleocene",
+    "parry-and-carney": "Parry 'n' Carney: Friends for Life",
     patreon: "Patreon",
     phylopic: "PhyloPic",
     pleistocene: "Pleistocene",

@@ -7,7 +7,7 @@ import Logo from "~/components/Logo"
 import styles from "./index.module.scss"
 export interface Props {
     children: string
-    id: "paleocene" | "pleistocene"
+    id: "paleocene" | "parry-and-carney" | "pleistocene"
 }
 const SeriesPromo: FC<Props> = ({ children, id }) => (
     <Link href={`/${id}`} legacyBehavior>

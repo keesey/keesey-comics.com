@@ -1,4 +1,5 @@
 @use "src/styles/mixins";
+
 .cell {
     border-radius: 2rem;
     max-width: 100%;
@@ -6,20 +7,32 @@
     max-height: 280px;
     position: relative;
     text-align: center;
-    &.theme-bw {
+
+    &.theme-bw,
+    &.theme-webcomic {
         align-items: flex-end;
-        border: 2.5pt solid #000;
         border-radius: unset;
         display: flex;
     }
+
+    &.theme-webcomic {
+        border: none;
+    }
+
+    &.theme-bw {
+        border: 2.5pt solid #000;
+    }
+
     &.theme-kc {
         @include mixins.brown;
         border-radius: unset;
     }
+
     &.theme-night {
         @include mixins.purple;
     }
 }
+
 .image {
     height: 100%;
     object-fit: cover;

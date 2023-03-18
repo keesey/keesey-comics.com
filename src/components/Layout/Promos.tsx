@@ -5,7 +5,7 @@ import { ThemeColor } from "~/themes/ThemeColor"
 import Logo from "../Logo"
 import styles from "./Promos.module.scss"
 import useLogoColor from "./useLogoColor"
-export type PromoType = "paleocene" | "phylopic" | "pleistocene"
+export type PromoType = "paleocene" | "parry-and-carney" | "phylopic" | "pleistocene"
 export interface Props {
     promos?: readonly PromoType[]
 }
@@ -20,6 +20,15 @@ const Promo: FC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => {
                 </Link>
             )
         }
+        case "parry-and-carney": {
+            return (
+                <Link href="/parry-and-carney" legacyBehavior>
+                    <a>
+                        <Logo color={color} type="parry-and-carney" height={32} width={165.5} />
+                    </a>
+                </Link>
+            )
+        }
         case "pleistocene": {
             return (
                 <Link href="/pleistocene" legacyBehavior>
@@ -30,12 +39,13 @@ const Promo: FC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => {
             )
         }
         case "phylopic":
-        default: {
             return (
-                <a href="//beta.phylopic.org" target="_blank" rel="noreferrer">
+                <a href="//www.phylopic.org" target="_blank" rel="noreferrer">
                     <Logo color={color} type="phylopic" height={21} width={129} />
                 </a>
             )
+        default: {
+            return null
         }
     }
 }

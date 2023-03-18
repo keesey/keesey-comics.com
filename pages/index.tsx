@@ -16,6 +16,7 @@ const Home: NextPage = () => {
                 <ItemListSchema
                     urls={[
                         "https://www.keesey-comics.com/paleocene",
+                        "https://www.keesey-comics.com/parry-and-carney",
                         "https://www.keesey-comics.com/pleistocene",
                         "https://www.keesey-comics.com/store",
                     ]}
@@ -29,6 +30,10 @@ const Home: NextPage = () => {
                 <hr />
                 <SeriesPromo id="pleistocene">
                     He told himself he was the greatest hero of his age -- the noblest human being of the...
+                </SeriesPromo>
+                <hr />
+                <SeriesPromo id="parry-and-carney">
+                    The boys are back, in...
                 </SeriesPromo>
                 <hr />
                 <SocialNav />
