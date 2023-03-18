@@ -9,6 +9,7 @@ const PATHS: readonly string[] = [
     "paleocene/issues/02",
     "paleocene/issues/03",
     "pleistocene",
+    "parry-and-carney",
     "mailinglist",
     "contact",
     ...PRODUCTS.filter(product => !product.path).map(product => `products/${product.id}`),
