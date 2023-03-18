@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
--   Most _PhyloPic_ footer promos to _Parry 'n' Carney_.
-
 ### Deprecated
 
 ### Fixed
@@ -20,6 +18,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Security
+
+## [2.3.1] - 2023-03-18
+
+### Added
+
+-   _Parry 'n' Carney_ to sitemap.
+
+### Changed
+
+-   Most _PhyloPic_ footer promos to _Parry 'n' Carney_.
 
 ## [2.3.0] - 2023-03-18
 
