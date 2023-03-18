@@ -9,11 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   _Parry 'n' Carney: Friends for Life_.
-
 ### Changed
-
--   Updated _PhyloPic_ link to `www.phylopic.org`.
 
 ### Deprecated
 
@@ -22,6 +18,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Security
+
+## [2.3.0] - 2023-03-18
+
+### Added
+
+-   _Parry 'n' Carney: Friends for Life_.
+
+### Changed
+
+-   Updated _PhyloPic_ link to `www.phylopic.org`.
 
 ## [2.2.5] - 2023-01-28
 
