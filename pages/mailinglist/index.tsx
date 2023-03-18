@@ -17,7 +17,7 @@ const Contact: NextPage = () => {
     return (
         <OrderContainer>
             <Head subject={SUBJECT} />
-            <Layout footerPromos={["paleocene", "pleistocene", "phylopic"]} theme="kc">
+            <Layout footerPromos={["paleocene", "pleistocene", "parry-and-carney"]} theme="kc">
                 <Hero>
                     <h1>Keesey Comics Mailing List</h1>
                 </Hero>

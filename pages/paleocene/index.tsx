@@ -33,7 +33,7 @@ const Page: NextPage = () => {
                     ]}
                 />
             </Head>
-            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="night">
+            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
                 <SeriesHero
                     ageRecommendation="9+"
                     id="paleocene"

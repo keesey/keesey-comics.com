@@ -38,7 +38,7 @@ const Page: NextPage = () => {
             <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT}>
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
-            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "phylopic"]} theme="night">
+            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
                 <IssueHero
                     ageRecommendation="9+"
                     id="paleocene"
