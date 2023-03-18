@@ -14,9 +14,9 @@ const Page: NextPage = () => {
             <Head favIconType="parry-and-carney" socialImagePath="/parry-and-carney" subject={PARRY_AND_CARNEY} />
             <Layout headerPromos={["parry-and-carney"]} footerPromos={["paleocene", "pleistocene"]} theme="webcomic">
                 <SeriesHero
-                ageRecommendation="17+"
+                    ageRecommendation="17+"
                     id="parry-and-carney"
-                    storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
+                    storeLinks={[{ type: "gumroad", url: "//keesey.gumroad.com/l/parry-and-carney" }]}
                     title="Parry 'n' Carney: Friends for Life"
                 />
                 <ComicStrip>
