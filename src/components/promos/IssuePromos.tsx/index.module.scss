@@ -27,12 +27,12 @@
         color: #000;
     }
 
-    >p {
+    > p {
         margin: 0;
         text-align: center;
     }
 
-    >nav {
+    > nav {
         @include mixins.page;
         align-items: center;
         column-gap: 1rem;

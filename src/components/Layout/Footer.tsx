@@ -5,7 +5,7 @@ import useThemedClassName from "~/themes/useThemedClassName"
 import styles from "./Footer.module.scss"
 import Promos, { Props as PromosProps } from "./Promos"
 export type Props = PromosProps
-const YEAR = new Date().getFullYear();
+const YEAR = new Date().getFullYear()
 const Footer: FC<Props> = ({ promos }) => {
     const className = useThemedClassName(styles, "footer")
     return (
