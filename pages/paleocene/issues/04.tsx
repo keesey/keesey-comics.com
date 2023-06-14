@@ -37,7 +37,7 @@ const Page: NextPage = () => {
                         <ComicText>Coming soon.</ComicText>
                     </div>
                     <CTA href="/mailinglist">Sign up for updates!</CTA>
-                    <CTA href="/patreon">
+                    <CTA href="//www.patreon.com/tmkeesey">
                         <span>
                             <ComicText>{"Follow the progress on "}</ComicText>
                             <Image

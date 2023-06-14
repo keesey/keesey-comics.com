@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.3.4] - 2023-06-13
+
+### Fixed
+
+-   Patreon link from _Paleocene #4_ page.
+
 ## [2.3.3] - 2023-03-18
 
 ### Fixed
