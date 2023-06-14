@@ -1823,7 +1823,7 @@
     "@chakra-ui/checkbox" "2.2.15"
     "@chakra-ui/shared-utils" "2.0.5"
 
-"@chakra-ui/system@2.5.7":
+"@chakra-ui/system@2.5.7", "@chakra-ui/system@^2.5.7":
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/@chakra-ui/system/-/system-2.5.7.tgz#f56c480af336d9f48e0ad84e2434d834017c44e2"
   integrity sha512-yB6en7YdJPxKvKY2jJROVwkBE2CLFmHS4ZDx27VdYs0Fa4kGiyDFhJAfnMtLBNDVsTy1NhUHL9aqR63u56QqFg==
@@ -2455,6 +2455,11 @@
   integrity sha512-5B0uOnh7wyUY9vNNdIA6NUvWozhrZaTMZOzdirYAefqD0ZBK5C/h3+KMYdCKrR7JrXGvVpWnHtv54b3dCzwICA==
   dependencies:
     glob "7.1.7"
+
+"@next/font@^13.4.4":
+  version "13.4.4"
+  resolved "https://registry.yarnpkg.com/@next/font/-/font-13.4.4.tgz#513632591a1041e39c1020022c0995ca78dde4fc"
+  integrity sha512-iYmL/O0rV9NS8a2UXuRoZOzImz8Q0mM8bAmxtj8nccrpwZ6iOOZlbf2d0Genczl4wtuXRXVPR8goGjJM4C2SDg==
 
 "@next/swc-darwin-arm64@13.4.3":
   version "13.4.3"
