@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.3.5] - 2023-08-07
+
+### Security
+
+-   Bump word-wrap from 1.2.3 to 1.2.4
+
 ## [2.3.4] - 2023-06-13
 
 ### Fixed
