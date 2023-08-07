@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.3.7] - 2023-08-07
+
+### Changed
+
+-   Kickstarter link to Created Project tab in profile.
+
 ## [2.3.6] - 2023-08-07
 
 ### Changed
