@@ -19,6 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.4.0] - 2023-08-20
+
+### Added
+
+-   Comic strip to _Paleocene #4_ page.
+-   Banner for Kickstarter campaign for _Paleocene #4_.
+
 ## [2.3.8] - 2023-08-15
 
 ### Changed

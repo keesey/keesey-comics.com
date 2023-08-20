@@ -6,7 +6,7 @@ const COLORS: Readonly<Record<Theme, ThemeColor>> = {
     day: "white",
     kc: "cream",
     night: "black",
-    webcomic: "white"
+    webcomic: "white",
 }
 const useBackgroundColor = () => COLORS[useTheme()]
 export default useBackgroundColor
