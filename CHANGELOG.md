@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+-   Comic strip to _Paleocene #4_ page.
+-   Banner for Kickstarter campaign for _Paleocene #4_.
+
 ### Changed
 
 ### Deprecated
