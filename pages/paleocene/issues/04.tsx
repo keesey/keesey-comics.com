@@ -60,7 +60,7 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/paleocene/04/03.png" width={(280 * 818) / 692} />
                     <TextPanel>And, as Brother grows up, will he stay with his Mamma?</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/04/04.png" width={(280 * 812) / 676} />
-                    <TextPanel>Discover Sister&apos;s fate!</TextPanel>
+                    <TextPanel emphatic>Discover Sister&apos;s fate!</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/04/05.png" width={(280 * 1218) / 1027} />
                 </ComicStrip>
                 <IssuePromos id="paleocene" numbers={[1, 2, 3]}>
