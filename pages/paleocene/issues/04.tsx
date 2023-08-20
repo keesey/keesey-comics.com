@@ -50,16 +50,18 @@ const Page: NextPage = () => {
                     </CTA>
                 </IssueHero>
                 <ComicStrip>
-                <TextPanel>Mamma and Brother continue their search for Sister … now in the freezing cold of winter.</TextPanel>
-                <ImagePanel height={280} src="/images/issues/paleocene/04/01.png" width={280 * 1178 / 767} />
-                <TextPanel>Could the little child possibly have survived?</TextPanel>
-                <ImagePanel height={280} src="/images/issues/paleocene/04/02.png" width={280 * 680 / 899} />
-                <TextPanel>What will happen to Auntie and the rest of the troop in their absence?</TextPanel>
-                <ImagePanel height={280} src="/images/issues/paleocene/04/03.png" width={280 * 818 / 692} />
-                <TextPanel>And, as Brother grows up, will he stay with his Mamma?</TextPanel>
-                <ImagePanel height={280} src="/images/issues/paleocene/04/04.png" width={280 * 812 / 676} />
-                <TextPanel>Discover Sister's fate!</TextPanel>
-                <ImagePanel height={280} src="/images/issues/paleocene/04/05.png" width={280 * 1218 / 1027} />
+                    <TextPanel>
+                        Mamma and Brother continue their search for Sister ... now in the freezing cold of winter.
+                    </TextPanel>
+                    <ImagePanel height={280} src="/images/issues/paleocene/04/01.png" width={(280 * 1178) / 767} />
+                    <TextPanel>Could the little child possibly have survived?</TextPanel>
+                    <ImagePanel height={280} src="/images/issues/paleocene/04/02.png" width={(280 * 680) / 899} />
+                    <TextPanel>What will happen to Auntie and the rest of the troop in their absence?</TextPanel>
+                    <ImagePanel height={280} src="/images/issues/paleocene/04/03.png" width={(280 * 818) / 692} />
+                    <TextPanel>And, as Brother grows up, will he stay with his Mamma?</TextPanel>
+                    <ImagePanel height={280} src="/images/issues/paleocene/04/04.png" width={(280 * 812) / 676} />
+                    <TextPanel>Discover Sister&apos;s fate!</TextPanel>
+                    <ImagePanel height={280} src="/images/issues/paleocene/04/05.png" width={(280 * 1218) / 1027} />
                 </ComicStrip>
                 <IssuePromos id="paleocene" numbers={[1, 2, 3]}>
                     Read the other issues!
