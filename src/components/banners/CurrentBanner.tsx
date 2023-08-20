@@ -1,12 +1,12 @@
-import { FC } from "react"
-/*
 import { FC, useEffect, useState } from "react"
 import Kickstarter from "./Kickstarter"
-const END = process.env.NEXT_PUBLIC_KICKSTARTER_END_DATE ? new Date(process.env.NEXT_PUBLIC_KICKSTARTER_END_DATE).valueOf() : NaN
+const END = process.env.NEXT_PUBLIC_KICKSTARTER_END_DATE
+    ? new Date(process.env.NEXT_PUBLIC_KICKSTARTER_END_DATE).valueOf()
+    : NaN
 const getCountdown = () => {
     const now = new Date().valueOf()
     const duration = END - now
-    if (duration < 1000) {
+    if (duration < 1000 || isNaN(duration)) {
         return null
     }
     if (duration < 60 * 1000) {
@@ -32,23 +32,25 @@ const getCountdown = () => {
 }
 const Message: FC = () => {
     if (process.env.NEXT_PUBLIC_KICKSTARTER_PHASE) {
-        return <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-3-comic-book">{process.env.NEXT_PUBLIC_KICKSTARTER_PHASE}</Kickstarter>
+        return (
+            <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-4-comic-book">
+                {process.env.NEXT_PUBLIC_KICKSTARTER_PHASE}
+            </Kickstarter>
+        )
     }
     return null
 }
 const Countdown: FC = () => {
     const [countdown, setCountdown] = useState(getCountdown)
-    useEffect(
-        () => {
-            const handle = setInterval(() => setCountdown(getCountdown()), 1000)
-            return () => clearInterval(handle)
-        },
-        [setCountdown],
+    useEffect(() => {
+        const handle = setInterval(() => setCountdown(getCountdown()), 1000)
+        return () => clearInterval(handle)
+    }, [setCountdown])
+    return countdown ? (
+        <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-4-comic-book">{countdown}</Kickstarter>
+    ) : (
+        <Message />
     )
-    return countdown
-        ? <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-3-comic-book">{countdown}</Kickstarter>
-        : <Message />
 }
-*/
-const CurrentBanner: FC = () => null
+const CurrentBanner: FC = () => <Countdown />
 export default CurrentBanner

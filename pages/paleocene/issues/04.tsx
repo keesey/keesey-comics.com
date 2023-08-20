@@ -3,10 +3,14 @@ import Image from "next/image"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
+import ComicStrip from "~/components/ComicStrip"
+import ImagePanel from "~/components/ComicStrip/ImagePanel"
+import TextPanel from "~/components/ComicStrip/TextPanel"
 import ComicText from "~/components/ComicText"
 import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
+import Logo from "~/components/Logo"
 import Head from "~/components/metadata/Head"
 import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
@@ -33,22 +37,31 @@ const Page: NextPage = () => {
             </Head>
             <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
                 <IssueHero ageRecommendation="9+" id="paleocene" number={4} seriesTitle="Paleocene">
-                    <div style={{ fontSize: "1.6rem" }}>
-                        <ComicText>Coming soon.</ComicText>
-                    </div>
-                    <CTA href="/mailinglist">Sign up for updates!</CTA>
+                    <CTA href="/mailinglist">
+                        <span>
+                            <ComicText>{"Get it through "}</ComicText>
+                            <Logo color="black" type="kickstarter" width={(18 * 1280) / 135.78667} height={18} />
+                        </span>
+                    </CTA>
                     <CTA href="//www.patreon.com/tmkeesey">
                         <span>
                             <ComicText>{"Follow the progress on "}</ComicText>
-                            <Image
-                                alt="Patreon"
-                                width={(18 * 3417.3201) / 474.92001}
-                                height={18}
-                                src="/images/logos/black/patreon.svg"
-                            />
+                            <Logo color="black" type="patreon" width={(18 * 3417.3201) / 474.92001} height={18} />
                         </span>
                     </CTA>
                 </IssueHero>
+                <ComicStrip>
+                <TextPanel>Mamma and Brother continue their search for Sister … now in the freezing cold of winter.</TextPanel>
+                <ImagePanel height={280} src="/images/issues/paleocene/04/01.png" width={280 * 1178 / 767} />
+                <TextPanel>Could the little child possibly have survived?</TextPanel>
+                <ImagePanel height={280} src="/images/issues/paleocene/04/02.png" width={280 * 680 / 899} />
+                <TextPanel>What will happen to Auntie and the rest of the troop in their absence?</TextPanel>
+                <ImagePanel height={280} src="/images/issues/paleocene/04/03.png" width={280 * 818 / 692} />
+                <TextPanel>And, as Brother grows up, will he stay with his Mamma?</TextPanel>
+                <ImagePanel height={280} src="/images/issues/paleocene/04/04.png" width={280 * 812 / 676} />
+                <TextPanel>Discover Sister's fate!</TextPanel>
+                <ImagePanel height={280} src="/images/issues/paleocene/04/05.png" width={280 * 1218 / 1027} />
+                </ComicStrip>
                 <IssuePromos id="paleocene" numbers={[1, 2, 3]}>
                     Read the other issues!
                 </IssuePromos>

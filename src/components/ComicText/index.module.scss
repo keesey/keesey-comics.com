@@ -1,8 +1,7 @@
 .comixified {
     display: none;
 
-    @media print,
-    screen {
+    @media print, screen {
         display: initial;
         font-family: Paleocene;
         letter-spacing: 0.25pt;
@@ -22,9 +21,7 @@
 }
 
 .regular {
-
-    @media print,
-    screen {
+    @media print, screen {
         display: none;
 
         &.theme-day,
@@ -35,8 +32,7 @@
         }
     }
 
-    @media print,
-    screen {
+    @media print, screen {
         display: none;
 
         &.theme-webcomic,

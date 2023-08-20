@@ -2,8 +2,7 @@ import type { ComicStory } from "schema-dts"
 const PARRY_AND_CARNEY: ComicStory = {
     "@id": "https://www.keesey-comics.com/parry-and-carney",
     "@type": "ComicStory",
-    abstract:
-        "Parry the Parasaurolophus and Carney the Carnotaurs are friends for life! Right???",
+    abstract: "Parry the Parasaurolophus and Carney the Carnotaurs are friends for life! Right???",
     accessMode: "textOnVisual",
     creator: "http://tmkeesey.net",
     contentRating: "17+",

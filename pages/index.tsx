@@ -32,9 +32,7 @@ const Home: NextPage = () => {
                     He told himself he was the greatest hero of his age -- the noblest human being of the...
                 </SeriesPromo>
                 <hr />
-                <SeriesPromo id="parry-and-carney">
-                    The boys are back, in...
-                </SeriesPromo>
+                <SeriesPromo id="parry-and-carney">The boys are back, in...</SeriesPromo>
                 <hr />
                 <SocialNav />
             </Layout>

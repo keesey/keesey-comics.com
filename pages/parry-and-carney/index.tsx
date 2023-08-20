@@ -20,9 +20,24 @@ const Page: NextPage = () => {
                     title="Parry 'n' Carney: Friends for Life"
                 />
                 <ComicStrip>
-                    <ImagePanel height={170} src="/images/issues/parry-and-carney/01.png" width={170} alt="Parry: &quot;Hey there! I'm Parry the Parasaurolophus, and this is my buddy, Carney the Carnotaurus!&quot; Carney: &quot;Heh-lo.&quot;" />
-                    <ImagePanel height={170} src="/images/issues/parry-and-carney/02.png" width={170} alt="Parry: &quot;Together we will provide you, the reader, with hours of rollicksome entertainment in this finely-crafted comic strip!&quot; Carney: &quot;Yeah...&quot;" />
-                    <ImagePanel height={170} src="/images/issues/parry-and-carney/03.png" width={170} alt="Carney stares ominously at Parry." />
+                    <ImagePanel
+                        height={170}
+                        src="/images/issues/parry-and-carney/01.png"
+                        width={170}
+                        alt='Parry: "Hey there! I&apos;m Parry the Parasaurolophus, and this is my buddy, Carney the Carnotaurus!" Carney: "Heh-lo."'
+                    />
+                    <ImagePanel
+                        height={170}
+                        src="/images/issues/parry-and-carney/02.png"
+                        width={170}
+                        alt='Parry: "Together we will provide you, the reader, with hours of rollicksome entertainment in this finely-crafted comic strip!" Carney: "Yeah..."'
+                    />
+                    <ImagePanel
+                        height={170}
+                        src="/images/issues/parry-and-carney/03.png"
+                        width={170}
+                        alt="Carney stares ominously at Parry."
+                    />
                     <TextPanel emphatic>Oh, the things that happen next!</TextPanel>
                 </ComicStrip>
                 <SocialNav />
