@@ -1,5 +1,4 @@
 import type { NextPage } from "next"
-import Image from "next/image"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
