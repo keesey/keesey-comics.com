@@ -36,7 +36,7 @@ const Page: NextPage = () => {
             </Head>
             <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
                 <IssueHero ageRecommendation="9+" id="paleocene" number={4} seriesTitle="Paleocene">
-                    <CTA href="/mailinglist">
+                    <CTA href="https://www.kickstarter.com/projects/keesey/paleocene-4-comic-book">
                         <span>
                             <ComicText>{"Get it through "}</ComicText>
                             <Logo color="black" type="kickstarter" width={(18 * 1280) / 135.78667} height={18} />
