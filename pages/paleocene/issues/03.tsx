@@ -21,7 +21,7 @@ const SUBJECT: ComicStory = {
         "On one continent, a lonely bird starves in the wasteland. On another, a band of primates searches for a new home. See what happens when continents collide!",
     copyrightYear: 2021,
     description: "Issue #3 of a comic series about our early primate ancestors.",
-    image: "https://www.keesey-comics.com/images/issues/03/front_cover.png",
+    image: "https://www.keesey-comics.com/images/issues/paleocene/03/front_cover.png",
     isPartOf: "https://www.keesey-comics.com/paleocene",
     name: "Paleocene #3",
     position: 3,

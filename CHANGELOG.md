@@ -19,7 +19,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [2.4.1] - 2023-08-23
+## [2.4.2] - 2023-08-23
+
+### Fixed
+
+-   Corrected images references in LD-JSON Schema for _Paleocene_ Issue Pages.
+-   Correctly-sized social media image for _Paleocene #4_ Page.
+
+## [2.4.1] - 2023-08-23 [YANKED]
 
 ### Fixed
 
