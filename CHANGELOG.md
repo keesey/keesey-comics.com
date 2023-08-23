@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.4.1] - 2023-08-23
+
+### Fixed
+
+-   Social media image for _Paleocene #4_ Page was incorrect.
+
 ## [2.4.0] - 2023-08-20
 
 ### Added

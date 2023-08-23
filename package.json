@@ -50,5 +50,5 @@
         "start": "next start",
         "version": "git add -A src"
     },
-    "version": "2.4.0"
+    "version": "2.4.1"
 }
