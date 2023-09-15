@@ -1,5 +1,6 @@
 import type { NextPage } from "next"
 import dynamic from "next/dynamic"
+import Link from "next/link"
 import { Suspense, useState } from "react"
 import ArtBoard from "~/components/ArtBoard"
 import CTA from "~/components/CTA"
@@ -36,14 +37,18 @@ const Page: NextPage = () => {
                             }}
                         >
                             A preview of one of the rewards for the{" "}
-                            <a href="/kickstarter" style={{ textDecoration: "underline" }}>
-                                <em>Paleocene #4</em> Kickstarter campaign
-                            </a>
+                            <Link href="/kickstarter">
+                                <a style={{ textDecoration: "underline" }}>
+                                    <em>Paleocene #4</em> Kickstarter campaign
+                                </a>
+                            </Link>
                             : original inked art boards. These are 11<abbr title="inch">&quot;</abbr> &times; 17
                             <abbr title="inch">&quot;</abbr> sheets of Bristol board with the original inks for{" "}
-                            <a href=".." style={{ textDecoration: "underline" }}>
-                                <em>Paleocene #4</em>
-                            </a>
+                            <Link href="/paleocene/issues/04" style={{ textDecoration: "underline" }}>
+                                <a style={{ textDecoration: "underline" }}>
+                                    <em>Paleocene #4</em>
+                                </a>
+                            </Link>
                             , complete with smudges and Wite-Out.
                         </p>
                         <p
@@ -61,13 +66,13 @@ const Page: NextPage = () => {
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "2em", justifyContent: "center" }}>
                         {BOARDS.map(board => (
                             <button
+                                key={board.code}
                                 onClick={() => setSelectedBoard(board)}
                                 style={{ background: "none", border: "none", cursor: "pointer" }}
                             >
                                 <ArtBoard
                                     board={board}
                                     imageSource={`/images/issues/paleocene/04/inks/${board.code}-ink.png`}
-                                    key={board.code}
                                 />
                             </button>
                         ))}
