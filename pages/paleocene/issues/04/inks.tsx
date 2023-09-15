@@ -1,107 +1,117 @@
-
 import type { NextPage } from "next"
 import dynamic from "next/dynamic"
-import { type FC, Fragment, Suspense, useState } from "react"
-import { DragDropContext, Draggable, Droppable, OnDragEndResponder } from "react-beautiful-dnd"
+import { Suspense, useState } from "react"
 import ArtBoard from "~/components/ArtBoard"
 import CTA from "~/components/CTA"
-import CTANav from "~/components/CTANav"
-import Container from "~/components/Container"
+import ComicText from "~/components/ComicText"
 import Head from "~/components/metadata/Head"
 import { Board } from "~/models/Board"
 import ThemeContext from "~/themes/ThemeContext"
 const Lightbox = dynamic(() => import("~/components/Lightbox"), { ssr: false })
 const Page: NextPage = () => {
+    const [selectedBoard, setSelectedBoard] = useState<Board | null>(null)
     return (
         <>
             <Head favIconType="paleocene" socialImagePath="/paleocene/04" />
             <ThemeContext.Provider value="bw">
-                <main style={{ minHeight: "100vh" }}>
-                    <OrderSelector />
+                <main style={{ padding: "2em", minHeight: "100vh" }}>
+                    <header
+                        style={{
+                            textAlign: "center",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                    >
+                        <h1>
+                            <em>Paleocene #4</em> Inks
+                        </h1>
+                        <p
+                            style={{
+                                width: "min(40em, calc(100vw - 4em))",
+                                textAlign: "justify",
+                                minWidth: "8em",
+                                fontSize: "larger",
+                            }}
+                        >
+                            A preview of one of the rewards for the{" "}
+                            <a href="/kickstarter" style={{ textDecoration: "underline" }}>
+                                <em>Paleocene #4</em> Kickstarter campaign
+                            </a>
+                            : original inked art boards. These are 11<abbr title="inch">&quot;</abbr> &times; 17
+                            <abbr title="inch">&quot;</abbr> sheets of Bristol board with the original inks for{" "}
+                            <a href=".." style={{ textDecoration: "underline" }}>
+                                <em>Paleocene #4</em>
+                            </a>
+                            , complete with smudges and Wite-Out.
+                        </p>
+                        <p
+                            style={{
+                                width: "min(40em, calc(100vw - 4em))",
+                                textAlign: "justify",
+                                minWidth: "8em",
+                                fontSize: "larger",
+                            }}
+                        >
+                            Click on each one to see a larger version.
+                        </p>
+                    </header>
+                    <hr />
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "2em", justifyContent: "center" }}>
+                        {BOARDS.map(board => (
+                            <button
+                                onClick={() => setSelectedBoard(board)}
+                                style={{ background: "none", border: "none", cursor: "pointer" }}
+                            >
+                                <ArtBoard
+                                    board={board}
+                                    imageSource={`/images/issues/paleocene/04/inks/${board.code}-ink.png`}
+                                    key={board.code}
+                                />
+                            </button>
+                        ))}
+                    </div>
+                    <hr />
+                    <footer
+                        style={{
+                            textAlign: "center",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            padding: "1em",
+                        }}
+                    >
+                        <CTA href="/kickstarter">
+                            <ComicText>Check out the campaign!</ComicText>
+                        </CTA>
+                    </footer>
                 </main>
+                {selectedBoard && (
+                    <Suspense>
+                        <Lightbox
+                            altText={selectedBoard.name}
+                            caption={
+                                <>
+                                    <h3>{selectedBoard.name}</h3>
+                                    {selectedBoard.comment && <p>{selectedBoard.comment}</p>}
+                                </>
+                            }
+                            image={{
+                                source: `/images/issues/paleocene/04/inks/${selectedBoard.code}-ink.png`,
+                                height: 554,
+                                width: selectedBoard.count === 2 ? 711 : 360,
+                            }}
+                            onClose={() => setSelectedBoard(null)}
+                        />
+                    </Suspense>
+                )}
             </ThemeContext.Provider>
         </>
     )
 }
 export default Page
-const OrderSelector: FC = () => {
-    const [boards, setBoards] = useState(BOARDS)
-    const [selectedBoard, setSelectedBoard] = useState<Board | null>(null)
-    const handleDragEnd: OnDragEndResponder = (result, provided) => {
-        console.debug(result, provided)
-    }
-    return (
-        <Container>
-            <CTANav>
-                <CTA onClick={() => setBoards(BOARDS)}>Reset</CTA>
-                <CTA onClick={() => setBoards(shuffle(BOARDS))}>Randomize!</CTA>
-            </CTANav>
-            <section>
-                {boards.map((board, index) => (
-                    <Fragment key={board.code}>
-                        {index > 0 ? "," : ""}
-                        {board.code}
-                    </Fragment>
-                ))}
-            </section>
-            <DragDropContext onDragEnd={handleDragEnd}>
-                <Droppable droppableId="droppable" direction="horizontal">
-                    {(provided, _snapshot) => (
-                        <div ref={provided.innerRef} {...provided.droppableProps}>
-                            {boards.map((board, index) => (
-                                <Draggable key={board.code} draggableId={board.code} index={index}>
-                                    {(provided, _snapshot) => (
-                                        <div
-                                            ref={provided.innerRef}
-                                            {...provided.draggableProps}
-                                            {...provided.dragHandleProps}
-                                        >
-                                            <ArtBoard
-                                                board={board}
-                                                imageSource={`/images/issues/paleocene/04/inks/${board.code}-ink.png`}
-                                            />
-                                        </div>
-                                    )}
-                                </Draggable>
-                            ))}
-                            {provided.placeholder}
-                        </div>
-                    )}
-                </Droppable>
-            </DragDropContext>
-            {selectedBoard && (
-                <Suspense>
-                    <Lightbox
-                        altText={selectedBoard.name}
-                        caption={
-                            <>
-                                <h3>{selectedBoard.name}</h3>
-                                {selectedBoard.comment && <p>{selectedBoard.comment}</p>}
-                            </>
-                        }
-                        image={{
-                            source: `/images/issues/paleocene/04/inks/${selectedBoard.code}-ink.png`,
-                            height: 554,
-                            width: selectedBoard.count === 2 ? 711 : 360,
-                        }}
-                        onClose={() => setSelectedBoard(null)}
-                    />
-                </Suspense>
-            )}
-        </Container>
-    )
-}
-const shuffle = function shuffle(array: readonly any[]) {
-    const result = [...array]
-    let currentIndex = result.length,
-        randomIndex
-    while (currentIndex > 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex)
-        currentIndex--
-        ;[result[currentIndex], result[randomIndex]] = [result[randomIndex], result[currentIndex]]
-    }
-    return result
-}
 const BOARDS: readonly Board[] = [
     {
         code: "front_cover",
