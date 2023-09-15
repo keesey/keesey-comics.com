@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.5.0] - 2023-09-15
+
+### Added
+
+-   Inks page for _Paleocene #4_ Kickstarter campaign.
+
 ## [2.4.4] - 2023-08-23
 
 ### Changed
