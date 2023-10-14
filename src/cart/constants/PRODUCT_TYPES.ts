@@ -8,7 +8,7 @@ const PRODUCT_TYPES: readonly ProductType[] = [
         name: "Comic Book (6⅞ × 10½ in)",
         ounces: 3.4,
         shippingOptions: [SHIPPING_OPTIONS_MAP["BAB"], SHIPPING_OPTIONS_MAP["NOB"]],
-        value: 4.99,
+        value: 9.99,
     },
     {
         html: `Sticker (2<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 2<abbr title="inches">&quot;</abbr>)`,
@@ -24,7 +24,7 @@ const PRODUCT_TYPES: readonly ProductType[] = [
         maximum: 25,
         name: "Bookmark (2 × 6 in)",
         ounces: 0.09,
-        value: 0.49,
+        value: 0.99,
     },
     {
         html: `Poster (11<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 17<abbr title="inches">&quot;</abbr>)`,
@@ -33,7 +33,7 @@ const PRODUCT_TYPES: readonly ProductType[] = [
         name: "Poster (11 × 17 in)",
         ounces: 0.65,
         shippingOptions: [SHIPPING_OPTIONS_MAP["UNF"], SHIPPING_OPTIONS_MAP["FOL"]],
-        value: 3.99,
+        value: 14.99,
     },
 ]
 export const PRODUCT_TYPES_MAP = PRODUCT_TYPES.reduce<Readonly<Record<string, ProductType>>>(

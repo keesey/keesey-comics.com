@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.5.2] - 2023-10-14
+
+### Changed
+
+-   Prices for most product types.
+
 ## [2.5.1] - 2023-09-26
 
 ### Changed
