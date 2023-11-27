@@ -5,15 +5,13 @@ import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
-import ComicText from "~/components/ComicText"
-import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
-import Logo from "~/components/Logo"
 import Head from "~/components/metadata/Head"
 import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
+import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
@@ -27,7 +25,8 @@ const SUBJECT: ComicStory = {
     position: 4,
     url: "https://www.keesey-comics.com/paleocene/issues/04",
 }
-const PRODUCT_ID = "COB-STD-PAL-03A"
+const PRODUCT_ID = "COB-STD-PAL-04A"
+const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
@@ -35,19 +34,14 @@ const Page: NextPage = () => {
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
             <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
-                <IssueHero ageRecommendation="9+" id="paleocene" number={4} seriesTitle="Paleocene">
-                    <CTA href="https://www.kickstarter.com/projects/keesey/paleocene-4-comic-book">
-                        <span>
-                            <ComicText>{"Get it through "}</ComicText>
-                            <Logo color="black" type="kickstarter" width={(18 * 1280) / 135.78667} height={18} />
-                        </span>
-                    </CTA>
-                    <CTA href="//www.patreon.com/tmkeesey">
-                        <span>
-                            <ComicText>{"Follow the progress on "}</ComicText>
-                            <Logo color="black" type="patreon" width={(18 * 3417.3201) / 474.92001} height={18} />
-                        </span>
-                    </CTA>
+                <IssueHero
+                    ageRecommendation="9+"
+                    id="paleocene"
+                    number={4}
+                    seriesTitle="Paleocene"
+                    storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
+                >
+                    <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
                 <ComicStrip>
                     <TextPanel>

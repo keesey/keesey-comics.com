@@ -12,13 +12,14 @@ const OrderContainer: FC<PropsWithChildren> = ({ children }) => {
     const [state, dispatch] = contextValue
     useEffect(() => {
         const payloadJSON = localStorage.getItem(STORAGE_KEY)
-        if (payloadJSON) {
+        if (payloadJSON && dispatch) {
             try {
                 const payload = JSON.parse(payloadJSON)
                 if (payload && typeof payload === "object") {
                     dispatch({ type: "INITIALIZE", payload })
                 }
             } catch (e) {
+                console.warn("Invalid order.")
                 // Corrupted.
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_STATE))
             }

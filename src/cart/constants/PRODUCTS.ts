@@ -29,6 +29,15 @@ const PRODUCTS: readonly Product[] = [
         type: PRODUCT_TYPES_MAP["COB-STD"],
     },
     {
+        html: "<cite>Paleocene</cite> #4",
+        id: "COB-STD-PAL-04A",
+        imagePath: "/images/issues/paleocene/04/front_cover.png",
+        name: "Paleocene #4",
+        path: "/paleocene/issues/04",
+        theme: "night",
+        type: PRODUCT_TYPES_MAP["COB-STD"],
+    },
+    {
         html: "<cite>Paleocene</cite> Poster &quot;Skull&quot;",
         id: "POS-17I-PAL-001",
         name: 'Paleocene Poster "Skull"',
@@ -40,6 +49,13 @@ const PRODUCTS: readonly Product[] = [
         id: "POS-17I-PAL-002",
         name: 'Paleocene Poster "Bird"',
         theme: "day",
+        type: PRODUCT_TYPES_MAP["POS-17I"],
+    },
+    {
+        html: "<cite>Paleocene</cite> Poster &quot;Night Watch&quot;",
+        id: "POS-17I-PAL-003",
+        name: 'Paleocene Poster "Night Watch"',
+        theme: "night",
         type: PRODUCT_TYPES_MAP["POS-17I"],
     },
     {

@@ -45,6 +45,7 @@ const Page: NextPage = () => {
                         <Product id="COB-STD-PAL-01B" />
                         <Product id="COB-STD-PAL-02A" />
                         <Product id="COB-STD-PAL-03A" />
+                        <Product id="COB-STD-PAL-04A" />
                     </ProductType>
                     <ProductType
                         title="Posters"
@@ -58,6 +59,7 @@ const Page: NextPage = () => {
                     >
                         <Product id="POS-17I-PAL-001" noTitle />
                         <Product id="POS-17I-PAL-002" noTitle />
+                        <Product id="POS-17I-PAL-003" noTitle />
                     </ProductType>
                     <ProductType
                         title="Stickers"

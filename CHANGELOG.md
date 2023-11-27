@@ -17,9 +17,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- Inks Page for *Paleocene #4*.
+### Security
+
+## [2.6.0] - 2023-11-27
+
+### Added
+
+-   New products for order:
+    -   _Paleocene_ #4
+    -   Poster: "Night Watch"
+
+### Removed
+
+-   Unnecessary console calls.
 
 ### Security
+
+-   Removed error traces to console.
+
+## [2.5.3] - 2023-11-27
+
+### Removed
+
+-   Inks Page for _Paleocene_ #4.
 
 ## [2.5.2] - 2023-10-14
 

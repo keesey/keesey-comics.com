@@ -91,11 +91,11 @@ const setQuantity = (prevState: State, productId: string, quantity: number): Sta
 }
 const isValidQuantity = (q: number) => isFinite(q) && q >= 1
 const reducer: Reducer<State, Action> = (prevState, action) => {
-    console.log(action)
+    console.debug(action)
     switch (action.type) {
         case "INCREMENT_QUANTITY": {
             if (!PRODUCTS_MAP[action.payload.productId]) {
-                console.warn("Invalid payload:", action.payload)
+                console.warn("Invalid product.")
                 return prevState
             }
             return setQuantity(
@@ -131,8 +131,12 @@ const reducer: Reducer<State, Action> = (prevState, action) => {
             return { items: [], shippingOptionIds: [] }
         }
         case "SET_QUANTITY": {
-            if (!PRODUCTS_MAP[action.payload.productId] || !isValidQuantity(action.payload.quantity)) {
-                console.warn("Invalid payload:", action.payload)
+            if (!PRODUCTS_MAP[action.payload.productId]) {
+                console.warn("Invalid product.")
+                return prevState
+            }
+            if (!isValidQuantity(action.payload.quantity)) {
+                console.warn("Invalid quantity.")
                 return prevState
             }
             return setQuantity(prevState, action.payload.productId, action.payload.quantity)

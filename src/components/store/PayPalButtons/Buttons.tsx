@@ -13,7 +13,6 @@ const Buttons: FC = () => {
     const handleApprove = useOnApprove()
     const [error, setError] = useState<string | undefined>()
     const handleError = useCallback((error: unknown) => {
-        console.error(error)
         setError(String(error) || undefined)
     }, [])
     const disabled = Boolean(!costs || isPending)

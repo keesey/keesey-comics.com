@@ -15,7 +15,7 @@ import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
 import PALEOCENE from "~/schema/PALEOCENE"
-const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A"]
+const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A", "COB-STD-PAL-04A"]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
@@ -25,8 +25,10 @@ const Page: NextPage = () => {
                         "https://www.keesey-comics.com/paleocene/issues/01",
                         "https://www.keesey-comics.com/paleocene/issues/02",
                         "https://www.keesey-comics.com/paleocene/issues/03",
+                        "https://www.keesey-comics.com/paleocene/issues/04",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-001",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-002",
+                        "https://www.keesey-comics.com/products/POS-17I-PAL-003",
                         "https://www.keesey-comics.com/products/BKM-06I-PAL-001",
                         "https://www.keesey-comics.com/products/STK-02I-PAL-001",
                         "https://www.keesey-comics.com/products/STK-02I-PAL-002",
