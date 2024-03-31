@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
--   Formatting for comic book product titles.
-
 ### Deprecated
 
 ### Fixed
@@ -20,6 +18,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Security
+
+## [2.7.0] - 2023-03-30
+
+### Changed
+
+-   Formatting for comic book product titles.
+
+### Security
+
+-   Upgrades for most dependencies.
 
 ## [2.6.0] - 2023-11-27
 

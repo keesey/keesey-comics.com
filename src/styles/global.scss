@@ -3,7 +3,8 @@
     font-family: Paleocene;
     font-style: normal;
     font-weight: normal;
-    src: url(/fonts/paleocene-regular-webfont.woff2) format("woff2"),
+    src:
+        url(/fonts/paleocene-regular-webfont.woff2) format("woff2"),
         url(/fonts/paleocene-regular-webfont.woff) format("woff");
     text-rendering: optimizeLegibility;
 }
@@ -13,7 +14,8 @@
     font-family: Paleocene;
     font-style: italic;
     font-weight: normal;
-    src: url(/fonts/paleocene-italic-webfont.woff2) format("woff2"),
+    src:
+        url(/fonts/paleocene-italic-webfont.woff2) format("woff2"),
         url(/fonts/paleocene-italic-webfont.woff) format("woff");
     text-rendering: optimizeLegibility;
 }
@@ -24,8 +26,11 @@
     font-style: normal;
     font-weight: normal;
     src: url(/fonts/AtlandBB.eot);
-    src: url(/fonts/AtlandBB.eot?#iefix) format("embedded-opentype"), url(/fonts/AtlandBB.woff) format("woff"),
-        url(/fonts/AtlandBB.ttf) format("truetype"), url(/fonts/AtlandBB.svg#AtlandBB) format("svg");
+    src:
+        url(/fonts/AtlandBB.eot?#iefix) format("embedded-opentype"),
+        url(/fonts/AtlandBB.woff) format("woff"),
+        url(/fonts/AtlandBB.ttf) format("truetype"),
+        url(/fonts/AtlandBB.svg#AtlandBB) format("svg");
     text-rendering: optimizeLegibility;
 }
 
@@ -35,8 +40,10 @@
     font-style: italic;
     font-weight: normal;
     src: url(/fonts/AtlandBB-Italic.eot);
-    src: url(/fonts/AtlandBB-Italic.eot?#iefix) format("embedded-opentype"),
-        url(/fonts/AtlandBB-Italic.woff) format("woff"), url(/fonts/AtlandBB-Italic.ttf) format("truetype"),
+    src:
+        url(/fonts/AtlandBB-Italic.eot?#iefix) format("embedded-opentype"),
+        url(/fonts/AtlandBB-Italic.woff) format("woff"),
+        url(/fonts/AtlandBB-Italic.ttf) format("truetype"),
         url(/fonts/AtlandBB-Italic.svg#AtlandBB) format("svg");
     text-rendering: optimizeLegibility;
 }
@@ -47,8 +54,10 @@
     font-style: italic;
     font-weight: bold;
     src: url(/fonts/AtlandBB-BoldItalic.eot);
-    src: url(/fonts/AtlandBB-BoldItalic.eot?#iefix) format("embedded-opentype"),
-        url(/fonts/AtlandBB-BoldItalic.woff) format("woff"), url(/fonts/AtlandBB-BoldItalic.ttf) format("truetype"),
+    src:
+        url(/fonts/AtlandBB-BoldItalic.eot?#iefix) format("embedded-opentype"),
+        url(/fonts/AtlandBB-BoldItalic.woff) format("woff"),
+        url(/fonts/AtlandBB-BoldItalic.ttf) format("truetype"),
         url(/fonts/AtlandBB-BoldItalic.svg#AtlandBB) format("svg");
     text-rendering: optimizeLegibility;
 }
@@ -93,7 +102,9 @@
     font-family: Euljiro-Che;
     font-style: normal;
     font-weight: normal;
-    src: url(/fonts/bmeuljiro.otf) format("opentype"), url(/fonts/bmeuljiro.ttf) format("truetype");
+    src:
+        url(/fonts/bmeuljiro.otf) format("opentype"),
+        url(/fonts/bmeuljiro.ttf) format("truetype");
 }
 
 * {

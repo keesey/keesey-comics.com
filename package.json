@@ -5,32 +5,31 @@
         "url": "http://tmkeesey.net/"
     },
     "dependencies": {
-        "@paypal/react-paypal-js": "^7.8.2",
+        "@paypal/react-paypal-js": "^8.2.0",
         "animate.css": "^4.1.1",
-        "axios": "^1.6.0",
-        "next": "^12.3.4",
+        "axios": "^1.6.8",
+        "next": "^14.1.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "sass": "^1.57.1",
-        "xmldoc": "^1.2.0"
+        "sass": "^1.72.0",
+        "xmldoc": "^1.3.0"
     },
     "description": "Website for Keesey Comics",
     "devDependencies": {
-        "@types/node": "^18.11.18",
-        "@types/react": "^18.2.21",
-        "@types/react-beautiful-dnd": "^13.1.4",
-        "@types/react-dom": "^18.2.7",
-        "@types/xmldoc": "^1.1.6",
-        "@typescript-eslint/eslint-plugin": "^5.49.0",
-        "@typescript-eslint/parser": "^5.49.0",
-        "eslint": "^8.32.0",
-        "eslint-config-next": "^12.3.4",
+        "@types/node": "^20.12.2",
+        "@types/react": "^18.2.73",
+        "@types/react-dom": "^18.2.23",
+        "@types/xmldoc": "^1.1.9",
+        "@typescript-eslint/eslint-plugin": "^7.4.0",
+        "@typescript-eslint/parser": "^7.4.0",
+        "eslint": "^8.57.0",
+        "eslint-config-next": "^14.1.4",
         "eslint-config-prettier": "^8.6.0",
         "flux-standard-action": "^2.1.2",
-        "prettier": "^2.8.3",
-        "schema-dts": "^1.1.0",
-        "typescript": "^4.9.4",
-        "vercel": "^28.14.0"
+        "prettier": "^3.2.5",
+        "schema-dts": "^1.1.2",
+        "typescript": "^5.4.3",
+        "vercel": "^33.6.2"
     },
     "license": "UNLICENSED",
     "name": "keesey-comics.com",
@@ -51,5 +50,5 @@
         "start": "next start",
         "version": "git add -A src"
     },
-    "version": "2.6.0"
+    "version": "2.7.0"
 }
