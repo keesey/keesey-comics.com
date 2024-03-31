@@ -90,18 +90,18 @@ const setQuantity = (prevState: State, productId: string, quantity: number): Sta
     }
 }
 const isValidQuantity = (q: number) => isFinite(q) && q >= 1
-const reducer: Reducer<State, Action> = (prevState, action) => {
+const reducer: Reducer<State | undefined, Action> = (prevState, action) => {
     console.debug(action)
     switch (action.type) {
         case "INCREMENT_QUANTITY": {
             if (!PRODUCTS_MAP[action.payload.productId]) {
                 console.warn("Invalid product.")
-                return prevState
+                return prevState ?? { items: [], shippingOptionIds: [] }
             }
             return setQuantity(
-                prevState,
+                prevState ?? { items: [], shippingOptionIds: [] },
                 action.payload.productId,
-                getQuantity(prevState, action.payload.productId) + 1,
+                getQuantity(prevState ?? { items: [], shippingOptionIds: [] }, action.payload.productId) + 1,
             )
         }
         case "INITIALIZE": {
@@ -117,14 +117,14 @@ const reducer: Reducer<State, Action> = (prevState, action) => {
             }
         }
         case "REMOVE_PRODUCT": {
-            const items = prevState.items.filter(item => item.productId !== action.payload.productId)
-            if (items.length === prevState.items.length) {
-                return prevState
+            const items = prevState?.items.filter(item => item.productId !== action.payload.productId) ?? []
+            if (items.length === prevState?.items.length ?? 0) {
+                return prevState ?? { items: [], shippingOptionIds: [] }
             }
             return {
                 ...prevState,
                 items,
-                shippingOptionIds: normalizeShippingOptionIds(prevState.shippingOptionIds, items),
+                shippingOptionIds: normalizeShippingOptionIds(prevState?.shippingOptionIds ?? [], items),
             }
         }
         case "RESET": {
@@ -133,19 +133,27 @@ const reducer: Reducer<State, Action> = (prevState, action) => {
         case "SET_QUANTITY": {
             if (!PRODUCTS_MAP[action.payload.productId]) {
                 console.warn("Invalid product.")
-                return prevState
+                return prevState ?? { items: [], shippingOptionIds: [] }
             }
             if (!isValidQuantity(action.payload.quantity)) {
                 console.warn("Invalid quantity.")
-                return prevState
+                return prevState ?? { items: [], shippingOptionIds: [] }
             }
-            return setQuantity(prevState, action.payload.productId, action.payload.quantity)
+            return setQuantity(
+                prevState ?? { items: [], shippingOptionIds: [] },
+                action.payload.productId,
+                action.payload.quantity,
+            )
         }
         case "SELECT_SHIPPING_OPTION": {
             return {
+                items: [],
                 ...prevState,
                 shippingOptionIds: [
-                    ...removeCompetingShippingOptionIds(prevState.shippingOptionIds, action.payload.shippingOptionId),
+                    ...removeCompetingShippingOptionIds(
+                        prevState?.shippingOptionIds ?? [],
+                        action.payload.shippingOptionId,
+                    ),
                     action.payload.shippingOptionId,
                 ].sort(compareShippingOptionIds),
             }
