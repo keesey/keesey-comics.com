@@ -2,7 +2,7 @@ import { Product } from "../models/Product"
 import { PRODUCT_TYPES_MAP } from "./PRODUCT_TYPES"
 const PRODUCTS: readonly Product[] = [
     {
-        html: "<cite>Paleocene</cite> #1",
+        html: "<cite>Paleocene #1</cite>",
         id: "COB-STD-PAL-01B",
         imagePath: "/images/issues/paleocene/01/front_cover.png",
         name: "Paleocene #1",
@@ -11,7 +11,7 @@ const PRODUCTS: readonly Product[] = [
         type: PRODUCT_TYPES_MAP["COB-STD"],
     },
     {
-        html: "<cite>Paleocene</cite> #2",
+        html: "<cite>Paleocene #2</cite>",
         id: "COB-STD-PAL-02A",
         imagePath: "/images/issues/paleocene/02/front_cover.png",
         name: "Paleocene #2",
@@ -20,7 +20,7 @@ const PRODUCTS: readonly Product[] = [
         type: PRODUCT_TYPES_MAP["COB-STD"],
     },
     {
-        html: "<cite>Paleocene</cite> #3",
+        html: "<cite>Paleocene #3</cite>",
         id: "COB-STD-PAL-03A",
         imagePath: "/images/issues/paleocene/03/front_cover.png",
         name: "Paleocene #3",
@@ -29,7 +29,7 @@ const PRODUCTS: readonly Product[] = [
         type: PRODUCT_TYPES_MAP["COB-STD"],
     },
     {
-        html: "<cite>Paleocene</cite> #4",
+        html: "<cite>Paleocene #4</cite>",
         id: "COB-STD-PAL-04A",
         imagePath: "/images/issues/paleocene/04/front_cover.png",
         name: "Paleocene #4",
