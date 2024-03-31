@@ -23,9 +23,7 @@ const ShoppingCart: FC = () => {
                     <div className={styles.empty}>Your cart is empty.</div>
                 </Section>
             )}
-            {order.items?.map(item => (
-                <CartItem key={`product:${item.productId}`} item={item} />
-            ))}
+            {order.items?.map(item => <CartItem key={`product:${item.productId}`} item={item} />)}
             {order.items?.length > 1 && (
                 <a key="removeAll" className={styles.removeAll} onClick={handleRemoveAllButtonClick} role="button">
                     Remove All Items
