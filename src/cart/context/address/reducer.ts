@@ -3,7 +3,7 @@ import USPS_COUNTRIES from "~/cart/constants/USPS_COUNTRIES"
 import isDomestic from "~/cart/functions/isDomestic"
 import { Action } from "./Action"
 import { State } from "./State"
-const reducer: Reducer<State, Action> = (prevState, action) => {
+const reducer: Reducer<State | undefined, Action> = (prevState, action) => {
     switch (action.type) {
         case "INITIALIZE": {
             const country =
