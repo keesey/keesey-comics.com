@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { FC, useEffect, useState } from "react"
-import { State } from "~/cart/context/approval/State"
+import { type PurchaseUnit as PurchaseUnitModel } from "@paypal/paypal-js/types/apis/orders"
+import { type FC, useEffect, useState } from "react"
+import { type State } from "~/cart/context/approval/State"
 import styles from "./Document.module.scss"
 import PurchaseUnit from "./PurchaseUnit"
 export interface Props {
@@ -35,15 +36,19 @@ const Document: FC<Props> = ({ approval }) => {
                 <main className={styles.main}>
                     <header>
                         <h1>Keesey Comics: Order #{approval.data.orderID}</h1>
-                        <time dateTime={approval.response.create_time}>
-                            {new Date(approval.response.create_time).toString()}
-                        </time>
+                        {approval.response.create_time && (
+                            <time dateTime={approval.response.create_time}>
+                                {new Date(approval.response.create_time).toString()}
+                            </time>
+                        )}
                     </header>
-                    <div>
-                        {approval.response.purchase_units.map((unit, index) => (
-                            <PurchaseUnit key={index} {...unit} />
-                        ))}
-                    </div>
+                    {approval.response.purchase_units && (
+                        <div>
+                            {approval.response.purchase_units?.map((unit, index) => (
+                                <PurchaseUnit key={index} {...(unit as PurchaseUnitModel)} />
+                            ))}
+                        </div>
+                    )}
                     <hr />
                     <footer className={styles.footer}>
                         <img src="/images/logos/black/keesey-comics.svg" width={94} height={56} alt="Keesey Comics" />
