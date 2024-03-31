@@ -6,7 +6,7 @@ import ExternalStores, { Props as ExternalStoresProps } from "./ExternalStores"
 import styles from "./IssueHero.module.scss"
 export interface Props extends PropsWithChildren {
     ageRecommendation: AgeRecommendationProps["ageRecommendation"]
-    id: "paleocene" | "pleistocene"
+    id: "paleocene" | "pleistocene" | "the-flesh"
     number: number
     seriesTitle: string
     storeLinks?: ExternalStoresProps["links"]

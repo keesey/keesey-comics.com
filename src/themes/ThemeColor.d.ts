@@ -1,1 +1,1 @@
-export type ThemeColor = "black" | "brown" | "cream" | "original" | "white"
+export type ThemeColor = "black" | "brown" | "cream" | "original" | "white" | "beige"

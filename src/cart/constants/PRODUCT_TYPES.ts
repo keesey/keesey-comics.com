@@ -11,6 +11,15 @@ const PRODUCT_TYPES: readonly ProductType[] = [
         value: 9.99,
     },
     {
+        html: `Standard Size Comic Book (6⅞<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 10½<abbr title="inches">&quot;</abbr>), 30–36 Story Pages <abbr title="Plus">+</abbr> Extra Material`,
+        id: "COB-ST2",
+        maximum: 50,
+        name: "Longer Comic Book (6⅞ × 10½ in)",
+        ounces: 3.6,
+        shippingOptions: [SHIPPING_OPTIONS_MAP["BAB"], SHIPPING_OPTIONS_MAP["NOB"]],
+        value: 9.99,
+    },
+    {
         html: `Sticker (2<abbr title="inches">&quot;</abbr> <abbr title="by">×</abbr> 2<abbr title="inches">&quot;</abbr>)`,
         id: "STK-02I",
         maximum: 25,

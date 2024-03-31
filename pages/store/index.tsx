@@ -36,8 +36,7 @@ const Page: NextPage = () => {
                         description={
                             <>
                                 Standard Size (6⅞<abbr title="inches">&quot;</abbr> × 10½
-                                <abbr title="inches">&quot;</abbr>), 22 Story Pages <abbr title="Plus">+</abbr> Extra
-                                Material
+                                <abbr title="inches">&quot;</abbr>)
                             </>
                         }
                         price={PRODUCT_TYPES_MAP["COB-STD"].value}
@@ -46,6 +45,9 @@ const Page: NextPage = () => {
                         <Product id="COB-STD-PAL-02A" />
                         <Product id="COB-STD-PAL-03A" />
                         <Product id="COB-STD-PAL-04A" />
+                        <Product id="COB-ST2-FLE-01A" />
+                        <Product id="COB-ST2-FLE-02A" />
+                        <Product id="COB-ST2-FLE-03A" />
                     </ProductType>
                     <ProductType
                         title="Posters"

@@ -32,6 +32,10 @@
     &.theme-night {
         @include mixins.purple;
     }
+
+    &.theme-hell {
+        @include mixins.gore;
+    }
 }
 
 .image {

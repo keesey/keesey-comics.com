@@ -4,6 +4,7 @@ import useTheme from "./useTheme"
 const COLORS: Readonly<Record<Theme, ThemeColor>> = {
     bw: "black",
     day: "original",
+    hell: "beige",
     kc: "brown",
     night: "white",
     webcomic: "original",

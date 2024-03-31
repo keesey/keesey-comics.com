@@ -33,6 +33,10 @@
         @include mixins.paynes;
     }
 
+    &.theme-hell {
+        @include mixins.gore;
+    }
+
     &.theme-webcomic {
         background-color: #000;
         border-radius: unset;

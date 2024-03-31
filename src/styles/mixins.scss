@@ -2,52 +2,83 @@
     background-color: #000;
     color: #fff;
 }
+
 @mixin brown {
     background-color: #000;
     color: #fff;
+
     @media screen {
         background-color: #660000;
         box-shadow: inset 0 0 1rem #330000;
         color: #ffc;
     }
 }
+
 @mixin cream {
     background-color: #fff;
     color: #000;
+
     @media screen {
         background-color: #ffc;
         box-shadow: inset 0 0 1rem #cccccc;
         color: #660000;
     }
 }
+
 @mixin green {
     @media screen {
         background-color: #cfdd28;
         color: #000;
     }
 }
+
 @mixin paynes {
     @media screen {
         background-color: #5d6e73;
         color: #fff;
     }
 }
+
 @mixin purple {
     background-color: #000;
     color: #fff;
+
     @media screen {
         background-color: #573754;
         color: #ffc;
     }
 }
+
+@mixin gore {
+    background-color: #000;
+    color: #fff;
+
+    @media screen {
+        background-color: #600;
+        color: #fcc;
+    }
+}
+
+@mixin rage {
+    background-color: #fff;
+    color: #000;
+
+    @media screen {
+        background-color: #c20;
+        color: #200;
+    }
+}
+
 @mixin page {
     margin: 0 auto;
     max-width: 1024px;
 }
+
 @mixin contained {
     margin: 0 auto;
     max-width: min(1024px, calc(100vw - 2rem));
 }
+
 @mixin business {
     @include contained;
     background-color: white;
@@ -56,6 +87,7 @@
     color: black;
     padding: 1rem;
 }
+
 @mixin input {
     border-radius: 4px;
     border: 1pt solid black;
@@ -63,5 +95,6 @@
     margin: 0;
     padding: 4px;
 }
+
 @mixin flash {
 }
