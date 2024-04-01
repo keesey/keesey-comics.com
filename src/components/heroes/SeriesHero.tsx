@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, PropsWithChildren } from "react"
 import useForegroundColor from "~/themes/useForegroundColor"
 import useThemedClassName from "~/themes/useThemedClassName"
 import ComicText from "../ComicText"
@@ -7,19 +7,20 @@ import IncrementQuantityCTA from "../store/IncrementQuantityCTA"
 import AgeRecommendation, { Props as AgeRecommendationProps } from "./AgeRecommendation"
 import ExternalStores, { Props as ExternalStoresProps } from "./ExternalStores"
 import styles from "./SeriesHero.module.scss"
-export interface Props {
+export type Props = PropsWithChildren<{
     ageRecommendation: AgeRecommendationProps["ageRecommendation"]
     id: "paleocene" | "parry-and-carney" | "pleistocene" | "the-flesh"
     productIds?: readonly string[]
     storeLinks?: ExternalStoresProps["links"]
     title: string
-}
-const SeriesHero: FC<Props> = ({ ageRecommendation, id, productIds, storeLinks, title }) => {
+}>
+const SeriesHero: FC<Props> = ({ ageRecommendation, children, id, productIds, storeLinks, title }) => {
     const className = useThemedClassName(styles, "hero")
     const logoColor = useForegroundColor()
     return (
         <header className={className}>
             <Logo color={logoColor} type={id} className={styles.logo} alt={title} />
+            {children}
             {Boolean(productIds?.length) && (
                 <div className={styles.store}>
                     <IncrementQuantityCTA href="/cart" productIds={productIds!} />

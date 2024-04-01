@@ -28,7 +28,9 @@ const Page: NextPage = () => {
                 footerPromos={["paleocene", "pleistocene", "parry-and-carney"]}
                 theme="hell"
             >
-                <SeriesHero ageRecommendation="17+" id="the-flesh" productIds={PRODUCT_IDS} title="The Flesh" />
+                <SeriesHero ageRecommendation="13+" id="the-flesh" productIds={PRODUCT_IDS} title="The Flesh">
+                    by Gage Ullman
+                </SeriesHero>
                 <ComicStrip>
                     <TextPanel>Lorem ipsum dolor sit amet.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/01.png" width={280} />
@@ -40,7 +42,7 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/the-flesh/04.png" width={280} />
                 </ComicStrip>
                 <IssuePromos id="the-flesh" numbers={[1, 2, 3]}>
-                    Read all issues!
+                    Read all the issues!
                 </IssuePromos>
                 {/* :TODO: Add merch? */}
                 <br />

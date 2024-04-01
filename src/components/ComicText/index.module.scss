@@ -9,6 +9,7 @@
 
         &.theme-day,
         &.theme-webcomic,
+        &.theme-hell,
         [lang="ko"] &,
         &[lang="ko"] {
             display: none;
@@ -30,6 +31,11 @@
             display: initial;
             font-family: AtlandBB;
         }
+
+        &.theme-hell {
+            display: initial;
+            font-family: monospace;
+        }
     }
 
     @media print, screen {
@@ -40,6 +46,11 @@
         &[lang="ko"] {
             display: initial;
             font-family: DigitalStrip;
+        }
+
+        &.theme-hell {
+            display: initial;
+            font-family: monospace;
         }
     }
 

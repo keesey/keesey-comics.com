@@ -4,6 +4,16 @@ import useTheme from "~/themes/useTheme"
 const useLogoColor = (): ThemeColor => {
     const theme = useTheme()
     const bgColor = useBackgroundColor()
-    return theme === "night" ? "cream" : bgColor
+    switch (theme) {
+        case "hell": {
+            return "beige"
+        }
+        case "night": {
+            return "cream"
+        }
+        default: {
+            return bgColor
+        }
+    }
 }
 export default useLogoColor

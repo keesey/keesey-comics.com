@@ -15,8 +15,8 @@
         @include mixins.cream;
     }
 
-    .theme-night &,
-    .theme-hell & {
+    .theme-hell &,
+    .theme-night & {
         @include mixins.black;
     }
 }

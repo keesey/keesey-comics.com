@@ -26,6 +26,8 @@
     }
 
     &.theme-hell {
+        font-weight: 900;
+        text-transform: small-caps;
         @include mixins.rage;
     }
 }

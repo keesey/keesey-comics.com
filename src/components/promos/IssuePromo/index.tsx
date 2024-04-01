@@ -4,12 +4,13 @@ import Link from "next/link"
 import { FC } from "react"
 import styles from "./index.module.scss"
 export interface Props {
-    id: "paleocene" | "pleistocene"
+    id: "paleocene" | "pleistocene" | "the-flesh"
     number: number
 }
 const TITLES: Readonly<Record<Props["id"], string>> = {
     paleocene: "Paleocene",
     pleistocene: "Pleistocene",
+    "the-flesh": "The Flesh",
 }
 const IssuePromo: FC<Props> = ({ id, number }) => {
     const paddedNumber = number < 10 ? `0${number}` : String(number)

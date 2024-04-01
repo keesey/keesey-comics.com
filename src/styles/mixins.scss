@@ -25,6 +25,16 @@
     }
 }
 
+@mixin gore {
+    background-color: #000;
+    color: #fff;
+
+    @media screen {
+        background-color: #600;
+        color: #fcc;
+    }
+}
+
 @mixin green {
     @media screen {
         background-color: #cfdd28;
@@ -46,16 +56,6 @@
     @media screen {
         background-color: #573754;
         color: #ffc;
-    }
-}
-
-@mixin gore {
-    background-color: #000;
-    color: #fff;
-
-    @media screen {
-        background-color: #600;
-        color: #fcc;
     }
 }
 
