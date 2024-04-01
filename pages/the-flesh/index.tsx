@@ -41,7 +41,13 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/the-flesh/04.png" width={280} />
                     <TextPanel>No one is safe...</TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/05.png" width={280} />
-                    <TextPanel>...from <span><cite>The Flesh</cite><i>!</i></span></TextPanel>
+                    <TextPanel>
+                        ...from{" "}
+                        <span>
+                            <cite>The Flesh</cite>
+                            <i>!</i>
+                        </span>
+                    </TextPanel>
                 </ComicStrip>
                 <IssuePromos id="the-flesh" numbers={[1, 2, 3]}>
                     Read all the issues!
