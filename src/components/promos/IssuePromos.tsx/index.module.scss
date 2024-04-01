@@ -28,18 +28,17 @@
     }
 
     &.theme-hell {
-        background-color: #ffc;
-        color: #800;
+        @include mixins.rage;
         font-style: italic;
         font-weight: bold;
     }
 
-    > p {
+    >p {
         margin: 0;
         text-align: center;
     }
 
-    > nav {
+    >nav {
         @include mixins.page;
         align-items: center;
         column-gap: 1rem;

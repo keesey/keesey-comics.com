@@ -15,12 +15,12 @@
         @include mixins.cream;
     }
 
-    .theme-hell &,
     .theme-night & {
         @include mixins.black;
     }
 
     .theme-hell & {
+        @include mixins.nightmare;
         font-family: TAYBirdie;
     }
 }

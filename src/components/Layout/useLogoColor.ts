@@ -5,9 +5,7 @@ const useLogoColor = (): ThemeColor => {
     const theme = useTheme()
     const bgColor = useBackgroundColor()
     switch (theme) {
-        case "hell": {
-            return "beige"
-        }
+        case "hell":
         case "night": {
             return "cream"
         }

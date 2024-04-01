@@ -3,6 +3,17 @@
     color: #fff;
 }
 
+@mixin nightmare {
+    background-color: #000;
+    color: #fff;
+
+    @media screen {
+        background-color: #330021;
+        box-shadow: inset 0 0 6rem #5f2c00;
+        color: #fff59e;
+    }
+}
+
 @mixin brown {
     background-color: #000;
     color: #fff;
@@ -30,8 +41,8 @@
     color: #fff;
 
     @media screen {
-        background-color: #702;
-        color: #fcb;
+        background-color: #d5352c;
+        color: #ffffcc;
     }
 }
 
@@ -64,8 +75,8 @@
     color: #000;
 
     @media screen {
-        background-color: #c20;
-        color: #110;
+        background-color: #fff59d;
+        color: #cc2a2c;
     }
 }
 
