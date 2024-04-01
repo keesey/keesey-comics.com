@@ -13,7 +13,11 @@ const Page: NextPage = () => {
     return (
         <OrderContainer>
             <Head favIconType="pleistocene" socialImagePath="/pleistocene" subject={PLEISTOCENE} author={MIKE_KEESEY} />
-            <Layout headerPromos={["pleistocene"]} footerPromos={["paleocene", "parry-and-carney"]} theme="bw">
+            <Layout
+                headerPromos={["pleistocene"]}
+                footerPromos={["paleocene", "the-flesh", "parry-and-carney"]}
+                theme="bw"
+            >
                 <SeriesHero
                     ageRecommendation="17+"
                     id="pleistocene"

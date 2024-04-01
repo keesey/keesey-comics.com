@@ -18,7 +18,11 @@ const Page: NextPage = () => {
                 subject={PARRY_AND_CARNEY}
                 author={MIKE_KEESEY}
             />
-            <Layout headerPromos={["parry-and-carney"]} footerPromos={["paleocene", "pleistocene"]} theme="webcomic">
+            <Layout
+                headerPromos={["parry-and-carney"]}
+                footerPromos={["paleocene", "the-flesh", "pleistocene"]}
+                theme="webcomic"
+            >
                 <SeriesHero
                     ageRecommendation="17+"
                     id="parry-and-carney"
