@@ -19,4 +19,8 @@
     .theme-night & {
         @include mixins.black;
     }
+
+    .theme-hell & {
+        font-family: TAYBirdie;
+    }
 }

@@ -29,9 +29,7 @@ const Page: NextPage = () => {
                 footerPromos={["paleocene", "parry-and-carney", "pleistocene"]}
                 theme="hell"
             >
-                <SeriesHero ageRecommendation="17+" id="the-flesh" productIds={PRODUCT_IDS} title="The Flesh">
-                    by Gage Ullman
-                </SeriesHero>
+                <SeriesHero ageRecommendation="17+" id="the-flesh" productIds={PRODUCT_IDS} title="The Flesh" />
                 <ComicStrip>
                     <TextPanel>Lorem ipsum dolor sit amet.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/01.png" width={280} />
