@@ -14,7 +14,7 @@ const AgeRecommendation: FC<Props> = ({ ageRecommendation }) => {
     const theme = useTheme()
     return (
         <div className={styles.ageRecommendation}>
-            <ComicText>{`Age Recommendation: ${theme === "hell" ? ageRecommendation : AGE_RECOMMENDATION_TEXT[ageRecommendation]}.`}</ComicText>
+            <ComicText>{`Age Recommendation: ${theme === "hell" || theme === "webcomic" ? ageRecommendation : AGE_RECOMMENDATION_TEXT[ageRecommendation]}.`}</ComicText>
         </div>
     )
 }
