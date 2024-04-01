@@ -9,12 +9,13 @@ import Head from "~/components/metadata/Head"
 import ItemListSchema from "~/components/metadata/ItemListSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
+import GAGE_ULLMAN from "~/schema/GAGE_ULLMAN"
 import PALEOCENE from "~/schema/PALEOCENE"
 const PRODUCT_IDS = ["COB-ST2-FLE-01A", "COB-ST2-FLE-02A", "COB-ST2-FLE-03A"]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="the-flesh" socialImagePath="/the-flesh" subject={PALEOCENE}>
+            <Head favIconType="the-flesh" socialImagePath="/the-flesh" subject={PALEOCENE} author={GAGE_ULLMAN}>
                 <ItemListSchema
                     urls={[
                         "https://www.keesey-comics.com/the-flesh/issues/01",
@@ -28,7 +29,7 @@ const Page: NextPage = () => {
                 footerPromos={["paleocene", "pleistocene", "parry-and-carney"]}
                 theme="hell"
             >
-                <SeriesHero ageRecommendation="13+" id="the-flesh" productIds={PRODUCT_IDS} title="The Flesh">
+                <SeriesHero ageRecommendation="17+" id="the-flesh" productIds={PRODUCT_IDS} title="The Flesh">
                     by Gage Ullman
                 </SeriesHero>
                 <ComicStrip>

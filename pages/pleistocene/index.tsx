@@ -7,11 +7,12 @@ import SeriesHero from "~/components/heroes/SeriesHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import SocialNav from "~/components/SocialNav"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PLEISTOCENE from "~/schema/PLEISTOCENE"
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="pleistocene" socialImagePath="/pleistocene" subject={PLEISTOCENE} />
+            <Head favIconType="pleistocene" socialImagePath="/pleistocene" subject={PLEISTOCENE} author={MIKE_KEESEY} />
             <Layout headerPromos={["pleistocene"]} footerPromos={["paleocene", "parry-and-carney"]} theme="bw">
                 <SeriesHero
                     ageRecommendation="17+"

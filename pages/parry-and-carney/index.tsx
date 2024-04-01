@@ -7,11 +7,17 @@ import SeriesHero from "~/components/heroes/SeriesHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import SocialNav from "~/components/SocialNav"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PARRY_AND_CARNEY from "~/schema/PARRY_AND_CARNEY"
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="parry-and-carney" socialImagePath="/parry-and-carney" subject={PARRY_AND_CARNEY} />
+            <Head
+                favIconType="parry-and-carney"
+                socialImagePath="/parry-and-carney"
+                subject={PARRY_AND_CARNEY}
+                author={MIKE_KEESEY}
+            />
             <Layout headerPromos={["parry-and-carney"]} footerPromos={["paleocene", "pleistocene"]} theme="webcomic">
                 <SeriesHero
                     ageRecommendation="17+"

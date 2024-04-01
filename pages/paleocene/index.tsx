@@ -14,12 +14,13 @@ import ItemListSchema from "~/components/metadata/ItemListSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
 const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A", "COB-STD-PAL-04A"]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene" subject={PALEOCENE}>
+            <Head favIconType="paleocene" socialImagePath="/paleocene" subject={PALEOCENE} author={MIKE_KEESEY}>
                 <ItemListSchema
                     urls={[
                         "https://www.keesey-comics.com/paleocene/issues/01",

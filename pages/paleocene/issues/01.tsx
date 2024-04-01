@@ -16,6 +16,7 @@ import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
 import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
@@ -35,7 +36,7 @@ const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT}>
+            <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT} author={MIKE_KEESEY}>
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
             <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">

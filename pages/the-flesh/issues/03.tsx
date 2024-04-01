@@ -12,6 +12,7 @@ import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
 import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
+import GAGE_ULLMAN from "~/schema/GAGE_ULLMAN"
 import THE_FLESH from "~/schema/THE_FLESH"
 const SUBJECT: ComicStory = {
     ...THE_FLESH,
@@ -30,7 +31,7 @@ const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="the-flesh" socialImagePath="/the-flesh/03" subject={SUBJECT}>
+            <Head favIconType="the-flesh" socialImagePath="/the-flesh/03" subject={SUBJECT} author={GAGE_ULLMAN}>
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
             <Layout
@@ -38,7 +39,7 @@ const Page: NextPage = () => {
                 footerPromos={["paleocene", "pleistocene", "parry-and-carney"]}
                 theme="hell"
             >
-                <IssueHero ageRecommendation="13+" id="the-flesh" number={3} seriesTitle="The Flesh">
+                <IssueHero ageRecommendation="17+" id="the-flesh" number={3} seriesTitle="The Flesh">
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
                 <ComicStrip>
