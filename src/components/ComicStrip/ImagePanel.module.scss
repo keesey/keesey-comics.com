@@ -2,7 +2,7 @@
 
 .cell {
     border-radius: 2rem;
-    max-width: 100%;
+    max-width: min(100%, 560px);
     overflow: hidden;
     max-height: 280px;
     position: relative;
@@ -35,7 +35,7 @@
 
     &.theme-hell {
         border-radius: unset;
-        @include mixins.black;
+        @include mixins.styx;
     }
 }
 

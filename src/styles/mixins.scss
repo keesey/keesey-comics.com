@@ -14,6 +14,16 @@
     }
 }
 
+@mixin styx {
+    background-color: #000;
+    color: #fff;
+
+    @media screen {
+        background-color: #000;
+        color: #d5352c;
+    }
+}
+
 @mixin brown {
     background-color: #000;
     color: #fff;
@@ -107,5 +117,4 @@
     padding: 4px;
 }
 
-@mixin flash {
-}
+@mixin flash {}

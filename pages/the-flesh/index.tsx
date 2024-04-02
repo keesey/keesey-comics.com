@@ -31,16 +31,14 @@ const Page: NextPage = () => {
             >
                 <SeriesHero ageRecommendation="17+" id="the-flesh" productIds={PRODUCT_IDS} title="The Flesh" />
                 <ComicStrip>
-                    <TextPanel>A quiet night.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/01.png" width={280} />
-                    <TextPanel>Then ... dread.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/02.png" width={280} />
+                    <TextPanel><p>A quiet night.</p><p>Then ... dread</p></TextPanel>
+                    <ImagePanel height={280} src="/images/issues/the-flesh/01.jpg" width={1914 / 2} />
                     <TextPanel>Chaos.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/03.png" width={280} />
-                    <TextPanel>Carnage</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/04.png" width={280} />
+                    <ImagePanel height={280} src="/images/issues/the-flesh/02.jpg" width={1470 / 2} />
+                    <TextPanel>Carnage.</TextPanel>
+                    <ImagePanel height={280} src="/images/issues/the-flesh/03.jpg" width={1072 / 2} />
                     <TextPanel>No one is safe...</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/05.png" width={280} />
+                    <ImagePanel height={280} src="/images/issues/the-flesh/04.jpg" width={1418 / 2} />
                     <TextPanel>
                         ...from{" "}
                         <span>
