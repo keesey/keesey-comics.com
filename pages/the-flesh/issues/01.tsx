@@ -2,9 +2,6 @@ import type { NextPage } from "next"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
-import ComicStrip from "~/components/ComicStrip"
-import ImagePanel from "~/components/ComicStrip/ImagePanel"
-import TextPanel from "~/components/ComicStrip/TextPanel"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
@@ -42,16 +39,6 @@ const Page: NextPage = () => {
                 <IssueHero ageRecommendation="17+" id="the-flesh" number={1} seriesTitle="The Flesh">
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
-                <ComicStrip>
-                    <TextPanel>Lorem ipsum dolor sit amet.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/01/01.png" width={280} />
-                    <TextPanel>Lorem ipsum dolor sit amet.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/01/02.png" width={280} />
-                    <TextPanel>Lorem ipsum dolor sit amet.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/01/03.png" width={280} />
-                    <TextPanel>Lorem ipsum dolor sit amet.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/01/04.png" width={280} />
-                </ComicStrip>
                 <IssuePromos id="the-flesh" numbers={[2, 3]}>
                     Read the other issues!
                 </IssuePromos>
