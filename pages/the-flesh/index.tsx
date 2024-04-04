@@ -31,7 +31,10 @@ const Page: NextPage = () => {
             >
                 <SeriesHero ageRecommendation="17+" id="the-flesh" productIds={PRODUCT_IDS} title="The Flesh" />
                 <ComicStrip>
-                    <TextPanel><p>A quiet night.</p><p>Then ... dread</p></TextPanel>
+                    <TextPanel>
+                        <p>A quiet night.</p>
+                        <p>Then ... dread</p>
+                    </TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/01.jpg" width={1914 / 2} />
                     <TextPanel>Chaos.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/02.jpg" width={1470 / 2} />

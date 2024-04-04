@@ -10,12 +10,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   New comic series: _The Flesh_ by Gage Ullman.
+    -   Series Page.
+    -   Issue Pages (#1–#3).
+    -   Footer links.
+    -   Sitemap entries.
+    -   Store items.
+    -   Favicon.
+    -   Social media images.
+-   Extended comic book product type.
+-   New theme: `hell`. (And associated mixins.)
+-   Author schema metadata to more pages.
+-   Sitemap entry for _Paleocene #4_.
 
 ### Changed
+
+-   Order of properties on Home Page.
+-   CTA label for _Paleocene_ series.
+-   Shrank inner content for social media images for Keesey Comics and the _Paleocene_ series.
+-   Using numerals in Age Recommendation for fonts that allow them.
+-   Copyright notice from "T. Michael Keesey" to "Keesey Comics".
 
 ### Deprecated
 
 ### Fixed
+
+-   Transparency for _Pleistocene_ logo.
 
 ### Removed
 
