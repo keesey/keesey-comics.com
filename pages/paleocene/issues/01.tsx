@@ -16,6 +16,7 @@ import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
 import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
@@ -35,12 +36,17 @@ const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT}>
+            <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT} author={MIKE_KEESEY}>
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
-            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
+            <Layout
+                headerPromos={["paleocene"]}
+                footerPromos={["parry-and-carney", "the-flesh", "pleistocene"]}
+                theme="night"
+            >
                 <IssueHero
                     ageRecommendation="9+"
+                    author="Mike Keesey"
                     id="paleocene"
                     number={1}
                     storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
@@ -82,7 +88,7 @@ const Page: NextPage = () => {
                     <TextPanel>Does she dare leave the infants alone? it is a dangerous world...</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/01/03.png" width={498} />
                     <TextPanel>...and &quot;dragons&quot; may still lurk in the hills.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/paleocene/01/04.png" width={203} />
+                    <ImagePanel height={280} src="/images/issues/paleocene/01/04.png" width={328} />
                 </ComicStrip>
                 <IssuePromos id="paleocene" numbers={[2, 3, 4]}>
                     Read the other issues!

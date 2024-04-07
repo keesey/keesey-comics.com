@@ -98,6 +98,15 @@
 }
 
 @font-face {
+    font-display: block;
+    font-family: TAYBirdie;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/TAYBirdie.otf) format("opentype");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
     font-display: swap;
     font-family: Euljiro-Che;
     font-style: normal;

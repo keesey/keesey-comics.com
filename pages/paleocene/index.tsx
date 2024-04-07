@@ -14,12 +14,13 @@ import ItemListSchema from "~/components/metadata/ItemListSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
 const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A", "COB-STD-PAL-04A"]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene" subject={PALEOCENE}>
+            <Head favIconType="paleocene" socialImagePath="/paleocene" subject={PALEOCENE} author={MIKE_KEESEY}>
                 <ItemListSchema
                     urls={[
                         "https://www.keesey-comics.com/paleocene/issues/01",
@@ -35,9 +36,14 @@ const Page: NextPage = () => {
                     ]}
                 />
             </Head>
-            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
+            <Layout
+                headerPromos={["paleocene"]}
+                footerPromos={["parry-and-carney", "the-flesh", "pleistocene"]}
+                theme="night"
+            >
                 <SeriesHero
                     ageRecommendation="9+"
+                    author="Mike Keesey"
                     id="paleocene"
                     productIds={PRODUCT_IDS}
                     storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
@@ -79,7 +85,7 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={166} />
                 </ComicStrip>
                 <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
-                    Read all issues!
+                    Read all the issues!
                 </IssuePromos>
                 {/* :TODO: Add merch? */}
                 <Nav>
