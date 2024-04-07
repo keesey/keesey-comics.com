@@ -19,6 +19,7 @@ const IssueHero: FC<Props> = ({ ageRecommendation, children, id, number, seriesT
             <Image
                 alt={`${seriesTitle} #${number}`}
                 height={640}
+                priority
                 src={`/images/issues/${id}/${paddedNumber}/front_cover.png`}
                 width={416}
             />
