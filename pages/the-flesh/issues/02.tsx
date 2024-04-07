@@ -18,7 +18,7 @@ const SUBJECT: ComicStory = {
     ...THE_FLESH,
     "@id": "https://www.keesey-comics.com/the-flesh/issues/02",
     abstract:
-        "In the dead of night, the aftermath of chaos unfolds. Emergency teams mobilize to contain the carnage, but the terror cannot be restrained. Explosions rend the air, screams pierce the silence, and panicked residents flee for their lives. But can they escape... the FLESH?",
+        "In the dead of night, the aftermath of chaos unfolds. Emergency teams mobilize to contain the carnage, but the terror cannot be restrained. Explosions rend the air, screams pierce the silence, and panicked residents flee for their lives. But can they escape ... the FLESH?",
     copyrightYear: 2022,
     description: "The second issue of The Flesh.",
     image: "https://www.keesey-comics.com/images/issues/the-flesh/02/front_cover.png",
@@ -56,9 +56,10 @@ const Page: NextPage = () => {
                     </TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/02/01.jpg" width={280} />
                     <TextPanel>
-                        <p>
-                            But can they escape&hellip; the <em>Flesh</em>?
-                        </p>
+                        But can they escape&hellip;{" "}
+                        <span style={{ whiteSpace: "nowrap" }}>
+                            the <em>Flesh?</em>
+                        </span>
                     </TextPanel>
                 </ComicStrip>
                 <IssuePromos id="the-flesh" numbers={[1, 3]}>

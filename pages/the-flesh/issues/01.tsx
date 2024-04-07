@@ -54,8 +54,12 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/the-flesh/01/01.jpg" width={280} />
                     <TextPanel>
                         <p>
-                            Behind the veil of ordinary life lurks the <em>Flesh,</em> poised to unleash a darkness that
-                            will leave behind only echoes of terror in the empty streets.
+                            Behind the veil of ordinary life lurks{" "}
+                            <span style={{ whiteSpace: "nowrap" }}>
+                                the <em>Flesh,</em>
+                            </span>{" "}
+                            poised to unleash a darkness that will leave behind only echoes of terror in the empty
+                            streets.
                         </p>
                     </TextPanel>
                 </ComicStrip>
