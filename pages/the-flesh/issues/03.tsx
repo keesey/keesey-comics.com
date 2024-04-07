@@ -2,6 +2,9 @@ import type { NextPage } from "next"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
+import ComicStrip from "~/components/ComicStrip"
+import ImagePanel from "~/components/ComicStrip/ImagePanel"
+import TextPanel from "~/components/ComicStrip/TextPanel"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
@@ -14,7 +17,8 @@ import THE_FLESH from "~/schema/THE_FLESH"
 const SUBJECT: ComicStory = {
     ...THE_FLESH,
     "@id": "https://www.keesey-comics.com/the-flesh/issues/03",
-    abstract: "In a quiet neighborhood shaken by the sudden emergence of a grotesque abomination, its insatiable hunger leaving a trail of carnage and terror, a varied group of survivors grapple with fear, mistrust, and their primal instincts for self-preservation. As the creature's rampage unfolds, the unlikely survivors emerge, each with their own motives and secrets. Amidst the turmoil, the survivors are forced to confront the grim reality of a world spiraling into oblivion as the situation escalates, revealing the true nature of humanity in the face of unspeakable horror.",
+    abstract:
+        "Desperate survivors seek refuge in an emergency shelter. Elsewhere, the remnants of the beast stand as a grotesque monument to the night's horrors. Law enforcement keeps vigil around the carcass. A trio of scientists -dispatched to find answers- only find more questions about... THE FLESH!",
     copyrightYear: 2024,
     description: "The third issue of The Flesh.",
     image: "https://www.keesey-comics.com/images/issues/the-flesh/03/front_cover.png",
@@ -39,6 +43,23 @@ const Page: NextPage = () => {
                 <IssueHero ageRecommendation="17+" id="the-flesh" number={3} seriesTitle="The Flesh">
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
+                <ComicStrip>
+                    <TextPanel>
+                        <p>Desperate survivors seek refuge in an emergency shelter.</p>
+                        <p>
+                            Elsewhere, the remnants of the beast stand as a grotesque monument to the night&apos;s
+                            horrors.
+                        </p>
+                        <p> Law enforcement keeps vigil around the carcass.</p>
+                    </TextPanel>
+                    <ImagePanel height={280} src="/images/issues/the-flesh/03/01.jpg" width={280} />
+                    <TextPanel>
+                        <p>
+                            A trio of scientists &mdash; dispatched to find answers &mdash; only find more questions
+                            about &hellip; <em>the Flesh!</em>
+                        </p>
+                    </TextPanel>
+                </ComicStrip>
                 <IssuePromos id="the-flesh" numbers={[1, 2]}>
                     Read the other issues!
                 </IssuePromos>

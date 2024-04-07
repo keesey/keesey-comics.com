@@ -33,21 +33,17 @@ const Page: NextPage = () => {
                 <ComicStrip>
                     <TextPanel>
                         <p>A quiet night.</p>
-                        <p>Then ... dread</p>
+                        <p>Then &hellip; dread</p>
                     </TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/01.jpg" width={1914 / 2} />
                     <TextPanel>Chaos.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/02.jpg" width={1470 / 2} />
                     <TextPanel>Carnage.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/03.jpg" width={1072 / 2} />
-                    <TextPanel>No one is safe...</TextPanel>
+                    <TextPanel>No one is safe&hellip;</TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/04.jpg" width={1418 / 2} />
                     <TextPanel>
-                        ...from{" "}
-                        <span>
-                            <cite>The Flesh</cite>
-                            <i>!</i>
-                        </span>
+                        &hellip;from <em>the Flesh!</em>
                     </TextPanel>
                 </ComicStrip>
                 <IssuePromos id="the-flesh" numbers={[1, 2, 3]}>

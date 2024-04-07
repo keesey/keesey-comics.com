@@ -2,6 +2,9 @@ import type { NextPage } from "next"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
+import ComicStrip from "~/components/ComicStrip"
+import ImagePanel from "~/components/ComicStrip/ImagePanel"
+import TextPanel from "~/components/ComicStrip/TextPanel"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
@@ -14,7 +17,8 @@ import THE_FLESH from "~/schema/THE_FLESH"
 const SUBJECT: ComicStory = {
     ...THE_FLESH,
     "@id": "https://www.keesey-comics.com/the-flesh/issues/02",
-    abstract: "In a quiet neighborhood shaken by the sudden emergence of a grotesque abomination, its insatiable hunger leaving a trail of carnage and terror, a varied group of survivors grapple with fear, mistrust, and their primal instincts for self-preservation. As the creature's rampage unfolds, the unlikely survivors emerge, each with their own motives and secrets. Amidst the turmoil, the survivors are forced to confront the grim reality of a world spiraling into oblivion as the situation escalates, revealing the true nature of humanity in the face of unspeakable horror.",
+    abstract:
+        "In the dead of night, the aftermath of chaos unfolds. Emergency teams mobilize to contain the carnage, but the terror cannot be restrained. Explosions rend the air, screams pierce the silence, and panicked residents flee for their lives. But can they escape... the FLESH?",
     copyrightYear: 2022,
     description: "The second issue of The Flesh.",
     image: "https://www.keesey-comics.com/images/issues/the-flesh/02/front_cover.png",
@@ -39,6 +43,24 @@ const Page: NextPage = () => {
                 <IssueHero ageRecommendation="17+" id="the-flesh" number={2} seriesTitle="The Flesh">
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
+                <ComicStrip>
+                    <TextPanel>
+                        <p>
+                            In the dead of night, the aftermath of chaos unfolds. Emergency teams mobilize to contain
+                            the carnage, but the terror cannot be restrained.
+                        </p>
+                        <p>
+                            Explosions rend the air, screams pierce the silence, and panicked residents flee for their
+                            lives.
+                        </p>
+                    </TextPanel>
+                    <ImagePanel height={280} src="/images/issues/the-flesh/02/01.jpg" width={280} />
+                    <TextPanel>
+                        <p>
+                            But can they escape&hellip; the <em>Flesh</em>?
+                        </p>
+                    </TextPanel>
+                </ComicStrip>
                 <IssuePromos id="the-flesh" numbers={[1, 3]}>
                     Read the other issues!
                 </IssuePromos>

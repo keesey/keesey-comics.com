@@ -35,9 +35,6 @@
 
     &.theme-hell {
         border-radius: unset;
-        border-color: #605e50;
-        border-style: solid;
-        border-width: 2px;
         @include mixins.styx;
     }
 
@@ -58,6 +55,10 @@
 
         &:empty {
             display: none;
+        }
+
+        &.theme-hell {
+            max-width: 36rem;
         }
     }
 }

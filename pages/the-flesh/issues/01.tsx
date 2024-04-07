@@ -2,6 +2,9 @@ import type { NextPage } from "next"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
+import ComicStrip from "~/components/ComicStrip"
+import ImagePanel from "~/components/ComicStrip/ImagePanel"
+import TextPanel from "~/components/ComicStrip/TextPanel"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
@@ -14,7 +17,8 @@ import THE_FLESH from "~/schema/THE_FLESH"
 const SUBJECT: ComicStory = {
     ...THE_FLESH,
     "@id": "https://www.keesey-comics.com/the-flesh/issues/01",
-    abstract: "In a quiet neighborhood shaken by the sudden emergence of a grotesque abomination, its insatiable hunger leaving a trail of carnage and terror, a varied group of survivors grapple with fear, mistrust, and their primal instincts for self-preservation. As the creature's rampage unfolds, the unlikely survivors emerge, each with their own motives and secrets. Amidst the turmoil, the survivors are forced to confront the grim reality of a world spiraling into oblivion as the situation escalates, revealing the true nature of humanity in the face of unspeakable horror.",
+    abstract:
+        "As night falls on the tranquil streets of a suburban neighborhood, a deceptive calm envelops the residents. A sinister presence stirs just beneath the surface. Behind the veil of ordinary life lurks the FLESH, poised to unleash a darkness that will leave behind only echoes of terror in the empty streets.",
     copyrightYear: 2021,
     description: "The first issue of The Flesh.",
     image: "https://www.keesey-comics.com/images/issues/the-flesh/01/front_cover.png",
@@ -39,6 +43,22 @@ const Page: NextPage = () => {
                 <IssueHero ageRecommendation="17+" id="the-flesh" number={1} seriesTitle="The Flesh">
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
+                <ComicStrip>
+                    <TextPanel>
+                        <p>
+                            As night falls on the tranquil streets of a suburban neighborhood, a deceptive calm envelops
+                            the residents.
+                        </p>
+                        <p> A sinister presence stirs just beneath the surface.</p>
+                    </TextPanel>
+                    <ImagePanel height={280} src="/images/issues/the-flesh/01/01.jpg" width={280} />
+                    <TextPanel>
+                        <p>
+                            Behind the veil of ordinary life lurks the <em>Flesh,</em> poised to unleash a darkness that
+                            will leave behind only echoes of terror in the empty streets.
+                        </p>
+                    </TextPanel>
+                </ComicStrip>
                 <IssuePromos id="the-flesh" numbers={[2, 3]}>
                     Read the other issues!
                 </IssuePromos>
