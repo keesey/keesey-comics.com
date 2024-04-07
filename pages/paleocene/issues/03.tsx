@@ -43,6 +43,7 @@ const Page: NextPage = () => {
             >
                 <IssueHero
                     ageRecommendation="9+"
+                    author="Mike Keesey"
                     id="paleocene"
                     number={3}
                     storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}

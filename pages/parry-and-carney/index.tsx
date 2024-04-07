@@ -25,6 +25,7 @@ const Page: NextPage = () => {
             >
                 <SeriesHero
                     ageRecommendation="17+"
+                    author="Mike Keesey"
                     id="parry-and-carney"
                     storeLinks={[{ type: "gumroad", url: "//keesey.gumroad.com/l/parry-and-carney" }]}
                     title="Parry 'n' Carney: Friends for Life"

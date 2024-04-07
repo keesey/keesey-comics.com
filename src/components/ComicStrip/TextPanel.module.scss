@@ -35,6 +35,7 @@
 
     &.theme-hell {
         border-radius: unset;
+        line-height: 1.4;
         @include mixins.styx;
     }
 

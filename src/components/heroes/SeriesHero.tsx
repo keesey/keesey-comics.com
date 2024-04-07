@@ -9,17 +9,21 @@ import ExternalStores, { Props as ExternalStoresProps } from "./ExternalStores"
 import styles from "./SeriesHero.module.scss"
 export type Props = PropsWithChildren<{
     ageRecommendation: AgeRecommendationProps["ageRecommendation"]
+    author: string
     id: "paleocene" | "parry-and-carney" | "pleistocene" | "the-flesh"
     productIds?: readonly string[]
     storeLinks?: ExternalStoresProps["links"]
     title: string
 }>
-const SeriesHero: FC<Props> = ({ ageRecommendation, children, id, productIds, storeLinks, title }) => {
+const SeriesHero: FC<Props> = ({ ageRecommendation, author, children, id, productIds, storeLinks, title }) => {
     const className = useThemedClassName(styles, "hero")
     const logoColor = useForegroundColor()
     return (
         <header className={className}>
             <Logo color={logoColor} type={id} className={styles.logo} alt={title} />
+            <div className={styles.byline}>
+                <ComicText>{`by ${author}`}</ComicText>
+            </div>
             {children}
             {Boolean(productIds?.length) && (
                 <div className={styles.store}>

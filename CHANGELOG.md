@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   New theme: `hell`. (And associated mixins.)
 -   Author schema metadata to more pages.
 -   Sitemap entry for _Paleocene #4_.
+-   Author bylines.
 
 ### Changed
 
@@ -29,12 +30,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Shrank inner content for social media images for Keesey Comics and the _Paleocene_ series.
 -   Using numerals in Age Recommendation for fonts that allow them.
 -   Copyright notice from "T. Michael Keesey" to "Keesey Comics".
+-   Metadata description for organization.
 
 ### Deprecated
 
 ### Fixed
 
 -   Transparency for _Pleistocene_ logo.
+-   URL for Instagram in schema metadata.
 
 ### Removed
 

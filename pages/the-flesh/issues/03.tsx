@@ -40,7 +40,13 @@ const Page: NextPage = () => {
                 footerPromos={["paleocene", "parry-and-carney", "pleistocene"]}
                 theme="hell"
             >
-                <IssueHero ageRecommendation="17+" id="the-flesh" number={3} seriesTitle="The Flesh">
+                <IssueHero
+                    ageRecommendation="17+"
+                    author="Gage Ullman"
+                    id="the-flesh"
+                    number={3}
+                    seriesTitle="The Flesh"
+                >
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
                 <ComicStrip>
