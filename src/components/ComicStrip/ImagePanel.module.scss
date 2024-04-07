@@ -17,7 +17,6 @@
 
     &.theme-webcomic {
         border: none;
-        max-width: 170px;
     }
 
     &.theme-bw {
@@ -40,8 +39,7 @@
 }
 
 .image {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-    max-height: 280px;
+    height: 280px;
+    object-fit: contain;
+    width: auto;
 }

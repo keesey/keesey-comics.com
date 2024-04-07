@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Using numerals in Age Recommendation for fonts that allow them.
 -   Copyright notice from "T. Michael Keesey" to "Keesey Comics".
 -   Metadata description for organization.
+-   Sizing strategy for comic panels.
 
 ### Deprecated
 

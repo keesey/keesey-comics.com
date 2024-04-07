@@ -88,7 +88,7 @@ const Page: NextPage = () => {
                     <TextPanel>Does she dare leave the infants alone? it is a dangerous world...</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/01/03.png" width={498} />
                     <TextPanel>...and &quot;dragons&quot; may still lurk in the hills.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/paleocene/01/04.png" width={203} />
+                    <ImagePanel height={280} src="/images/issues/paleocene/01/04.png" width={328} />
                 </ComicStrip>
                 <IssuePromos id="paleocene" numbers={[2, 3, 4]}>
                     Read the other issues!

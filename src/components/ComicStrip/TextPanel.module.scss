@@ -6,15 +6,12 @@
     flex-grow: 1;
     flex-direction: column;
     justify-content: center;
-    min-width: 10rem;
+    min-width: 12rem;
     padding: 0.25in;
     text-align: center;
 
     &.theme-bw {
         background-color: #fff;
-    }
-
-    &.theme-bw {
         border: 2.5pt solid #000;
         border-radius: unset;
     }

@@ -32,21 +32,21 @@ const Page: NextPage = () => {
                 />
                 <ComicStrip>
                     <ImagePanel
-                        height={170}
+                        height={280}
                         src="/images/issues/parry-and-carney/01.png"
-                        width={170}
+                        width={280}
                         alt='Parry: "Hey there! I&apos;m Parry the Parasaurolophus, and this is my buddy, Carney the Carnotaurus!" Carney: "Heh-lo."'
                     />
                     <ImagePanel
-                        height={170}
+                        height={280}
                         src="/images/issues/parry-and-carney/02.png"
-                        width={170}
+                        width={280}
                         alt='Parry: "Together we will provide you, the reader, with hours of rollicksome entertainment in this finely-crafted comic strip!" Carney: "Yeah..."'
                     />
                     <ImagePanel
-                        height={170}
+                        height={280}
                         src="/images/issues/parry-and-carney/03.png"
-                        width={170}
+                        width={280}
                         alt="Carney stares ominously at Parry."
                     />
                     <TextPanel emphatic>Oh, the things that happen next!</TextPanel>
