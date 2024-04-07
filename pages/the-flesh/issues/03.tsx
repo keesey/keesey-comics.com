@@ -50,15 +50,18 @@ const Page: NextPage = () => {
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
                 <ComicStrip>
-                    <TextPanel>
+                <TextPanel>
                         <p>Desperate survivors seek refuge in an emergency shelter.</p>
+                    </TextPanel>
+                    <ImagePanel height={280} src="/images/issues/the-flesh/03/01.jpg" width={280} />
+                    <TextPanel>
                         <p>
                             Elsewhere, the remnants of the beast stand as a grotesque monument to the night&apos;s
                             horrors.
                         </p>
                         <p> Law enforcement keeps vigil around the carcass.</p>
                     </TextPanel>
-                    <ImagePanel height={280} src="/images/issues/the-flesh/03/01.jpg" width={280} />
+                    <ImagePanel height={280} src="/images/issues/the-flesh/03/02.jpg" width={280} />
                     <TextPanel>
                         <p>
                             A trio of scientists <span style={{ whiteSpace: "nowrap" }}>&mdash;dispatched</span> to find{" "}

@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.9.1] - 2024-04-07
+
+### Added
+
+-   New Image Panel for _The Flesh #3_.
+
 ## [2.9.0] - 2024-04-07
 
 ### Changed
