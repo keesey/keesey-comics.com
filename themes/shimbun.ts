@@ -1,6 +1,6 @@
-import { mode } from "@chakra-ui/theme-tools"
 import { extendTheme, type StyleFunctionProps } from "@chakra-ui/react"
-import { Baloo_Tammudu_2, Signika_Negative } from "@next/font/google"
+import { mode } from "@chakra-ui/theme-tools"
+import { Baloo_Tammudu_2, Signika_Negative } from "next/font/google"
 const balooTammudu2 = Baloo_Tammudu_2({ subsets: ["latin"] })
 const signikaNegative = Signika_Negative({ subsets: ["latin"] })
 const shimbun = extendTheme({
