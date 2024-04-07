@@ -28,5 +28,6 @@
             }
         ]
     },
-    "exclude": [".next", ".vercel", "node_modules", "out", "public"]
+    "exclude": [".next", ".vercel", "node_modules", "out", "public"],
+    "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"]
 }

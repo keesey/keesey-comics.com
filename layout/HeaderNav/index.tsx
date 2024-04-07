@@ -1,7 +1,7 @@
 "use client"
 import { Image, Link } from "@chakra-ui/next-js"
-import { Box, Center, ColorModeContext, Flex, useColorMode } from "@chakra-ui/react"
-import React, { FC } from "react"
+import { Box, Center, Flex, useColorMode } from "@chakra-ui/react"
+import { FC } from "react"
 const HeaderNav: FC = () => {
     const { colorMode } = useColorMode()
     return (
