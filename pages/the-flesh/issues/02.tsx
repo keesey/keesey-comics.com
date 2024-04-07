@@ -68,8 +68,8 @@ const Page: NextPage = () => {
                         </span>
                     </TextPanel>
                 </ComicStrip>
-                <IssuePromos id="the-flesh" numbers={[1, 3]}>
-                    Read the other issues!
+                <IssuePromos id="the-flesh" numbers={[1, 2, 3]}>
+                    Read all the issues!
                 </IssuePromos>
                 <SocialNav />
             </Layout>
