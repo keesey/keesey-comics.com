@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Fixed
+
+### Removed
+
+### Security
+
+## [2.8.0] - 2024-04-06
+
+### Added
+
 -   New comic series: _The Flesh_ by Gage Ullman.
     -   Series Page.
     -   Issue Pages (#1–#3).
@@ -33,24 +47,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Metadata description for organization.
 -   Sizing strategy for comic panels.
 
-### Deprecated
-
 ### Fixed
 
 -   Transparency for _Pleistocene_ logo.
 -   URL for Instagram in schema metadata.
 
-### Removed
-
-### Security
-
-## [2.7.1] - 2023-03-30
+## [2.7.1] - 2024-03-30
 
 ### Security
 
 -   Upgrade for `semver`.
 
-## [2.7.0] - 2023-03-30
+## [2.7.0] - 2024-03-30
 
 ### Changed
 
