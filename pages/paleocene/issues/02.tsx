@@ -61,6 +61,7 @@ const Page: NextPage = () => {
                             ),
                             content: "Our hearty little family of proto-primates is charming.",
                             href: "https://fanbasepress.com/index.php/press/reviews/item/12295-paleocene-1-3-comic-book-review",
+                            id: "fanbasepress",
                         },
                     ]}
                 />

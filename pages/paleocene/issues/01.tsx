@@ -64,6 +64,7 @@ const Page: NextPage = () => {
                             ),
                             content: "Desperate times are brought vividly to life.",
                             href: "https://dinodadreviews.com/2022/01/05/paleocene-issues-1-3/",
+                            id: "dinodadreviews",
                         },
                         {
                             attribution: (
@@ -73,6 +74,7 @@ const Page: NextPage = () => {
                             ),
                             content: "A terrific cliffhanger.",
                             href: "https://fanbasepress.com/index.php/press/reviews/item/12295-paleocene-1-3-comic-book-review",
+                            id: "fanbasepress",
                         },
                     ]}
                 />

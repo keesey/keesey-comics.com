@@ -60,7 +60,7 @@ const Page: NextPage = () => {
                                 </>
                             ),
                             content: <>The birds&rsquo; world is operatic and grand.</>,
-                            href: "http://www.thekingdomsofevil.com/?p=8983",
+                            id: "kingdomsofevil",
                         },
                         {
                             attribution: (
@@ -70,6 +70,7 @@ const Page: NextPage = () => {
                             ),
                             content: "Fascinating story … with an empathetic dilemma.",
                             href: "https://dinodadreviews.com/2022/01/05/paleocene-issues-1-3/",
+                            id: "dinodadreviews",
                         },
                     ]}
                 />

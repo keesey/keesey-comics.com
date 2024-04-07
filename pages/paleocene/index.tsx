@@ -58,7 +58,7 @@ const Page: NextPage = () => {
                                 </>
                             ),
                             content: "★★★★",
-                            href: "http://www.thekingdomsofevil.com/?p=8983",
+                            id: "kingdomsofevil",
                         },
                         {
                             attribution: (
@@ -68,6 +68,7 @@ const Page: NextPage = () => {
                             ),
                             content: "I highly recommend this series … Dino Dad Stomp of Approval!",
                             href: "https://dinodadreviews.com/2022/01/05/paleocene-issues-1-3/",
+                            id: "dinodadreviews",
                         },
                     ]}
                 />
