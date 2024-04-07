@@ -1,9 +1,9 @@
-import { AmountWithBreakdown, PurchaseUnit as Props } from "@paypal/paypal-js/types/apis/orders"
+import { PurchaseUnit as Props } from "@paypal/paypal-js/types/apis/orders"
 import { FC, Fragment } from "react"
 import Price from "~/components/Price"
 import styles from "./index.module.scss"
 import PurchaseItem from "./PurchaseItem"
-const BREAKDOWN_KEYS: ReadonlyArray<keyof NonNullable<AmountWithBreakdown["breakdown"]>> = [
+const BREAKDOWN_KEYS: ReadonlyArray<keyof NonNullable<Props["amount"]["breakdown"]>> = [
     "item_total",
     "tax_total",
     "shipping",

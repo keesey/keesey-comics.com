@@ -6,7 +6,7 @@ import IssuePromo from "../IssuePromo"
 import styles from "./index.module.scss"
 export interface Props {
     children?: string
-    id: "paleocene" | "pleistocene"
+    id: "paleocene" | "pleistocene" | "the-flesh"
     numbers: readonly number[]
 }
 const IssuePromos: FC<Props> = ({ children, id, numbers }) => {

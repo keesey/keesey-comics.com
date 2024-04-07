@@ -14,7 +14,17 @@ const CONTAINERS: readonly Container[] = [
             },
             {
                 maximum: 3,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
+                shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
+            },
+            {
+                maximum: 3,
                 productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
+            },
+            {
+                maximum: 3,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
                 shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
             },
             {
@@ -44,8 +54,18 @@ const CONTAINERS: readonly Container[] = [
                 shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
             },
             {
+                maximum: 6,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
+                shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
+            },
+            {
                 maximum: 10,
                 productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
+            },
+            {
+                maximum: 9,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
                 shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
             },
             {
@@ -75,8 +95,18 @@ const CONTAINERS: readonly Container[] = [
                 shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
             },
             {
+                maximum: 7,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
+                shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
+            },
+            {
                 maximum: 10,
                 productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
+            },
+            {
+                maximum: 9,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
                 shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
             },
             {
@@ -106,8 +136,18 @@ const CONTAINERS: readonly Container[] = [
                 shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
             },
             {
+                maximum: 11,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
+                shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
+            },
+            {
                 maximum: 16,
                 productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
+            },
+            {
+                maximum: 15,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
                 shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
             },
             {
@@ -142,8 +182,18 @@ const CONTAINERS: readonly Container[] = [
                 shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
             },
             {
+                maximum: 8,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
+                shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
+            },
+            {
                 maximum: 11,
                 productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
+            },
+            {
+                maximum: 10,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
                 shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
             },
             {
@@ -173,8 +223,18 @@ const CONTAINERS: readonly Container[] = [
                 shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
             },
             {
+                maximum: 18,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
+                shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
+            },
+            {
                 maximum: 30,
                 productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
+            },
+            {
+                maximum: 26,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
                 shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
             },
             {
@@ -205,7 +265,17 @@ const CONTAINERS: readonly Container[] = [
             },
             {
                 maximum: 100,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
+                shippingOption: SHIPPING_OPTIONS_MAP["BAB"],
+            },
+            {
+                maximum: 100,
                 productType: PRODUCT_TYPES_MAP["COB-STD"],
+                shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
+            },
+            {
+                maximum: 100,
+                productType: PRODUCT_TYPES_MAP["COB-ST2"],
                 shippingOption: SHIPPING_OPTIONS_MAP["NOB"],
             },
             {

@@ -1,17 +1,26 @@
 @use "src/styles/mixins.scss";
+
 .layout {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
 .main {
     flex-grow: 1;
     overflow-x: hidden;
     padding-bottom: 1rem;
+
     .theme-kc & {
         @include mixins.cream;
     }
+
     .theme-night & {
         @include mixins.black;
+    }
+
+    .theme-hell & {
+        @include mixins.nightmare;
+        font-family: TAYBirdie;
     }
 }

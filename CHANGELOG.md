@@ -19,6 +19,169 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.9.0] - 2024-04-07
+
+### Changed
+
+-   Showing all issues in Issues Promos.
+
+## [2.8.1] - 2024-04-06
+
+### Removed
+
+-   Outdated quote links.
+
+## [2.8.0] - 2024-04-06
+
+### Added
+
+-   New comic series: _The Flesh_ by Gage Ullman.
+    -   Series Page.
+    -   Issue Pages (#1–#3).
+    -   Footer links.
+    -   Sitemap entries.
+    -   Store items.
+    -   Favicon.
+    -   Social media images.
+-   Extended comic book product type.
+-   New theme: `hell`. (And associated mixins.)
+-   Author schema metadata to more pages.
+-   Sitemap entry for _Paleocene #4_.
+-   Author bylines.
+
+### Changed
+
+-   Order of properties on Home Page.
+-   CTA label for _Paleocene_ series.
+-   Shrank inner content for social media images for Keesey Comics and the _Paleocene_ series.
+-   Using numerals in Age Recommendation for fonts that allow them.
+-   Copyright notice from "T. Michael Keesey" to "Keesey Comics".
+-   Metadata description for organization.
+-   Sizing strategy for comic panels.
+
+### Fixed
+
+-   Transparency for _Pleistocene_ logo.
+-   URL for Instagram in schema metadata.
+
+## [2.7.1] - 2024-03-30
+
+### Security
+
+-   Upgrade for `semver`.
+
+## [2.7.0] - 2024-03-30
+
+### Changed
+
+-   Formatting for comic book product titles.
+
+### Security
+
+-   Upgrades for most dependencies.
+
+## [2.6.0] - 2023-11-27
+
+### Added
+
+-   New products for order:
+    -   _Paleocene_ #4
+    -   Poster: "Night Watch"
+
+### Removed
+
+-   Unnecessary console calls.
+
+### Security
+
+-   Removed error traces to console.
+
+## [2.5.3] - 2023-11-27
+
+### Removed
+
+-   Inks Page for _Paleocene_ #4.
+
+## [2.5.2] - 2023-10-14
+
+### Changed
+
+-   Prices for most product types.
+
+## [2.5.1] - 2023-09-26
+
+### Changed
+
+-   Prices for some product types.
+
+## [2.5.0] - 2023-09-15
+
+### Added
+
+-   Inks page for _Paleocene #4_ Kickstarter campaign.
+
+## [2.4.4] - 2023-08-23
+
+### Changed
+
+-   Encoding for _Paleocene #4_ social media image.
+
+## [2.4.3] - 2023-08-23
+
+### Fixed
+
+-   Kickstarter link on _Paleocene #4_ Page.
+
+## [2.4.2] - 2023-08-23
+
+### Fixed
+
+-   Corrected images references in LD-JSON Schema for _Paleocene_ Issue Pages.
+-   Correctly-sized social media image for _Paleocene #4_ Page.
+
+## [2.4.1] - 2023-08-23 [YANKED]
+
+### Fixed
+
+-   Social media image for _Paleocene #4_ Page was incorrect.
+
+## [2.4.0] - 2023-08-20
+
+### Added
+
+-   Comic strip to _Paleocene #4_ page.
+-   Banner for Kickstarter campaign for _Paleocene #4_.
+
+## [2.3.8] - 2023-08-15
+
+### Changed
+
+-   Kickstarter link to Paleocene #4 campaign.
+
+## [2.3.7] - 2023-08-07
+
+### Changed
+
+-   Kickstarter link to Created Project tab in profile.
+
+## [2.3.6] - 2023-08-07
+
+### Changed
+
+-   Kickstarter link to profile (not _Paleocene #3_).
+
+## [2.3.5] - 2023-08-07
+
+### Security
+
+-   Bump word-wrap from 1.2.3 to 1.2.4
+
+## [2.3.4] - 2023-06-13
+
+### Fixed
+
+-   Patreon link from _Paleocene #4_ page.
+
 ## [2.3.3] - 2023-03-18
 
 ### Fixed

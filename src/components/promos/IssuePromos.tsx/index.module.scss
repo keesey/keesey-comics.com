@@ -27,6 +27,12 @@
         color: #000;
     }
 
+    &.theme-hell {
+        @include mixins.rage;
+        font-style: italic;
+        font-weight: bold;
+    }
+
     > p {
         margin: 0;
         text-align: center;

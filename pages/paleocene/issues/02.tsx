@@ -13,6 +13,7 @@ import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
 import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
@@ -21,7 +22,7 @@ const SUBJECT: ComicStory = {
         "Sister has been taken from the nest by ... something. Was it really a Hunter, as Brother says? Will the troop believe his story? What really happened to her?",
     copyrightYear: 2020,
     description: "Issue #2 of a comic series about our early primate ancestors.",
-    image: "https://www.keesey-comics.com/images/issues/02/front_cover.png",
+    image: "https://www.keesey-comics.com/images/issues/paleocene/02/front_cover.png",
     isPartOf: "https://www.keesey-comics.com/paleocene",
     name: "Paleocene #2",
     position: 2,
@@ -32,12 +33,17 @@ const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene/02" subject={SUBJECT}>
+            <Head favIconType="paleocene" socialImagePath="/paleocene/02" subject={SUBJECT} author={MIKE_KEESEY}>
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
-            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
+            <Layout
+                headerPromos={["paleocene"]}
+                footerPromos={["parry-and-carney", "the-flesh", "pleistocene"]}
+                theme="night"
+            >
                 <IssueHero
                     ageRecommendation="9+"
+                    author="Mike Keesey"
                     id="paleocene"
                     number={2}
                     storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
@@ -55,6 +61,7 @@ const Page: NextPage = () => {
                             ),
                             content: "Our hearty little family of proto-primates is charming.",
                             href: "https://fanbasepress.com/index.php/press/reviews/item/12295-paleocene-1-3-comic-book-review",
+                            id: "fanbasepress",
                         },
                     ]}
                 />
@@ -68,8 +75,8 @@ const Page: NextPage = () => {
                     <TextPanel>What really happened to her?</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/02/04.png" width={240} />
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[1, 3, 4]}>
-                    Read the other issues!
+                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
+                    Read all the issues!
                 </IssuePromos>
                 <SocialNav />
             </Layout>

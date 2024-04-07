@@ -1,1 +1,1 @@
-export type Theme = "bw" | "day" | "kc" | "night" | "webcomic"
+export type Theme = "bw" | "day" | "hell" | "kc" | "night" | "webcomic"

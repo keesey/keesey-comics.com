@@ -1,11 +1,9 @@
 import { FC, PropsWithChildren, useEffect, useReducer } from "react"
 import Context from "./Context"
-import reducer from "./reducer"
-import { State } from "./State"
 import STORAGE_KEY from "./STORAGE_KEY"
-const DEFAULT_STATE: State = { country: "United States" }
+import reducer from "./reducer"
 const AddressContainer: FC<PropsWithChildren> = ({ children }) => {
-    const contextValue = useReducer(reducer, DEFAULT_STATE)
+    const contextValue = useReducer(reducer, undefined)
     const [state, dispatch] = contextValue
     useEffect(() => {
         const payloadJSON = localStorage.getItem(STORAGE_KEY)
@@ -17,15 +15,19 @@ const AddressContainer: FC<PropsWithChildren> = ({ children }) => {
                 }
             } catch (e) {
                 // Corrupted.
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_STATE))
+                localStorage.removeItem(STORAGE_KEY)
             }
+        } else {
+            dispatch({ type: "INITIALIZE", payload: { country: "United States" } })
         }
     }, [dispatch])
     useEffect(() => {
-        try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
-        } catch (e) {
-            alert(e)
+        if (state) {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+            } catch (e) {
+                alert(e)
+            }
         }
     }, [state])
     return <Context.Provider value={contextValue}>{children}</Context.Provider>

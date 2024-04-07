@@ -13,6 +13,7 @@ import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
 import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
@@ -21,7 +22,7 @@ const SUBJECT: ComicStory = {
         "On one continent, a lonely bird starves in the wasteland. On another, a band of primates searches for a new home. See what happens when continents collide!",
     copyrightYear: 2021,
     description: "Issue #3 of a comic series about our early primate ancestors.",
-    image: "https://www.keesey-comics.com/images/issues/03/front_cover.png",
+    image: "https://www.keesey-comics.com/images/issues/paleocene/03/front_cover.png",
     isPartOf: "https://www.keesey-comics.com/paleocene",
     name: "Paleocene #3",
     position: 3,
@@ -32,12 +33,17 @@ const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene/03" subject={SUBJECT}>
+            <Head favIconType="paleocene" socialImagePath="/paleocene/03" subject={SUBJECT} author={MIKE_KEESEY}>
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
-            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="day">
+            <Layout
+                headerPromos={["paleocene"]}
+                footerPromos={["parry-and-carney", "the-flesh", "pleistocene"]}
+                theme="day"
+            >
                 <IssueHero
                     ageRecommendation="9+"
+                    author="Mike Keesey"
                     id="paleocene"
                     number={3}
                     storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
@@ -54,7 +60,7 @@ const Page: NextPage = () => {
                                 </>
                             ),
                             content: <>The birds&rsquo; world is operatic and grand.</>,
-                            href: "http://www.thekingdomsofevil.com/?p=8983",
+                            id: "kingdomsofevil",
                         },
                         {
                             attribution: (
@@ -64,6 +70,7 @@ const Page: NextPage = () => {
                             ),
                             content: "Fascinating story … with an empathetic dilemma.",
                             href: "https://dinodadreviews.com/2022/01/05/paleocene-issues-1-3/",
+                            id: "dinodadreviews",
                         },
                     ]}
                 />
@@ -82,8 +89,8 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/paleocene/03/04.png" width={286} />
                     <TextPanel emphatic>...the Great Ones strode.</TextPanel>
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[1, 2, 4]}>
-                    Read the other issues!
+                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
+                    Read all the issues!
                 </IssuePromos>
                 <SocialNav />
             </Layout>

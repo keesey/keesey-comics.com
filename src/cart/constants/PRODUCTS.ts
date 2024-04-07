@@ -2,7 +2,7 @@ import { Product } from "../models/Product"
 import { PRODUCT_TYPES_MAP } from "./PRODUCT_TYPES"
 const PRODUCTS: readonly Product[] = [
     {
-        html: "<cite>Paleocene</cite> #1",
+        html: "<cite>Paleocene #1</cite>",
         id: "COB-STD-PAL-01B",
         imagePath: "/images/issues/paleocene/01/front_cover.png",
         name: "Paleocene #1",
@@ -11,7 +11,7 @@ const PRODUCTS: readonly Product[] = [
         type: PRODUCT_TYPES_MAP["COB-STD"],
     },
     {
-        html: "<cite>Paleocene</cite> #2",
+        html: "<cite>Paleocene #2</cite>",
         id: "COB-STD-PAL-02A",
         imagePath: "/images/issues/paleocene/02/front_cover.png",
         name: "Paleocene #2",
@@ -20,13 +20,49 @@ const PRODUCTS: readonly Product[] = [
         type: PRODUCT_TYPES_MAP["COB-STD"],
     },
     {
-        html: "<cite>Paleocene</cite> #3",
+        html: "<cite>Paleocene #3</cite>",
         id: "COB-STD-PAL-03A",
         imagePath: "/images/issues/paleocene/03/front_cover.png",
         name: "Paleocene #3",
         path: "/paleocene/issues/03",
         theme: "day",
         type: PRODUCT_TYPES_MAP["COB-STD"],
+    },
+    {
+        html: "<cite>Paleocene #4</cite>",
+        id: "COB-STD-PAL-04A",
+        imagePath: "/images/issues/paleocene/04/front_cover.png",
+        name: "Paleocene #4",
+        path: "/paleocene/issues/04",
+        theme: "night",
+        type: PRODUCT_TYPES_MAP["COB-STD"],
+    },
+    {
+        html: "<cite>The Flesh #1</cite>",
+        id: "COB-ST2-FLE-01A",
+        imagePath: "/images/issues/the-flesh/01/front_cover.png",
+        name: "The Flesh #1",
+        path: "/the-flesh/issues/01",
+        theme: "hell",
+        type: PRODUCT_TYPES_MAP["COB-ST2"],
+    },
+    {
+        html: "<cite>The Flesh #2</cite>",
+        id: "COB-ST2-FLE-02A",
+        imagePath: "/images/issues/the-flesh/02/front_cover.png",
+        name: "The Flesh #2",
+        path: "/the-flesh/issues/02",
+        theme: "hell",
+        type: PRODUCT_TYPES_MAP["COB-ST2"],
+    },
+    {
+        html: "<cite>The Flesh #3</cite>",
+        id: "COB-ST2-FLE-03A",
+        imagePath: "/images/issues/the-flesh/03/front_cover.png",
+        name: "The Flesh #3",
+        path: "/the-flesh/issues/03",
+        theme: "hell",
+        type: PRODUCT_TYPES_MAP["COB-ST2"],
     },
     {
         html: "<cite>Paleocene</cite> Poster &quot;Skull&quot;",
@@ -40,6 +76,13 @@ const PRODUCTS: readonly Product[] = [
         id: "POS-17I-PAL-002",
         name: 'Paleocene Poster "Bird"',
         theme: "day",
+        type: PRODUCT_TYPES_MAP["POS-17I"],
+    },
+    {
+        html: "<cite>Paleocene</cite> Poster &quot;Night Watch&quot;",
+        id: "POS-17I-PAL-003",
+        name: 'Paleocene Poster "Night Watch"',
+        theme: "night",
         type: PRODUCT_TYPES_MAP["POS-17I"],
     },
     {

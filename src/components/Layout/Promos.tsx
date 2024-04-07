@@ -5,7 +5,7 @@ import { ThemeColor } from "~/themes/ThemeColor"
 import Logo from "../Logo"
 import styles from "./Promos.module.scss"
 import useLogoColor from "./useLogoColor"
-export type PromoType = "paleocene" | "parry-and-carney" | "phylopic" | "pleistocene"
+export type PromoType = "paleocene" | "parry-and-carney" | "phylopic" | "pleistocene" | "the-flesh"
 export interface Props {
     promos?: readonly PromoType[]
 }
@@ -44,6 +44,15 @@ const Promo: FC<{ color: ThemeColor; type: PromoType }> = ({ color, type }) => {
                     <Logo color={color} type="phylopic" height={21} width={129} />
                 </a>
             )
+        case "the-flesh": {
+            return (
+                <Link href="/the-flesh" legacyBehavior>
+                    <a>
+                        <Logo color={color} type="the-flesh" height={32} width={101} />
+                    </a>
+                </Link>
+            )
+        }
         default: {
             return null
         }

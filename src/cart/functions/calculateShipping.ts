@@ -29,7 +29,6 @@ const createShippingRequestURL = (order: Shipment): URL => {
     return new URL(`${SHIPPING_API_ENDPOINT}?${query}`)
 }
 const getServiceOptionFromXML = (xml: string): ServiceOption => {
-    console.info(xml)
     const responseDoc = new xmldoc.XmlDocument(xml)
     if (responseDoc.name !== "RateV4Response" && responseDoc.name !== "IntlRateV2Response") {
         throw new Error(`Unrecognized response type from USPS: "${responseDoc.name}"`)

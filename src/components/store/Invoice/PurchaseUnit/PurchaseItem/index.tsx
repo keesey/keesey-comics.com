@@ -1,4 +1,4 @@
-import { PurchaseItem as Props } from "@paypal/paypal-js/types/apis/orders"
+import { PurchaseUnitItem as Props } from "@paypal/paypal-js/types/apis/orders"
 import { FC } from "react"
 import Price from "~/components/Price"
 import styles from "./index.module.scss"

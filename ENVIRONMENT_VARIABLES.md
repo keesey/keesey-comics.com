@@ -12,3 +12,4 @@
 ## Optional
 
 -   `NEXT_PUBLIC_KICKSTARTER_END_DATE` - ISO datetime telling end of Kickstarter campaign.
+-   `NEXT_PUBLIC_KICKSTARTER_PHASE` - Textual description of current phase of Kickstarter campaign (e.g., "Coming Soon").

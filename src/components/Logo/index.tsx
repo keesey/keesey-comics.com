@@ -16,6 +16,7 @@ export interface Props
         | "patreon"
         | "phylopic"
         | "pleistocene"
+        | "the-flesh"
 }
 const getExtension = (type: Props["type"]) => (type === "pleistocene" ? "png" : "svg")
 const ALT_TEXT: Readonly<Record<Props["type"], string>> = {
@@ -30,6 +31,7 @@ const ALT_TEXT: Readonly<Record<Props["type"], string>> = {
     patreon: "Patreon",
     phylopic: "PhyloPic",
     pleistocene: "Pleistocene",
+    "the-flesh": "The Flesh",
 }
 const Logo = forwardRef<HTMLImageElement, Props>(function Logo({ color, type, ...props }, ref) {
     const alt = ALT_TEXT[type]

@@ -2,6 +2,7 @@
     position: relative;
     display: block;
 }
+
 .count {
     background-color: red;
     border-radius: 50%;
@@ -14,4 +15,11 @@
     text-align: center;
     top: -12px;
     right: -12px;
+
+    &.theme-hell {
+        background-color: #ffff80;
+        border-color: #a00000;
+        border-style: solid;
+        color: #a00000;
+    }
 }

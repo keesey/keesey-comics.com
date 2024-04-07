@@ -14,28 +14,36 @@ import ItemListSchema from "~/components/metadata/ItemListSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
-const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A"]
+const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A", "COB-STD-PAL-04A"]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene" subject={PALEOCENE}>
+            <Head favIconType="paleocene" socialImagePath="/paleocene" subject={PALEOCENE} author={MIKE_KEESEY}>
                 <ItemListSchema
                     urls={[
                         "https://www.keesey-comics.com/paleocene/issues/01",
                         "https://www.keesey-comics.com/paleocene/issues/02",
                         "https://www.keesey-comics.com/paleocene/issues/03",
+                        "https://www.keesey-comics.com/paleocene/issues/04",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-001",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-002",
+                        "https://www.keesey-comics.com/products/POS-17I-PAL-003",
                         "https://www.keesey-comics.com/products/BKM-06I-PAL-001",
                         "https://www.keesey-comics.com/products/STK-02I-PAL-001",
                         "https://www.keesey-comics.com/products/STK-02I-PAL-002",
                     ]}
                 />
             </Head>
-            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
+            <Layout
+                headerPromos={["paleocene"]}
+                footerPromos={["parry-and-carney", "the-flesh", "pleistocene"]}
+                theme="night"
+            >
                 <SeriesHero
                     ageRecommendation="9+"
+                    author="Mike Keesey"
                     id="paleocene"
                     productIds={PRODUCT_IDS}
                     storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
@@ -50,7 +58,7 @@ const Page: NextPage = () => {
                                 </>
                             ),
                             content: "★★★★",
-                            href: "http://www.thekingdomsofevil.com/?p=8983",
+                            id: "kingdomsofevil",
                         },
                         {
                             attribution: (
@@ -60,6 +68,7 @@ const Page: NextPage = () => {
                             ),
                             content: "I highly recommend this series … Dino Dad Stomp of Approval!",
                             href: "https://dinodadreviews.com/2022/01/05/paleocene-issues-1-3/",
+                            id: "dinodadreviews",
                         },
                     ]}
                 />
@@ -77,7 +86,7 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={166} />
                 </ComicStrip>
                 <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
-                    Read all issues!
+                    Read all the issues!
                 </IssuePromos>
                 {/* :TODO: Add merch? */}
                 <Nav>

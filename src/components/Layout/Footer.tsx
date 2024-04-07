@@ -14,7 +14,7 @@ const Footer: FC<Props> = ({ promos }) => {
                 <div key="copyright">
                     <abbr title="Copyright">©</abbr> {YEAR}{" "}
                     <Link href="/contact" legacyBehavior>
-                        <a title="Contact the Creator">T. Michael Keesey</a>
+                        <a title="Contact the Creator">Keesey Comics</a>
                     </Link>{" "}
                     • All Rights Reserved
                 </div>

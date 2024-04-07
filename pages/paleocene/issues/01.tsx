@@ -16,6 +16,7 @@ import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import SocialNav from "~/components/SocialNav"
 import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
+import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
@@ -24,7 +25,7 @@ const SUBJECT: ComicStory = {
         "Mamma loves telling her babies about the &quot;dragons&quot; that used to roam the Earth. But with Pappa gone for days, she is starting to tire of being stuck in the nest. Does she dare leave the infants alone? It is a dangerous world ... and &quot;dragons&quot; may still lurk in the hills.",
     copyrightYear: 2020,
     description: "Issue #1 of a comic series about our early primate ancestors.",
-    image: "https://www.keesey-comics.com/images/issues/01/front_cover.png",
+    image: "https://www.keesey-comics.com/images/issues/paleocene/01/front_cover.png",
     isPartOf: "https://www.keesey-comics.com/paleocene",
     name: "Paleocene #1",
     position: 1,
@@ -35,12 +36,17 @@ const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT}>
+            <Head favIconType="paleocene" socialImagePath="/paleocene/01" subject={SUBJECT} author={MIKE_KEESEY}>
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
-            <Layout headerPromos={["paleocene"]} footerPromos={["pleistocene", "parry-and-carney"]} theme="night">
+            <Layout
+                headerPromos={["paleocene"]}
+                footerPromos={["parry-and-carney", "the-flesh", "pleistocene"]}
+                theme="night"
+            >
                 <IssueHero
                     ageRecommendation="9+"
+                    author="Mike Keesey"
                     id="paleocene"
                     number={1}
                     storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
@@ -58,6 +64,7 @@ const Page: NextPage = () => {
                             ),
                             content: "Desperate times are brought vividly to life.",
                             href: "https://dinodadreviews.com/2022/01/05/paleocene-issues-1-3/",
+                            id: "dinodadreviews",
                         },
                         {
                             attribution: (
@@ -67,6 +74,7 @@ const Page: NextPage = () => {
                             ),
                             content: "A terrific cliffhanger.",
                             href: "https://fanbasepress.com/index.php/press/reviews/item/12295-paleocene-1-3-comic-book-review",
+                            id: "fanbasepress",
                         },
                     ]}
                 />
@@ -82,10 +90,10 @@ const Page: NextPage = () => {
                     <TextPanel>Does she dare leave the infants alone? it is a dangerous world...</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/01/03.png" width={498} />
                     <TextPanel>...and &quot;dragons&quot; may still lurk in the hills.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/paleocene/01/04.png" width={203} />
+                    <ImagePanel height={280} src="/images/issues/paleocene/01/04.png" width={328} />
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[2, 3, 4]}>
-                    Read the other issues!
+                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
+                    Read all the issues!
                 </IssuePromos>
                 <Nav>
                     <ComicText>Translations:</ComicText>

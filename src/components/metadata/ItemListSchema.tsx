@@ -14,7 +14,7 @@ const ItemListSchema: FC<Props> = ({ urls }) => {
                         "@type": "ListItem",
                         position,
                         url,
-                    } as ListItem),
+                    }) as ListItem,
             ),
         }),
         [urls],

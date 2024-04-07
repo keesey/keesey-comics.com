@@ -7,7 +7,7 @@ import Logo from "~/components/Logo"
 import styles from "./index.module.scss"
 export interface Props {
     children: string
-    id: "paleocene" | "parry-and-carney" | "pleistocene"
+    id: "paleocene" | "parry-and-carney" | "pleistocene" | "the-flesh"
 }
 const SeriesPromo: FC<Props> = ({ children, id }) => (
     <Link href={`/${id}`} legacyBehavior>
@@ -19,9 +19,11 @@ const SeriesPromo: FC<Props> = ({ children, id }) => (
                 <div className={styles.logo}>
                     <Logo color="brown" type={id} width="100%" height="auto" />
                 </div>
-                <div className={styles.image}>
-                    <Image alt="" height={180} src={`/images/promos/${id}.png`} width={600} />
-                </div>
+                {id !== "the-flesh" && (
+                    <div className={styles.image}>
+                        <Image alt="" height={180} src={`/images/promos/${id}.png`} width={600} />
+                    </div>
+                )}
             </section>
         </a>
     </Link>
