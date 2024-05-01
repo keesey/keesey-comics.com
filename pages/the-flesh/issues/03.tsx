@@ -1,6 +1,5 @@
 import type { NextPage } from "next"
 import type { ComicStory } from "schema-dts"
-import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
@@ -9,7 +8,6 @@ import ComicText from "~/components/ComicText"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
-import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
 import GAGE_ULLMAN from "~/schema/GAGE_ULLMAN"
@@ -27,14 +25,11 @@ const SUBJECT: ComicStory = {
     position: 3,
     url: "https://www.keesey-comics.com/the-flesh/issues/03",
 }
-const PRODUCT_ID = "COB-ST2-FLE-03A"
-const PRODUCT_IDS = [PRODUCT_ID]
+//const PRODUCT_ID = "COB-ST2-FLE-03A"
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="the-flesh" socialImagePath="/the-flesh/03" subject={SUBJECT} author={GAGE_ULLMAN}>
-                <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
-            </Head>
+            <Head favIconType="the-flesh" socialImagePath="/the-flesh/03" subject={SUBJECT} author={GAGE_ULLMAN} />
             <Layout
                 headerPromos={["the-flesh"]}
                 footerPromos={["paleocene", "parry-and-carney", "pleistocene"]}
