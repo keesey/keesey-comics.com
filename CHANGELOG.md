@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [2.9.2] - 2024-05-01
+
+### Removed
+
+-   Access to buying _The Flesh #3_ (for now).
+
 ## [2.9.1] - 2024-04-07
 
 ### Added
