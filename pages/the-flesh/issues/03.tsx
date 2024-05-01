@@ -50,7 +50,7 @@ const Page: NextPage = () => {
                     <ComicText>Coming soon!</ComicText>
                 </IssueHero>
                 <ComicStrip>
-                <TextPanel>
+                    <TextPanel>
                         <p>Desperate survivors seek refuge in an emergency shelter.</p>
                     </TextPanel>
                     <ImagePanel height={280} src="/images/issues/the-flesh/03/01.jpg" width={280} />
