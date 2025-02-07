@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Fixed
+
+### Removed
+
+### Security
+
+## [2.10.0] - 2024-02-07
+
+### Added
+
 -   Page for _Paleocene #5_.
 -   2023 and 2025 to copyright years for _Paleocene_.
 
@@ -16,12 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Upgraded `caniuse-lite`.
 -   Expanded page size from 1024px to 1280px.
-
-### Deprecated
-
-### Fixed
-
-### Removed
 
 ### Security
 
