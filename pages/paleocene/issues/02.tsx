@@ -75,7 +75,7 @@ const Page: NextPage = () => {
                     <TextPanel>What really happened to her?</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/02/04.png" width={240} />
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
+                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4, 5]}>
                     Read all the issues!
                 </IssuePromos>
                 <SocialNav />

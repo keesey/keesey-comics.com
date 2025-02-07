@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   2023 to copyright years for _Paleocene_.
+-   Page for _Paleocene #5_.
+-   2023 and 2025 to copyright years for _Paleocene_.
 
 ### Changed
+
+- Upgraded `caniuse-lite`.
+- Expanded page size from 1024px to 1280px.
 
 ### Deprecated
 
@@ -170,7 +174,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
--   Kickstarter link to Paleocene #4 campaign.
+-   Kickstarter link to _Paleocene #4_ campaign.
 
 ## [2.3.7] - 2023-08-07
 

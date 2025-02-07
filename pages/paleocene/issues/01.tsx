@@ -92,7 +92,7 @@ const Page: NextPage = () => {
                     <TextPanel>...and &quot;dragons&quot; may still lurk in the hills.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/01/04.png" width={328} />
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
+                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4, 5]}>
                     Read all the issues!
                 </IssuePromos>
                 <Nav>

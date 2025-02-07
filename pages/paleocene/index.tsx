@@ -85,7 +85,7 @@ const Page: NextPage = () => {
                     <TextPanel>...and the early dawn of a new one.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={166} />
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
+                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4, 5]}>
                     Read all the issues!
                 </IssuePromos>
                 {/* :TODO: Add merch? */}
