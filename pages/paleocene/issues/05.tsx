@@ -15,7 +15,7 @@ import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {
     ...PALEOCENE,
     "@id": "https://www.keesey-comics.com/paleocene/issues/05",
-    abstract: ":TODO:",
+    abstract: "What happened to Sister after she was snatched from the hollow? Her hardships were only beginning...",
     copyrightYear: 2025,
     description: "Issue #5 of a comic series about our early primate ancestors.",
     image: "https://www.keesey-comics.com/images/issues/paleocene/05/front_cover.png",
