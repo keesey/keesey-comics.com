@@ -14,8 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Upgraded `caniuse-lite`.
-- Expanded page size from 1024px to 1280px.
+-   Upgraded `caniuse-lite`.
+-   Expanded page size from 1024px to 1280px.
 
 ### Deprecated
 
@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Security
+
+-   Dependency updates.
 
 ## [2.9.2] - 2024-05-01
 
