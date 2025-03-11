@@ -19,13 +19,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [2.10.2] - 2024-02-07
+## [2.10.3] - 2025-03-11
+
+### Changed
+
+-   Slight update to cover image for _Paleocene #5_.
+
+## [2.10.2] - 2025-02-07
 
 ### Changed
 
 -   Updated cover images of _Paleocene #1–2_ to include Keesey Comics logo.
 
-## [2.10.1] - 2024-02-07
+## [2.10.1] - 2025-02-07
 
 ### Added
 
@@ -40,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Dependency updates.
 
-## [2.10.0] - 2024-02-07
+## [2.10.0] - 2025-02-07
 
 ### Added
 
