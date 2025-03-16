@@ -42,7 +42,7 @@
     },
     "scripts": {
         "build": "next build",
-        "bump": "towncrier build --yes --version= && yarn version --new-version $1",
+        "bump": "towncrier build --yes --version && yarn version --new-version",
         "deploy": "vercel --prod",
         "dev": "next dev",
         "format": "prettier -w . && eslint --ext .js,.ts,.tsx --fix .",
