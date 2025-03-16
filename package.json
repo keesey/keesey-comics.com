@@ -42,13 +42,14 @@
     },
     "scripts": {
         "build": "next build",
+        "bump": "towncrier build --yes --version=$1 && yarn version --new-version $1",
         "deploy": "vercel --prod",
         "dev": "next dev",
         "format": "prettier -w . && eslint --ext .js,.ts,.tsx --fix .",
         "lint": "eslint --ext .js,.ts,.tsx .",
         "preversion": "yarn format",
         "start": "next start",
-        "version": "git add -A src"
+        "version": "git add -A ."
     },
     "version": "2.10.4"
 }
