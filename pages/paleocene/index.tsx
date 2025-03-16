@@ -77,13 +77,13 @@ const Page: NextPage = () => {
                         Sixty-six million years ago, an asteroid slammed into the Earth, killing three quarters of all
                         living things.
                     </TextPanel>
-                    <ImagePanel height={280} src="/images/issues/paleocene/01.png" width={349} />
+                    <ImagePanel height={280} src="/images/issues/paleocene/01.png" width={280} />
                     <TextPanel>But our tiny ancestors survived.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/02.png" width={240} />
                     <TextPanel>With clutched hands and shining eyes, they witnessed the end of the world...</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/03.png" width={605} />
                     <TextPanel>...and the early dawn of a new one.</TextPanel>
-                    <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={166} />
+                    <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={285.5} />
                 </ComicStrip>
                 <IssuePromos id="paleocene" numbers={[1, 2, 3, 4, 5]}>
                     Read all the issues!
