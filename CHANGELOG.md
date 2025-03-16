@@ -11,14 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
--   Revised script for bumping version. (Issue [#bump](https://github.com/keesey/keesey-comics.com/issues/bump))
+-   Revised script for bumping version.
 
 ## [2.10.5](https://github.com/keesey/keesey-comics.com/tree/v2.10.5) - 2025-03-16
 
 ### Security
 
--   Bump axios from 1.7.4 to 1.8.2. (Issue [#axios](https://github.com/keesey/keesey-comics.com/issues/axios))
--   Bump @babel/helpers from 7.15.4 to 7.26.10. (Issue [#babel-helpers](https://github.com/keesey/keesey-comics.com/issues/babel-helpers))
+-   Bump axios from 1.7.4 to 1.8.2.
+-   Bump @babel/helpers from 7.15.4 to 7.26.10.
 
 ## [2.10.4] - 2025-03-11
 
