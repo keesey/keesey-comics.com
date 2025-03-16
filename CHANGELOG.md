@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [2.10.6](https://github.com/keesey/keesey-comics.com/tree/v2.10.6) - 2025-03-16
+
+### Changed
+
+-   Revised script for bumping version. (Issue [#bump](https://github.com/keesey/keesey-comics.com/issues/bump))
+
 ## [2.10.5](https://github.com/keesey/keesey-comics.com/tree/v2.10.5) - 2025-03-16
 
 ### Security

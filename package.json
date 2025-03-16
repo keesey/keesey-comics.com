@@ -42,7 +42,7 @@
     },
     "scripts": {
         "build": "next build",
-        "bump": "towncrier build --yes --version",
+        "bump": "./bump.sh",
         "deploy": "vercel --prod",
         "dev": "next dev",
         "format": "prettier -w . && eslint --ext .js,.ts,.tsx --fix .",
@@ -51,5 +51,5 @@
         "start": "next start",
         "version": "git add -A ."
     },
-    "version": "2.10.5"
+    "version": "2.10.6"
 }
