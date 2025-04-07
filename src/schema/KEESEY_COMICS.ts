@@ -6,7 +6,6 @@ const KEESEY_COMICS: Organization = {
     email: "keesey+comics@gmail.com",
     logo: "https://www.keesey-comics.com/social/1200x1200.png",
     name: "Keesey Comics",
-    sameAs: ["https://www.instagram.com/keesey.comics/"],
     subjectOf: [
         { "@id": "https://www.keesey-comics.com/contact" },
         { "@id": "https://www.keesey-comics.com/mailinglist" },
