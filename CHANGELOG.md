@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [2.11.0](https://github.com/keesey/keesey-comics.com/tree/v2.11.0) - 2025-04-07
+
+### Changed
+
+-   Moved online store from Gumroad to Patreon.
+-   Updated Patreon logo.
+-   Updated links for _Paleocene_ translations.
+-   Using single-letter icon for Kickstarter in Social Nav.
+
+### Removed
+
+-   Instagram and Mastodon links.
+
 ## [2.10.6](https://github.com/keesey/keesey-comics.com/tree/v2.10.6) - 2025-03-16
 
 ### Changed

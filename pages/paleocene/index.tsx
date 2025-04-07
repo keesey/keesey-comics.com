@@ -91,16 +91,14 @@ const Page: NextPage = () => {
                 {/* :TODO: Add merch? */}
                 <Nav>
                     <ComicText>Translations:</ComicText>
-                    <CTA href="//www.patreon.com/tmkeesey/shop/palreose-1-paleocene-1-in-korean-digital-1430942?source=keesey-comics" hrefLang="ko">
+                    <CTA
+                        href="//www.patreon.com/tmkeesey/shop/palreose-1-paleocene-1-in-korean-digital-1430942?source=keesey-comics"
+                        hrefLang="ko"
+                    >
                         <ComicText lang="ko">한국어</ComicText>
                         <ComicText> (Korean)</ComicText>
                     </CTA>
-                    <CTA
-                        href="//fourcatspress.com/paleocene/"
-                        hrefLang="it"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
+                    <CTA href="//fourcatspress.com/paleocene/" hrefLang="it" target="_blank" rel="noreferrer">
                         <ComicText lang="it">Italiano</ComicText>
                         <ComicText> (Italian)</ComicText>
                         <br />
