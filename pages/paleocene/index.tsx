@@ -91,14 +91,12 @@ const Page: NextPage = () => {
                 {/* :TODO: Add merch? */}
                 <Nav>
                     <ComicText>Translations:</ComicText>
-                    <Link href="/store" legacyBehavior passHref>
-                        <CTA hrefLang="ko">
-                            <ComicText lang="ko">한국어</ComicText>
-                            <ComicText> (Korean)</ComicText>
-                        </CTA>
-                    </Link>
+                    <CTA href="//www.patreon.com/tmkeesey/shop/palreose-1-paleocene-1-in-korean-digital-1430942?source=keesey-comics" hrefLang="ko">
+                        <ComicText lang="ko">한국어</ComicText>
+                        <ComicText> (Korean)</ComicText>
+                    </CTA>
                     <CTA
-                        href="http://fourcatspress.com/catalog/paleontology/paleocene"
+                        href="//fourcatspress.com/paleocene/"
                         hrefLang="it"
                         target="_blank"
                         rel="noreferrer"
@@ -109,7 +107,7 @@ const Page: NextPage = () => {
                         <ComicText emphatic>(Most artwork differs)</ComicText>
                     </CTA>
                     <CTA
-                        href="http://www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno"
+                        href="//www.revistadelauniversidad.mx/articles/24d183cd-e3d4-4e63-8e9a-16966fa26726/paleoceno"
                         hrefLang="es"
                         target="_blank"
                         rel="noreferrer"
