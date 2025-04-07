@@ -45,7 +45,7 @@ const Page: NextPage = () => {
                     id="paleocene"
                     number={4}
                     seriesTitle="Paleocene"
-                    storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
+                    storeLinks={[{ type: "patreon", url: "//www.patreon.com/tmkeesey/shop?source=keesey-comics" }]}
                 >
                     <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>

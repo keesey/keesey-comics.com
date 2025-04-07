@@ -46,7 +46,7 @@ const Page: NextPage = () => {
                     author="Mike Keesey"
                     id="paleocene"
                     productIds={PRODUCT_IDS}
-                    storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
+                    storeLinks={[{ type: "patreon", url: "//www.patreon.com/tmkeesey/shop?source=keesey-comics" }]}
                     title="Paleocene"
                 />
                 <Quotes

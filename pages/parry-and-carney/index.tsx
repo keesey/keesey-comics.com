@@ -27,7 +27,7 @@ const Page: NextPage = () => {
                     ageRecommendation="17+"
                     author="Mike Keesey"
                     id="parry-and-carney"
-                    storeLinks={[{ type: "gumroad", url: "//keesey.gumroad.com/l/parry-and-carney" }]}
+                    storeLinks={[{ type: "patreon", url: "https://www.patreon.com/tmkeesey/shop/parry-n-carney-friends-for-life-webcomic-1430746?source=keesey-comics" }]}
                     title="Parry 'n' Carney: Friends for Life"
                 />
                 <ComicStrip>

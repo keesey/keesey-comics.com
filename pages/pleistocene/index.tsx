@@ -22,7 +22,7 @@ const Page: NextPage = () => {
                     ageRecommendation="17+"
                     author="Mike Keesey"
                     id="pleistocene"
-                    storeLinks={[{ type: "gumroad", url: "//gumroad.com/keesey" }]}
+                    storeLinks={[{ type: "patreon", url: "//www.patreon.com/tmkeesey/shop?source=keesey-comics" }]}
                     title="Pleistocene"
                 />
                 <ComicStrip>

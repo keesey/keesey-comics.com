@@ -5,14 +5,14 @@ import ComicText from "../ComicText"
 import Logo from "../Logo"
 import styles from "./ExternalStores.module.scss"
 export type ExternalStoreLink = Readonly<{
-    type: "gumroad"
+    type: "patreon"
     url: string
 }>
 export interface Props extends PropsWithChildren {
     links?: readonly ExternalStoreLink[]
 }
 const LOGO_HEIGHT: Readonly<Record<ExternalStoreLink["type"], number>> = {
-    gumroad: 48,
+    patreon: 48,
 }
 const ExternalStores: FC<Props> = ({ children, links }) => {
     const logoColor = useForegroundColor()
