@@ -12,7 +12,7 @@ export interface Props extends PropsWithChildren {
     links?: readonly ExternalStoreLink[]
 }
 const LOGO_HEIGHT: Readonly<Record<ExternalStoreLink["type"], number>> = {
-    patreon: 48,
+    patreon: 28,
 }
 const ExternalStores: FC<Props> = ({ children, links }) => {
     const logoColor = useForegroundColor()

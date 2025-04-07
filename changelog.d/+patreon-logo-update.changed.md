@@ -1,0 +1,1 @@
+Updated Patreon logo.

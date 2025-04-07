@@ -45,7 +45,7 @@ const Header: FC<PromosProps> = ({ promos }) => {
                         </a>
                     </Link>
                     <a href="//patreon.com/tmkeesey" rel="author" role="button">
-                        <Logo color={logoColor} type="patreon" width={79} height={21} />
+                        <Logo color={logoColor} type="patreon-p" width={25} height={25} />
                     </a>
                 </section>
             </nav>

@@ -13,6 +13,7 @@ export interface Props
         | "paleocene"
         | "parry-and-carney"
         | "patreon"
+        | "patreon-p"
         | "phylopic"
         | "pleistocene"
         | "the-flesh"
@@ -27,6 +28,7 @@ const ALT_TEXT: Readonly<Record<Props["type"], string>> = {
     paleocene: "Paleocene",
     "parry-and-carney": "Parry 'n' Carney: Friends for Life",
     patreon: "Patreon",
+    "patreon-p": "Patreon",
     phylopic: "PhyloPic",
     pleistocene: "Pleistocene",
     "the-flesh": "The Flesh",
