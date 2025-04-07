@@ -8,7 +8,6 @@ export interface Props
         | "keesey-comics"
         | "kickstarter"
         | "kickstarter-k"
-        | "mastodon"
         | "paleocene"
         | "parry-and-carney"
         | "patreon"
@@ -22,7 +21,6 @@ const ALT_TEXT: Readonly<Record<Props["type"], string>> = {
     "keesey-comics": "Keesey Comics",
     kickstarter: "Kickstarter",
     "kickstarter-k": "Kickstarter",
-    mastodon: "Mastodon",
     paleocene: "Paleocene",
     "parry-and-carney": "Parry 'n' Carney: Friends for Life",
     patreon: "Patreon",

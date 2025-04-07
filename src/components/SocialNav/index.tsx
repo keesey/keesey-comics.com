@@ -9,12 +9,9 @@ const SocialNav: FC = () => {
         <Nav>
             <Link href="/kickstarter" legacyBehavior passHref>
                 <a role="button">
-                    <Logo color={logoColor} type="kickstarter" width={198} height={21} />
+                    <Logo color={logoColor} type="kickstarter-k" width={50} height={50} />
                 </a>
             </Link>
-            <a href="//sauropods.win/@keeseycomics" rel="me" role="button">
-                <Logo color={logoColor} type="mastodon" width={50} height={50} />
-            </a>
             <a href="//patreon.com/tmkeesey" rel="author" role="button">
                 <Logo color={logoColor} type="patreon-p" width={50} height={50} />
             </a>

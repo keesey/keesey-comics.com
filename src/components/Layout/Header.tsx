@@ -33,9 +33,6 @@ const Header: FC<PromosProps> = ({ promos }) => {
                 </section>
                 <section className={styles.social}>
                     <CartButton />
-                    <a href="//sauropods.win/@keeseycomics" rel="me" role="button">
-                        <Logo color={logoColor} type="mastodon" width={25} height={25} />
-                    </a>
                     <Link href="/kickstarter" legacyBehavior passHref>
                         <a role="button">
                             <Logo color={logoColor} type="kickstarter-k" width={19} height={21} />
