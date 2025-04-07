@@ -1,5 +1,4 @@
 import type { NextPage } from "next"
-import Link from "next/link"
 import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
