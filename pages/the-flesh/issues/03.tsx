@@ -4,12 +4,12 @@ import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
-import ComicText from "~/components/ComicText"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
+import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
 import GAGE_ULLMAN from "~/schema/GAGE_ULLMAN"
 import THE_FLESH from "~/schema/THE_FLESH"
 const SUBJECT: ComicStory = {
@@ -25,7 +25,8 @@ const SUBJECT: ComicStory = {
     position: 3,
     url: "https://www.keesey-comics.com/the-flesh/issues/03",
 }
-//const PRODUCT_ID = "COB-ST2-FLE-03A"
+const PRODUCT_ID = "COB-ST2-FLE-03A"
+const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
@@ -42,7 +43,7 @@ const Page: NextPage = () => {
                     number={3}
                     seriesTitle="The Flesh"
                 >
-                    <ComicText>Coming soon!</ComicText>
+                    <IncrementQuantityCTA href="/cart" productIds={PRODUCT_IDS} />
                 </IssueHero>
                 <ComicStrip>
                     <TextPanel>

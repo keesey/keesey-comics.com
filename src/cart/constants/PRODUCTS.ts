@@ -56,6 +56,15 @@ const PRODUCTS: readonly Product[] = [
         type: PRODUCT_TYPES_MAP["COB-ST2"],
     },
     {
+        html: "<cite>The Flesh #3</cite>",
+        id: "COB-ST2-FLE-03A",
+        imagePath: "/images/issues/the-flesh/03/front_cover.png",
+        name: "The Flesh #3",
+        path: "/the-flesh/issues/03",
+        theme: "hell",
+        type: PRODUCT_TYPES_MAP["COB-ST2"],
+    },
+    {
         html: "<cite>Paleocene</cite> Poster &quot;Skull&quot;",
         id: "POS-17I-PAL-001",
         name: 'Paleocene Poster "Skull"',

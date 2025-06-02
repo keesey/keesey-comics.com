@@ -11,7 +11,7 @@ const Kickstarter: FC<Props> = ({ children, url }) => (
             <span className={styles.phase}>{children}</span>
             <cite>
                 <Logo color="white" type="paleocene" height={48} width={133} />
-                #4
+                #5
             </cite>
             <Logo color="white" type="kickstarter" height={32} width={302} />
         </aside>
