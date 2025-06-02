@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Updated Kickstarter link for _Paleocene #5_ campaign.
 -   _The Flesh #3_ is on sale, not coming soon.
 
+### Security
+
+-   Next.js patch upgrade.
+
 ## [2.11.0](https://github.com/keesey/keesey-comics.com/tree/v2.11.0) - 2025-04-07
 
 ### Changed
