@@ -33,7 +33,7 @@ const getCountdown = () => {
 const Message: FC = () => {
     if (process.env.NEXT_PUBLIC_KICKSTARTER_PHASE) {
         return (
-            <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-5-comic-book">
+            <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-5-comic-book?ref=56eiuo">
                 {process.env.NEXT_PUBLIC_KICKSTARTER_PHASE}
             </Kickstarter>
         )
@@ -47,7 +47,7 @@ const Countdown: FC = () => {
         return () => clearInterval(handle)
     }, [setCountdown])
     return countdown ? (
-        <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-5-comic-book">{countdown}</Kickstarter>
+        <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-5-comic-book?ref=56eiuo">{countdown}</Kickstarter>
     ) : (
         <Message />
     )

@@ -40,22 +40,12 @@ const Page: NextPage = () => {
                     number={5}
                     seriesTitle="Paleocene"
                 >
-                    <p>
-                        <ComicText emphatic>Coming later this year!</ComicText>
-                    </p>
-                    <p>
-                        <ComicText>Want to be notified early?</ComicText>
-                    </p>
-                    <Link href="/mailinglist" legacyBehavior passHref>
+                    <Link href="/kickstarter" legacyBehavior passHref>
                         <CTA>
-                            <ComicText>Join the mailing list</ComicText>
+                            <ComicText>Check it out on</ComicText><br />
+                            <Logo color="black" type="kickstarter" width={237} height={63} />
                         </CTA>
                     </Link>
-                    <CTA href="//patreon.com/tmkeesey">
-                        <ComicText>Follow on</ComicText>
-                        <br />
-                        <Logo color="black" type="patreon" width={158} height={42} />
-                    </CTA>
                 </IssueHero>
                 <IssuePromos id="paleocene" numbers={[1, 2, 3, 4]}>
                     Catch up on earlier issues!
