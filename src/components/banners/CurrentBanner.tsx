@@ -47,7 +47,9 @@ const Countdown: FC = () => {
         return () => clearInterval(handle)
     }, [setCountdown])
     return countdown ? (
-        <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-5-comic-book?ref=56eiuo">{countdown}</Kickstarter>
+        <Kickstarter url="//www.kickstarter.com/projects/keesey/paleocene-5-comic-book?ref=56eiuo">
+            {countdown}
+        </Kickstarter>
     ) : (
         <Message />
     )

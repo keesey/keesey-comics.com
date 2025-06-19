@@ -42,7 +42,8 @@ const Page: NextPage = () => {
                 >
                     <Link href="/kickstarter" legacyBehavior passHref>
                         <CTA>
-                            <ComicText>Check it out on</ComicText><br />
+                            <ComicText>Check it out on</ComicText>
+                            <br />
                             <Logo color="black" type="kickstarter" width={237} height={63} />
                         </CTA>
                     </Link>
