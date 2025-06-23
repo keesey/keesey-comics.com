@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [2.11.3](https://github.com/keesey/keesey-comics.com/tree/v2.11.3) - 2025-06-23
+
+### Added
+
+-   Link for _Paleocene #5_ in _Paleocene_ schema.
+-   CTA for Kickstarter on _Paleocene_ index page.
+
 ## [2.11.2](https://github.com/keesey/keesey-comics.com/tree/v2.11.2) - 2025-06-18
 
 ### Changed

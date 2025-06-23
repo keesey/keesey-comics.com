@@ -1,4 +1,5 @@
 import type { NextPage } from "next"
+import Link from "next/link"
 import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
@@ -8,6 +9,7 @@ import CTA from "~/components/CTA"
 import SeriesHero from "~/components/heroes/SeriesHero"
 import Layout from "~/components/Layout"
 import Nav from "~/components/Layout/Nav"
+import Logo from "~/components/Logo"
 import Head from "~/components/metadata/Head"
 import ItemListSchema from "~/components/metadata/ItemListSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
@@ -26,6 +28,7 @@ const Page: NextPage = () => {
                         "https://www.keesey-comics.com/paleocene/issues/02",
                         "https://www.keesey-comics.com/paleocene/issues/03",
                         "https://www.keesey-comics.com/paleocene/issues/04",
+                        "https://www.keesey-comics.com/paleocene/issues/05",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-001",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-002",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-003",
@@ -47,7 +50,15 @@ const Page: NextPage = () => {
                     productIds={PRODUCT_IDS}
                     storeLinks={[{ type: "patreon", url: "//www.patreon.com/tmkeesey/shop?source=keesey-comics" }]}
                     title="Paleocene"
-                />
+                >
+                    <Link href="/kickstarter" legacyBehavior passHref>
+                        <CTA>
+                            <ComicText>New issue on</ComicText>
+                            <br />
+                            <Logo color="black" type="kickstarter" width={237} height={63} />
+                        </CTA>
+                    </Link>
+                </SeriesHero>
                 <Quotes
                     quotes={[
                         {
