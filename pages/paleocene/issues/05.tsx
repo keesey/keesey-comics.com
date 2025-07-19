@@ -6,7 +6,6 @@ import ComicText from "~/components/ComicText"
 import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
-import Logo from "~/components/Logo"
 import Head from "~/components/metadata/Head"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import SocialNav from "~/components/SocialNav"
@@ -40,11 +39,10 @@ const Page: NextPage = () => {
                     number={5}
                     seriesTitle="Paleocene"
                 >
-                    <Link href="/kickstarter" legacyBehavior passHref>
+                    <ComicText>Coming Soon!</ComicText>
+                    <Link href="/newsletter" legacyBehavior passHref>
                         <CTA>
-                            <ComicText>Check it out on</ComicText>
-                            <br />
-                            <Logo color="black" type="kickstarter" width={237} height={63} />
+                            <ComicText>Subscribe for Updates</ComicText>
                         </CTA>
                     </Link>
                 </IssueHero>
