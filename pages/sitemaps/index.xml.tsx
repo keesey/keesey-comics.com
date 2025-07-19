@@ -15,7 +15,7 @@ const PATHS: readonly string[] = [
     "the-flesh/issues/02",
     "the-flesh/issues/03",
     "pleistocene",
-    "mailinglist",
+    "newsletter",
     "contact",
     ...PRODUCTS.filter(product => !product.path).map(product => `products/${product.id}`),
 ]

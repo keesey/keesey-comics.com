@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [2.12.0](https://github.com/keesey/keesey-comics.com/tree/v2.12.0) - 2025-07-19
+
+### Added
+
+-   Description for Newsletter.
+
+### Changed
+
+-   Renamed "Mailing List" to "Newsletter".
+
+### Removed
+
+-   Anything related to the _Paleocene #5_ Kickstarter.
+
 ## [2.11.4](https://github.com/keesey/keesey-comics.com/tree/v2.11.4) - 2025-06-23
 
 ### Security

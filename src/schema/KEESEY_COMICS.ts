@@ -8,7 +8,7 @@ const KEESEY_COMICS: Organization = {
     name: "Keesey Comics",
     subjectOf: [
         { "@id": "https://www.keesey-comics.com/contact" },
-        { "@id": "https://www.keesey-comics.com/mailinglist" },
+        { "@id": "https://www.keesey-comics.com/newsletter" },
     ],
     url: "https://www.keesey-comics.com/",
 }

@@ -24,8 +24,8 @@ const Header: FC<PromosProps> = ({ promos }) => {
                     <Link href="/store" legacyBehavior passHref>
                         <a>Store</a>
                     </Link>
-                    <Link href="/mailinglist" legacyBehavior passHref>
-                        <a>Mailing List</a>
+                    <Link href="/newsletter" legacyBehavior passHref>
+                        <a>Newsletter</a>
                     </Link>
                     <Link href="/contact" legacyBehavior passHref>
                         <a>Contact</a>

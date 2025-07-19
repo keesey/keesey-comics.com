@@ -8,10 +8,10 @@ import Head from "~/components/metadata/Head"
 import SocialNav from "~/components/SocialNav"
 const SUBJECT: MediaSubscription = {
     "@type": "MediaSubscription",
-    "@id": "https://www.keesey-comics.com/mailinglist",
-    name: "Keesey Comics Mailing List",
-    description: "Newsletter for Keesey Comics.",
-    url: "https://www.keesey-comics.com/mailinglist",
+    "@id": "https://www.keesey-comics.com/newsletter",
+    name: "Keesey Comics Newsletter",
+    description: "An infrequent email bulletin for the latest news and events from Keesey Comics.",
+    url: "https://www.keesey-comics.com/newsletter",
 }
 const Contact: NextPage = () => {
     return (
@@ -19,7 +19,14 @@ const Contact: NextPage = () => {
             <Head subject={SUBJECT} />
             <Layout footerPromos={["paleocene", "parry-and-carney", "the-flesh", "pleistocene"]} theme="kc">
                 <Hero>
-                    <h1>Keesey Comics Mailing List</h1>
+                    <h1>Keesey Comics Newsletter</h1>
+                    <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+                        <p style={{ maxWidth: "30rem", textAlign: "justify" }}>
+                            The <em>Keesey Comics Newsletter</em> is an infrequent email bulletin that will keep you
+                            updated on the latest news and events from Keesey Comics. Typically only a few emails are
+                            sent per year.
+                        </p>
+                    </div>
                 </Hero>
                 <Form />
                 <hr />

@@ -12,7 +12,8 @@ const Form: FC = () => (
             target="_blank"
         >
             <div className="content" id="mc_embed_signup_scroll">
-                <label htmlFor="mce-EMAIL">Sign up for the newsletter:</label>
+                <label htmlFor="mce-EMAIL">Subscribe to the newsletter:</label>
+                <br />
                 <input
                     className="email"
                     id="mce-EMAIL"
