@@ -27,6 +27,7 @@ const Page: NextPage = () => {
                         "https://www.keesey-comics.com/paleocene/issues/03",
                         "https://www.keesey-comics.com/paleocene/issues/04",
                         "https://www.keesey-comics.com/paleocene/issues/05",
+                        "https://www.keesey-comics.com/paleocene/issues/06",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-001",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-002",
                         "https://www.keesey-comics.com/products/POS-17I-PAL-003",
@@ -42,7 +43,7 @@ const Page: NextPage = () => {
                 theme="night"
             >
                 <SeriesHero
-                    ageRecommendation="9+"
+                    ageRecommendation="13+"
                     author="Mike Keesey"
                     id="paleocene"
                     productIds={PRODUCT_IDS}
@@ -85,7 +86,7 @@ const Page: NextPage = () => {
                     <TextPanel>...and the early dawn of a new one.</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/04.png" width={285.5} />
                 </ComicStrip>
-                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4, 5]}>
+                <IssuePromos id="paleocene" numbers={[1, 2, 3, 4, 5, 6]}>
                     Read all the issues!
                 </IssuePromos>
                 {/* :TODO: Add merch? */}
