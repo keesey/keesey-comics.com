@@ -29,6 +29,15 @@ const PRODUCTS: readonly Product[] = [
         type: PRODUCT_TYPES_MAP["COB-STD"],
     },
     {
+        html: "<cite>Paleocene #5</cite>",
+        id: "COB-STD-PAL-05A",
+        imagePath: "/images/issues/paleocene/05/front_cover.png",
+        name: "Paleocene #5",
+        path: "/paleocene/issues/05",
+        theme: "night",
+        type: PRODUCT_TYPES_MAP["COB-STD"],
+    },
+    {
         html: "<cite>Paleocene #4</cite>",
         id: "COB-STD-PAL-04A",
         imagePath: "/images/issues/paleocene/04/front_cover.png",
