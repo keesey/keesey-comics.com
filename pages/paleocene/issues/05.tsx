@@ -59,9 +59,9 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/paleocene/05/02.png" width={583} />
                     <TextPanel>Can she possibly escape from such a deadly predator?</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/05/03.png" width={165} />
-                    <TextPanel>If she escapes, how can she survive?</TextPanel>
+                    <TextPanel>If she does escape, how can she survive?</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/05/04.png" width={286} />
-                    <TextPanel>And if she survives...</TextPanel>
+                    <TextPanel>And if she does survive...</TextPanel>
                     <ImagePanel height={280} src="/images/issues/paleocene/05/05.png" width={255} />
                     <TextPanel emphatic>...will she ever be the same?</TextPanel>
                 </ComicStrip>

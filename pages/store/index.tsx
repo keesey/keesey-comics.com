@@ -47,6 +47,7 @@ const Page: NextPage = () => {
                         <Product id="COB-STD-PAL-02A" />
                         <Product id="COB-STD-PAL-03A" />
                         <Product id="COB-STD-PAL-04A" />
+                        <Product id="COB-STD-PAL-05A" />
                         <Product id="COB-ST2-FLE-01A" />
                         <Product id="COB-ST2-FLE-02A" />
                         <Product id="COB-ST2-FLE-03A" />
