@@ -35,8 +35,6 @@ const Home: NextPage = () => {
                 <SeriesPromo id="pleistocene">
                     He told himself he was the greatest hero of his age -- the noblest human being of the...
                 </SeriesPromo>
-                <hr />
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )

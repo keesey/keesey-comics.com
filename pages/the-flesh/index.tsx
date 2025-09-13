@@ -56,8 +56,6 @@ const Page: NextPage = () => {
                     Read all the issues!
                 </IssuePromos>
                 {/* :TODO: Add merch? */}
-                <br />
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )

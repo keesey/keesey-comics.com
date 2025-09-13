@@ -31,8 +31,6 @@ const Contact: NextPage = () => {
                         <span>Join the mailing list</span>
                     </CTA>
                 </Link>
-                <hr />
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )

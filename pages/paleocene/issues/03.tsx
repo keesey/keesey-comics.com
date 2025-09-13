@@ -92,7 +92,6 @@ const Page: NextPage = () => {
                 <IssuePromos id="paleocene" numbers={[1, 2, 3, 4, 5, 6]}>
                     Read all the issues!
                 </IssuePromos>
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )

@@ -124,8 +124,6 @@ const Page: NextPage = () => {
                         <ComicText emphatic>(Eight pages only)</ComicText>
                     </CTA>
                 </Nav>
-                <br />
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )

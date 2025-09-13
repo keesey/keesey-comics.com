@@ -38,7 +38,6 @@ const Page: NextPage = () => {
                     <ImagePanel height={280} src="/images/issues/pleistocene/04.png" width={509} />
                     <TextPanel emphatic>...or was it something else?</TextPanel>
                 </ComicStrip>
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )

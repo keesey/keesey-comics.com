@@ -71,7 +71,6 @@ const Page: NextPage = () => {
                 <IssuePromos id="the-flesh" numbers={[1, 2, 3]}>
                     Read all the issues!
                 </IssuePromos>
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )

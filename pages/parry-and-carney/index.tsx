@@ -56,7 +56,6 @@ const Page: NextPage = () => {
                     />
                     <TextPanel emphatic>Oh, the things that happen next!</TextPanel>
                 </ComicStrip>
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )

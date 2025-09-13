@@ -29,8 +29,6 @@ const Contact: NextPage = () => {
                     </div>
                 </Hero>
                 <Form />
-                <hr />
-                <SocialNav />
             </Layout>
         </OrderContainer>
     )
