@@ -6,7 +6,6 @@ import CTA from "~/components/CTA"
 import Hero from "~/components/heroes/Hero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
-import SocialNav from "~/components/SocialNav"
 const SUBJECT: ContactPage = {
     "@type": "ContactPage",
     "@id": "https://www.keesey-comics.com/contact",

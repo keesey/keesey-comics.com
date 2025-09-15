@@ -1,19 +1,15 @@
 import type { NextPage } from "next"
-import Link from "next/link"
 import type { ComicStory } from "schema-dts"
 import { PRODUCTS_MAP } from "~/cart/constants/PRODUCTS"
 import OrderContainer from "~/cart/context/order/OrderContainer"
 import ComicStrip from "~/components/ComicStrip"
 import ImagePanel from "~/components/ComicStrip/ImagePanel"
 import TextPanel from "~/components/ComicStrip/TextPanel"
-import ComicText from "~/components/ComicText"
-import CTA from "~/components/CTA"
 import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import ProductSchema from "~/components/metadata/ProductSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
-import SocialNav from "~/components/SocialNav"
 import IncrementQuantityCTA from "~/components/store/IncrementQuantityCTA"
 import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
@@ -34,7 +30,7 @@ const PRODUCT_IDS = [PRODUCT_ID]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
-            <Head favIconType="paleocene" socialImagePath="/paleocene/05" subject={SUBJECT} author={MIKE_KEESEY} >
+            <Head favIconType="paleocene" socialImagePath="/paleocene/05" subject={SUBJECT} author={MIKE_KEESEY}>
                 <ProductSchema product={PRODUCTS_MAP[PRODUCT_ID]} />
             </Head>
             <Layout

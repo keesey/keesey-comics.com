@@ -8,7 +8,6 @@ import IssueHero from "~/components/heroes/IssueHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
-import SocialNav from "~/components/SocialNav"
 import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
 const SUBJECT: ComicStory = {

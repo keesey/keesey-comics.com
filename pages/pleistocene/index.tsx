@@ -6,7 +6,6 @@ import TextPanel from "~/components/ComicStrip/TextPanel"
 import SeriesHero from "~/components/heroes/SeriesHero"
 import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
-import SocialNav from "~/components/SocialNav"
 import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PLEISTOCENE from "~/schema/PLEISTOCENE"
 const Page: NextPage = () => {

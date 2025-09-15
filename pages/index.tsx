@@ -5,7 +5,6 @@ import Head from "~/components/metadata/Head"
 import ItemListSchema from "~/components/metadata/ItemListSchema"
 import Schema from "~/components/metadata/Schema"
 import SeriesPromo from "~/components/promos/SeriesPromo"
-import SocialNav from "~/components/SocialNav"
 import KEESEY_COMICS from "~/schema/KEESEY_COMICS"
 import KEESEY_COMICS_WEBSITE from "~/schema/KEESEY_COMICS_WEBSITE"
 const Home: NextPage = () => {

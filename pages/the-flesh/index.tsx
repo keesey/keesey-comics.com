@@ -8,7 +8,6 @@ import Layout from "~/components/Layout"
 import Head from "~/components/metadata/Head"
 import ItemListSchema from "~/components/metadata/ItemListSchema"
 import IssuePromos from "~/components/promos/IssuePromos.tsx"
-import SocialNav from "~/components/SocialNav"
 import GAGE_ULLMAN from "~/schema/GAGE_ULLMAN"
 import THE_FLESH from "~/schema/THE_FLESH"
 const PRODUCT_IDS = ["COB-ST2-FLE-01A", "COB-ST2-FLE-02A", "COB-ST2-FLE-03A"]
