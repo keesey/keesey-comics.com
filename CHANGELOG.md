@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [2.13.1](https://github.com/keesey/keesey-comics.com/tree/v2.13.1) - 2025-09-14
+
+### Fixed
+
+- Removed some outdated countries from the USPS list.
+
 ## [2.13.0](https://github.com/keesey/keesey-comics.com/tree/v2.13.0) - 2025-09-14
 
 ### Added
