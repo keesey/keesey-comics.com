@@ -14,7 +14,7 @@ import IssuePromos from "~/components/promos/IssuePromos.tsx"
 import Quotes from "~/components/Quotes"
 import MIKE_KEESEY from "~/schema/MIKE_KEESEY"
 import PALEOCENE from "~/schema/PALEOCENE"
-const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A", "COB-STD-PAL-04A"]
+const PRODUCT_IDS = ["COB-STD-PAL-01B", "COB-STD-PAL-02A", "COB-STD-PAL-03A", "COB-STD-PAL-04A", "COB-STD-PAL-05A"]
 const Page: NextPage = () => {
     return (
         <OrderContainer>
