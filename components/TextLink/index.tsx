@@ -12,7 +12,7 @@ export type TextLinkProps = PropsWithChildren &
         AnchorHTMLAttributes<HTMLAnchorElement>,
         HTMLAnchorElement
       >)
-    | ({ isExternal?: false } & LinkProps<AppRoute>)
+    | ({ isExternal?: false; className?: string } & LinkProps<AppRoute>)
   )
 export const TextLink = ({ children, ...props }: TextLinkProps) => {
   if (props.isExternal) {
