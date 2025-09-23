@@ -1,0 +1,11 @@
+.negative {
+  color: red;
+
+  &::before {
+    content: "(";
+  }
+
+  &::after {
+    content: ")";
+  }
+}
