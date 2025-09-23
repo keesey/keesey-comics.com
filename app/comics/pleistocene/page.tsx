@@ -88,7 +88,7 @@ export default function Pleistocene() {
                 <abbr title="inches">″</abbr>
                 {"\u200A×\u200A"}7{"\u200A"}
                 <span style={{ fontVariantNumeric: "diagonal-fractions" }}>
-                  11/48
+                  1/4
                 </span>
                 <abbr title="inches">″</abbr>
               </Definition>
