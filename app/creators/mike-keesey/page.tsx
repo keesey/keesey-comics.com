@@ -1,4 +1,3 @@
-
 import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { ImageRail } from "@/components/ImageRail"
 import { Portrait } from "@/components/Portrait"

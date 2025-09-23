@@ -1,4 +1,3 @@
-
 import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { LogoHeader } from "@/components/LogoHeader"
 import { TextPassage } from "@/components/TextPassage"

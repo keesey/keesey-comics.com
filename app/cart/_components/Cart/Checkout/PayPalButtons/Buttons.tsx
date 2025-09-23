@@ -4,10 +4,10 @@ import { Context as OrderContext } from "@/lib/cart/context/order/Context"
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js"
 import clsx from "clsx"
 import { useCallback, useContext, useState } from "react"
-import { handleShippingOptionsChange } from "./handleShippingOptionsChange"
 import { useCreateOrder } from "./useCreateOrder"
 import { useOnApprove } from "./useOnApprove"
-import { useOnShippingAddressChange } from "./useOnShippingAddressChange"
+// import { handleShippingOptionsChange } from "./handleShippingOptionsChange"
+// import { useOnShippingAddressChange } from "./useOnShippingAddressChange"
 const Buttons = () => {
   const [{ isPending, isRejected }] = usePayPalScriptReducer() ?? [{}]
   const [order] = useContext(OrderContext) ?? []
@@ -18,7 +18,7 @@ const Buttons = () => {
   const handleError = useCallback((error: unknown) => {
     setError(String(error) || undefined)
   }, [])
-  const handleShippingAddressChange = useOnShippingAddressChange()
+  //const handleShippingAddressChange = useOnShippingAddressChange()
   const isDisabled = Boolean(!costs || isPending)
   return (
     <>
@@ -29,8 +29,8 @@ const Buttons = () => {
         forceReRender={[order, costs]}
         onApprove={handleApprove}
         onError={handleError}
-        onShippingAddressChange={handleShippingAddressChange}
-        onShippingOptionsChange={handleShippingOptionsChange}
+        //onShippingAddressChange={handleShippingAddressChange}
+        //onShippingOptionsChange={handleShippingOptionsChange}
       />
       {isRejected && <div className="text-red-500">{error ?? "Error!"}</div>}
     </>

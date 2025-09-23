@@ -30,7 +30,7 @@ export const generateMetadata = async ({
   }
   return {
     alternates: { canonical: `/products/${encodeURIComponent(productId)}` },
-      title: `${product.name} (${product.type.name})`,
+    title: `${product.name} (${product.type.name})`,
   }
 }
 const Product = async ({ params }: PageProps<"/products/[id]">) => {
