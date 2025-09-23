@@ -12,6 +12,14 @@ export const metadata: Metadata = {
   ...generateThingMetadata(GAGE_ULLMAN),
   alternates: { canonical: "/creators/gage-ullman" },
   metadataBase: METADATA_BASE,
+  openGraph: {
+    images: [{
+      alt: "Gage Ullman",
+      height: 400,
+      url: "/creators/gage-ullman/portrait.svg",
+      width: 400
+    }]
+  }
 }
 export default function GageUllman() {
   return (

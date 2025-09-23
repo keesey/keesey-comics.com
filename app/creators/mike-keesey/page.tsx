@@ -12,6 +12,14 @@ export const metadata: Metadata = {
   ...generateThingMetadata(MIKE_KEESEY),
   alternates: { canonical: "/creators/mike-keesey" },
   metadataBase: METADATA_BASE,
+  openGraph: {
+    images: [{
+      alt: "Mike Keesey",
+      height: 874 ,
+      url: "/creators/mike-keesey/portrait.svg",
+      width: 850
+    }]
+  }
 }
 export default function MikeKeesey() {
   return (
