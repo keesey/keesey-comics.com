@@ -74,7 +74,7 @@ export const Carousel = ({ slides, interval = 8000 }: CarouselProps) => {
   }
   return (
     <div className="relative">
-      <div className="relative aspect-square w-full md:aspect-auto md:h-96 lg:h-112">
+      <div className="relative aspect-square w-full overflow-y-hidden md:aspect-auto md:h-96 lg:h-112">
         <SwipeDetector onSwipeLeft={handleNext} onSwipeRight={handlePrev}>
           {slides.map((slide, index) => (
             <CarouselSlide
