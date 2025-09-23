@@ -1,4 +1,4 @@
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 import { CreativeWorkSections } from "@/app/comics/_components/CreativeWorkSections"
 import { EditionSection } from "@/app/comics/_components/EditionSection"
 import { EditionsSection } from "@/app/comics/_components/EditionsSection"
@@ -24,7 +24,6 @@ import { THE_FLESH_03, THE_FLESH_03_ABSTRACT_HTML } from "./schema"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(THE_FLESH_03),
   alternates: { canonical: "/comics/the-flesh/issues/03" },
-  metadataBase: METADATA_BASE,
 }
 export default function TheFlesh03() {
   return (

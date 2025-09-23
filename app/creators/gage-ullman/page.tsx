@@ -7,11 +7,10 @@ import { Schema } from "@/lib/schema/Schema"
 import type { Metadata } from "next"
 import { GAGE_ULLMAN } from "./schema"
 import { TextLink } from "@/components/TextLink"
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 export const metadata: Metadata = {
   ...generateThingMetadata(GAGE_ULLMAN),
   alternates: { canonical: "/creators/gage-ullman" },
-  metadataBase: METADATA_BASE,
 }
 export default function GageUllman() {
   return (

@@ -2,10 +2,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { Portrait } from "@/components/Portrait"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { METADATA_BASE } from "../_lib/METADATA_BASE"
+
 export const metadata: Metadata = {
   alternates: { canonical: "/creators" },
-  metadataBase: METADATA_BASE,
   title: "Keesey Comics: The Creators",
 }
 export default function Creators() {

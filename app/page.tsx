@@ -4,13 +4,10 @@ import { Schema } from "@/lib/schema/Schema"
 import type { Metadata } from "next"
 import { FeaturedPublications } from "./_components/FeaturedPublications"
 import { KEESEY_COMICS } from "./schema"
-import { METADATA_BASE } from "./_lib/METADATA_BASE"
+
 export const metadata: Metadata = {
   ...generateThingMetadata(KEESEY_COMICS),
-  alternates: {
-    canonical: "/",
-  },
-  metadataBase: METADATA_BASE,
+  alternates: { canonical: "/" },
 }
 export default function Home() {
   return (

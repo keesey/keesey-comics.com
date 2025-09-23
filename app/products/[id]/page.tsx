@@ -10,7 +10,7 @@ import { notFound, permanentRedirect } from "next/navigation"
 import { getProductSchema } from "./_lib/getProductSchema"
 import { Definitions } from "@/components/Definitions"
 import { Metadata } from "next"
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 export interface Props {
   productId: string
 }
@@ -30,8 +30,7 @@ export const generateMetadata = async ({
   }
   return {
     alternates: { canonical: `/products/${encodeURIComponent(productId)}` },
-    metadataBase: METADATA_BASE,
-    title: `${product.name} (${product.type.name})`,
+      title: `${product.name} (${product.type.name})`,
   }
 }
 const Product = async ({ params }: PageProps<"/products/[id]">) => {

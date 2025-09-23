@@ -7,12 +7,11 @@ import { Schema } from "@/lib/schema/Schema"
 import type { Metadata } from "next"
 import { AppRoute } from "next/dist/build/swc/types"
 import { LinkProps } from "next/link"
-import { METADATA_BASE } from "../_lib/METADATA_BASE"
+
 import { CONTACT } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(CONTACT),
   alternates: { canonical: "/contact" },
-  metadataBase: METADATA_BASE,
 }
 export default function Contact() {
   return (

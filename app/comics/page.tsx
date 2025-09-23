@@ -8,6 +8,7 @@ import { PLEISTOCENE_ABSTRACT_HTML } from "./pleistocene/schema"
 import { THE_FLESH } from "./the-flesh/schema"
 import { TextPassage } from "@/components/TextPassage"
 import { LogoHeader } from "@/components/LogoHeader"
+
 export const metadata: Metadata = {
   title: "Keesey Comics: All Comics",
 }

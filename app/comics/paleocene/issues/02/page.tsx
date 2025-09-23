@@ -23,11 +23,10 @@ import Link from "next/link"
 import { DigitalEditionDefinitions } from "../../_components/DigitalEditionDefinitions"
 import { PALEOCENE_02 } from "./schema"
 import type { Metadata } from "next"
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PALEOCENE_02),
   alternates: { canonical: "/comics/paleocene/issues/02" },
-  metadataBase: METADATA_BASE,
 }
 export default function Paleocene02() {
   return (

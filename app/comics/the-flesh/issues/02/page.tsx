@@ -20,11 +20,10 @@ import { Schema } from "@/lib/schema/Schema"
 import Link from "next/link"
 import { THE_FLESH_02, THE_FLESH_02_ABSTRACT_HTML } from "./schema"
 import type { Metadata } from "next"
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(THE_FLESH_02),
   alternates: { canonical: "/comics/the-flesh/issues/02" },
-  metadataBase: METADATA_BASE,
 }
 export default function TheFlesh02() {
   return (

@@ -17,12 +17,11 @@ import { PARRY_N_CARNEY, PARRY_N_CARNEY_ABSTRACT_HTML } from "./schema"
 import { TextPassage } from "@/components/TextPassage"
 import { MIKE_KEESEY } from "@/app/creators/mike-keesey/schema"
 import { Price } from "@/components/Price"
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 import { Metadata } from "next"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PARRY_N_CARNEY),
   alternates: { canonical: "/comics/parry-n-carney" },
-  metadataBase: METADATA_BASE,
 }
 export default function ParryNCarney() {
   return (

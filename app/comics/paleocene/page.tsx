@@ -1,4 +1,4 @@
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { LogoHeader } from "@/components/LogoHeader"
 import { TextPassage } from "@/components/TextPassage"
@@ -10,7 +10,6 @@ import { PALEOCENE } from "./schema"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PALEOCENE),
   alternates: { canonical: "/comics/paleocene" },
-  metadataBase: METADATA_BASE,
 }
 export default function Paleocene() {
   return (

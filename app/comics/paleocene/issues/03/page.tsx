@@ -24,11 +24,10 @@ import { DigitalEditionDefinitions } from "../../_components/DigitalEditionDefin
 import { PALEOCENE_03 } from "./schema"
 import { TrailerSection } from "@/components/TrailerSection"
 import type { Metadata } from "next"
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PALEOCENE_03),
   alternates: { canonical: "/comics/paleocene/issues/03" },
-  metadataBase: METADATA_BASE,
 }
 export default function Paleocene03() {
   return (

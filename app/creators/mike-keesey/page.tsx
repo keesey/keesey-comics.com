@@ -1,4 +1,4 @@
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { ImageRail } from "@/components/ImageRail"
 import { Portrait } from "@/components/Portrait"
@@ -11,7 +11,6 @@ import { MIKE_KEESEY } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(MIKE_KEESEY),
   alternates: { canonical: "/creators/mike-keesey" },
-  metadataBase: METADATA_BASE,
 }
 export default function MikeKeesey() {
   return (

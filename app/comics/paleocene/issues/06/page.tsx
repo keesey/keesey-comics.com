@@ -11,11 +11,10 @@ import { Schema } from "@/lib/schema/Schema"
 import { PALEOCENE_06 } from "./schema"
 import { MIKE_KEESEY } from "@/app/creators/mike-keesey/schema"
 import type { Metadata } from "next"
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PALEOCENE_06),
   alternates: { canonical: "/comics/paleocene/issues/06" },
-  metadataBase: METADATA_BASE,
 }
 export default function Paleocene06() {
   return (

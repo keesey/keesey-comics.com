@@ -1,4 +1,4 @@
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { Abstract } from "@/components/CreativeWorkHeader"
 import { LogoHeader } from "@/components/LogoHeader"
@@ -9,7 +9,6 @@ import { THE_FLESH } from "./schema"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(THE_FLESH),
   alternates: { canonical: "/comics/the-flesh" },
-  metadataBase: METADATA_BASE,
 }
 export default function TheFlesh() {
   return (

@@ -3,12 +3,11 @@ import { TextLink } from "@/components/TextLink"
 import { generateThingMetadata } from "@/lib/schema/generateThingMetadata"
 import { Schema } from "@/lib/schema/Schema"
 import type { Metadata } from "next"
-import { METADATA_BASE } from "../_lib/METADATA_BASE"
+
 import { NEWSLETTER } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(NEWSLETTER),
   alternates: { canonical: "/newsletter" },
-  metadataBase: METADATA_BASE,
 }
 export default function Newsletter() {
   return (

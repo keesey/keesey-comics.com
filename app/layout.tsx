@@ -1,10 +1,11 @@
+import { OrderContainer } from "@/lib/cart/context/order/OrderContainer"
+import { Metadata } from "next"
 import { Roboto, Roboto_Mono } from "next/font/google"
 import Footer from "./_components/Footer"
 import Navbar from "./_components/NavBar"
 import { SocialLinks } from "./_components/SocialLinks"
-import "./globals.css"
 import { AllComicsAside } from "./comics/_components/AllComicsAside"
-import { OrderContainer } from "@/lib/cart/context/order/OrderContainer"
+import "./globals.css"
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -18,6 +19,9 @@ const robotoMono = Roboto_Mono({
   weight: ["300", "400", "500", "700"],
 })
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.keesey-comics.com"),
+}
 export default function RootLayout({
   children,
 }: Readonly<{

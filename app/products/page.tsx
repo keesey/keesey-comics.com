@@ -9,13 +9,12 @@ import { TextLink } from "@/components/TextLink"
 import { generateThingMetadata } from "@/lib/schema/generateThingMetadata"
 import { Schema } from "@/lib/schema/Schema"
 import type { Metadata } from "next"
-import { METADATA_BASE } from "../_lib/METADATA_BASE"
+
 import { ProductsSection } from "./_components/ProductsSection"
 import { STORE } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(STORE),
   alternates: { canonical: "/products" },
-  metadataBase: METADATA_BASE,
 }
 /* eslint-disable @next/next/no-img-element */
 export default function Products() {

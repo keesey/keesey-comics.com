@@ -18,11 +18,10 @@ import { TextPassage } from "@/components/TextPassage"
 import { MIKE_KEESEY } from "@/app/creators/mike-keesey/schema"
 import { Price } from "@/components/Price"
 import { Metadata } from "next"
-import { METADATA_BASE } from "@/app/_lib/METADATA_BASE"
+
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PLEISTOCENE),
   alternates: { canonical: "/comics/pleistocene" },
-  metadataBase: METADATA_BASE,
 }
 export default function Pleistocene() {
   return (
