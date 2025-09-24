@@ -11,6 +11,7 @@ import {
   type BaseRatesQuery as IntlBaseRatesQuery,
 } from "@/lib/external/usps/internationalPrices/postBaseRatesSearch"
 import { OUNCES_PER_POUND } from "../constants/OUNCES_PER_POUND"
+import { postRevoke } from "@/lib/external/usps/oauth2/postRevoke"
 export const calculateShipping = async (
   shipment: Shipment,
 ): Promise<number> => {
@@ -37,6 +38,7 @@ export const calculateShipping = async (
     weight: shipment.package.ounces / OUNCES_PER_POUND,
     width: dimensions[1],
   }
+  // :TODO: Store this in a cache and only refresh when near expiration?
   const { access_token } = await postToken()
   const { totalBasePrice } = await (isDomestic(shipment.address.countryCode)
     ? postBaseRatesSearch(access_token, {
@@ -49,5 +51,10 @@ export const calculateShipping = async (
         destinationCountryCode: shipment.address.countryCode,
         mailClass: "FIRST-CLASS_PACKAGE_INTERNATIONAL_SERVICE",
       }))
+  try {
+    await postRevoke(access_token, "access_token")
+  } catch {
+    // Ignore
+  }
   return totalBasePrice
 }
