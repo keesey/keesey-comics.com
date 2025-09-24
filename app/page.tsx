@@ -8,7 +8,7 @@ import { KEESEY_COMICS } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(KEESEY_COMICS),
   alternates: { canonical: "/" },
-  openGraph: { url: "/" },
+  openGraph: { siteName: "Keesey Comics", url: "/" },
 }
 export default function Home() {
   return (

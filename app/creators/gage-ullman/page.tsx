@@ -11,7 +11,7 @@ import { TextLink } from "@/components/TextLink"
 export const metadata: Metadata = {
   ...generateThingMetadata(GAGE_ULLMAN),
   alternates: { canonical: "/creators/gage-ullman" },
-  openGraph: { url: "/creators/gage-ullman" },
+  openGraph: { siteName: "Keesey Comics", url: "/creators/gage-ullman" },
 }
 export default function GageUllman() {
   return (

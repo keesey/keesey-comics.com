@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/creators" },
-  openGraph: { url: "/creators" },
+  openGraph: { siteName: "Keesey Comics", url: "/creators" },
   title: "Keesey Comics: The Creators",
 }
 export default function Creators() {

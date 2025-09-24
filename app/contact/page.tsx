@@ -12,7 +12,7 @@ import { CONTACT } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(CONTACT),
   alternates: { canonical: "/contact" },
-  openGraph: { url: "/contact" },
+  openGraph: { siteName: "Keesey Comics", url: "/contact" },
 }
 export default function Contact() {
   return (

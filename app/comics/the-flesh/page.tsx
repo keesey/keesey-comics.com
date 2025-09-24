@@ -8,7 +8,7 @@ import { THE_FLESH } from "./schema"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(THE_FLESH),
   alternates: { canonical: "/comics/the-flesh" },
-  openGraph: { url: "/comics/the-flesh" },
+  openGraph: { siteName: "Keesey Comics", url: "/comics/the-flesh" },
 }
 export default function TheFlesh() {
   return (

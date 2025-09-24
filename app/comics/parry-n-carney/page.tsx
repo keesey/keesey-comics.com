@@ -22,7 +22,7 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PARRY_N_CARNEY),
   alternates: { canonical: "/comics/parry-n-carney" },
-  openGraph: { url: "/comics/parry-n-carney" },
+  openGraph: { siteName: "Keesey Comics", url: "/comics/parry-n-carney" },
 }
 export default function ParryNCarney() {
   return (

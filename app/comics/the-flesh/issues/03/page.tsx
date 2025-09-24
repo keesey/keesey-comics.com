@@ -23,7 +23,7 @@ import { THE_FLESH_03, THE_FLESH_03_ABSTRACT_HTML } from "./schema"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(THE_FLESH_03),
   alternates: { canonical: "/comics/the-flesh/issues/03" },
-  openGraph: { url: "/comics/the-flesh/issues/03" },
+  openGraph: { siteName: "Keesey Comics", url: "/comics/the-flesh/issues/03" },
 }
 export default function TheFlesh03() {
   return (

@@ -7,7 +7,7 @@ import { Cart } from "./_components/Cart"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/cart" },
-  openGraph: { url: "/cart" },
+  openGraph: { siteName: "Keesey Comics", url: "/cart" },
   robots: { follow: true, index: false },
   title: "Your Shopping Cart – Keesey Comics",
 }
