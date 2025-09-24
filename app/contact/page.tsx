@@ -38,10 +38,10 @@ export default function Contact() {
         <h2 className="mb-4 text-center text-xl font-bold">
           Items Available for Bulk Order
         </h2>
-        <ul className="flex flex-wrap items-baseline justify-center gap-8">
+        <ul className="flex flex-col flex-wrap items-baseline justify-center gap-8 pl-8 md:flex-row md:pl-0">
           {PRODUCT_TYPES.map(type => (
             <li key={type.id}>
-              <h3 className="max-w-[14em] font-bold">{type.name}</h3>
+              <h3 className="font-bold md:max-w-[14em]">{type.name}</h3>
               <ul className="list-disc text-left">
                 {PRODUCTS.filter(product => product.type === type).map(
                   product => (

@@ -27,7 +27,7 @@ export default function Newsletter() {
       </header>
       <form
         action="//paleocene-comic.us17.list-manage.com/subscribe/post?u=e566f9716747a52421a7b5ac7&amp;id=e318ef44fc"
-        className="mt-8 text-center"
+        className="mx-4 mt-8 text-center md:mx-0"
         id="mc-embedded-subscribe-form"
         method="post"
         name="mc-embedded-subscribe-form"

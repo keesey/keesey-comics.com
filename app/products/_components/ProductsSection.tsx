@@ -19,7 +19,7 @@ export const ProductsSection = ({
     types.some(type => product.id.startsWith(type)),
   )
   return (
-    <section className="inline-flex max-w-[1440px] flex-col items-start">
+    <section className="inline-flex max-w-[1440px] flex-col items-stretch md:items-start">
       {types.map(type => (
         <a key={type} id={type} />
       ))}
@@ -28,10 +28,9 @@ export const ProductsSection = ({
       </header>
       <ul
         className={clsx(
-          "flex flex-row flex-wrap items-stretch justify-center gap-6 rounded-b-2xl bg-gray-200 p-4 dark:bg-black",
-          products.length > 1 && "rounded-tr-2xl",
+          "flex flex-row flex-wrap items-stretch justify-center gap-6 place-self-stretch rounded-b-2xl bg-gray-200 p-4 dark:bg-black",
+          products.length > 1 && "md:rounded-tr-2xl",
         )}
-        style={{ alignSelf: "stretch" }}
       >
         {products.map(product => (
           <li
