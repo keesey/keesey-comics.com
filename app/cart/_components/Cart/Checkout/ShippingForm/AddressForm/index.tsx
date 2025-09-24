@@ -1,17 +1,24 @@
 "use client"
-import { USPS_COUNTRIES } from "@/lib/cart/constants/USPS_COUNTRIES"
+import {
+  type CountryCode,
+  USPS_COUNTRIES,
+} from "@/lib/external/usps/USPS_COUNTRIES"
 import { Context } from "@/lib/cart/context/address/Context"
 import { isDomestic } from "@/lib/cart/functions/isDomestic"
 import { type ChangeEvent, useCallback, useContext, useMemo } from "react"
 export const AddressForm = () => {
   const [address, dispatch] = useContext(Context) ?? []
+  console.debug(address)
   const domestic = useMemo(
-    () => Boolean(address?.country && isDomestic(address.country)),
-    [address?.country],
+    () => Boolean(address?.countryCode && isDomestic(address.countryCode)),
+    [address?.countryCode],
   )
   const handleCountrySelectChange = useCallback(
     (event: ChangeEvent<HTMLSelectElement>) => {
-      dispatch?.({ type: "SET_COUNTRY", payload: event.currentTarget.value })
+      dispatch?.({
+        type: "SET_COUNTRY_CODE",
+        payload: event.currentTarget.value as CountryCode,
+      })
     },
     [dispatch],
   )
@@ -30,13 +37,14 @@ export const AddressForm = () => {
   return (
     <div className="flex w-full flex-col items-end gap-2">
       <select
-        className="w-sm rounded-2xl border-2 bg-white p-2 placeholder-gray-400 dark:text-black"
+        className="w-full rounded-2xl border-2 bg-white p-2 placeholder-gray-400 dark:text-black"
+        defaultValue="US"
         onChange={handleCountrySelectChange}
-        required
-        value={address.country}
+        value={address.countryCode}
+        title="Country"
       >
-        {USPS_COUNTRIES.map(value => (
-          <option key={value} label={value} value={value} />
+        {USPS_COUNTRIES.map(([code, name]) => (
+          <option key={code} label={name} value={code} />
         ))}
       </select>
       {domestic && (

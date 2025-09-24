@@ -1,4 +1,5 @@
+import type { CountryCode } from "../../external/usps/USPS_COUNTRIES"
 export type Address = Readonly<{
-  country: string
+  countryCode: CountryCode
   postalCode?: string
 }>

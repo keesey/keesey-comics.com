@@ -1,4 +1,5 @@
 "use client"
+import { USPS_COUNTRY_CODES } from "@/lib/external/usps/USPS_COUNTRIES"
 import { type PropsWithChildren, useEffect, useReducer } from "react"
 import { Context } from "./Context"
 import { STORAGE_KEY } from "./STORAGE_KEY"
@@ -11,16 +12,28 @@ export const AddressContainer = ({ children }: PropsWithChildren) => {
     if (payloadJSON) {
       try {
         const payload = JSON.parse(payloadJSON)
-        if (payload && typeof payload === "object") {
-          dispatch({ type: "INITIALIZE", payload })
+        if (
+          payload &&
+          typeof payload === "object" &&
+          USPS_COUNTRY_CODES.includes(payload.countryCode)
+        ) {
+          return dispatch({
+            type: "INITIALIZE",
+            payload: {
+              countryCode: payload.countryCode,
+              postalCode:
+                typeof payload.postalCode === "string"
+                  ? payload.postalCode
+                  : undefined,
+            },
+          })
         }
       } catch {
         // Corrupted.
         localStorage.removeItem(STORAGE_KEY)
       }
-    } else {
-      dispatch({ type: "INITIALIZE", payload: { country: "United States" } })
     }
+    dispatch({ type: "INITIALIZE", payload: { countryCode: "US" } })
   }, [dispatch])
   useEffect(() => {
     if (state) {

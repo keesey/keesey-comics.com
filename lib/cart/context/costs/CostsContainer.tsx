@@ -10,8 +10,8 @@ import { Context } from "./Context"
 const isValidZIPCode = (s?: string) => Boolean(s && s.length >= 5)
 const isValidAddress = (address?: Partial<Address>) =>
   Boolean(
-    address?.country &&
-      (isValidZIPCode(address.postalCode) || !isDomestic(address.country)),
+    address?.countryCode &&
+      (isValidZIPCode(address.postalCode) || !isDomestic(address.countryCode)),
   )
 export const CostsContainer = ({ children }: PropsWithChildren) => {
   const [pending, setPending] = useState(false)
@@ -35,9 +35,9 @@ export const CostsContainer = ({ children }: PropsWithChildren) => {
             { signal: abortController.signal },
           )
           setCosts(result.data)
-        } catch (e) {
+        } catch {
           if (!abortController.signal.aborted) {
-            setError(e instanceof Error ? e : new Error(String(e)))
+            setError(new Error("Could not determine a shipping rate."))
           }
         } finally {
           setPending(false)

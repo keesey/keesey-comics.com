@@ -1,10 +1,11 @@
+"use server"
 import { PRODUCTS_MAP } from "../constants/PRODUCTS"
 import { SHIPPING_OPTIONS_MAP } from "../constants/SHIPPING_OPTIONS"
-import { Address } from "../models/Address"
-import { Costs } from "../models/Costs"
-import { Order } from "../models/Order"
-import { Package } from "../models/Package"
-import { ProductType } from "../models/ProductType"
+import type { Address } from "../models/Address"
+import type { Costs } from "../models/Costs"
+import type { Order } from "../models/Order"
+import type { Package } from "../models/Package"
+import type { ProductType } from "../models/ProductType"
 import { calculateShipping } from "./calculateShipping"
 import { selectContainer } from "./selectContainer"
 const PAYPAL_TRANSACTION_RATE = 0.0289
@@ -74,7 +75,7 @@ export const calculateCosts = async (
   }
   const shipping = await calculateShipping({ address, package: pkg })
   const processingSubtotal =
-    pkg.value + shipping.rate + shippingAdditional + handling + salesTax
+    pkg.value + shipping + shippingAdditional + handling + salesTax
   const totalWithProcessing = Number(
     (
       (processingSubtotal + PAYPAL_TRANSACTION_FEE) /
@@ -84,11 +85,11 @@ export const calculateCosts = async (
   const processing = totalWithProcessing - processingSubtotal
   return {
     containers: container.value,
-    shipping: shipping.rate,
-    shippingAdditional,
     handling,
     products,
     processing,
     salesTax,
+    shipping,
+    shippingAdditional,
   }
 }

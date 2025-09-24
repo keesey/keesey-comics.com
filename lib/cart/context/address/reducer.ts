@@ -1,5 +1,5 @@
 import type { Reducer } from "react"
-import { USPS_COUNTRIES } from "../../constants/USPS_COUNTRIES"
+import { USPS_COUNTRY_CODES } from "../../../external/usps/USPS_COUNTRIES"
 import { isDomestic } from "../../functions/isDomestic"
 import type { Action } from "./Action"
 import type { State } from "./State"
@@ -9,36 +9,37 @@ export const reducer: Reducer<State | undefined, Action> = (
 ) => {
   switch (action.type) {
     case "INITIALIZE": {
-      const country =
-        action.payload.country &&
-        USPS_COUNTRIES.includes(action.payload.country)
-          ? action.payload.country
+      const countryCode =
+        action.payload.countryCode &&
+        USPS_COUNTRY_CODES.includes(action.payload.countryCode)
+          ? action.payload.countryCode
           : undefined
       const postalCode =
-        (country && isDomestic(country) && action.payload.postalCode) ||
+        (countryCode && isDomestic(countryCode) && action.payload.postalCode) ||
         undefined
       return {
-        ...(country ? { country } : null),
+        ...(countryCode ? { countryCode } : null),
         ...(postalCode ? { postalCode } : null),
       }
     }
-    case "SET_COUNTRY": {
-      const country = USPS_COUNTRIES.includes(action.payload)
+    case "SET_COUNTRY_CODE": {
+      const countryCode = USPS_COUNTRY_CODES.includes(action.payload)
         ? action.payload
         : undefined
       const postalCode =
-        (country && isDomestic(country) && prevState?.postalCode) || undefined
+        (countryCode && isDomestic(countryCode) && prevState?.postalCode) ||
+        undefined
       return {
-        ...(country ? { country } : null),
+        ...(countryCode ? { countryCode } : null),
         ...(postalCode ? { postalCode } : null),
       }
     }
     case "SET_POSTAL_CODE": {
-      const country = prevState?.country
+      const countryCode = prevState?.countryCode
       const postalCode =
-        (country && isDomestic(country) && action.payload) || undefined
+        (countryCode && isDomestic(countryCode) && action.payload) || undefined
       return {
-        ...(country ? { country } : null),
+        ...(countryCode ? { countryCode } : null),
         ...(postalCode ? { postalCode } : null),
       }
     }

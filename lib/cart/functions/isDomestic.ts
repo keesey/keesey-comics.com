@@ -1,14 +1,6 @@
-export const isDomestic = (country: string) =>
-  country === "United States" ||
-  country === "Guam" ||
-  country === "Koror (Palau)" ||
-  country === "Palau" ||
-  country === "Puerto Rico" ||
-  country === "Samoa, American" ||
-  country === "United Nations, New York" ||
-  country === "Virgin Islands (US)" ||
-  /American Samoa/.test(country) ||
-  /Marshall Islands/.test(country) ||
-  /Micronesia/.test(country) ||
-  /Northern Mariana Islands/.test(country) ||
-  /US Virgin Islands$/.test(country)
+import {
+  USPS_DOMESTIC_COUNTRY_CODES,
+  type CountryCode,
+} from "@/lib/external/usps/USPS_COUNTRIES"
+export const isDomestic = (countryCode: CountryCode) =>
+  USPS_DOMESTIC_COUNTRY_CODES.includes(countryCode)

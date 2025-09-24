@@ -14,12 +14,12 @@ export const useOnShippingAddressChange = () => {
       actions: OnShippingAddressChangeActions,
     ) => {
       if (
-        address?.country !== data.shippingAddress.countryCode ||
-        (isDomestic(address.country) &&
+        address?.countryCode !== data.shippingAddress.countryCode ||
+        (isDomestic(address.countryCode) &&
           address.postalCode !== data.shippingAddress.postalCode)
       ) {
         dispatch?.({
-          type: "SET_COUNTRY",
+          type: "SET_COUNTRY_CODE",
           payload: data.shippingAddress.countryCode,
         })
         dispatch?.({
