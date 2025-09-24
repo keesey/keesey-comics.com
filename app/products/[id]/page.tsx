@@ -26,11 +26,26 @@ export const generateMetadata = async ({
   const { id: productId } = await params
   const product = PRODUCTS_MAP[productId]
   if (!product) {
-    notFound()
+    return {}
   }
+  const url = `/products/${encodeURIComponent(productId)}`
   return {
-    alternates: { canonical: `/products/${encodeURIComponent(productId)}` },
-    title: `${product.name} (${product.type.name})`,
+    alternates: { canonical: url },
+    description: product.type.name,
+    openGraph: {
+      siteName: "Keesey Comics",
+      images: [
+        {
+          alt: `${product.name} (${product.type.name})`,
+          height: 1050,
+          url: `${url}.png`,
+          width: 688,
+          type: "image/png",
+        },
+      ],
+      url,
+    },
+    title: product.name,
   }
 }
 const Product = async ({ params }: PageProps<"/products/[id]">) => {
@@ -69,9 +84,7 @@ const Product = async ({ params }: PageProps<"/products/[id]">) => {
         <section className="flex flex-col items-center justify-center gap-4 text-center">
           <h1
             className="px-2 text-3xl font-bold"
-            dangerouslySetInnerHTML={{
-              __html: product.html,
-            }}
+            dangerouslySetInnerHTML={{ __html: product.html }}
           />
           <Definitions>{product.type.details}</Definitions>
           <IncrementQuantityCTA productIds={[productId]}>
