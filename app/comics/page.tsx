@@ -10,6 +10,9 @@ import { TextPassage } from "@/components/TextPassage"
 import { LogoHeader } from "@/components/LogoHeader"
 
 export const metadata: Metadata = {
+  alternates: {canonical: "/comics" },
+  description: "All of our comics: Paleocene, The Flesh, Parry ‘n’ Carney: Friends for Life, and Pleistocene.",
+  openGraph: { url: "/comics" },
   title: "Keesey Comics: All Comics",
 }
 export default function Comics() {
