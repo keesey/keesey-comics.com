@@ -21,10 +21,8 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.keesey-comics.com"),
+  openGraph: { siteName: "Keesey Comics" },
   robots: { follow: true, index: true },
-  openGraph: {
-    siteName: "Keesey Comics",
-  },
 }
 export default function RootLayout({
   children,

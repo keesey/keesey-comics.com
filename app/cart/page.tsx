@@ -6,7 +6,8 @@ import type { Metadata } from "next"
 import { Cart } from "./_components/Cart"
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/cart" }, openGraph: { url: "/cart" }
+  alternates: { canonical: "/cart" },
+  openGraph: { url: "/cart" },
   robots: { follow: true, index: false },
   title: "Your Shopping Cart – Keesey Comics",
 }
