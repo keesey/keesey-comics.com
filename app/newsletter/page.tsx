@@ -8,6 +8,7 @@ import { NEWSLETTER } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(NEWSLETTER),
   alternates: { canonical: "/newsletter" },
+  openGraph: { url: "/newsletter" },
 }
 export default function Newsletter() {
   return (

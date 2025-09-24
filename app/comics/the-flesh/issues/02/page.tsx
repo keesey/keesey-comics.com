@@ -24,6 +24,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(THE_FLESH_02),
   alternates: { canonical: "/comics/the-flesh/issues/02" },
+  openGraph: { url: "/comics/the-flesh/issues/02" },
 }
 export default function TheFlesh02() {
   return (

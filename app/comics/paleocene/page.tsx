@@ -9,6 +9,7 @@ import { PALEOCENE } from "./schema"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PALEOCENE),
   alternates: { canonical: "/comics/paleocene" },
+  openGraph: { url: "/comics/paleocene" },
 }
 export default function Paleocene() {
   return (

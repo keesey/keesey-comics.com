@@ -10,6 +10,7 @@ import { MIKE_KEESEY } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(MIKE_KEESEY),
   alternates: { canonical: "/creators/mike-keesey" },
+  openGraph: { url: "/creators/mike-keesey" },
 }
 export default function MikeKeesey() {
   return (

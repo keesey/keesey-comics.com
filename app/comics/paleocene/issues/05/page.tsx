@@ -26,6 +26,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   ...generateCreativeWorkMetadata(PALEOCENE_05),
   alternates: { canonical: "/comics/paleocene/issues/05" },
+  openGraph: { url: "/comics/paleocene/issues/05" },
 }
 export default function Paleocene05() {
   return (

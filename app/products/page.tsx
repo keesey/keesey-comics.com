@@ -15,6 +15,7 @@ import { STORE } from "./schema"
 export const metadata: Metadata = {
   ...generateThingMetadata(STORE),
   alternates: { canonical: "/products" },
+  openGraph: { url: "/products" },
 }
 /* eslint-disable @next/next/no-img-element */
 export default function Products() {
