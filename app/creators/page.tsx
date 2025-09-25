@@ -16,9 +16,9 @@ export default function Creators() {
       />
       <div className="flex flex-col gap-8">
         <h1 className="mx-auto px-4 text-3xl font-bold">The Comics Creators</h1>
-        <div className="flex flex-wrap items-center justify-center gap-8 px-8">
+        <div className="flex flex-wrap items-center justify-center gap-12 px-8">
           <Link
-            className="group flex cursor-pointer flex-col gap-8 text-center"
+            className="group flex cursor-pointer flex-col gap-4 text-center"
             href="/creators/mike-keesey"
           >
             <Portrait
@@ -28,7 +28,7 @@ export default function Creators() {
             <h2 className="text-xl font-bold">Mike Keesey</h2>
           </Link>
           <Link
-            className="group flex cursor-pointer flex-col gap-8 text-center"
+            className="group flex cursor-pointer flex-col gap-4 text-center"
             href="/creators/gage-ullman"
           >
             <Portrait
