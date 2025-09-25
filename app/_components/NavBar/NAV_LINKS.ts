@@ -5,9 +5,9 @@ export type NavLink = Readonly<{
   name: string
 }>
 export const NAV_LINKS: readonly NavLink[] = [
-  { name: "Store", href: "/store" },
   { name: "Comics", href: "/comics" },
   { name: "Creators", href: "/creators" },
-  { name: "Newsletter", href: "/newsletter" },
   { name: "Contact", href: "/contact" },
+  { name: "Newsletter", href: "/newsletter" },
+  { name: "Store", href: "/store" },
 ]
