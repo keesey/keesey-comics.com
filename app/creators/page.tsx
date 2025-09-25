@@ -33,7 +33,7 @@ export default function Creators() {
           >
             <Portrait
               alt="Gage Ullman (Cartoon Portrait)"
-              src="/creators/gage-ullman/portrait.svg"
+              src="/creators/gage-ullman/portrait.png"
             />
             <h2 className="text-xl font-bold">Gage Ullman</h2>
           </Link>

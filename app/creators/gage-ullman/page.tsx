@@ -27,7 +27,7 @@ export default function GageUllman() {
       <div className="flex flex-col items-center justify-center gap-8 text-center">
         <Portrait
           alt="Gage Ullman (Cartoon Portrait)"
-          src="/creators/gage-ullman/portrait.svg"
+          src="/creators/gage-ullman/portrait.png"
         />
         <h1 className="text-2xl font-bold">Gage Ullman</h1>
       </div>
