@@ -1,0 +1,111 @@
+import { Product } from "../models/Product"
+import { PRODUCT_TYPES_MAP } from "./PRODUCT_TYPES"
+export const PRODUCTS: readonly Product[] = [
+  {
+    html: "<cite>Paleocene #1</cite>",
+    id: "COB-STD-PAL-01B",
+    imagePath: "/comics/paleocene/issues/01/front_cover.png",
+    name: "Paleocene #1",
+    path: "/comics/paleocene/issues/01",
+    type: PRODUCT_TYPES_MAP["COB-STD"],
+  },
+  {
+    html: "<cite>Paleocene #2</cite>",
+    id: "COB-STD-PAL-02A",
+    imagePath: "/comics/paleocene/issues/02/front_cover.png",
+    name: "Paleocene #2",
+    path: "/comics/paleocene/issues/02",
+    type: PRODUCT_TYPES_MAP["COB-STD"],
+  },
+  {
+    html: "<cite>Paleocene #3</cite>",
+    id: "COB-STD-PAL-03A",
+    imagePath: "/comics/paleocene/issues/03/front_cover.png",
+    name: "Paleocene #3",
+    path: "/comics/paleocene/issues/03",
+    type: PRODUCT_TYPES_MAP["COB-STD"],
+  },
+  {
+    html: "<cite>Paleocene #4</cite>",
+    id: "COB-STD-PAL-04A",
+    imagePath: "/comics/paleocene/issues/04/front_cover.png",
+    name: "Paleocene #4",
+    path: "/comics/paleocene/issues/04",
+    type: PRODUCT_TYPES_MAP["COB-STD"],
+  },
+  {
+    html: "<cite>Paleocene #5</cite>",
+    id: "COB-STD-PAL-05A",
+    imagePath: "/comics/paleocene/issues/05/front_cover.png",
+    name: "Paleocene #5",
+    path: "/comics/paleocene/issues/05",
+    type: PRODUCT_TYPES_MAP["COB-STD"],
+  },
+  {
+    html: "<cite>The Flesh #1</cite>",
+    id: "COB-ST2-FLE-01A",
+    imagePath: "/comics/the-flesh/issues/01/front_cover.png",
+    name: "The Flesh #1",
+    path: "/comics/the-flesh/issues/01",
+    type: PRODUCT_TYPES_MAP["COB-ST2"],
+  },
+  {
+    html: "<cite>The Flesh #2</cite>",
+    id: "COB-ST2-FLE-02A",
+    imagePath: "/comics/the-flesh/issues/02/front_cover.png",
+    name: "The Flesh #2",
+    path: "/comics/the-flesh/issues/02",
+    type: PRODUCT_TYPES_MAP["COB-ST2"],
+  },
+  {
+    html: "<cite>The Flesh #3</cite>",
+    id: "COB-ST2-FLE-03A",
+    imagePath: "/comics/the-flesh/issues/03/front_cover.png",
+    name: "The Flesh #3",
+    path: "/comics/the-flesh/issues/03",
+    type: PRODUCT_TYPES_MAP["COB-ST2"],
+  },
+  {
+    html: "<cite>Paleocene</cite> Poster &quot;Skull&quot;",
+    id: "POS-17I-PAL-001",
+    name: 'Paleocene Poster "Skull"',
+    type: PRODUCT_TYPES_MAP["POS-17I"],
+  },
+  {
+    html: "<cite>Paleocene</cite> Poster &quot;Bird&quot;",
+    id: "POS-17I-PAL-002",
+    name: 'Paleocene Poster "Bird"',
+    type: PRODUCT_TYPES_MAP["POS-17I"],
+  },
+  {
+    html: "<cite>Paleocene</cite> Poster &quot;Night Watch&quot;",
+    id: "POS-17I-PAL-003",
+    name: 'Paleocene Poster "Night Watch"',
+    type: PRODUCT_TYPES_MAP["POS-17I"],
+  },
+  {
+    html: "<cite>Paleocene</cite> Bookmark",
+    id: "BKM-06I-PAL-001",
+    name: "Paleocene Bookmark",
+    type: PRODUCT_TYPES_MAP["BKM-06I"],
+  },
+  {
+    html: "<cite>Paleocene</cite> Sticker &quot;Eyes&quot;",
+    id: "STK-02I-PAL-001",
+    name: 'Paleocene Sticker "Eyes"',
+    type: PRODUCT_TYPES_MAP["STK-02I"],
+  },
+  {
+    html: "<cite>Paleocene</cite> Sticker &quot;Bird&quot;",
+    id: "STK-02I-PAL-002",
+    name: 'Paleocene Sticker "Bird"',
+    type: PRODUCT_TYPES_MAP["STK-02I"],
+  },
+]
+export const PRODUCTS_MAP = PRODUCTS.reduce<Readonly<Record<string, Product>>>(
+  (prev, product) => ({
+    ...prev,
+    [product.id]: product,
+  }),
+  {},
+)
