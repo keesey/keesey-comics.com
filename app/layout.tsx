@@ -6,6 +6,9 @@ import Navbar from "./_components/NavBar"
 import { SocialLinks } from "./_components/SocialLinks"
 import { AllComicsAside } from "./comics/_components/AllComicsAside"
 import "./globals.css"
+import Script from "next/script"
+
+const GA4_ID = "G-QVVWQ9ZJEZ"
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -31,6 +34,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        async
+        src={`//www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA4_ID)}`}
+      />
+      <Script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config",${JSON.stringify(GA4_ID)})`,
+        }}
+      />
       <body
         className={`${robotoSans.variable} ${robotoMono.variable} antialiased`}
       >
