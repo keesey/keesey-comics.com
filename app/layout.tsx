@@ -1,4 +1,5 @@
 import { OrderContainer } from "@/lib/cart/context/order/OrderContainer"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next"
 import { Roboto, Roboto_Mono } from "next/font/google"
 import Script from "next/script"
@@ -57,6 +58,7 @@ export default function RootLayout({
             <Footer />
           </OrderContainer>
         </div>
+        <SpeedInsights />
       </body>
     </html>
   )

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.2.0](https://github.com/keesey/keesey-comics.com/tree/v3.2.0) - 2025-10-07
+
+### Added
+
+- Vercel Speed Insights.
+
 ## [3.1.1](https://github.com/keesey/keesey-comics.com/tree/v3.1.1) - 2025-10-07
 
 ### Added
