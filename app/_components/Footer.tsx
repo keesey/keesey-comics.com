@@ -1,4 +1,4 @@
-export default function Footer() {
+export function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer className="bg-gray-100 py-4 text-center text-sm text-gray-600 dark:bg-gray-800 dark:text-gray-400">

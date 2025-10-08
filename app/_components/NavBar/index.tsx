@@ -7,7 +7,7 @@ import { Menu } from "./menu/Menu"
 import { MenuButton } from "./menu/MenuButton"
 import { MenuProvider } from "./menu/MenuProvider"
 import { SocialButtons } from "./SocialButtons"
-export default function NavBar() {
+export function NavBar() {
   return (
     <nav className="sticky top-0 z-10 bg-white shadow dark:bg-gray-800">
       <MenuProvider>
