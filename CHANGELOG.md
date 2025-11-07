@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.2.1](https://github.com/keesey/keesey-comics.com/tree/v3.2.1) - 2025-11-07
+
+### Fixed
+
+- Nav Bar was showing under the Carousel (`z-index` issue).
+
 ## [3.2.0](https://github.com/keesey/keesey-comics.com/tree/v3.2.0) - 2025-10-07
 
 ### Added

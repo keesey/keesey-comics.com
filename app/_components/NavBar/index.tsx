@@ -9,7 +9,7 @@ import { MenuProvider } from "./menu/MenuProvider"
 import { SocialButtons } from "./SocialButtons"
 export function NavBar() {
   return (
-    <nav className="sticky top-0 z-10 bg-white shadow dark:bg-gray-800">
+    <nav className="sticky top-0 z-30 bg-white shadow dark:bg-gray-800">
       <MenuProvider>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-24 items-center justify-between">
