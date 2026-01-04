@@ -24,19 +24,19 @@ export default function Paleocene() {
       <Carousel
         slides={[
           {
-            alt: "Now on sale! PALEOCENE #5. Read the latest issue.",
-            bgImgSrc: "/carousel/paleocene05_onsale/bg.png",
-            href: "/comics/paleocene/issues/05",
-            id: "paleocene05_onsale",
-            imgSrc: "/carousel/paleocene05_onsale/fg.png",
-          },
-          {
             alt: "Sneak peek! PALEOCENE #6. Follow progress on the final issue!",
             bgImgSrc: "/carousel/paleocene06_cover/bg.png",
             href: "https://www.patreon.com/c/tmkeesey/posts?filters%5Btag%5D=paleocene6",
             id: "paleocene06_cover",
             imgSrc: "/carousel/paleocene06_cover/fg.png",
             isExternal: true,
+          },
+          {
+            alt: "Now on sale! PALEOCENE #5. Read the latest issue.",
+            bgImgSrc: "/carousel/paleocene05_onsale/bg.png",
+            href: "/comics/paleocene/issues/05",
+            id: "paleocene05_onsale",
+            imgSrc: "/carousel/paleocene05_onsale/fg.png",
           },
         ]}
       />

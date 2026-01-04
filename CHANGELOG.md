@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.3.0](https://github.com/keesey/keesey-comics.com/tree/v3.3.0) - 2026-01-04
+
+### Changed
+
+- Replaced Logo Header with Carousel on _Paleocene_ page, and replaced long essay with shorter abstract.
+
+### Security
+
+- Upgraded Next.js and React.
+
 ## [3.2.2](https://github.com/keesey/keesey-comics.com/tree/v3.2.1) - 2026-01-4
 
 ### Security
