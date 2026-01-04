@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.2.2](https://github.com/keesey/keesey-comics.com/tree/v3.2.1) - 2026-01-4
+
+### Security
+
+- Patch upgrades for Next.js, Storybook, `js-yaml`, and `qs`.
+
 ## [3.2.1](https://github.com/keesey/keesey-comics.com/tree/v3.2.1) - 2025-11-07
 
 ### Fixed
