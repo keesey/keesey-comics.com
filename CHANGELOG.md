@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.3.1](https://github.com/keesey/keesey-comics.com/tree/v3.3.1) - 2026-01-30
+
+### Fixed
+
+- Product Pages with redirects were yielding 404s instead.
+
 ## [3.3.0](https://github.com/keesey/keesey-comics.com/tree/v3.3.0) - 2026-01-04
 
 ### Changed

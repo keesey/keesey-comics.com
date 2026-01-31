@@ -18,7 +18,7 @@ export const dynamicParams = false
 export const generateStaticParams = (): Array<
   Awaited<PageProps<"/products/[id]">["params"]>
 > => {
-  return PRODUCTS.filter(product => !product.path).map(({ id }) => ({ id }))
+  return PRODUCTS.map(({ id }) => ({ id }))
 }
 export const generateMetadata = async ({
   params,
@@ -62,6 +62,7 @@ const Product = async ({ params }: PageProps<"/products/[id]">) => {
         `/products/${encodeURIComponent(productId.toUpperCase())}`,
       )
     }
+    console.warn(`Product not found: ${productId}` )
     notFound()
   }
   if (typeof product.path === "string") {
