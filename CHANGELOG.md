@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
-## [3.3.3](https://github.com/keesey/keesey-comics.com/tree/v3.3.2) - 2026-02-05
+## [3.3.4](https://github.com/keesey/keesey-comics.com/tree/v3.3.4) - 2026-02-05
+
+### Fixed
+
+- Price for Digital Edition of *Parry 'n' Carney: Friends for Life*.
+
+## [3.3.3](https://github.com/keesey/keesey-comics.com/tree/v3.3.3) - 2026-02-05
 
 ### Fixed
 

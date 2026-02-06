@@ -70,7 +70,7 @@ export default function ParryNCarney() {
             <Definitions className="flex-grow-1">
               <DefinitionTerm>Unit Price</DefinitionTerm>
               <Definition>
-                <Price amount={4} abbreviate /> (<Price amount={6} abbreviate />{" "}
+                <Price amount={5} abbreviate /> (<Price amount={7.50} abbreviate />{" "}
                 on iOS)
               </Definition>
               <DefinitionTerm>File Format</DefinitionTerm>
