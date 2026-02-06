@@ -77,7 +77,7 @@ export default function ParryNCarney() {
               <Definition>PDF</Definition>
             </Definitions>
             <a
-              href="https://www.patreon.com/tmkeesey/shop/pleistocene-digital-mini-comic-1430967?source=storefront"
+              href="https://www.patreon.com/tmkeesey/shop/parry-n-carney-friends-for-life-webcomic-1430746?source=storefront"
               rel="noopener roreferrer"
               target="_blank"
             >
