@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.3.5](https://github.com/keesey/keesey-comics.com/tree/v3.3.5) - 2026-05-11
+
+### Added
+
+- Additions to _Paleocene #6_ page:
+  - Newsletter CTA:
+  - Page 1 and Back Cover previews.
+
+### Security
+
+- Dependency upgrades.
+
 ## [3.3.4](https://github.com/keesey/keesey-comics.com/tree/v3.3.4) - 2026-02-05
 
 ### Fixed
