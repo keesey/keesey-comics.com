@@ -32,16 +32,29 @@ export default function Paleocene06() {
               alt: "Paleocene #6 - Front Cover",
               imgSrc: "/comics/paleocene/issues/06/front_cover.png",
             },
+            {
+              alt: "Paleocene #6 - Page1",
+              imgSrc: "/comics/paleocene/issues/06/01.png",
+            },
+            {
+              alt: "Paleocene #6 - Back Cover",
+              imgSrc: "/comics/paleocene/issues/06/back_cover.png",
+            },
           ]}
         />
         <EditionsSection>
-          <EditionSection title="Coming in 2026!">
+          <EditionSection title="Coming in 2026">
             <a
               href="https://www.patreon.com/c/tmkeesey/posts?filters%5Btag%5D=paleocene6"
               rel="noopener roreferrer"
               target="_blank"
             >
               <CTA>Follow Progress</CTA>
+            </a>
+          </EditionSection>
+          <EditionSection title="Get the latest updates!">
+            <a href="/newsletter">
+              <CTA>Subscribe Now</CTA>
             </a>
           </EditionSection>
         </EditionsSection>
