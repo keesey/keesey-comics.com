@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.3.6](https://github.com/keesey/keesey-comics.com/tree/v3.3.6) - 2026-07-22
+
+### Changed
+
+- Revised Mike Keesey's biography.
+
 ## [3.3.5](https://github.com/keesey/keesey-comics.com/tree/v3.3.5) - 2026-05-11
 
 ### Added
@@ -23,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Price for Digital Edition of *Parry 'n' Carney: Friends for Life*.
+- Price for Digital Edition of _Parry 'n' Carney: Friends for Life_.
 
 ### Security
 
@@ -33,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Digital Edition link on page for *Parry 'n' Carney: Friends for Life* was incorrect.
+- Digital Edition link on page for _Parry 'n' Carney: Friends for Life_ was incorrect.
 
 ## [3.3.2](https://github.com/keesey/keesey-comics.com/tree/v3.3.2) - 2026-01-30
 

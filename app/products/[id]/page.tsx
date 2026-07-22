@@ -62,7 +62,7 @@ const Product = async ({ params }: PageProps<"/products/[id]">) => {
         `/products/${encodeURIComponent(productId.toUpperCase())}`,
       )
     }
-    console.warn(`Product not found: ${productId}` )
+    console.warn(`Product not found: ${productId}`)
     notFound()
   }
   if (typeof product.path === "string") {

@@ -58,17 +58,19 @@ export default function MikeKeesey() {
             <ul style={{ listStyle: "circle" }} className="ml-4">
               <li>
                 <TextLink
-                  href="https://dx.doi.org/10.1111/j.1420-9101.2004.00870.x"
+                  href="https://dx.doi.org/10.1098/rstb.2020.0496"
                   isExternal
+                  style={{ fontVariant: "small-caps" }}
                 >
                   <span style={{ fontVariant: "small-caps" }}>
-                    Hone, Keesey, Pisani &amp; Purvis
+                    Iriarte, Ziegler, Outram, Robinson, Roberts, Aceituno,
+                    Morcote-Ríos &amp; Keesey
                   </span>{" "}
-                  <time>2005</time>.
+                  <time>2022</time>.
                 </TextLink>{" "}
-                Macroevolutionary trends in the <i>Dinosauria</i>: Cope&rsquo;s
-                rule. <cite>Journal of Evolutionary Biology</cite> 18(
-                <strong>3</strong>):587–595.
+                Ice Age megafauna rock art in the Colombian Amazon?{" "}
+                <cite>Philosophical Transcations of the Royal Society B</cite>{" "}
+                377(<strong>1849</strong>):1–11.
               </li>
               <li>
                 <TextLink
@@ -85,19 +87,17 @@ export default function MikeKeesey() {
               </li>
               <li>
                 <TextLink
-                  href="https://dx.doi.org/10.1098/rstb.2020.0496"
+                  href="https://dx.doi.org/10.1111/j.1420-9101.2004.00870.x"
                   isExternal
-                  style={{ fontVariant: "small-caps" }}
                 >
                   <span style={{ fontVariant: "small-caps" }}>
-                    Iriarte, Ziegler, Outram, Robinson, Roberts, Aceituno,
-                    Morcote-Ríos &amp; Keesey
+                    Hone, Keesey, Pisani &amp; Purvis
                   </span>{" "}
-                  <time>2022</time>.
+                  <time>2005</time>.
                 </TextLink>{" "}
-                Ice Age megafauna rock art in the Colombian Amazon?{" "}
-                <cite>Philosophical Transcations of the Royal Society B</cite>{" "}
-                377(<strong>1849</strong>):1–11.
+                Macroevolutionary trends in the <i>Dinosauria</i>: Cope&rsquo;s
+                rule. <cite>Journal of Evolutionary Biology</cite> 18(
+                <strong>3</strong>):587–595.
               </li>
             </ul>
           </li>
@@ -116,8 +116,8 @@ export default function MikeKeesey() {
           </li>
         </ul>
         <p>
-          Keesey resides in Los Angeles with his partner, Renie, his child,
-          Lucy, and his cat, Scout.
+          Keesey resides in Los Angeles with his fiancée, Renie, and his child,
+          Lucy.
         </p>
       </TextPassage>
       <br />
