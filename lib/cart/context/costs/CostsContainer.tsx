@@ -11,7 +11,7 @@ const isValidZIPCode = (s?: string) => Boolean(s && s.length >= 5)
 const isValidAddress = (address?: Partial<Address>) =>
   Boolean(
     address?.countryCode &&
-      (isValidZIPCode(address.postalCode) || !isDomestic(address.countryCode)),
+    (isValidZIPCode(address.postalCode) || !isDomestic(address.countryCode)),
   )
 export const CostsContainer = ({ children }: PropsWithChildren) => {
   const [pending, setPending] = useState(false)
