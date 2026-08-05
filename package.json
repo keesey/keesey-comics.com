@@ -53,6 +53,6 @@
     "format:check": "prettier --check .",
     "storybook": "storybook dev -p 6006"
   },
-  "version": "3.3.7",
+  "version": "3.4.0",
   "repository": "https://github.com/keesey/keesey-comics.com"
 }
