@@ -3,6 +3,16 @@ import type { NextConfig } from "next"
 const nextConfig: NextConfig = {
   redirects: async () => [
     {
+      source: "/comics/dang-spaceship",
+      destination: "/comics/dang-spaceship/issues/01",
+      permanent: false,
+    },
+    {
+      source: "/comics/dang-spaceship/issues",
+      destination: "/comics/dang-spaceship/issues/01",
+      permanent: false,
+    },
+    {
       source: "/kickstarter",
       destination: "https://www.kickstarter.com/profile/keesey/created",
       permanent: false,

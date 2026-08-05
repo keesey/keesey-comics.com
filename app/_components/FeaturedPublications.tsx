@@ -22,15 +22,15 @@ const RELEASES: readonly Release[] = [
     aspectRatio: 994 / 1538,
   },
   {
-    title: "The Flesh #3",
-    img: "/comics/the-flesh/issues/03/front_cover.png",
-    link: "/comics/the-flesh/issues/03",
+    title: "Where Are My Dang Spaceship Keys?",
+    img: "/comics/dang-spaceship/issues/01/standard.png",
+    link: "/comics/dang-spaceship",
     aspectRatio: 994 / 1538,
   },
   {
-    title: "The Flesh #2",
-    img: "/comics/the-flesh/issues/02/front_cover.png",
-    link: "/comics/the-flesh/issues/02",
+    title: "The Flesh #3",
+    img: "/comics/the-flesh/issues/03/front_cover.png",
+    link: "/comics/the-flesh/issues/03",
     aspectRatio: 994 / 1538,
   },
   {

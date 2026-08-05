@@ -11,7 +11,7 @@ export type PreviewImage = Readonly<{
   imgSrc: string | StaticImport
 }>
 
-export type PageSize = "standard" | "mini" | "booklet"
+export type PageSize = "standard" | "mini" | "booklet" | "zineSpread"
 
 export interface PreviewProps {
   images: readonly PreviewImage[]
@@ -22,6 +22,7 @@ const ASPECT_RATIOS: Readonly<Record<PageSize, string>> = {
   booklet: "aspect-[1206/756]",
   mini: "aspect-[1085/1582]",
   standard: "aspect-[994/1538]",
+  zineSpread: "aspect-[1650/1275]",
 }
 
 export const Preview = ({ images, size = "standard" }: PreviewProps) => {

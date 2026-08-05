@@ -18,6 +18,11 @@ export const AllComicsAside = () => {
             imgSrc: "/comics/the-flesh/issues/01/front_cover.png",
           },
           {
+            alt: "Where Are My Dang Spaceship Keys?",
+            href: "/comics/dang-spaceship",
+            imgSrc: "/comics/dang-spaceship/issues/01/standard.png",
+          },
+          {
             alt: "Pleistocene",
             href: "/comics/pleistocene",
             imgSrc: "/comics/pleistocene/front_cover_standard.jpg",

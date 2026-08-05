@@ -1,13 +1,14 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs"
+import { LogoHeader } from "@/components/LogoHeader"
+import { TextPassage } from "@/components/TextPassage"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { WHERE_ARE_MY_DANG_SPACESHIP_KEYS_ABSTRACT_HTML } from "./dang-spaceship/issues/01/schema"
 import { PALEOCENE } from "./paleocene/schema"
 import { PARRY_N_CARNEY_ABSTRACT_HTML } from "./parry-n-carney/schema"
 import { PLEISTOCENE_ABSTRACT_HTML } from "./pleistocene/schema"
 import { THE_FLESH } from "./the-flesh/schema"
-import { TextPassage } from "@/components/TextPassage"
-import { LogoHeader } from "@/components/LogoHeader"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/comics" },
@@ -96,10 +97,36 @@ export default function Comics() {
             </Link>
             <Link
               className="group cursor-pointer"
-              href="/comics/parry-n-carney"
+              href="/comics/dang-spaceship"
             >
               <div className="mx-auto flex w-full max-w-5xl flex-row items-center gap-8">
                 <div className="relative h-[185px] w-[119px] overflow-visible bg-gray-500 shadow-md transition-transform group-hover:scale-105 md:h-[278px] md:w-[179px] lg:h-[370px] lg:w-[238px]">
+                  <Image
+                    src="/comics/dang-spaceship/issues/01/standard.png"
+                    alt="Where Are My Dang Spaceship Keys?"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col gap-4">
+                  <h2 className="text-xl font-bold">
+                    <cite>Where Are My Dang Spaceship Keys?</cite>
+                  </h2>
+                  <div
+                    className="max-w-2xl text-left md:text-justify"
+                    dangerouslySetInnerHTML={{
+                      __html: WHERE_ARE_MY_DANG_SPACESHIP_KEYS_ABSTRACT_HTML,
+                    }}
+                  />
+                </div>
+              </div>
+            </Link>
+            <Link
+              className="group cursor-pointer"
+              href="/comics/parry-n-carney"
+            >
+              <div className="mx-auto flex w-full max-w-5xl flex-row items-center justify-end gap-8">
+                <div className="relative order-1 h-[185px] w-[119px] overflow-visible bg-gray-500 shadow-md transition-transform group-hover:scale-105 md:h-[278px] md:w-[179px] lg:h-[370px] lg:w-[238px]">
                   <Image
                     src="/comics/parry-n-carney/front_cover_standard.png"
                     alt="Parry ‘n’ Carney: Friends for Life"
@@ -107,7 +134,7 @@ export default function Comics() {
                     className="object-cover"
                   />
                 </div>
-                <div className="flex flex-1 flex-col gap-4">
+                <div className="flex flex-1 flex-col items-end gap-4">
                   <h2 className="text-xl font-bold">
                     <cite>Parry ‘n’ Carney: Friends for Life</cite>
                   </h2>
@@ -130,8 +157,8 @@ export default function Comics() {
               </div>
             </Link>
             <Link className="group cursor-pointer" href="/comics/pleistocene">
-              <div className="mx-auto flex w-full max-w-5xl flex-row items-center justify-end gap-8">
-                <div className="relative order-1 h-[185px] w-[119px] overflow-visible bg-gray-500 shadow-md transition-transform group-hover:scale-105 md:h-[278px] md:w-[179px] lg:h-[370px] lg:w-[238px]">
+              <div className="mx-auto flex w-full max-w-5xl flex-row items-center gap-8">
+                <div className="relative h-[185px] w-[119px] overflow-visible bg-gray-500 shadow-md transition-transform group-hover:scale-105 md:h-[278px] md:w-[179px] lg:h-[370px] lg:w-[238px]">
                   <Image
                     src="/comics/pleistocene/front_cover_standard.jpg"
                     alt="Pleistocene"
@@ -139,11 +166,11 @@ export default function Comics() {
                     className="object-cover"
                   />
                 </div>
-                <div className="flex flex-1 flex-col items-end gap-4">
+                <div className="flex flex-1 flex-col gap-4">
                   <h2 className="text-xl font-bold">
                     <cite>Pleistocene</cite>
                   </h2>
-                  <p
+                  <div
                     className="max-w-2xl text-left md:text-justify"
                     dangerouslySetInnerHTML={{
                       __html: PLEISTOCENE_ABSTRACT_HTML,
