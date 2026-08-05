@@ -25,6 +25,7 @@ export const ImageRail = ({ items }: ImageRailProps) => {
               alt={item.alt}
               fill
               className="object-cover"
+              sizes="119px"
             />
           </div>
         </Link>

@@ -44,6 +44,7 @@ export const Preview = ({ images, size = "standard" }: PreviewProps) => {
               className="object-cover transition-transform group-hover:scale-101"
               fill
               priority
+              sizes="(min-width: 768px) 24rem, 100vw"
               src={images[0].imgSrc}
             />
           </div>

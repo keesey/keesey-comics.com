@@ -46,6 +46,7 @@ export const ProductsSection = ({
                 alt={product.name}
                 fill
                 className="object-cover"
+                sizes="119px"
               />
             </div>
             <h3

@@ -32,6 +32,13 @@ export default function Home() {
             isExternal: true,
           },
           {
+            alt: "Check out WHERE ARE MY DANG SPACESHIP KEYS?: an upcoming graphic game-novel.",
+            bgImgSrc: "/carousel/dang-spaceship/bg.png",
+            href: "/comics/dang-spaceship",
+            id: "dang-spaceship",
+            imgSrc: "/carousel/dang-spaceship/fg.png",
+          },
+          {
             alt: "The boys are back! PARRY 'N' CARNEY: FRIENDS FOR LIFE. Every strip from this old webcomic you never heard of!",
             bgImgSrc: "/carousel/parry-n-carney/bg.svg",
             href: "/comics/parry-n-carney",

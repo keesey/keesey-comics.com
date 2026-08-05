@@ -35,6 +35,7 @@ export default function Comics() {
                 fill
                 className="object-cover"
                 priority
+                sizes="100vw"
               />
             </div>
           }
@@ -63,6 +64,7 @@ export default function Comics() {
                     alt="Paleocene"
                     fill
                     className="object-cover"
+                    sizes="(min-width: 1024px) 238px, (min-width: 768px) 179px, 119px"
                   />
                 </div>
                 <div className="flex flex-1 flex-col gap-4">
@@ -83,6 +85,7 @@ export default function Comics() {
                     alt="The Flesh"
                     fill
                     className="object-cover"
+                    sizes="(min-width: 1024px) 238px, (min-width: 768px) 179px, 119px"
                   />
                 </div>
                 <div className="flex flex-1 flex-col items-end gap-4">
@@ -106,6 +109,7 @@ export default function Comics() {
                     alt="Where Are My Dang Spaceship Keys?"
                     fill
                     className="object-cover"
+                    sizes="(min-width: 1024px) 238px, (min-width: 768px) 179px, 119px"
                   />
                 </div>
                 <div className="flex flex-1 flex-col gap-4">
@@ -132,6 +136,7 @@ export default function Comics() {
                     alt="Parry ‘n’ Carney: Friends for Life"
                     fill
                     className="object-cover"
+                    sizes="(min-width: 1024px) 238px, (min-width: 768px) 179px, 119px"
                   />
                 </div>
                 <div className="flex flex-1 flex-col items-end gap-4">
@@ -164,6 +169,7 @@ export default function Comics() {
                     alt="Pleistocene"
                     fill
                     className="object-cover"
+                    sizes="(min-width: 1024px) 238px, (min-width: 768px) 179px, 119px"
                   />
                 </div>
                 <div className="flex flex-1 flex-col gap-4">

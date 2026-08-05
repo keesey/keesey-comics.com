@@ -40,6 +40,7 @@ export const CarouselSlide = ({
           draggable={false}
           fill
           priority={priority}
+          sizes="100vw"
           src={bgImgSrc}
         />
       )}
@@ -57,6 +58,7 @@ export const CarouselSlide = ({
           draggable={false}
           fill
           priority={priority}
+          sizes="100vw"
           src={imgSrc}
         />
       )}

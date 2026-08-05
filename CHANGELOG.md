@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.4.1](https://github.com/keesey/keesey-comics.com/tree/v3.4.1) - 2026-08-05
+
+### Added
+
+- Home Page Carousel item for _Where Are My Dang Spaceship Keys?_.
+
+### Fixed
+
+- Added `sizes` props for images.
+
 ## [3.4.0](https://github.com/keesey/keesey-comics.com/tree/v3.4.0) - 2026-08-05
 
 ### Added

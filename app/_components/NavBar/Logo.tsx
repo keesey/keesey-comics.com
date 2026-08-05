@@ -6,6 +6,7 @@ export const Logo = () => {
         alt="Keesey Comics"
         fill
         className="inline-block dark:hidden"
+        sizes="(min-width: 768px) 120px, 80px"
         src="/logos/black/keesey-comics.svg"
         priority
       />
@@ -13,6 +14,7 @@ export const Logo = () => {
         alt="Keesey Comics"
         className="hidden dark:inline-block"
         fill
+        sizes="(min-width: 768px) 120px, 80px"
         src="/logos/white/keesey-comics.svg"
         priority
       />
