@@ -32,6 +32,10 @@ export default function GageUllman() {
         <h1 className="text-2xl font-bold">Gage Ullman</h1>
       </div>
       <br />
+      <section title="Gage's comics">
+        <SeriesRail />
+      </section>
+      <br />
       <TextPassage>
         <p>
           Gage Ullman is a motion designer. His reel can be seen at{" "}
@@ -42,13 +46,6 @@ export default function GageUllman() {
         </p>
         <p>Ullman resides in Los Angeles.</p>
       </TextPassage>
-      <br />
-      <section>
-        <h2 className="mx-auto mb-4 text-center text-xl font-bold">
-          Gage&rsquo;s comics:
-        </h2>
-        <SeriesRail />
-      </section>
     </>
   )
 }

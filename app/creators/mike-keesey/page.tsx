@@ -23,13 +23,65 @@ export default function MikeKeesey() {
           { label: "Mike Keesey" },
         ]}
       />
-      <div className="flex flex-col items-center justify-center gap-8 text-center">
+      <header className="flex flex-col items-center justify-center gap-8 text-center">
         <Portrait
           alt="Mike Keesey (Cartoon Portrait)"
           src="/creators/mike-keesey/portrait.svg"
         />
         <h1 className="text-2xl font-bold">Mike Keesey</h1>
-      </div>
+      </header>
+      <br />
+      <section title="Mike's comics">
+        <ImageRail
+          items={[
+            {
+              alt: "Paleocene #1",
+              href: "/comics/paleocene/issues/01",
+              imgSrc: "/comics/paleocene/issues/01/front_cover.png",
+            },
+            {
+              alt: "Paleocene #2",
+              href: "/comics/paleocene/issues/02",
+              imgSrc: "/comics/paleocene/issues/02/front_cover.png",
+            },
+            {
+              alt: "Paleocene #3",
+              href: "/comics/paleocene/issues/03",
+              imgSrc: "/comics/paleocene/issues/03/front_cover.png",
+            },
+            {
+              alt: "Paleocene #4",
+              href: "/comics/paleocene/issues/04",
+              imgSrc: "/comics/paleocene/issues/04/front_cover.png",
+            },
+            {
+              alt: "Paleocene #5",
+              href: "/comics/paleocene/issues/05",
+              imgSrc: "/comics/paleocene/issues/05/front_cover.png",
+            },
+            {
+              alt: "Paleocene #6",
+              href: "/comics/paleocene/issues/06",
+              imgSrc: "/comics/paleocene/issues/06/front_cover.png",
+            },
+            {
+              alt: "Where Are My Dang Spaceship Keys?",
+              href: "/comics/dang-spaceship",
+              imgSrc: "/comics/dang-spaceship/issues/01/standard.png",
+            },
+            {
+              alt: "Pleistocene",
+              href: "/comics/pleistocene",
+              imgSrc: "/comics/pleistocene/front_cover_standard.jpg",
+            },
+            {
+              alt: "Parry ‘n’ Carney",
+              href: "/comics/parry-n-carney",
+              imgSrc: "/comics/parry-n-carney/front_cover_standard.png",
+            },
+          ]}
+        />
+      </section>
       <br />
       <TextPassage>
         <p>
@@ -120,56 +172,6 @@ export default function MikeKeesey() {
           Lucy.
         </p>
       </TextPassage>
-      <br />
-      <section>
-        <h2 className="mx-auto mb-4 text-center text-xl font-bold">
-          Mike&rsquo;s comics:
-        </h2>
-        <ImageRail
-          items={[
-            {
-              alt: "Paleocene #1",
-              href: "/comics/paleocene/issues/01",
-              imgSrc: "/comics/paleocene/issues/01/front_cover.png",
-            },
-            {
-              alt: "Paleocene #2",
-              href: "/comics/paleocene/issues/02",
-              imgSrc: "/comics/paleocene/issues/02/front_cover.png",
-            },
-            {
-              alt: "Paleocene #3",
-              href: "/comics/paleocene/issues/03",
-              imgSrc: "/comics/paleocene/issues/03/front_cover.png",
-            },
-            {
-              alt: "Paleocene #4",
-              href: "/comics/paleocene/issues/04",
-              imgSrc: "/comics/paleocene/issues/04/front_cover.png",
-            },
-            {
-              alt: "Paleocene #5",
-              href: "/comics/paleocene/issues/05",
-              imgSrc: "/comics/paleocene/issues/05/front_cover.png",
-            },
-            {
-              alt: "Paleocene #6",
-              href: "/comics/paleocene/issues/06",
-              imgSrc: "/comics/paleocene/issues/06/front_cover.png",
-            },
-            {
-              alt: "Pleistocene",
-              href: "/comics/pleistocene",
-              imgSrc: "/comics/pleistocene/front_cover_standard.jpg",
-            },
-            {
-              alt: "Parry ‘n’ Carney",
-              href: "/comics/parry-n-carney",
-              imgSrc: "/comics/parry-n-carney/front_cover_standard.png",
-            },
-          ]}
-        />
-      </section>
     </>
   )
 }
