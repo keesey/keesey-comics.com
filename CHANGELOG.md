@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- release notes start -->
 
+## [3.4.3](https://github.com/keesey/keesey-comics.com/tree/v3.4.3) - 2026-08-22
+
+### Fixed
+
+- Typo on Mike Keesey Page.
+
 ## [3.4.2](https://github.com/keesey/keesey-comics.com/tree/v3.4.2) - 2026-08-22
 
 ### Added

@@ -121,7 +121,7 @@ export default function MikeKeesey() {
                   <time>2022</time>.
                 </TextLink>{" "}
                 Ice Age megafauna rock art in the Colombian Amazon?{" "}
-                <cite>Philosophical Transcations of the Royal Society B</cite>{" "}
+                <cite>Philosophical Transactions of the Royal Society B</cite>{" "}
                 377(<strong>1849</strong>):1–11.
               </li>
               <li>
