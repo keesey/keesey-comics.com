@@ -5,7 +5,7 @@ export const PALEOCENE_06: ComicStory = {
   "@id": "https://www.keesey-comics.com/comics/paleocene/issues/06",
   abstract:
     "Mamma must guide those around her through reunions and fights, death and danger, to save the future of her species, in the final issue of this prehistoric saga.",
-  copyrightYear: 2026,
+  copyrightYear: 2027,
   description: "Issue #6 of a comic series about our early primate ancestors.",
   image:
     "https://www.keesey-comics.com/comics/paleocene/issues/06/front_cover.png",
