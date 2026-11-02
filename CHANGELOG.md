@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Release year for _Paleocene #6_.
 
+### Security
+
+- Dependency upgrades.
+
 ## [3.4.3](https://github.com/keesey/keesey-comics.com/tree/v3.4.3) - 2026-08-22
 
 ### Fixed
