@@ -43,7 +43,7 @@ export default function Paleocene06() {
           ]}
         />
         <EditionsSection>
-          <EditionSection title="Coming in 2026">
+          <EditionSection title="Coming in 2027">
             <a
               href="https://www.patreon.com/c/tmkeesey/posts?filters%5Btag%5D=paleocene6"
               rel="noopener roreferrer"
